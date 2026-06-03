@@ -1,0 +1,4681 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard VW · Gazda Katowice · 02.06.2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --vw-navy: #001e50;       /* VW corporate navy */
+    --vw-navy-2: #0a2d65;
+    --vw-blue: #00b0f0;       /* VW signal blue */
+    --vw-blue-2: #0098d3;
+    --vw-blue-pale: #e6f6fd;
+    --vw-navy-pale: #f0f4fb;
+
+    --bg: #f7f8fa;             /* page bg */
+    --bg-card: #ffffff;
+    --bg-soft: #f8f9fb;
+    --bg-sunken: #f1f3f7;
+
+    --border: #e5e8ec;
+    --border-strong: #d4d8df;
+    --border-soft: #ecedf0;
+
+    --ink: #1a1f2e;
+    --ink-soft: #2c3344;
+    --dim: #6b7180;
+    --dim-2: #97a0b1;
+    --dim-3: #b8c0cd;
+
+    --good: #16a34a;
+    --good-bg: #f0fdf4;
+    --good-border: #bbf7d0;
+
+    --warn: #ea580c;
+    --warn-bg: #fff7ed;
+    --warn-border: #fed7aa;
+
+    --bad: #dc2626;
+    --bad-bg: #fef2f2;
+    --bad-border: #fecaca;
+
+    --gold: #d97706;
+    --silver: #6b7180;
+    --bronze: #92400e;
+
+    --radius: 10px;
+    --radius-sm: 6px;
+    --shadow-sm: 0 1px 2px rgba(0,30,80,0.04);
+    --shadow: 0 2px 8px rgba(0,30,80,0.05);
+    --shadow-lg: 0 8px 24px rgba(0,30,80,0.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size:14px;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+  body{min-height:100vh;padding-bottom:80px}
+  .mono{font-family:'JetBrains Mono', monospace;font-feature-settings:"tnum"}
+
+  /* === HEADER === */
+  header{
+    background:var(--vw-navy);
+    color:white;
+    padding:18px 32px;
+    position:sticky;top:0;z-index:50;
+    box-shadow:0 1px 0 var(--vw-navy-2);
+  }
+  .header-row{display:flex;align-items:center;gap:24px;flex-wrap:wrap;max-width:1600px;margin:0 auto}
+  .vw-logo{
+    width:42px;height:42px;border-radius:50%;
+    background:white;
+    display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:14px;color:var(--vw-navy);
+    letter-spacing:-1px;font-family:'Inter';
+    border:2px solid white;
+  }
+  .header-title{flex:1;min-width:280px}
+  .header-title h1{font-size:18px;font-weight:700;letter-spacing:-0.3px;line-height:1.2;color:white}
+  .header-title .sub{font-family:'JetBrains Mono';font-size:11px;color:rgba(255,255,255,0.7);margin-top:3px;letter-spacing:0.3px}
+  .header-meta{display:flex;gap:24px;flex-wrap:wrap}
+  .meta-cell{display:flex;flex-direction:column;gap:2px}
+  .meta-cell .lbl{font-size:10px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;font-weight:500}
+  .meta-cell .val{font-family:'JetBrains Mono';font-size:12px;color:white;font-weight:500}
+  .pulse{display:inline-block;width:7px;height:7px;border-radius:50%;background:#22d77b;box-shadow:0 0 8px #22d77b;margin-right:6px;animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
+
+  /* === MAIN NAV === */
+  nav.main-nav{
+    background:var(--bg-card);
+    border-bottom:1px solid var(--border);
+    max-width:none;
+    box-shadow:var(--shadow-sm);
+    position:sticky;top:78px;z-index:40;
+  }
+  nav.main-nav .nav-inner{
+    max-width:1600px;margin:0 auto;padding:0 32px;
+    display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;
+  }
+  nav.main-nav .nav-inner::-webkit-scrollbar{display:none}
+  .tab{
+    padding:14px 16px;background:none;border:none;color:var(--dim);
+    font-family:'Inter';font-size:13px;font-weight:500;
+    cursor:pointer;position:relative;white-space:nowrap;
+    transition:all 0.15s;
+  }
+  .tab .num{font-family:'JetBrains Mono';font-size:10px;color:var(--dim-2);margin-right:8px;font-weight:500}
+  .tab:hover{color:var(--ink)}
+  .tab.active{color:var(--vw-navy);font-weight:600}
+  .tab.active .num{color:var(--vw-blue)}
+  .tab.active::after{content:'';position:absolute;bottom:-1px;left:8px;right:8px;height:2px;background:var(--vw-navy);border-radius:1px 1px 0 0}
+  .tab .badge{
+    display:inline-block;font-family:'JetBrains Mono';font-size:10px;
+    background:var(--bad);color:white;padding:1px 6px;border-radius:8px;
+    margin-left:6px;font-weight:600;line-height:1.4;
+  }
+  .tab .badge.info{background:var(--vw-blue);color:white}
+
+  /* === LAYOUT === */
+  main{max-width:1600px;margin:0 auto;padding:24px 32px}
+  .section{display:none;animation:fadeIn 0.25s ease}
+  .section.active{display:block}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+  .section-head{margin-bottom:20px;display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+  .section-head h2{font-size:24px;font-weight:700;letter-spacing:-0.5px;line-height:1.1;color:var(--vw-navy)}
+  .section-head .pigulka{
+    font-size:12px;color:var(--dim);padding:5px 12px;
+    border:1px solid var(--border);border-radius:20px;
+    background:var(--bg-card);font-weight:500;
+  }
+  .section-head .pigulka::before{content:'›';color:var(--vw-blue);margin-right:6px;font-weight:700}
+
+  /* === SUB NAV (dla STOCK) === */
+  nav.sub-nav{
+    background:var(--bg-soft);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:4px;
+    display:inline-flex;gap:2px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+  }
+  .sub-tab{
+    padding:8px 16px;background:none;border:none;color:var(--dim);
+    font-family:'Inter';font-size:13px;font-weight:500;
+    cursor:pointer;border-radius:var(--radius-sm);
+    transition:all 0.15s;
+  }
+  .sub-tab:hover{color:var(--ink);background:rgba(0,0,0,0.03)}
+  .sub-tab.active{background:white;color:var(--vw-navy);box-shadow:var(--shadow-sm);font-weight:600}
+  .sub-tab .sub-badge{
+    display:inline-block;font-family:'JetBrains Mono';font-size:10px;
+    background:var(--bg-sunken);color:var(--dim);padding:1px 6px;border-radius:8px;
+    margin-left:6px;font-weight:600;
+  }
+  .sub-tab.active .sub-badge{background:var(--vw-navy);color:white}
+  .sub-section{display:none}
+  .sub-section.active{display:block}
+
+  /* === CARDS === */
+  .card{
+    background:var(--bg-card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:20px;
+    box-shadow:var(--shadow-sm);
+    position:relative;
+  }
+  .card.accent{border-top:3px solid var(--vw-blue)}
+  .card.bad{border-top:3px solid var(--bad)}
+  .card.good{border-top:3px solid var(--good)}
+  .card-label{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;font-weight:600}
+  .card-value{font-size:36px;font-weight:700;line-height:1;letter-spacing:-1px;color:var(--ink)}
+  .card-sub{font-size:12px;color:var(--dim);margin-top:6px}
+
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr}}
+
+  /* === KPI === */
+  .kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:20px}
+  .kpi{
+    background:var(--bg-card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:18px;
+    box-shadow:var(--shadow-sm);
+  }
+  .kpi .lbl{font-size:11px;text-transform:uppercase;color:var(--dim);letter-spacing:1px;margin-bottom:10px;font-weight:600}
+  .kpi .v{font-weight:700;font-size:28px;line-height:1;letter-spacing:-0.8px;color:var(--ink)}
+  .kpi .delta{font-family:'JetBrains Mono';font-size:11px;margin-top:8px;color:var(--dim);font-weight:500}
+  .kpi .delta.pos{color:var(--good)}
+  .kpi .delta.neg{color:var(--bad)}
+
+  /* === PROGRESS === */
+  .progress-block{margin-top:12px}
+  .progress{height:8px;background:var(--bg-sunken);border-radius:4px;overflow:hidden}
+  .progress.big{height:20px;border-radius:10px;background:var(--vw-navy-pale)}
+  .progress-bar{height:100%;background:var(--vw-blue);transition:width 0.6s ease;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;font-family:'JetBrains Mono';font-size:11px;font-weight:700;color:white;border-radius:4px}
+  .progress-bar.good{background:var(--good)}
+  .progress-bar.warn{background:var(--warn)}
+  .progress-bar.bad{background:var(--bad)}
+  .progress-label{display:flex;justify-content:space-between;font-size:11px;margin-top:6px;color:var(--dim);font-weight:500}
+
+  /* === TABLES === */
+  .table-wrap{
+    background:var(--bg-card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:var(--shadow-sm);
+  }
+  .table-head{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:14px 18px;border-bottom:1px solid var(--border);
+    background:var(--bg-soft);
+  }
+  .table-head h3{font-size:14px;font-weight:600;letter-spacing:-0.2px;color:var(--ink)}
+  .table-head .count{font-family:'JetBrains Mono';font-size:11px;color:var(--dim);font-weight:500}
+
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{
+    text-align:left;font-size:10px;font-weight:600;
+    text-transform:uppercase;letter-spacing:1px;color:var(--dim);
+    padding:12px 14px;border-bottom:1px solid var(--border);
+    background:var(--bg-card);position:sticky;top:0;
+  }
+  td{padding:12px 14px;border-bottom:1px solid var(--border-soft);font-size:13px;vertical-align:top;color:var(--ink)}
+  td.mono{font-family:'JetBrains Mono';font-size:12px}
+  tr:last-child td{border-bottom:none}
+  tr:hover td{background:var(--vw-blue-pale)}
+  td.num{text-align:right;font-variant-numeric:tabular-nums;font-family:'JetBrains Mono';font-size:12px}
+  td.delta-pos{color:var(--good);font-weight:600}
+  td.delta-neg{color:var(--bad);font-weight:600}
+  td.delta-zero{color:var(--dim)}
+
+  .table-scroll{max-height:640px;overflow-y:auto}
+  .table-scroll::-webkit-scrollbar{width:8px;height:8px}
+  .table-scroll::-webkit-scrollbar-track{background:var(--bg-soft)}
+  .table-scroll::-webkit-scrollbar-thumb{background:var(--border-strong);border-radius:4px}
+
+  .filter-bar{
+    display:flex;gap:10px;padding:12px 18px;
+    border-bottom:1px solid var(--border);align-items:center;
+    background:var(--bg-soft);
+  }
+  .filter-bar input{
+    background:white;border:1px solid var(--border);
+    color:var(--ink);padding:7px 12px;border-radius:var(--radius-sm);
+    font-family:'Inter';font-size:12px;width:280px;
+    transition:border 0.15s;
+  }
+  .filter-bar input:focus{outline:none;border-color:var(--vw-blue);box-shadow:0 0 0 3px rgba(0,176,240,0.1)}
+  .filter-label{font-size:10px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;font-weight:600}
+
+  /* === BARS IN TABLES === */
+  .minibar{display:inline-block;height:12px;background:var(--vw-blue);border-radius:2px;margin-right:8px;vertical-align:middle;opacity:0.85}
+  .minibar.bad{background:var(--bad)}
+  .minibar.good{background:var(--good)}
+
+  /* === BADGES === */
+  .badge-type{display:inline-block;padding:3px 8px;border-radius:4px;font-family:'JetBrains Mono';font-size:10px;font-weight:600;letter-spacing:0.5px}
+  .badge-type.cu{background:var(--vw-blue-pale);color:var(--vw-navy);border:1px solid rgba(0,176,240,0.3)}
+  .badge-type.de{background:var(--warn-bg);color:var(--warn);border:1px solid var(--warn-border)}
+  .badge-pill{display:inline-block;padding:3px 10px;border-radius:12px;font-family:'JetBrains Mono';font-size:10px;font-weight:600}
+  .pill-bad{background:var(--bad-bg);color:var(--bad);border:1px solid var(--bad-border)}
+  .pill-warn{background:var(--warn-bg);color:var(--warn);border:1px solid var(--warn-border)}
+  .pill-good{background:var(--good-bg);color:var(--good);border:1px solid var(--good-border)}
+
+  /* === CAR DETAIL (deliveries) === */
+  .car-detail{font-family:'JetBrains Mono';font-size:11px;color:var(--dim);line-height:1.6;margin-top:3px}
+  .car-detail .lbl{color:var(--dim-2);text-transform:uppercase;letter-spacing:0.5px;font-size:9px;font-weight:600}
+  .car-price{font-weight:700;color:var(--vw-navy);font-size:14px;font-family:'Inter'}
+  .sprzedawca-tag{display:inline-block;padding:3px 10px;background:var(--vw-blue-pale);border:1px solid rgba(0,176,240,0.2);border-radius:4px;font-size:12px;color:var(--vw-navy);font-weight:600}
+  .wolny-tag{display:inline-block;padding:3px 10px;background:var(--warn-bg);border:1px solid var(--warn-border);border-radius:4px;font-size:10px;color:var(--warn);font-weight:700;letter-spacing:1px}
+
+  /* === RANKINGI === */
+  .rank-num{
+    font-weight:700;font-size:14px;
+    width:28px;height:28px;display:flex;align-items:center;justify-content:center;
+    border-radius:50%;background:var(--bg-sunken);color:var(--dim);
+    border:1px solid var(--border);flex-shrink:0;font-family:'Inter';
+  }
+  .rank-num.gold{background:linear-gradient(135deg, #fbbf24, #d97706);color:white;border-color:#d97706;box-shadow:0 0 0 3px rgba(217,119,6,0.15)}
+  .rank-num.silver{background:linear-gradient(135deg, #d1d5db, #9ca3af);color:white;border-color:#9ca3af;box-shadow:0 0 0 3px rgba(156,163,175,0.15)}
+  .rank-num.bronze{background:linear-gradient(135deg, #d97706, #92400e);color:white;border-color:#92400e;box-shadow:0 0 0 3px rgba(146,64,14,0.15)}
+  .rank-name{font-weight:600;font-size:13px;color:var(--ink)}
+  .rank-name.last{color:var(--bad)}
+
+  .podium{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:12px;align-items:end;margin-bottom:24px}
+  @media(max-width:700px){.podium{grid-template-columns:1fr}}
+  .podium-card{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:var(--radius);padding:18px;text-align:center;
+    box-shadow:var(--shadow-sm);
+  }
+  .podium-card.gold{border-color:#fbbf24;background:linear-gradient(180deg, #fffbeb 0%, white 100%);padding-top:26px;padding-bottom:26px}
+  .podium-card.silver{border-color:#d1d5db;background:linear-gradient(180deg, #f9fafb 0%, white 100%)}
+  .podium-card.bronze{border-color:#d97706;background:linear-gradient(180deg, #fff7ed 0%, white 100%)}
+  .podium-medal{font-size:28px;margin-bottom:6px}
+  .podium-name{font-weight:600;font-size:14px;color:var(--ink);margin-bottom:4px}
+  .podium-score{font-weight:800;font-size:32px;letter-spacing:-1px;line-height:1;color:var(--vw-navy)}
+  .podium-card.gold .podium-score{font-size:40px;color:#d97706}
+  .podium-sub{font-family:'JetBrains Mono';font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:1px;margin-top:6px;font-weight:600}
+
+  /* === CELE === */
+  .goal-banner{
+    background:linear-gradient(135deg, var(--vw-navy) 0%, var(--vw-navy-2) 100%);
+    color:white;
+    border-radius:var(--radius);
+    padding:28px;margin-bottom:20px;
+    box-shadow:var(--shadow);
+  }
+  .goal-banner-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:16px;margin-bottom:20px}
+  .goal-banner-title{font-size:11px;color:rgba(255,255,255,0.7);font-weight:600;letter-spacing:1.5px;text-transform:uppercase}
+  .goal-banner-num{display:flex;align-items:baseline;gap:8px;letter-spacing:-2px}
+  .goal-banner-num .now{font-size:56px;font-weight:800;color:white;line-height:1}
+  .goal-banner-num .sep{font-size:36px;color:rgba(255,255,255,0.4);font-weight:400}
+  .goal-banner-num .target{font-size:36px;font-weight:600;color:var(--vw-blue)}
+  .goal-banner-pct{font-weight:800;font-size:28px;letter-spacing:-1px;color:white}
+  .goal-banner .progress{background:rgba(255,255,255,0.15);height:16px;border-radius:8px}
+  .goal-status-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:16px}
+  .goal-status-cell{background:rgba(255,255,255,0.08);border-radius:var(--radius-sm);padding:10px 12px;border-left:3px solid rgba(255,255,255,0.2)}
+  .goal-status-cell .lbl{font-size:9px;text-transform:uppercase;color:rgba(255,255,255,0.6);letter-spacing:1.2px;margin-bottom:4px;font-weight:600}
+  .goal-status-cell .val{font-size:18px;color:white;font-weight:700}
+  .goal-status-cell.bad{border-left-color:#f87171}
+  .goal-status-cell.good{border-left-color:#34d399}
+  .goal-status-cell.warn{border-left-color:#fb923c}
+  .goal-status-cell.info{border-left-color:var(--vw-blue)}
+
+  .status-pill{
+    display:inline-block;padding:3px 10px;border-radius:12px;
+    font-family:'JetBrains Mono';font-size:10px;font-weight:700;
+    letter-spacing:0.5px;text-transform:uppercase;
+  }
+  .status-pill.done{background:var(--good-bg);color:var(--good);border:1px solid var(--good-border)}
+  .status-pill.close{background:#ecfdf5;color:var(--good);border:1px solid #a7f3d0}
+  .status-pill.ontrack{background:var(--warn-bg);color:var(--warn);border:1px solid var(--warn-border)}
+  .status-pill.risk{background:var(--bad-bg);color:var(--bad);border:1px solid var(--bad-border)}
+  .status-pill.no-goal{background:var(--bg-sunken);color:var(--dim);border:1px solid var(--border)}
+
+  .inline-progress{display:inline-flex;align-items:center;gap:10px;width:100%}
+  .inline-progress-bar-wrap{flex:1;height:6px;background:var(--bg-sunken);border-radius:3px;overflow:hidden;max-width:140px}
+  .inline-progress-bar{height:100%;border-radius:3px;transition:width 0.6s ease}
+  .inline-progress-bar.done{background:var(--good)}
+  .inline-progress-bar.close{background:var(--good)}
+  .inline-progress-bar.ontrack{background:var(--warn)}
+  .inline-progress-bar.risk{background:var(--bad)}
+  .inline-pct{font-family:'JetBrains Mono';font-size:11px;color:var(--dim);min-width:40px;text-align:right;font-weight:600}
+
+  .task-cell{font-size:12px;color:var(--ink-soft);line-height:1.5}
+  .task-cell .task-icon{color:var(--vw-blue);font-weight:700;margin-right:4px}
+  .task-cell.done{color:var(--good)}
+  .task-cell.risk{color:var(--bad)}
+
+  /* === ALERTS === */
+  .alert{
+    padding:12px 16px;border-radius:var(--radius-sm);
+    font-size:12px;margin-bottom:16px;
+    border:1px solid;border-left-width:3px;
+    line-height:1.6;
+  }
+  .alert.warn{background:var(--warn-bg);border-color:var(--warn-border);border-left-color:var(--warn);color:#7c2d12}
+  .alert.info{background:var(--vw-blue-pale);border-color:#bae6fd;border-left-color:var(--vw-blue);color:var(--vw-navy)}
+  .alert.bad{background:var(--bad-bg);border-color:var(--bad-border);border-left-color:var(--bad);color:#7f1d1d}
+  .alert strong{font-weight:700}
+  .alert details{margin-top:8px}
+  .alert summary{cursor:pointer;color:var(--vw-navy);font-weight:600}
+  .alert details table{margin-top:8px;background:white;border:1px solid var(--border);border-radius:var(--radius-sm)}
+
+  /* === SUMMARY (Fakty kluczowe) === */
+  .summary-card{
+    background:var(--bg-card);
+    border:1px solid var(--border);
+    border-left:4px solid var(--vw-blue);
+    border-radius:var(--radius);
+    padding:24px;margin-top:32px;
+    box-shadow:var(--shadow-sm);
+  }
+  .summary-card h3{font-size:18px;font-weight:700;margin-bottom:16px;color:var(--vw-navy);letter-spacing:-0.3px}
+  .fact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+  .fact{padding:12px 14px;background:var(--bg-soft);border-radius:var(--radius-sm);border-left:2px solid var(--border-strong);font-size:12px;line-height:1.6}
+  .fact .lbl{display:block;font-size:9px;text-transform:uppercase;color:var(--dim);letter-spacing:1.2px;margin-bottom:4px;font-weight:600}
+  .fact .val{color:var(--ink-soft)}
+  .fact strong{color:var(--vw-navy);font-weight:700}
+  .fact.good{border-left-color:var(--good)}
+  .fact.bad{border-left-color:var(--bad)}
+  .fact.warn{border-left-color:var(--warn)}
+
+  .col-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:900px){.col-2{grid-template-columns:1fr}}
+
+  .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--dim);margin-bottom:12px;margin-top:12px;justify-content:center}
+  .legend-item{display:flex;align-items:center;gap:6px}
+  .legend-dot{width:10px;height:10px;border-radius:50%}
+
+  footer{
+    max-width:1600px;margin:48px auto 0;padding:20px 32px;
+    border-top:1px solid var(--border);
+    font-family:'JetBrains Mono';font-size:10px;
+    color:var(--dim-2);text-transform:uppercase;letter-spacing:1px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+  }
+
+  .filter-info-pill{
+    display:inline-block;padding:4px 10px;
+    background:var(--warn-bg);border:1px solid var(--warn-border);
+    border-radius:12px;font-family:'JetBrains Mono';font-size:10px;
+    color:var(--warn);font-weight:600;letter-spacing:0.5px;margin-left:8px;
+  }
+
+  /* === Funkcyjne wynik === */
+  .yield-pos{color:var(--good);font-weight:700}
+  .yield-neg{color:var(--bad);font-weight:700}
+  .type-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;font-family:'JetBrains Mono'}
+  .type-badge.demo{background:#eff6ff;color:#1e40af;border:1px solid #bfdbfe}
+  .type-badge.zs{background:#f3e8ff;color:#6b21a8;border:1px solid #d8b4fe}
+  .type-badge.exdemo{background:#fef3c7;color:#92400e;border:1px solid #fde68a}
+  .type-badge.other{background:var(--bg-sunken);color:var(--dim);border:1px solid var(--border)}
+
+  /* === GRAFIK === */
+  .schedule-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg-card);box-shadow:var(--shadow-sm)}
+  table.schedule{border-collapse:collapse;font-size:11px;width:100%;min-width:1000px}
+  table.schedule th,table.schedule td{border:1px solid var(--border-soft);padding:0;text-align:center;vertical-align:middle;font-family:'JetBrains Mono';font-weight:600}
+  table.schedule thead th.day-h{padding:6px 4px;background:var(--bg-soft);color:var(--ink-soft);font-size:11px;font-weight:600;min-width:28px}
+  table.schedule thead th.day-h.weekend{background:var(--bg-sunken);color:var(--dim)}
+  table.schedule thead th.day-h.holiday{background:#fef3c7;color:#92400e}
+  table.schedule thead th.day-h.today{background:var(--vw-navy);color:white;border-color:var(--vw-navy)}
+  table.schedule thead th.dow{padding:2px 4px;background:var(--bg-soft);color:var(--dim-2);font-size:9px;font-weight:500;font-family:'Inter';text-transform:uppercase;letter-spacing:0.5px}
+  table.schedule thead th.dow.weekend{color:var(--bad);background:var(--bg-sunken)}
+  table.schedule th.name-col{text-align:left;padding:8px 12px;background:var(--bg-card);color:var(--ink);font-family:'Inter';font-weight:600;font-size:12px;min-width:140px;position:sticky;left:0;z-index:2;box-shadow:2px 0 0 var(--border)}
+  table.schedule td.name-cell{text-align:left;padding:8px 12px;background:var(--bg-card);color:var(--ink);font-family:'Inter';font-weight:600;font-size:12px;position:sticky;left:0;z-index:1;box-shadow:2px 0 0 var(--border)}
+  table.schedule td.name-cell.assistant{font-weight:500;color:var(--dim);background:var(--bg-soft)}
+  table.schedule td.cell{height:32px;min-width:28px;font-size:12px}
+  table.schedule td.cell.work{background:white;color:var(--ink)}
+  table.schedule td.cell.work-late{background:#eff6ff;color:#1e40af}
+  table.schedule td.cell.work-early{background:#f0fdf4;color:#166534}
+  table.schedule td.cell.urlop{background:#fef3c7;color:#92400e;font-weight:700}
+  table.schedule td.cell.l4{background:#fee2e2;color:#991b1b;font-weight:700}
+  table.schedule td.cell.weekend{background:var(--bg-sunken);color:var(--dim-3)}
+  table.schedule td.cell.holiday{background:#fef9c3;color:#854d0e}
+  table.schedule td.cell.empty{background:var(--bg-soft);color:var(--dim-3)}
+  table.schedule td.cell.today{outline:2px solid var(--vw-navy);outline-offset:-2px;position:relative;z-index:1}
+  table.schedule tr.summary-row td{background:var(--bg-soft);color:var(--ink-soft);font-weight:700;border-top:2px solid var(--border-strong)}
+  table.schedule tr.assistant-divider td{background:var(--vw-navy-pale);color:var(--vw-navy);font-size:10px;text-transform:uppercase;letter-spacing:1px;padding:6px 12px;font-weight:700;text-align:left;font-family:'Inter'}
+
+  .schedule-legend{display:flex;gap:10px;flex-wrap:wrap;padding:12px 16px;background:var(--bg-soft);border-bottom:1px solid var(--border);font-size:11px;color:var(--dim);font-family:'JetBrains Mono';font-weight:500}
+  .schedule-legend .lg{display:flex;align-items:center;gap:5px}
+  .schedule-legend .lg-box{width:14px;height:14px;border-radius:3px;border:1px solid rgba(0,0,0,0.05)}
+
+  .urlop-list{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);margin-top:16px}
+  .urlop-item{display:flex;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid var(--border-soft);font-size:13px}
+  .urlop-item:last-child{border-bottom:none}
+  .urlop-item .date{font-family:'JetBrains Mono';font-size:12px;color:var(--dim);min-width:130px;font-weight:500}
+  .urlop-item .typ-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;letter-spacing:0.5px;font-family:'JetBrains Mono'}
+  .urlop-item .typ-urlop{background:#fef3c7;color:#92400e;border:1px solid #fde68a}
+  .urlop-item .typ-l4{background:#fee2e2;color:#991b1b;border:1px solid #fecaca}
+  .urlop-item .typ-wolne{background:#dbeafe;color:#1e40af;border:1px solid #bfdbfe}
+  .urlop-item .who{flex:1;color:var(--ink);font-weight:500}
+
+</style>
+
+<style id="login-style">
+#login-overlay {
+  position:fixed;inset:0;z-index:9999;
+  background:var(--bg, #0d1b2e);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Inter',sans-serif;
+}
+.login-box {
+  background:#162032;border:1px solid #1e3a5f;border-radius:12px;
+  padding:40px 48px;width:360px;box-shadow:0 24px 64px rgba(0,0,0,0.5);
+  text-align:center;
+}
+.login-logo {
+  font-size:28px;font-weight:800;letter-spacing:-1px;color:#fff;margin-bottom:4px;
+}
+.login-logo span { color:#00b0f0; }
+.login-sub {
+  font-size:12px;color:#7a97b8;letter-spacing:2px;text-transform:uppercase;
+  font-weight:600;margin-bottom:32px;
+}
+.login-label {
+  display:block;text-align:left;font-size:11px;font-weight:700;
+  color:#7a97b8;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;
+}
+.login-input {
+  width:100%;box-sizing:border-box;
+  background:#0d1b2e;border:1px solid #1e3a5f;border-radius:8px;
+  padding:12px 16px;color:#fff;font-size:15px;font-family:'Inter',sans-serif;
+  outline:none;transition:border-color .2s;margin-bottom:20px;
+}
+.login-input:focus { border-color:#00b0f0; }
+.login-btn {
+  width:100%;padding:13px;border:none;border-radius:8px;
+  background:#00b0f0;color:#fff;font-size:14px;font-weight:700;
+  letter-spacing:0.5px;cursor:pointer;transition:background .2s;
+}
+.login-btn:hover { background:#0090cc; }
+.login-error {
+  display:none;margin-top:12px;padding:10px 14px;border-radius:8px;
+  background:#3b1212;border:1px solid #dc2626;
+  color:#f87171;font-size:12px;font-weight:600;letter-spacing:0.3px;
+}
+.login-footer {
+  margin-top:24px;font-size:11px;color:#3a5270;
+}
+</style>
+</head>
+<body>
+<div id="login-overlay">
+  <div class="login-box">
+    <div class="login-logo">VW <span>Gazda</span></div>
+    <div class="login-sub">Dashboard · Katowice</div>
+    <label class="login-label" for="pwd-input">Hasło dostępu</label>
+    <input class="login-input" id="pwd-input" type="password"
+           placeholder="••••••••••" autocomplete="current-password"
+           onkeydown="if(event.key==='Enter') checkLogin()">
+    <button class="login-btn" onclick="checkLogin()">Zaloguj się →</button>
+    <div class="login-error" id="login-error">Nieprawidłowe hasło. Spróbuj ponownie.</div>
+    <div class="login-footer">Dashboard jest poufny · dostęp tylko dla uprawnionych</div>
+  </div>
+</div>
+
+
+<header>
+  <div class="header-row">
+    <div class="vw-logo">VW</div>
+    <div class="header-title">
+      <h1>Dashboard Dzienny · Gazda Katowice</h1>
+      <div class="sub"><span class="pulse" style="background:#22c55e;box-shadow:0 0 8px #22c55e"></span>Stan na 2 czerwca 2026 · tydzień 23/2026</div>
+    </div>
+    <div class="header-meta">
+      <div class="meta-cell"><span class="lbl">Dealer</span><span class="val">01380V / ASO 138</span></div>
+      <div class="meta-cell"><span class="lbl">Region</span><span class="val">4 · Katowice</span></div>
+      <div class="meta-cell"><span class="lbl">IH</span><span class="val">26/2026 · 25.05.2026</span></div>
+      <div class="meta-cell"><span class="lbl">Upływ mc</span><span class="val">9.5%</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="main-nav"><div class="nav-inner" id="nav"></div></nav>
+
+<main id="main"></main>
+
+<footer>
+  <div>Volkswagen Gazda Katowice · KVPS 01380V · Confidential</div>
+  <div>Wygenerowano · 2026-06-02 · z RAPORT_ZBIORCZY + IH 26/2026 + Push/Funkcyjne</div>
+</footer>
+
+<script>
+/* ============================================================
+   DASHBOARD VW GAZDA KATOWICE — TEMPLATE
+   ============================================================
+   To jest WZÓR (template) dashboardu — kompletny, działający plik.
+
+   PRZY NOWYM RAPORCIE:
+   - Skopiuj ten plik jako bazę
+   - Podmień TYLKO obiekt `const DATA = {...}` poniżej na świeże dane
+     obliczone z nowego raportu wg sekcji 2-3 i 6 INSTRUKCJI_PROJEKTU.md
+   - NIE zmieniaj nic powyżej (HTML, CSS) ani poniżej tej zmiennej (JS rendering)
+   - Zapisz jako dashboard_VW_Gazda_[NOWA_DATA].html
+
+   Dane poniżej są przykładowe — z raportu z 28.05.2026
+   ============================================================ */
+const DATA = {
+  "meta": {
+    "data_raportu": "2026-06-02",
+    "data_raportu_pl": "2 czerwca 2026",
+    "dealer": "GAZDA KATOWICE",
+    "kvps": "01380V",
+    "aso": "138",
+    "region": "4",
+    "miasto": "KATOWICE",
+    "ih_data": "01.06.2026",
+    "ih_numer": "IH 28/2026",
+    "ih_tydzien": "23/2026"
+  },
+  "realizacja": {
+    "detal": {
+      "cel_aak": 0.0,
+      "aak": 5.0,
+      "aak_prev": 2.0,
+      "delta_aak": 3.0,
+      "abk_bm": 40.0,
+      "cel_aek": 0.0,
+      "aek": -7.0,
+      "aakmax": 64.0,
+      "fk": 2.0,
+      "uplyw": 0.095,
+      "prognoza": 8
+    },
+    "flota": {
+      "cel_aak": 0.0,
+      "aak": 3.0,
+      "aak_prev": 0.0,
+      "delta_aak": 3.0,
+      "abk_bm": 3.0,
+      "cel_aek": 0.0,
+      "aek": 2.0,
+      "aakmax": 0.0,
+      "fk": 1.0,
+      "uplyw": 0.095,
+      "prognoza": 0
+    }
+  },
+  "stan_aek": {
+    "DETALICZNY_RD": {
+      "p": 8,
+      "u": 4,
+      "d": 4
+    },
+    "FLOTOWY": {
+      "p": 2,
+      "u": 0,
+      "d": 2
+    },
+    "DETALICZNY_reszta": {
+      "p": 0,
+      "u": 0,
+      "d": 0
+    }
+  },
+  "handlowcy_detal": [
+    {
+      "name": "Pokusa Konrad",
+      "p": 0,
+      "u": 1,
+      "d": -1
+    },
+    {
+      "name": "Mikusz Oskar",
+      "p": 3,
+      "u": 0,
+      "d": 3
+    },
+    {
+      "name": "Nowak Anita",
+      "p": 4,
+      "u": 2,
+      "d": 2
+    },
+    {
+      "name": "Żbik Kacper",
+      "p": 1,
+      "u": 0,
+      "d": 1
+    },
+    {
+      "name": "Kowalska Magdalena",
+      "p": 2,
+      "u": 0,
+      "d": 2
+    },
+    {
+      "name": "Fudalej Tymoteusz",
+      "p": 0,
+      "u": 1,
+      "d": -1
+    }
+  ],
+  "handlowcy_flota": [
+    {
+      "name": "Kowalska Magdalena",
+      "p": 1,
+      "u": 0,
+      "d": 1
+    },
+    {
+      "name": "Mikusz Oskar",
+      "p": 1,
+      "u": 0,
+      "d": 1
+    }
+  ],
+  "kanaly": [
+    {
+      "name": "true retail",
+      "p": 5,
+      "u": 2,
+      "d": 3
+    },
+    {
+      "name": "strategic fleet",
+      "p": 2,
+      "u": 0,
+      "d": 2
+    },
+    {
+      "name": "small fleet",
+      "p": 3,
+      "u": 2,
+      "d": 1
+    }
+  ],
+  "magazyn": {
+    "razem": 55,
+    "klienc": 22,
+    "wolne": 33,
+    "klienc_modele": [
+      {
+        "m": "T-ROC NF",
+        "n": 7
+      },
+      {
+        "m": "TOUAREG NF FL",
+        "n": 4
+      },
+      {
+        "m": "TIGUAN 3",
+        "n": 3
+      },
+      {
+        "m": "GOLF A8 PA",
+        "n": 3
+      },
+      {
+        "m": "TAIGO",
+        "n": 2
+      },
+      {
+        "m": "TAYRON",
+        "n": 2
+      },
+      {
+        "m": "T-CROSS FL",
+        "n": 1
+      }
+    ],
+    "wolne_modele": [
+      {
+        "m": "T-ROC NF",
+        "n": 11
+      },
+      {
+        "m": "TIGUAN 3",
+        "n": 4
+      },
+      {
+        "m": "T-CROSS FL",
+        "n": 4
+      },
+      {
+        "m": "GOLF A8 PA",
+        "n": 4
+      },
+      {
+        "m": "TAYRON",
+        "n": 3
+      },
+      {
+        "m": "PASSAT B9 VAR",
+        "n": 2
+      },
+      {
+        "m": "ID.3 FL",
+        "n": 2
+      },
+      {
+        "m": "TAIGO",
+        "n": 1
+      },
+      {
+        "m": "GOLF A8  VARIANT PA",
+        "n": 1
+      },
+      {
+        "m": "TOUAREG NF FL",
+        "n": 1
+      }
+    ]
+  },
+  "przet": {
+    "done": [
+      {
+        "vin": "WVGZZZCT7TW036532",
+        "model": "TIGUAN 3",
+        "pz": "2026-01-20",
+        "dni_mag": 144,
+        "dni_exp": -13,
+        "typ": "2.DE"
+      },
+      {
+        "vin": "WVGZZZCS9TY039329",
+        "model": "TAIGO",
+        "pz": "2026-02-19",
+        "dni_mag": 139,
+        "dni_exp": 17,
+        "typ": "2.DE"
+      },
+      {
+        "vin": "WVGZZZA29TV028965",
+        "model": "T-ROC NF",
+        "pz": "2026-02-17",
+        "dni_mag": 139,
+        "dni_exp": 15,
+        "typ": "1.CU"
+      },
+      {
+        "vin": "WVGZZZC1XTY051724",
+        "model": "T-CROSS FL",
+        "pz": "2026-02-24",
+        "dni_mag": 145,
+        "dni_exp": 22,
+        "typ": "2.DE"
+      },
+      {
+        "vin": "WVGZZZA2XTV036377",
+        "model": "T-ROC NF",
+        "pz": "2026-02-26",
+        "dni_mag": 127,
+        "dni_exp": 24,
+        "typ": "2.DE"
+      },
+      {
+        "vin": "WVWZZZCJ9TD038331",
+        "model": "PASSAT B9 VAR",
+        "pz": "2026-02-08",
+        "dni_mag": 123,
+        "dni_exp": 6,
+        "typ": "2.DE"
+      },
+      {
+        "vin": "WVWZZZCD8TW624842",
+        "model": "GOLF A8  VARIANT PA",
+        "pz": "2026-02-04",
+        "dni_mag": 124,
+        "dni_exp": 2,
+        "typ": "2.DE"
+      },
+      {
+        "vin": "WVWZZZE19TP046165",
+        "model": "ID.3 FL",
+        "pz": "2026-02-05",
+        "dni_mag": 120,
+        "dni_exp": 3,
+        "typ": "2.DE"
+      },
+      {
+        "vin": "WVWZZZE17TP044446",
+        "model": "ID.3 FL",
+        "pz": "2026-01-30",
+        "dni_mag": 126,
+        "dni_exp": -3,
+        "typ": "2.DE"
+      },
+      {
+        "vin": "WVWZZZCJXTD038449",
+        "model": "PASSAT B9 VAR",
+        "pz": "2026-02-05",
+        "dni_mag": 123,
+        "dni_exp": 3,
+        "typ": "2.DE"
+      }
+    ],
+    "w30": [
+      {
+        "vin": "WVGZZZCT9TW047113",
+        "model": "TIGUAN 3",
+        "pz": "2026-03-13",
+        "dni_mag": 85,
+        "dni_exp": 39,
+        "typ": "2.DE"
+      },
+      {
+        "vin": "WVGZZZR42TW030704",
+        "model": "TAYRON",
+        "pz": "2026-03-06",
+        "dni_mag": 109,
+        "dni_exp": 32,
+        "typ": "2.DE"
+      },
+      {
+        "vin": "WVGZZZA21TV044402",
+        "model": "T-ROC NF",
+        "pz": "2026-03-26",
+        "dni_mag": 97,
+        "dni_exp": 52,
+        "typ": "2.DE"
+      },
+      {
+        "vin": "WVGZZZR44TW030851",
+        "model": "TAYRON",
+        "pz": "2026-03-05",
+        "dni_mag": 101,
+        "dni_exp": 31,
+        "typ": "2.DE"
+      }
+    ],
+    "w60": [
+      {
+        "vin": "WVGZZZCT5TW576350",
+        "model": "TIGUAN 3",
+        "pz": "2026-04-01",
+        "dni_mag": 67,
+        "dni_exp": 58,
+        "typ": "1.CU"
+      },
+      {
+        "vin": "WVGZZZA27TV078747",
+        "model": "T-ROC NF",
+        "pz": "2026-04-10",
+        "dni_mag": 72,
+        "dni_exp": 67,
+        "typ": "2.DE"
+      },
+      {
+        "vin": "WVGZZZA26TV063155",
+        "model": "T-ROC NF",
+        "pz": "2026-04-03",
+        "dni_mag": 90,
+        "dni_exp": 60,
+        "typ": "1.CU"
+      },
+      {
+        "vin": "WVGZZZA20TV045184",
+        "model": "T-ROC NF",
+        "pz": "2026-04-10",
+        "dni_mag": 74,
+        "dni_exp": 67,
+        "typ": "2.DE"
+      },
+      {
+        "vin": "WVWZZZCD3TW239933",
+        "model": "GOLF A8 PA",
+        "pz": "2026-04-02",
+        "dni_mag": 75,
+        "dni_exp": 59,
+        "typ": "2.DE"
+      }
+    ]
+  },
+  "dostawy": {
+    "cutoff": "2026-05-26",
+    "vgp": [
+      {
+        "data": "2026-05-30",
+        "model": "TOUAREG NF FL",
+        "vin": "WVGZZZCR1TD022898",
+        "wersja": "R-Line",
+        "silnik": "3.0 210 kw (286 HP) TDI ",
+        "paliwo": "DIESEL",
+        "sprzedawca": "",
+        "wolny": true,
+        "cena": 443080,
+        "typ": "2.DE"
+      },
+      {
+        "data": "2026-06-02",
+        "model": "GOLF A8  VARIANT PA",
+        "vin": "WVWZZZCD7TW643883",
+        "wersja": "R",
+        "silnik": "2,0 245 kW (333HP) TSI",
+        "paliwo": "BENZYNA",
+        "sprzedawca": "",
+        "wolny": true,
+        "cena": 227630,
+        "typ": "2.DE"
+      },
+      {
+        "data": "2026-05-29",
+        "model": "T-ROC NF",
+        "vin": "WVGZZZA21TV109295",
+        "wersja": "Life",
+        "silnik": "1.5 85 kW 116KM eTsi mhev ",
+        "paliwo": "BENZYNA",
+        "sprzedawca": "NOWAK ANITA",
+        "wolny": false,
+        "cena": 141650,
+        "typ": "1.CU"
+      },
+      {
+        "data": "2026-06-01",
+        "model": "PASSAT B9 VAR",
+        "vin": "WVWZZZCJ6TD059153",
+        "wersja": "Passat",
+        "silnik": "1.5  110 kW (150HP) eTsi mhev",
+        "paliwo": "BENZYNA",
+        "sprzedawca": "",
+        "wolny": true,
+        "cena": 181820,
+        "typ": "2.DE"
+      },
+      {
+        "data": "2026-05-29",
+        "model": "T-CROSS FL",
+        "vin": "WVGZZZC13TY051743",
+        "wersja": "Life",
+        "silnik": "1.0 85 kw (115HP) TSI ",
+        "paliwo": "BENZYNA",
+        "sprzedawca": "",
+        "wolny": true,
+        "cena": 127430,
+        "typ": "2.DE"
+      },
+      {
+        "data": "2026-05-29",
+        "model": "T-ROC NF",
+        "vin": "WVGZZZA27TV102156",
+        "wersja": "Style",
+        "silnik": "1.5 110 kW 150KM eTsi mhev ",
+        "paliwo": "BENZYNA",
+        "sprzedawca": "",
+        "wolny": true,
+        "cena": 166030,
+        "typ": "2.DE"
+      },
+      {
+        "data": "2026-05-29",
+        "model": "GOLF A8 PA",
+        "vin": "WVWZZZCD2TW265293",
+        "wersja": "R",
+        "silnik": "2,0 245 kW (333HP) TSI",
+        "paliwo": "BENZYNA",
+        "sprzedawca": "POKUSA KONRAD",
+        "wolny": false,
+        "cena": 221890,
+        "typ": "1.CU"
+      }
+    ],
+    "aah": []
+  },
+  "prognoza": [
+    {
+      "mc": "2026-06",
+      "cu": 68,
+      "de": 38,
+      "razem": 106
+    },
+    {
+      "mc": "2026-07",
+      "cu": 41,
+      "de": 22,
+      "razem": 63
+    },
+    {
+      "mc": "2026-08",
+      "cu": 1,
+      "de": 8,
+      "razem": 9
+    },
+    {
+      "mc": "2026-09+",
+      "cu": 0,
+      "de": 0,
+      "razem": 0
+    }
+  ],
+  "prognoza_model": [
+    {
+      "m": "TAIGO",
+      "n": 33
+    },
+    {
+      "m": "T-ROC NF",
+      "n": 15
+    },
+    {
+      "m": "POLO A06 FL",
+      "n": 10
+    },
+    {
+      "m": "GOLF A8 PA",
+      "n": 5
+    },
+    {
+      "m": "TIGUAN 3",
+      "n": 3
+    },
+    {
+      "m": "TAYRON",
+      "n": 3
+    },
+    {
+      "m": "T-CROSS FL",
+      "n": 3
+    }
+  ],
+  "pominiete_abh": 257,
+  "prognoza_handlowcy": [
+    {
+      "name": "— BEZ HANDLOWCA —",
+      "razem": 30,
+      "2026-06": 0,
+      "2026-07": 22,
+      "2026-08": 8,
+      "2026-09+": 0
+    },
+    {
+      "name": "POKUSA KONRAD",
+      "razem": 22,
+      "2026-06": 10,
+      "2026-07": 12,
+      "2026-08": 0,
+      "2026-09+": 0
+    },
+    {
+      "name": "MIKUSZ OSKAR",
+      "razem": 17,
+      "2026-06": 14,
+      "2026-07": 3,
+      "2026-08": 0,
+      "2026-09+": 0
+    },
+    {
+      "name": "ŻBIK KACPER",
+      "razem": 16,
+      "2026-06": 3,
+      "2026-07": 13,
+      "2026-08": 0,
+      "2026-09+": 0
+    },
+    {
+      "name": "NOWAK ANITA",
+      "razem": 12,
+      "2026-06": 6,
+      "2026-07": 5,
+      "2026-08": 1,
+      "2026-09+": 0
+    },
+    {
+      "name": "JÓŹWIAK FABIAN",
+      "razem": 6,
+      "2026-06": 1,
+      "2026-07": 5,
+      "2026-08": 0,
+      "2026-09+": 0
+    },
+    {
+      "name": "KOWALSKA MAGDALENA",
+      "razem": 4,
+      "2026-06": 4,
+      "2026-07": 0,
+      "2026-08": 0,
+      "2026-09+": 0
+    },
+    {
+      "name": "PAWLAS MAŁGORZATA",
+      "razem": 3,
+      "2026-06": 1,
+      "2026-07": 2,
+      "2026-08": 0,
+      "2026-09+": 0
+    },
+    {
+      "name": "FUDALEJ TYMOTEUSZ",
+      "razem": 3,
+      "2026-06": 3,
+      "2026-07": 0,
+      "2026-08": 0,
+      "2026-09+": 0
+    },
+    {
+      "name": "DZIURZYŃSKI PATRYK",
+      "razem": 1,
+      "2026-06": 1,
+      "2026-07": 0,
+      "2026-08": 0,
+      "2026-09+": 0
+    },
+    {
+      "name": "POTOCZNY ROBERT",
+      "razem": 1,
+      "2026-06": 0,
+      "2026-07": 1,
+      "2026-08": 0,
+      "2026-09+": 0
+    }
+  ],
+  "horizon": [
+    "2026-06",
+    "2026-07",
+    "2026-08",
+    "2026-09+"
+  ],
+  "aak_handlowcy": [
+    {
+      "name": "Dziurzyński Patryk",
+      "n": 3
+    },
+    {
+      "name": "Mikusz Oskar",
+      "n": 2
+    },
+    {
+      "name": "Pokusa Konrad",
+      "n": 1
+    },
+    {
+      "name": "Pawlas Małgorzata",
+      "n": 1
+    },
+    {
+      "name": "Jóźwiak Fabian",
+      "n": 1
+    }
+  ],
+  "ranking_aek": [
+    {
+      "name": "Mikusz Oskar",
+      "p": 3,
+      "u": 0,
+      "d": 3
+    },
+    {
+      "name": "Kowalska Magdalena",
+      "p": 2,
+      "u": 0,
+      "d": 2
+    },
+    {
+      "name": "Nowak Anita",
+      "p": 4,
+      "u": 2,
+      "d": 2
+    },
+    {
+      "name": "Żbik Kacper",
+      "p": 1,
+      "u": 0,
+      "d": 1
+    },
+    {
+      "name": "Fudalej Tymoteusz",
+      "p": 0,
+      "u": 1,
+      "d": -1
+    },
+    {
+      "name": "Pokusa Konrad",
+      "p": 0,
+      "u": 1,
+      "d": -1
+    }
+  ],
+  "ranking_combined": [
+    {
+      "name": "Dziurzyński Patryk",
+      "aak": 3,
+      "aek_p": 0,
+      "aek_u": 0,
+      "aek_d": 0
+    },
+    {
+      "name": "Mikusz Oskar",
+      "aak": 2,
+      "aek_p": 3,
+      "aek_u": 0,
+      "aek_d": 3
+    },
+    {
+      "name": "Pokusa Konrad",
+      "aak": 1,
+      "aek_p": 0,
+      "aek_u": 1,
+      "aek_d": -1
+    },
+    {
+      "name": "Jóźwiak Fabian",
+      "aak": 1,
+      "aek_p": 0,
+      "aek_u": 0,
+      "aek_d": 0
+    },
+    {
+      "name": "Pawlas Małgorzata",
+      "aak": 1,
+      "aek_p": 0,
+      "aek_u": 0,
+      "aek_d": 0
+    },
+    {
+      "name": "Nowak Anita",
+      "aak": 0,
+      "aek_p": 4,
+      "aek_u": 2,
+      "aek_d": 2
+    },
+    {
+      "name": "Żbik Kacper",
+      "aak": 0,
+      "aek_p": 1,
+      "aek_u": 0,
+      "aek_d": 1
+    },
+    {
+      "name": "Kowalska Magdalena",
+      "aak": 0,
+      "aek_p": 2,
+      "aek_u": 0,
+      "aek_d": 2
+    },
+    {
+      "name": "Fudalej Tymoteusz",
+      "aak": 0,
+      "aek_p": 0,
+      "aek_u": 1,
+      "aek_d": -1
+    },
+    {
+      "name": "Potoczny Robert",
+      "aak": 0,
+      "aek_p": 0,
+      "aek_u": 0,
+      "aek_d": 0
+    }
+  ],
+  "filtered_clients": [
+    "KLINIKA TESTOSTERONU",
+    "NONO INVEST",
+    "SB TECHNIC",
+    "HAPPY AND RICH",
+    "COPCO",
+    "MAJCHER",
+    "GORA"
+  ],
+  "filtered_records_count": 11,
+  "filtered_records_detail": [
+    {
+      "kontrahent": "COPCO PLUS SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
+      "model": "TAIGO",
+      "obszar": "DETALICZNY_RD",
+      "odpowiedzialny": "KOWALSKA MAGDALENA"
+    },
+    {
+      "kontrahent": "SYLWESTER BUGAŃSKI - SB TECHNIC - DZIAŁALNOŚĆ INŻYNIERYJNA",
+      "model": "TAIGO",
+      "obszar": "DETALICZNY_reszta",
+      "odpowiedzialny": "FUDALEJ TYMOTEUSZ"
+    }
+  ],
+  "cele": {
+    "cel_zespolowy": 64,
+    "wykonanie_realne": 5,
+    "brakuje": 59,
+    "pct": 8,
+    "uplyw": 0.095,
+    "abk_bm": 43,
+    "fk": 3,
+    "do_dyspozycji": 46,
+    "prognoza": 8,
+    "cele": [
+      {
+        "name": "Pawlas Małgorzata",
+        "short": "Małgosia",
+        "cel": 4,
+        "wykonanie": 1,
+        "flota": 0,
+        "pct": 25,
+        "brakuje": 3,
+        "nadwyzka": 0,
+        "status": "risk"
+      },
+      {
+        "name": "Mikusz Oskar",
+        "short": "Oskar",
+        "cel": 12,
+        "wykonanie": 2,
+        "flota": 0,
+        "pct": 17,
+        "brakuje": 10,
+        "nadwyzka": 0,
+        "status": "risk"
+      },
+      {
+        "name": "Pokusa Konrad",
+        "short": "Konrad",
+        "cel": 12,
+        "wykonanie": 1,
+        "flota": 0,
+        "pct": 8,
+        "brakuje": 11,
+        "nadwyzka": 0,
+        "status": "risk"
+      },
+      {
+        "name": "Jóźwiak Fabian",
+        "short": "Fabian",
+        "cel": 12,
+        "wykonanie": 1,
+        "flota": 0,
+        "pct": 8,
+        "brakuje": 11,
+        "nadwyzka": 0,
+        "status": "risk"
+      },
+      {
+        "name": "Żbik Kacper",
+        "short": "Kacper",
+        "cel": 12,
+        "wykonanie": 0,
+        "flota": 0,
+        "pct": 0,
+        "brakuje": 12,
+        "nadwyzka": 0,
+        "status": "risk"
+      },
+      {
+        "name": "Nowak Anita",
+        "short": "Anita",
+        "cel": 12,
+        "wykonanie": 0,
+        "flota": 0,
+        "pct": 0,
+        "brakuje": 12,
+        "nadwyzka": 0,
+        "status": "risk"
+      }
+    ],
+    "bez_celu": [
+      {
+        "name": "Dziurzyński Patryk",
+        "rd": 0,
+        "flota": 3
+      },
+      {
+        "name": "Kowalska Magdalena",
+        "rd": 0,
+        "flota": 0
+      }
+    ],
+    "zadania": [
+      {
+        "nazwa": "Trade-in",
+        "opis": "Szanse trade-in pozyskane od klientów",
+        "handlowcy": [
+          {
+            "name": "Anita Nowak",
+            "short": "Anita",
+            "cel": 12,
+            "wykonanie": 1
+          },
+          {
+            "name": "Konrad Pokusa",
+            "short": "Konrad",
+            "cel": 12,
+            "wykonanie": 0
+          },
+          {
+            "name": "Oskar Mikusz",
+            "short": "Oskar",
+            "cel": 12,
+            "wykonanie": 0
+          },
+          {
+            "name": "Kacper Żbik",
+            "short": "Kacper",
+            "cel": 12,
+            "wykonanie": 0
+          },
+          {
+            "name": "Fabian Jóźwiak",
+            "short": "Fabian",
+            "cel": 12,
+            "wykonanie": 0
+          },
+          {
+            "name": "Małgorzata Pawlas",
+            "short": "Małgosia",
+            "cel": 4,
+            "wykonanie": 0
+          },
+          {
+            "name": "Magdalena Kowalska",
+            "short": "Magda",
+            "cel": 12,
+            "wykonanie": 0
+          },
+          {
+            "name": "Patryk Dziurzyński",
+            "short": "Patryk",
+            "cel": 12,
+            "wykonanie": 0
+          }
+        ]
+      },
+      {
+        "nazwa": "Opinie Google",
+        "opis": "Opinie wystawione przez klientów w Google",
+        "handlowcy": [
+          {
+            "name": "Anita Nowak",
+            "short": "Anita",
+            "cel": 4,
+            "wykonanie": 1
+          },
+          {
+            "name": "Konrad Pokusa",
+            "short": "Konrad",
+            "cel": 4,
+            "wykonanie": 0
+          },
+          {
+            "name": "Oskar Mikusz",
+            "short": "Oskar",
+            "cel": 4,
+            "wykonanie": 0
+          },
+          {
+            "name": "Kacper Żbik",
+            "short": "Kacper",
+            "cel": 4,
+            "wykonanie": 0
+          },
+          {
+            "name": "Fabian Jóźwiak",
+            "short": "Fabian",
+            "cel": 4,
+            "wykonanie": 1
+          },
+          {
+            "name": "Małgorzata Pawlas",
+            "short": "Małgosia",
+            "cel": 4,
+            "wykonanie": 0
+          },
+          {
+            "name": "Magdalena Kowalska",
+            "short": "Magda",
+            "cel": 4,
+            "wykonanie": 1
+          },
+          {
+            "name": "Patryk Dziurzyński",
+            "short": "Patryk",
+            "cel": 4,
+            "wykonanie": 0
+          }
+        ]
+      }
+    ]
+  },
+  "stock_funkcyjne": {
+    "uzywane": [
+      {
+        "typ": "Ex-demo",
+        "model": "T-Roc",
+        "vin": "WVGZZZA1ZPV629191",
+        "data_rej": "2023-05-24",
+        "cena_sprzedazy": 110000,
+        "cena_zakupu_brutto": 155524
+      },
+      {
+        "typ": "Ex-demo",
+        "model": "Passat",
+        "vin": "WVWZZZCJ5RD004251",
+        "data_rej": "2024-03-14",
+        "cena_sprzedazy": 130000,
+        "cena_zakupu_brutto": 169124
+      },
+      {
+        "typ": "ZS",
+        "model": "T-Roc",
+        "vin": "WVGZZZA19RV165985",
+        "data_rej": null,
+        "cena_sprzedazy": 110000,
+        "cena_zakupu_brutto": 126717
+      },
+      {
+        "typ": "ZS",
+        "model": "Tiguan",
+        "vin": "WVGZZZCT9RW018610",
+        "data_rej": "2024-06-15",
+        "cena_sprzedazy": 135000,
+        "cena_zakupu_brutto": 145776
+      },
+      {
+        "typ": "ZS",
+        "model": "T-Cross",
+        "vin": "WVGZZZC14RY007677",
+        "data_rej": "2024-06-28",
+        "cena_sprzedazy": 85000,
+        "cena_zakupu_brutto": 106293
+      },
+      {
+        "typ": "demo",
+        "model": "Golf",
+        "vin": "WVWZZZCD6RW400414",
+        "data_rej": "2024-07-18",
+        "cena_sprzedazy": 115000,
+        "cena_zakupu_brutto": 158489
+      },
+      {
+        "typ": "ZS",
+        "model": "Form",
+        "vin": "VSSZZZKM8SR052197",
+        "data_rej": "2025-09-01",
+        "cena_sprzedazy": 130000,
+        "cena_zakupu_brutto": 160585
+      },
+      {
+        "typ": "ZS",
+        "model": "T-Cross",
+        "vin": "WVGZZZC19RY031571",
+        "data_rej": "2024-10-16",
+        "cena_sprzedazy": 95000,
+        "cena_zakupu_brutto": 121891
+      },
+      {
+        "typ": "ZS",
+        "model": "T-Roc",
+        "vin": "WVGZZZA17SV104608",
+        "data_rej": "2025-04-22",
+        "cena_sprzedazy": 100000,
+        "cena_zakupu_brutto": 120866
+      },
+      {
+        "typ": "ZS",
+        "model": "T-Cross",
+        "vin": "WVGZZZC18SY072148",
+        "data_rej": "2025-04-22",
+        "cena_sprzedazy": 105000,
+        "cena_zakupu_brutto": 113812
+      },
+      {
+        "typ": "ZS",
+        "model": "T-Roc",
+        "vin": "WVGZZZA19SV104481",
+        "data_rej": "2025-04-22",
+        "cena_sprzedazy": 100000,
+        "cena_zakupu_brutto": 119602
+      }
+    ],
+    "salon": [
+      {
+        "typ": "demo",
+        "model": "Tayron",
+        "vin": "WVGZZZR4XSW003815",
+        "data_rej": "2025-03-12",
+        "cena_sprzedazy": 230000,
+        "cena_zakupu_brutto": 262350
+      },
+      {
+        "typ": "demo",
+        "model": "Passat",
+        "vin": "WVWZZZCJXSD043164",
+        "data_rej": "2025-05-06",
+        "cena_sprzedazy": 150000,
+        "cena_zakupu_brutto": 174583
+      },
+      {
+        "typ": "ZS",
+        "model": "Tiguan",
+        "vin": "WVGZZZCT3SW526710",
+        "data_rej": "2025-05-06",
+        "cena_sprzedazy": 160000,
+        "cena_zakupu_brutto": 163547
+      },
+      {
+        "typ": "demo",
+        "model": "Touran",
+        "vin": "WVGZZZ1T5SW017513",
+        "data_rej": "2025-05-13",
+        "cena_sprzedazy": 150000,
+        "cena_zakupu_brutto": 159816
+      },
+      {
+        "typ": "demo",
+        "model": "Tiguan",
+        "vin": "WVGZZZCT9TW513025",
+        "data_rej": "2025-10-03",
+        "cena_sprzedazy": 170000,
+        "cena_zakupu_brutto": 177175
+      },
+      {
+        "typ": "demo",
+        "model": "N T-Roc",
+        "vin": "WVGZZZA24TV001186",
+        "data_rej": "2025-12-04",
+        "cena_sprzedazy": 138000,
+        "cena_zakupu_brutto": 137804
+      },
+      {
+        "typ": "demo",
+        "model": "T-Cross",
+        "vin": "WVGZZZC16TY039828",
+        "data_rej": "2026-02-26",
+        "cena_sprzedazy": 110000,
+        "cena_zakupu_brutto": 109317
+      },
+      {
+        "typ": "demo",
+        "model": "N T-Roc",
+        "vin": "WVGZZZA26TV029023",
+        "data_rej": "2026-03-06",
+        "cena_sprzedazy": 155000,
+        "cena_zakupu_brutto": 153636
+      },
+      {
+        "typ": "demo",
+        "model": "Taigo",
+        "vin": "WVGZZZCS3TY038192",
+        "data_rej": "2026-03-19",
+        "cena_sprzedazy": 119000,
+        "cena_zakupu_brutto": 118202
+      },
+      {
+        "typ": "demo",
+        "model": "N T-Roc",
+        "vin": "WVGZZZA27TV042735",
+        "data_rej": "2026-03-10",
+        "cena_sprzedazy": 115000,
+        "cena_zakupu_brutto": 113132
+      },
+      {
+        "typ": "ZS",
+        "model": "N T-Roc",
+        "vin": "WVGZZZA2XTV061134",
+        "data_rej": "2026-04-13",
+        "cena_sprzedazy": 118000,
+        "cena_zakupu_brutto": 115984
+      }
+    ]
+  },
+  "stock_push": [
+    {
+      "cy": "2025",
+      "komisja": "128356",
+      "kod_modelu": "CJ54DZ",
+      "model_long": "Volkswagen Passat Elegance 1.5 TSI mHEV 110 kW",
+      "vin": "WVWZZZCJ8TD011718",
+      "cena_sprzedazy": 175000,
+      "cena_zakupu": 173817,
+      "kolor": "0R0R",
+      "uwagi": "odbiór maj",
+      "sprzedane": "TAK",
+      "status": "SPRZEDANE",
+      "tyg_zp8": "38/2025",
+      "data_zam": "2026-03-31",
+      "tapicerka": "AP"
+    },
+    {
+      "cy": "2025",
+      "komisja": "143663",
+      "kod_modelu": "CT1CBM",
+      "model_long": "Volkswagen Tiguan Life Plus 1,5 eTSI 110 kW",
+      "vin": "WVGZZZCT8TW033087",
+      "cena_sprzedazy": 149000,
+      "cena_zakupu": 144429,
+      "kolor": "V2V2",
+      "uwagi": "odbiór maj",
+      "sprzedane": "TAK",
+      "status": "SPRZEDANE",
+      "tyg_zp8": "51/2025",
+      "data_zam": "2026-03-31",
+      "tapicerka": "AO"
+    },
+    {
+      "cy": "2025",
+      "komisja": "133061",
+      "kod_modelu": "D315BZ",
+      "model_long": "Volkswagen T-Cross R-Line Plus 1.0 TSI",
+      "vin": "WVGZZZC13TY049099",
+      "cena_sprzedazy": 103000,
+      "cena_zakupu": 98244,
+      "kolor": "1C1C",
+      "uwagi": "otomoto/render ZASTĘPCZY",
+      "sprzedane": "TAK",
+      "status": "SPRZEDANE",
+      "tyg_zp8": "48/2025",
+      "data_zam": "2026-03-31",
+      "tapicerka": "WS"
+    },
+    {
+      "cy": "2025",
+      "komisja": "127380",
+      "kod_modelu": "D315PZ",
+      "model_long": "Volkswagen T-Cross R-Line Plus 1.5 TSI ACT",
+      "vin": "WVGZZZC15TY047919",
+      "cena_sprzedazy": 112000,
+      "cena_zakupu": 109262,
+      "kolor": "1C1C",
+      "uwagi": "ZASTĘPCZY",
+      "sprzedane": "TAK",
+      "status": "SPRZEDANE",
+      "tyg_zp8": "47/2025",
+      "data_zam": "2026-03-31",
+      "tapicerka": "WS"
+    },
+    {
+      "cy": "2025",
+      "komisja": "127384",
+      "kod_modelu": "D315PZ",
+      "model_long": "Volkswagen T-Cross R-Line Plus 1.5 TSI ACT",
+      "vin": "WVGZZZC10TY049979",
+      "cena_sprzedazy": 112000,
+      "cena_zakupu": 109904,
+      "kolor": "P8P8",
+      "uwagi": "ZASTĘPCZY",
+      "sprzedane": "TAK",
+      "status": "SPRZEDANE",
+      "tyg_zp8": "48/2025",
+      "data_zam": "2026-03-31",
+      "tapicerka": "WS"
+    },
+    {
+      "cy": "2026",
+      "komisja": "151905",
+      "kod_modelu": "D413ME",
+      "model_long": "Volkswagen T-Roc Life 1.5 eTSI 85 kW",
+      "vin": "WVGZZZA2XTV061134",
+      "cena_sprzedazy": 119000,
+      "cena_zakupu": 115781,
+      "kolor": "A6A6",
+      "uwagi": "odbiór sierpień - jeździe jako zastępczy serwisu",
+      "sprzedane": "",
+      "status": "NIESPRZEDANE",
+      "tyg_zp8": "09/2026",
+      "data_zam": "2026-03-31",
+      "tapicerka": "AP"
+    }
+  ],
+  "grafik": {
+    "aktualny": {
+      "rok": 2026,
+      "mc": 6,
+      "mc_label": "czerwiec 2026",
+      "dni": 30,
+      "weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        0,
+        1
+      ],
+      "holidays": {
+        "4": "Boże Ciało"
+      },
+      "handlowcy": [
+        {
+          "short": "Anita",
+          "name": "Nowak Anita",
+          "days": [
+            "9",
+            "9",
+            "9",
+            "",
+            "9",
+            "8",
+            "",
+            "10",
+            "u",
+            "10",
+            "10",
+            "10",
+            "",
+            "",
+            "u",
+            "u",
+            "8",
+            "8",
+            "8",
+            "8",
+            "",
+            "9",
+            "9",
+            "9",
+            "u",
+            "u",
+            "",
+            "",
+            "9",
+            "9"
+          ]
+        },
+        {
+          "short": "Oskar",
+          "name": "Mikusz Oskar",
+          "days": [
+            "8",
+            "8",
+            "u",
+            "",
+            "u",
+            "u",
+            "",
+            "u",
+            "u",
+            "9",
+            "9",
+            "9",
+            "",
+            "",
+            "10",
+            "10",
+            "10",
+            "10",
+            "10",
+            "",
+            "",
+            "8",
+            "8",
+            "8",
+            "8",
+            "8",
+            "",
+            "",
+            "9",
+            "9"
+          ]
+        },
+        {
+          "short": "Fabian",
+          "name": "Jóźwiak Fabian",
+          "days": [
+            "10",
+            "10",
+            "10",
+            "",
+            "10",
+            "8",
+            "",
+            "8",
+            "8",
+            "8",
+            "8",
+            "8",
+            "",
+            "",
+            "9",
+            "9",
+            "u",
+            "9",
+            "9",
+            "8",
+            "",
+            "10",
+            "10",
+            "10",
+            "10",
+            "10",
+            "",
+            "",
+            "8",
+            "8"
+          ]
+        },
+        {
+          "short": "Konrad",
+          "name": "Pokusa Konrad",
+          "days": [
+            "u",
+            "u",
+            "u",
+            "",
+            "u",
+            "",
+            "",
+            "9",
+            "9",
+            "9",
+            "9",
+            "9",
+            "8",
+            "",
+            "9",
+            "9",
+            "9",
+            "9",
+            "9",
+            "",
+            "",
+            "10",
+            "8",
+            "8",
+            "8",
+            "8",
+            "8",
+            "",
+            "10",
+            "10"
+          ]
+        },
+        {
+          "short": "Kacper",
+          "name": "Żbik Kacper",
+          "days": [
+            "8",
+            "8",
+            "8",
+            "",
+            "8",
+            "u",
+            "",
+            "u",
+            "8",
+            "8",
+            "8",
+            "8",
+            "8",
+            "",
+            "10",
+            "10",
+            "10",
+            "8",
+            "u",
+            "",
+            "",
+            "u",
+            "10",
+            "10",
+            "10",
+            "10",
+            "8",
+            "",
+            "10",
+            "10"
+          ]
+        },
+        {
+          "short": "Małgosia",
+          "name": "Pawlas Małgorzata",
+          "days": [
+            "9",
+            "u",
+            "9",
+            "",
+            "10",
+            "8",
+            "",
+            "10",
+            "10",
+            "10",
+            "10",
+            "10",
+            "",
+            "",
+            "8",
+            "8",
+            "8",
+            "u",
+            "u",
+            "u",
+            "",
+            "u",
+            "9",
+            "9",
+            "9",
+            "9",
+            "8",
+            "",
+            "8",
+            "8"
+          ]
+        },
+        {
+          "short": "Kacper N",
+          "name": "Kacper N (detal)",
+          "days": [
+            "9",
+            "9",
+            "9",
+            "",
+            "9",
+            "",
+            "",
+            "9",
+            "9",
+            "9",
+            "9",
+            "9",
+            "8",
+            "",
+            "9",
+            "9",
+            "9",
+            "9",
+            "9",
+            "8",
+            "",
+            "9",
+            "9",
+            "9",
+            "9",
+            "9",
+            "",
+            "",
+            "9",
+            "9"
+          ]
+        },
+        {
+          "short": "Patryk",
+          "name": "Dziurzyński Patryk",
+          "days": [
+            "",
+            "",
+            "",
+            "",
+            "u",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "s",
+            "s",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "short": "Magda",
+          "name": "Kowalska Magdalena",
+          "days": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "s",
+            "s",
+            "",
+            "",
+            "u",
+            "u",
+            "u",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "asystenci": [
+        {
+          "short": "Agata",
+          "name": "Agata",
+          "days": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "short": "Dominika",
+          "name": "Dominika",
+          "days": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "short": "Wiktoria",
+          "name": "Wiktoria",
+          "days": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "plan_urlopowy": [
+        {
+          "d_od": 1,
+          "d_do": 3,
+          "kto_short": "Konrad",
+          "kto_full": "Pokusa Konrad",
+          "typ": "URLOP"
+        },
+        {
+          "d_od": 2,
+          "d_do": 2,
+          "kto_short": "Małgosia",
+          "kto_full": "Pawlas Małgorzata",
+          "typ": "URLOP"
+        },
+        {
+          "d_od": 3,
+          "d_do": 3,
+          "kto_short": "Oskar",
+          "kto_full": "Mikusz Oskar",
+          "typ": "URLOP"
+        },
+        {
+          "d_od": 5,
+          "d_do": 5,
+          "kto_short": "Konrad",
+          "kto_full": "Pokusa Konrad",
+          "typ": "URLOP"
+        },
+        {
+          "d_od": 5,
+          "d_do": 6,
+          "kto_short": "Oskar",
+          "kto_full": "Mikusz Oskar",
+          "typ": "URLOP"
+        },
+        {
+          "d_od": 5,
+          "d_do": 5,
+          "kto_short": "Patryk",
+          "kto_full": "Dziurzyński Patryk",
+          "typ": "URLOP"
+        },
+        {
+          "d_od": 6,
+          "d_do": 6,
+          "kto_short": "Kacper",
+          "kto_full": "Żbik Kacper",
+          "typ": "URLOP"
+        },
+        {
+          "d_od": 8,
+          "d_do": 8,
+          "kto_short": "Kacper",
+          "kto_full": "Żbik Kacper",
+          "typ": "URLOP"
+        },
+        {
+          "d_od": 8,
+          "d_do": 9,
+          "kto_short": "Oskar",
+          "kto_full": "Mikusz Oskar",
+          "typ": "URLOP"
+        },
+        {
+          "d_od": 9,
+          "d_do": 9,
+          "kto_short": "Anita",
+          "kto_full": "Nowak Anita",
+          "typ": "URLOP"
+        },
+        {
+          "d_od": 15,
+          "d_do": 16,
+          "kto_short": "Anita",
+          "kto_full": "Nowak Anita",
+          "typ": "URLOP"
+        },
+        {
+          "d_od": 17,
+          "d_do": 17,
+          "kto_short": "Fabian",
+          "kto_full": "Jóźwiak Fabian",
+          "typ": "URLOP"
+        },
+        {
+          "d_od": 18,
+          "d_do": 19,
+          "kto_short": "Magda",
+          "kto_full": "Kowalska Magdalena",
+          "typ": "SZKOLENIE"
+        },
+        {
+          "d_od": 18,
+          "d_do": 20,
+          "kto_short": "Małgosia",
+          "kto_full": "Pawlas Małgorzata",
+          "typ": "URLOP"
+        },
+        {
+          "d_od": 18,
+          "d_do": 19,
+          "kto_short": "Patryk",
+          "kto_full": "Dziurzyński Patryk",
+          "typ": "SZKOLENIE"
+        },
+        {
+          "d_od": 19,
+          "d_do": 19,
+          "kto_short": "Kacper",
+          "kto_full": "Żbik Kacper",
+          "typ": "URLOP"
+        },
+        {
+          "d_od": 22,
+          "d_do": 22,
+          "kto_short": "Kacper",
+          "kto_full": "Żbik Kacper",
+          "typ": "URLOP"
+        },
+        {
+          "d_od": 22,
+          "d_do": 24,
+          "kto_short": "Magda",
+          "kto_full": "Kowalska Magdalena",
+          "typ": "URLOP"
+        },
+        {
+          "d_od": 22,
+          "d_do": 22,
+          "kto_short": "Małgosia",
+          "kto_full": "Pawlas Małgorzata",
+          "typ": "URLOP"
+        },
+        {
+          "d_od": 25,
+          "d_do": 26,
+          "kto_short": "Anita",
+          "kto_full": "Nowak Anita",
+          "typ": "URLOP"
+        },
+        {
+          "d_od": 29,
+          "d_do": 30,
+          "kto_short": "Anita",
+          "kto_full": "Nowak Anita",
+          "typ": "URLOP"
+        }
+      ]
+    },
+    "nastepny": {
+      "rok": 2026,
+      "mc": 7,
+      "mc_label": "lipiec 2026",
+      "dni": 31,
+      "weekdays": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "holidays": {},
+      "handlowcy": [
+        {
+          "short": "Anita",
+          "name": "Nowak Anita",
+          "days": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "short": "Oskar",
+          "name": "Mikusz Oskar",
+          "days": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "short": "Magda",
+          "name": "Kowalska Magdalena",
+          "days": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "short": "Tymek",
+          "name": "Fudalej Tymoteusz",
+          "days": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "short": "Fabian",
+          "name": "Jóźwiak Fabian",
+          "days": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "short": "Konrad",
+          "name": "Pokusa Konrad",
+          "days": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "short": "Kacper",
+          "name": "Żbik Kacper",
+          "days": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "short": "Małgosia",
+          "name": "Pawlas Małgorzata",
+          "days": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "short": "Patryk",
+          "name": "Dziurzyński Patryk",
+          "days": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "asystenci": [
+        {
+          "short": "Agata",
+          "name": "Agata",
+          "days": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "short": "Dominika",
+          "name": "Dominika",
+          "days": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "short": "Wiktoria",
+          "name": "Wiktoria",
+          "days": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "plan_urlopowy": [],
+      "pusty": true
+    }
+  },
+  "kpi_handlowcy": [
+    {
+      "name": "Anita Nowak",
+      "oferty": 3,
+      "klienci": 4,
+      "zamowienia": 2,
+      "wydania": 0,
+      "traffic": 2,
+      "opinie": 1,
+      "trade_in": 1
+    },
+    {
+      "name": "Konrad Pokusa",
+      "oferty": 0,
+      "klienci": 0,
+      "zamowienia": 0,
+      "wydania": 2,
+      "traffic": 0,
+      "opinie": 0,
+      "trade_in": 0
+    },
+    {
+      "name": "Oskar Mikusz",
+      "oferty": 3,
+      "klienci": 3,
+      "zamowienia": 2,
+      "wydania": 1,
+      "traffic": 2,
+      "opinie": 0,
+      "trade_in": 0
+    },
+    {
+      "name": "Kacper Żbik",
+      "oferty": 5,
+      "klienci": 3,
+      "zamowienia": 1,
+      "wydania": 0,
+      "traffic": 3,
+      "opinie": 0,
+      "trade_in": 0
+    },
+    {
+      "name": "Fabian Jóźwiak",
+      "oferty": 4,
+      "klienci": 4,
+      "zamowienia": 0,
+      "wydania": 0,
+      "traffic": 1,
+      "opinie": 1,
+      "trade_in": 0
+    },
+    {
+      "name": "Małgorzata Pawlas",
+      "oferty": 4,
+      "klienci": 5,
+      "zamowienia": 0,
+      "wydania": 1,
+      "traffic": 1,
+      "opinie": 0,
+      "trade_in": 0
+    },
+    {
+      "name": "Magdalena Kowalska",
+      "oferty": 2,
+      "klienci": 0,
+      "zamowienia": 0,
+      "wydania": 1,
+      "traffic": 0,
+      "opinie": 1,
+      "trade_in": 0
+    },
+    {
+      "name": "Patryk Dziurzyński",
+      "oferty": 4,
+      "klienci": 9,
+      "zamowienia": 0,
+      "wydania": 0,
+      "traffic": 0,
+      "opinie": 0,
+      "trade_in": 0
+    }
+  ],
+  "kpi_cele": {
+    "klienci": 60,
+    "opinie": 6,
+    "trade_in": 12
+  },
+  "restrykcje": {
+    "pdf": [
+      {
+        "model": "Wszystkie modele",
+        "kod": "1M6/1M9/1D2",
+        "opis": "Hak holowniczy"
+      },
+      {
+        "model": "Wszystkie modele",
+        "kod": "3FU/3FG",
+        "opis": "Dach panoramiczny"
+      },
+      {
+        "model": "POLO (AE1)",
+        "kod": "PI7",
+        "opis": "Obręcze Torsby 16\""
+      },
+      {
+        "model": "POLO (AE1)",
+        "kod": "51B",
+        "opis": "Kontrastowy dach"
+      },
+      {
+        "model": "GOLF (DA1/DB5)",
+        "kod": "mHEV",
+        "opis": "Silniki mHEV"
+      },
+      {
+        "model": "GOLF (DA1/DB5)",
+        "kod": "Performance",
+        "opis": "Pakiet Performance Plus / GTI / R-Performance / GTI Ed.50"
+      },
+      {
+        "model": "GOLF (DA1/DB5)",
+        "kod": "Czarny dach",
+        "opis": "Czarny dach"
+      },
+      {
+        "model": "GOLF (DA1/DB5)",
+        "kod": "40P/PJN/PI9/C7M",
+        "opis": "Obręcze Nottingham 7.5J×17 / Warmenau 19\""
+      },
+      {
+        "model": "TIGUAN (CT1)",
+        "kod": "8VP/PLB/8VJ/PLA",
+        "opis": "Lampy tylne LED (Pakiet Światło / IQ Light HD LED Matrix) — opóźnienia w tyg. 23-29"
+      },
+      {
+        "model": "TIGUAN (CT1)",
+        "kod": "0K4",
+        "opis": "PHEV"
+      },
+      {
+        "model": "TIGUAN (CT1)",
+        "kod": "V11",
+        "opis": "Obręcze Venezia 7J×17, czarne, szlif diamentowy"
+      },
+      {
+        "model": "TIGUAN (CT1)",
+        "kod": "F15/F14/PJU/PJR",
+        "opis": "Obręcze York 8J×20, czarne / czarne, szlif diamentowy"
+      },
+      {
+        "model": "TAYRON (R41)",
+        "kod": "F14/F15/PJI/PJM",
+        "opis": "Felgi York 20\""
+      },
+      {
+        "model": "TAYRON (R41)",
+        "kod": "V11",
+        "opis": "Obręcze Venezia 7J×17, czarne, szlif diamentowy"
+      },
+      {
+        "model": "TAYRON (R41)",
+        "kod": "KA9",
+        "opis": "Pakiet zimowy"
+      },
+      {
+        "model": "ID.4 (E21) / ID.5 (E39)",
+        "kod": "PBF/PBN/PBM/PAK/WAJ",
+        "opis": "Wnętrze Style Plus, Pakiet wnętrze Plus"
+      },
+      {
+        "model": "ID.7 / ID.7 Tourer (ED2/ED5)",
+        "kod": "64Q",
+        "opis": "Obręcze Trondheim 8,5J×20 (przód) 9,5J×20 (tył)"
+      }
+    ],
+    "kalendarz": [
+      {
+        "model": "POLO (AE1)",
+        "tydzien": "33/2026",
+        "miesiac": "LISTOPAD",
+        "opoznienie": "-",
+        "czas_dostawy": "7 TYGODNI"
+      },
+      {
+        "model": "T-CROSS (D31)",
+        "tydzien": "27/2026",
+        "miesiac": "LIPIEC",
+        "opoznienie": "-",
+        "czas_dostawy": "4 TYGODNIE"
+      },
+      {
+        "model": "TAIGO (CS1)",
+        "tydzien": "27/2026",
+        "miesiac": "Q1 2027",
+        "opoznienie": "-",
+        "czas_dostawy": "5 TYGODNI"
+      },
+      {
+        "model": "T-ROC (D41)",
+        "tydzien": "27/2026",
+        "miesiac": "LIPIEC",
+        "opoznienie": "-",
+        "czas_dostawy": "4 TYGODNIE"
+      },
+      {
+        "model": "GOLF HB (DA1)",
+        "tydzien": "27/2026",
+        "miesiac": "SIERPIEŃ",
+        "opoznienie": "-",
+        "czas_dostawy": "3 – 14 DNI"
+      },
+      {
+        "model": "GOLF VAR (DB5)",
+        "tydzien": "27/2026",
+        "miesiac": "WRZESIEŃ",
+        "opoznienie": "-",
+        "czas_dostawy": "3 – 14 DNI"
+      },
+      {
+        "model": "PASSAT (CJ5)",
+        "tydzien": "27/2026",
+        "miesiac": "WRZESIEŃ",
+        "opoznienie": "-",
+        "czas_dostawy": "3 – 14 DNI"
+      },
+      {
+        "model": "TIGUAN (CT1)",
+        "tydzien": "27/2026",
+        "miesiac": "SIERPIEŃ",
+        "opoznienie": "-",
+        "czas_dostawy": "3 – 14 DNI"
+      },
+      {
+        "model": "TAYRON (R41)",
+        "tydzien": "27/2026",
+        "miesiac": "LIPIEC",
+        "opoznienie": "-",
+        "czas_dostawy": "3 – 14 DNI"
+      },
+      {
+        "model": "ID. POLO (ES1)",
+        "tydzien": "28/2026",
+        "miesiac": "SIERPIEŃ",
+        "opoznienie": "-",
+        "czas_dostawy": "3 – 14 DNI"
+      },
+      {
+        "model": "ID.3 NEO (E13)",
+        "tydzien": "29/2026",
+        "miesiac": "WRZESIEŃ",
+        "opoznienie": "-",
+        "czas_dostawy": "3 – 14 DNI"
+      },
+      {
+        "model": "ID.4 (E21)",
+        "tydzien": "27/2026",
+        "miesiac": "PAŹDZIERNIK",
+        "opoznienie": "-",
+        "czas_dostawy": "3 – 14 DNI"
+      },
+      {
+        "model": "ID.5 (E39)",
+        "tydzien": "28/2026",
+        "miesiac": "WRZESIEŃ",
+        "opoznienie": "-",
+        "czas_dostawy": "3 – 14 DNI"
+      },
+      {
+        "model": "ID.7 (ED2)",
+        "tydzien": "27/2026",
+        "miesiac": "SIERPIEŃ",
+        "opoznienie": "-",
+        "czas_dostawy": "3 – 14 DNI"
+      },
+      {
+        "model": "ID.7 TOURER (ED5)",
+        "tydzien": "27/2026",
+        "miesiac": "SIERPIEŃ",
+        "opoznienie": "-",
+        "czas_dostawy": "3 – 14 DNI"
+      }
+    ],
+    "komunikaty": [
+      {
+        "tytul": "Rozdanie kwot produkcyjnych",
+        "tresc": "Na samochody magazynowe odbyło się 1.06.2026 r. Prosimy o wykorzystanie przyznanych kwot do 16.06.26. Przypominamy o nowych zasadach zamawiania, szczegóły IH 01/2026."
+      },
+      {
+        "tytul": "Plac centralny Importera",
+        "tresc": "Zachęcamy do zapoznania się z bogatą ofertą samochodów w ramach tzw. „Oferty pod ZWS\" importera w ramach locatingu VGP, szczegóły w Piśmie okólnym 29/2026. Obecnie na stoku znajduje się blisko 100 aut dostępnych od ręki."
+      },
+      {
+        "tytul": "ID.3 Neo",
+        "tresc": "Informujemy o wprowadzeniu nowego modelu ID.3 Neo. Szczegóły dotyczące nowego modelu znajdują się w Piśmie okólnym 44/2026."
+      },
+      {
+        "tytul": "ID. Polo",
+        "tresc": "Informujemy o wprowadzeniu nowego modelu ID. Polo. Szczegóły dotyczące nowego modelu znajdują się w Piśmie okólnym 45/2026."
+      },
+      {
+        "tytul": "Tiguan",
+        "tresc": "Z uwagi na restrykcje Pakietu Światło (kod PLA) oraz reflektorów IQ Light HD LED Matrix (kod PLB) zawartych w standardzie w wersji Life Plus oraz wyższych w tygodniach 23-29 mogą wystąpić opóźnienia produkcyjne."
+      },
+      {
+        "tytul": "ID. Family",
+        "tresc": "Producent informuje, że w związku z trwającym procesem implementacji zmian w procesach logistycznych możliwe jest czasowe wydłużenie czasu transportu egzemplarzy z rodziny ID. Dotyczy egzemplarzy produkowanych od 18. tygodnia kalendarzowego."
+      },
+      {
+        "tytul": "Polo",
+        "tresc": "Informujemy o wprowadzeniu pakietu sport do Polo w wersji R-line oraz R-line Plus. R-Line (5900 zł): sportowe zawieszenie, pakiet design, czarny dach, felgi York 17\" (korzyść z tyt. pakietu: 2450 zł). R-Line Plus (2690 zł): sportowe zawieszenie, pakiet design, czarny dach (korzyść z tyt. pakietu: 1380 zł)."
+      }
+    ],
+    "przerwy_produkcyjne": [
+      {
+        "model": "POLO (AE1)",
+        "tydzien": "BRAK PRZERWY"
+      },
+      {
+        "model": "T-CROSS (D31)",
+        "tydzien": "28-30/2026"
+      },
+      {
+        "model": "TAIGO (CS1)",
+        "tydzien": "28-30/2026"
+      },
+      {
+        "model": "NOWY T-ROC (D41)",
+        "tydzien": "29-34/2026"
+      },
+      {
+        "model": "GOLF HB (DA1)",
+        "tydzien": "30-32/2026"
+      },
+      {
+        "model": "GOLF VAR (DB5)",
+        "tydzien": "30-32/2026"
+      },
+      {
+        "model": "PASSAT (CJ5)",
+        "tydzien": "30-32/2026"
+      },
+      {
+        "model": "TIGUAN (CT1)",
+        "tydzien": "30-32/2026"
+      },
+      {
+        "model": "TAYRON (R41)",
+        "tydzien": "30-32/2026"
+      },
+      {
+        "model": "ID.3 NEO (E13)",
+        "tydzien": "29-32/2026"
+      },
+      {
+        "model": "ID.4 (E21)",
+        "tydzien": "29-32/2026"
+      },
+      {
+        "model": "ID.5 (E39)",
+        "tydzien": "30-32/2026"
+      },
+      {
+        "model": "ID.7 (ED2)",
+        "tydzien": "29-32/2026"
+      },
+      {
+        "model": "ID.7 TOURER (ED5)",
+        "tydzien": "29-32/2026"
+      }
+    ]
+  }
+};
+
+const $ = (s, p=document) => p.querySelector(s);
+const el = (tag, props={}, ...kids) => {
+  const e = document.createElement(tag);
+  Object.entries(props).forEach(([k,v]) => {
+    if (k === 'class') e.className = v;
+    else if (k === 'html') e.innerHTML = v;
+    else if (k.startsWith('on')) e.addEventListener(k.slice(2).toLowerCase(), v);
+    else e.setAttribute(k, v);
+  });
+  kids.flat().forEach(k => e.append(k?.nodeType ? k : document.createTextNode(k ?? '')));
+  return e;
+};
+const fmt = (n) => n === null || n === undefined ? '—' : (typeof n === 'number' ? n.toLocaleString('pl-PL') : n);
+const fmtPln = (n) => n === null || n === undefined ? '—' : n.toLocaleString('pl-PL') + ' zł';
+const sgn = (n) => n > 0 ? `+${n}` : `${n}`;
+const cls = (n) => n > 0 ? 'pos' : (n < 0 ? 'neg' : 'zero');
+const deltaCls = (n) => n > 0 ? 'delta-pos' : (n < 0 ? 'delta-neg' : 'delta-zero');
+const MONTHS_PL = ['styczeń','luty','marzec','kwiecień','maj','czerwiec','lipiec','sierpień','wrzesień','październik','listopad','grudzień'];
+const MONTHS_PL_SHORT = ['sty','lut','mar','kwi','maj','cze','lip','sie','wrz','paź','lis','gru'];
+function mcLabel(mc){const [y,m] = mc.split('-').map(Number);return MONTHS_PL[m-1] + ' ' + y;}
+function mcShort(mc){const [y,m] = mc.split('-').map(Number);return MONTHS_PL_SHORT[m-1] + ' ' + (y % 100);}
+
+const SECTIONS = [
+  {id:'realizacja', num:'01', label:'Realizacja AAK'},
+  {id:'cele',       num:'02', label:'Cele i zadania', badge:null, badgeBad:false},
+  {id:'grafik',     num:'03', label:'Grafik'},
+  {id:'aek',        num:'04', label:'Stan zamówień AEK'},
+  {id:'handlowcy',  num:'05', label:'Handlowcy'},
+  {id:'stock',      num:'06', label:'Stock', badge:DATA.magazyn.razem, badgeInfo:true},
+  {id:'informacja_produkcyjna', num:'07', label:'Informacja Produkcyjna'},
+];
+
+const nav = $('#nav');
+SECTIONS.forEach((s, i) => {
+  const btn = el('button', {class:'tab' + (i===0 ? ' active' : ''), 'data-target':s.id});
+  let badge = '';
+  if(s.badge !== null && s.badge !== undefined && s.badge > 0){
+    const cls = s.badgeBad ? '' : (s.badgeInfo ? 'info' : '');
+    badge = `<span class="badge ${cls}">${s.badge}</span>`;
+  }
+  btn.innerHTML = `<span class="num">${s.num}</span>${s.label}${badge}`;
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.main-nav .tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('main > .section').forEach(s => s.classList.remove('active'));
+    btn.classList.add('active');
+    $('#sec-'+s.id).classList.add('active');
+    window.scrollTo({top: 0, behavior:'smooth'});
+  });
+  nav.append(btn);
+});
+
+const main = $('#main');
+
+function rankNum(i){
+  const c = i===0?'gold':(i===1?'silver':(i===2?'bronze':''));
+  return `<div class="rank-num ${c}">${i+1}</div>`;
+}
+function filterAlertHTML(){
+  const klienci = DATA.filtered_clients.join(', ');
+  let rows = '';
+  DATA.filtered_records_detail.forEach(r => {
+    rows += `<tr><td style="font-size:11px">${r.kontrahent}</td><td style="font-size:11px">${r.model}</td><td style="font-size:11px">${r.obszar}</td><td style="font-size:11px">${r.odpowiedzialny}</td></tr>`;
+  });
+  return `<strong>FILTR UBYTKÓW AKTYWNY:</strong> pominięto <strong>${DATA.filtered_records_count}</strong> ubytków klientów na liście wykluczeń (${klienci}).
+    <details>
+      <summary style="margin-top:6px">Pokaż pominięte rekordy (${DATA.filtered_records_count})</summary>
+      <table><thead><tr><th>Kontrahent</th><th>Model</th><th>Obszar</th><th>Handlowiec</th></tr></thead><tbody>${rows}</tbody></table>
+    </details>`;
+}
+
+// ============================================================
+// SEKCJA 01: REALIZACJA AAK
+// ============================================================
+{
+  const sec = el('div', {class:'section active', id:'sec-realizacja'});
+  sec.append(el('div',{class:'section-head'},
+    el('h2',{},'Realizacja AAK'),
+    el('div',{class:'pigulka'},'Detal +2 od początku miesiąca · prognoza 2 · cel AAK: 64 szt.')
+  ));
+
+  sec.append(el('div',{class:'alert info',html:'<strong>CEL_AAK = 0</strong> w pliku — pole nie wypełnione przez importera. Cele indywidualne i zespołowe zarządzane ręcznie znajdziesz w zakładce <strong>Cele i zadania</strong>.<br><strong>AAK</strong> = wykonanie dzisiejsze · <strong>AAK-1</strong> = stan z poprzedniego raportu · <strong>Δ</strong> = przyrost od poprzedniego raportu (dzienny)'}));
+
+  function realCard(title, d){
+    const card = el('div',{class:'card accent'});
+    card.append(el('div',{class:'card-label'}, title));
+    const row = el('div',{class:'kpi-row',style:'grid-template-columns:repeat(4,1fr);margin-top:14px;margin-bottom:0'});
+    row.append(makeKpi('AAK bm', fmt(d.aak), `Δ od poprz.: ${sgn(d.delta_aak)} (z ${fmt(d.aak_prev)})`, cls(d.delta_aak)));
+    row.append(makeKpi('ABK na bm', fmt(d.abk_bm), 'zamówienia z terminem'));
+    row.append(makeKpi('AEK bm', fmt(d.aek), 'saldo zamówień (z pliku)', d.aek > 0 ? 'pos' : (d.aek < 0 ? 'neg' : '')));
+    row.append(makeKpi('Prognoza', fmt(d.prognoza), `przy upływie ${Math.round(d.uplyw*100)}%`));
+    card.append(row);
+    if(d.aakmax){
+      const pct = Math.round(d.aak / d.aakmax * 100);
+      const block = el('div',{class:'progress-block'});
+      block.append(el('div',{class:'progress-label'}, el('span',{},'Realizacja vs AAK max'), el('span',{}, `${d.aak} / ${d.aakmax} (${pct}%)`)));
+      const bar = el('div',{class:'progress'});
+      bar.append(el('div',{class:'progress-bar' + (pct>=80?' good':(pct>=50?'':' warn')),style:`width:${pct}%`}));
+      block.append(bar);
+      card.append(block);
+    }
+    return card;
+  }
+  function makeKpi(lbl, v, sub, c=''){
+    const k = el('div',{class:'kpi'});
+    k.append(el('div',{class:'lbl'},lbl));
+    k.append(el('div',{class:'v'},v));
+    if(sub) k.append(el('div',{class:'delta '+c},sub));
+    return k;
+  }
+
+  const wrap = el('div',{class:'grid-2'});
+  wrap.append(realCard('DETAL', DATA.realizacja.detal));
+  wrap.append(realCard('FLOTA', DATA.realizacja.flota));
+  sec.append(wrap);
+
+  const compare = el('div',{class:'table-wrap',style:'margin-top:16px'});
+  compare.append(el('div',{class:'table-head'}, el('h3',{},'Pełne wskaźniki realizacji')));
+  const tc = el('table');
+  tc.innerHTML = `
+    <thead><tr><th>Wskaźnik</th><th class="num">Detal</th><th class="num">Flota</th><th>Opis</th></tr></thead>
+    <tbody>
+      <tr><td>CEL_AAK</td><td class="num">${DATA.realizacja.detal.cel_aak || '—'}</td><td class="num">${DATA.realizacja.flota.cel_aak || '—'}</td><td>Cel sprzedaży z pliku (niewyznaczony)</td></tr>
+      <tr><td><strong>AAK</strong></td><td class="num"><strong>${DATA.realizacja.detal.aak}</strong></td><td class="num"><strong>${DATA.realizacja.flota.aak}</strong></td><td>Wykonanie bm (dzisiejsze)</td></tr>
+      <tr><td>AAK-1</td><td class="num">${DATA.realizacja.detal.aak_prev}</td><td class="num">${DATA.realizacja.flota.aak_prev}</td><td>Wykonanie z poprzedniego raportu</td></tr>
+      <tr><td><strong>Δ AAK</strong></td><td class="num ${deltaCls(DATA.realizacja.detal.delta_aak)}">${sgn(DATA.realizacja.detal.delta_aak)}</td><td class="num ${deltaCls(DATA.realizacja.flota.delta_aak)}">${sgn(DATA.realizacja.flota.delta_aak)}</td><td>Przyrost od poprzedniego raportu</td></tr>
+      <tr><td>ABK_bm</td><td class="num">${DATA.realizacja.detal.abk_bm}</td><td class="num">${DATA.realizacja.flota.abk_bm}</td><td>Zamówienia z terminem na bm</td></tr>
+      <tr><td>FK bez AAK</td><td class="num">${DATA.realizacja.detal.fk}</td><td class="num">${DATA.realizacja.flota.fk}</td><td>Faktury bez wydania</td></tr>
+      <tr><td>AEK</td><td class="num">${DATA.realizacja.detal.aek}</td><td class="num ${deltaCls(DATA.realizacja.flota.aek)}">${DATA.realizacja.flota.aek}</td><td>Saldo zamówień bm (z pliku, bez filtra)</td></tr>
+      <tr><td>AAK max</td><td class="num">${DATA.realizacja.detal.aakmax}</td><td class="num">${DATA.realizacja.flota.aakmax}</td><td>Potencjał maksymalny (AAK+ABK+FK)</td></tr>
+      <tr><td>Prognoza</td><td class="num"><strong style="color:var(--vw-blue)">${DATA.realizacja.detal.prognoza}</strong></td><td class="num"><strong style="color:var(--vw-blue)">${DATA.realizacja.flota.prognoza}</strong></td><td>Ekstrapolacja liniowa (AAK / upływ)</td></tr>
+    </tbody>`;
+  compare.append(tc);
+  sec.append(compare);
+
+  main.append(sec);
+}
+
+// ============================================================
+// SEKCJA 02: CELE I ZADANIA
+// ============================================================
+{
+  const sec = el('div',{class:'section',id:'sec-cele'});
+  sec.append(el('div',{class:'section-head'},
+    el('h2',{},'Cele i zadania'),
+    el('div',{class:'pigulka'},`Cel zespołowy ${DATA.cele.cel_zespolowy} AAK RD · wykonanie ${DATA.cele.wykonanie_realne} (${DATA.cele.pct}%) · brakuje ${DATA.cele.brakuje}`)
+  ));
+
+  const C = DATA.cele;
+  const pctClass = C.pct >= 100 ? 'good' : (C.pct >= 80 ? 'good' : (C.pct >= 50 ? 'warn' : 'bad'));
+
+  const banner = el('div',{class:'goal-banner'});
+  banner.innerHTML = `
+    <div class="goal-banner-head">
+      <div>
+        <div class="goal-banner-title">Cel zespołowy · AAK Retail Direct · Czerwiec 2026</div>
+        <div class="goal-banner-num" style="margin-top:8px">
+          <span class="now">${C.wykonanie_realne}</span>
+          <span class="sep">/</span>
+          <span class="target">${C.cel_zespolowy}</span>
+        </div>
+      </div>
+      <div style="text-align:right">
+        <div class="goal-banner-title">Realizacja</div>
+        <div class="goal-banner-pct" style="margin-top:8px">${C.pct}%</div>
+      </div>
+    </div>
+    <div class="progress big"><div class="progress-bar ${pctClass}" style="width:${Math.min(100,C.pct)}%">${C.pct >= 8 ? C.pct + '%' : ''}</div></div>
+    <div class="goal-status-row">
+      <div class="goal-status-cell bad">
+        <div class="lbl">Brakuje do celu</div>
+        <div class="val">${C.brakuje} szt.</div>
+      </div>
+      <div class="goal-status-cell warn">
+        <div class="lbl">Upływ miesiąca</div>
+        <div class="val">${Math.round(C.upływ*100)}%</div>
+      </div>
+      <div class="goal-status-cell info">
+        <div class="lbl">ABK na bm (detal)</div>
+        <div class="val">${C.abk_bm} szt.</div>
+      </div>
+      <div class="goal-status-cell info">
+        <div class="lbl">FK bez AAK (detal)</div>
+        <div class="val">${C.fk} szt.</div>
+      </div>
+      <div class="goal-status-cell good">
+        <div class="lbl">Potencjał domknięć</div>
+        <div class="val">${C.do_dyspozycji} szt.</div>
+      </div>
+      <div class="goal-status-cell ${C.pct >= 100 ? 'good' : 'bad'}">
+        <div class="lbl">Prognoza końca mc</div>
+        <div class="val">${DATA.realizacja.detal.prognoza} szt.</div>
+      </div>
+    </div>
+  `;
+  sec.append(banner);
+
+  const prognoza = DATA.realizacja.detal.prognoza;
+  if(prognoza < C.cel_zespolowy){
+    const luka = C.cel_zespolowy - prognoza;
+    sec.append(el('div',{class:'alert bad',html:`<strong>PROGNOZA POD CELEM:</strong> przy obecnym tempie zamknięcie miesiąca to ~${prognoza} szt., co oznacza lukę <strong>${luka} szt.</strong> względem celu zespołowego ${C.cel_zespolowy}. Do dyspozycji jest ${C.do_dyspozycji} potencjalnych domknięć (ABK ${C.abk_bm} + FK ${C.fk}).`}));
+  }
+
+  const wrap = el('div',{class:'table-wrap'});
+  wrap.append(el('div',{class:'table-head'},
+    el('h3',{},'Cele indywidualne AAK RD'),
+    el('span',{class:'count'}, `${C.cele.length} handlowców · suma celów: ${C.cele.reduce((s,h)=>s+h.cel,0)}`)
+  ));
+  const t = el('table');
+
+  function statusLabel(s){
+    return {done:'✓ wykonano', close:'blisko', ontrack:'w trakcie', risk:'zagrożone'}[s];
+  }
+
+  function buildTask(h){
+    if(h.status === 'done'){
+      const extra = h.flota ? ` Dodatkowo: ${h.flota} szt. flota.` : '';
+      return `<span class="task-cell done"><span class="task-icon">✓</span>Cel wykonany${h.nadwyzka ? ` (nadwyżka +${h.nadwyzka})` : ''}.${extra}</span>`;
+    }
+    if(h.status === 'risk'){
+      return `<span class="task-cell risk"><span class="task-icon">!</span>${h.brakuje} do celu — pilna mobilizacja (ABK zespołu: ${C.abk_bm}, FK: ${C.fk})</span>`;
+    }
+    return `<span class="task-cell"><span class="task-icon">→</span>${h.brakuje} do celu — domknij z ABK/FK do końca miesiąca</span>`;
+  }
+
+  const sorted = [...C.cele].sort((a,b) => b.pct - a.pct);
+  let html = `<thead><tr>
+    <th>Handlowiec</th>
+    <th class="num">Cel</th>
+    <th class="num">Wykonanie</th>
+    <th style="width:200px">Realizacja</th>
+    <th class="num">Brakuje</th>
+    <th>Status</th>
+    <th>Zadanie</th>
+  </tr></thead><tbody>`;
+  sorted.forEach(h => {
+    const flotaInfo = h.flota ? ` <span style="color:var(--dim);font-size:10px">(+${h.flota} flota)</span>` : '';
+    const realPct = Math.min(100, h.pct);
+    html += `<tr>
+      <td><strong>${h.name}</strong></td>
+      <td class="num"><strong>${h.cel}</strong></td>
+      <td class="num"><strong>${h.wykonanie}</strong>${flotaInfo}</td>
+      <td>
+        <div class="inline-progress">
+          <div class="inline-progress-bar-wrap"><div class="inline-progress-bar ${h.status}" style="width:${realPct}%"></div></div>
+          <span class="inline-pct" style="color:${h.status==='done'?'var(--good)':h.status==='risk'?'var(--bad)':'var(--ink)'}">${h.pct}%</span>
+        </div>
+      </td>
+      <td class="num">${h.brakuje > 0 ? `<strong style="color:var(--bad)">${h.brakuje}</strong>` : `<span style="color:var(--good)">0</span>`}</td>
+      <td><span class="status-pill ${h.status}">${statusLabel(h.status)}</span></td>
+      <td>${buildTask(h)}</td>
+    </tr>`;
+  });
+  const totalCel = C.cele.reduce((s,h)=>s+h.cel,0);
+  const totalWyk = C.cele.reduce((s,h)=>s+h.wykonanie,0);
+  const totalBrak = C.cele.reduce((s,h)=>s+h.brakuje,0);
+  const totalPct = Math.round(totalWyk/totalCel*100);
+  html += `<tr style="background:var(--bg-soft);font-weight:600">
+    <td><strong>SUMA (6 handlowców z celem)</strong></td>
+    <td class="num"><strong>${totalCel}</strong></td>
+    <td class="num"><strong>${totalWyk}</strong></td>
+    <td>
+      <div class="inline-progress">
+        <div class="inline-progress-bar-wrap"><div class="inline-progress-bar ${totalPct>=100?'done':totalPct>=75?'close':totalPct>=50?'ontrack':'risk'}" style="width:${Math.min(100,totalPct)}%"></div></div>
+        <span class="inline-pct"><strong>${totalPct}%</strong></span>
+      </div>
+    </td>
+    <td class="num"><strong style="color:var(--bad)">${totalBrak}</strong></td>
+    <td colspan="2" style="color:var(--dim);font-size:12px">+1 AAK RD bez celu (Dziurzyński) — realna suma RD: <strong style="color:var(--ink)">${DATA.cele.wykonanie_realne}</strong></td>
+  </tr>`;
+  html += '</tbody>';
+  t.innerHTML = html;
+  wrap.append(t);
+  sec.append(wrap);
+
+  const bezCelu = DATA.cele.bez_celu;
+  if(bezCelu.length){
+    const wrap2 = el('div',{class:'table-wrap',style:'margin-top:16px'});
+    wrap2.append(el('div',{class:'table-head'},
+      el('h3',{},'Handlowcy bez celu RD na ten miesiąc'),
+      el('span',{class:'count'}, `${bezCelu.length} osób`)
+    ));
+    const t2 = el('table');
+    let h2 = `<thead><tr><th>Handlowiec</th><th class="num">AAK RD</th><th class="num">AAK flota</th><th>Status</th><th>Uwagi</th></tr></thead><tbody>`;
+    bezCelu.forEach(h => {
+      h2 += `<tr>
+        <td><strong>${h.name}</strong></td>
+        <td class="num">${h.rd}</td>
+        <td class="num">${h.flota}</td>
+        <td><span class="status-pill no-goal">brak celu RD</span></td>
+        <td style="color:var(--dim);font-size:12px">${h.flota > 0 ? 'Aktywny w obszarze flotowym' : 'Pojedyncze wydanie RD bez przypisanego celu'}</td>
+      </tr>`;
+    });
+    h2 += '</tbody>';
+    t2.innerHTML = h2;
+    wrap2.append(t2);
+    sec.append(wrap2);
+  }
+
+  // === ZADANIA — sub-section ===
+  if(DATA.cele.zadania && DATA.cele.zadania.length){
+    sec.append(el('div',{style:'margin-top:32px;padding-top:24px;border-top:2px solid var(--border)'},
+      el('div',{style:'display:flex;align-items:baseline;gap:12px;margin-bottom:16px'},
+        el('h3',{style:'font-size:20px;font-weight:700;letter-spacing:-0.3px;color:var(--vw-navy)'},'Zadania miesięczne'),
+        el('span',{style:'font-size:11px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;font-weight:600'},'cele dodatkowe per handlowiec')
+      )
+    ));
+    DATA.cele.zadania.forEach(zadanie => {
+      const zWrap = el('div',{class:'table-wrap',style:'margin-bottom:20px'});
+      // Suma zadania
+      const sumWyk = zadanie.handlowcy.reduce((s,h)=>s+h.wykonanie,0);
+      const sumCel = zadanie.handlowcy.reduce((s,h)=>s+h.cel,0);
+      const sumPct = Math.round(sumWyk/sumCel*100);
+      zWrap.append(el('div',{class:'table-head'},
+        el('h3',{},zadanie.nazwa),
+        el('span',{class:'count'},`${sumWyk}/${sumCel} · ${sumPct}% · ${zadanie.opis}`)
+      ));
+      // Pasek postępu sumaryczny
+      const progBar = el('div',{style:'margin:0 0 12px 0;height:8px;background:var(--bg-sunken);border-radius:4px;overflow:hidden'});
+      const fill = el('div',{style:`height:100%;width:${Math.min(100,sumPct)}%;background:${sumPct>=100?'var(--good)':sumPct>=50?'var(--vw-blue)':'var(--warn)'};border-radius:4px;transition:width 0.4s`});
+      progBar.append(fill); zWrap.append(progBar);
+      // Siatka kart per handlowiec
+      const grid = el('div',{style:'display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px'});
+      zadanie.handlowcy.forEach(h => {
+        const pct = Math.round(h.wykonanie/h.cel*100);
+        const card = el('div',{class:'card',style:'padding:12px 14px'});
+        const top = el('div',{style:'display:flex;justify-content:space-between;align-items:center;margin-bottom:6px'});
+        top.append(el('span',{style:'font-weight:600;font-size:12px'},h.short));
+        const pEl = el('span',{style:`font-family:'JetBrains Mono';font-size:12px;font-weight:700;color:${pct>=100?'var(--good)':pct>=50?'var(--vw-blue)':'var(--dim)'}`});
+        pEl.textContent = h.wykonanie+'/'+h.cel; top.append(pEl); card.append(top);
+        const bg=el('div',{style:'height:4px;background:var(--bg-sunken);border-radius:2px;overflow:hidden'});
+        const bf=el('div',{style:`height:100%;width:${Math.min(100,pct)}%;background:${pct>=100?'var(--good)':pct>=50?'var(--vw-blue)':'var(--warn)'};border-radius:2px`});
+        bg.append(bf); card.append(bg);
+        grid.append(card);
+      });
+      zWrap.append(grid);
+      sec.append(zWrap);
+    });
+  }
+
+  main.append(sec);
+}
+
+
+// ============================================================
+// SEKCJA 03: GRAFIK
+// ============================================================
+{
+  const sec = el('div',{class:'section',id:'sec-grafik'});
+  sec.append(el('div',{class:'section-head'},
+    el('h2',{},'Grafik pracy'),
+    el('div',{class:'pigulka'},'Aktualny miesiąc + następny · godziny rozpoczęcia 8/9/10 (8h pracy) · u = urlop · z/s = L4')
+  ));
+
+  const TODAY = {y: 2026, m: 6, d: 1};
+  const DOW_PL = ['pn','wt','śr','cz','pt','sb','nd'];
+
+  // Sub-nav: maj / czerwiec
+  const subNav = el('nav',{class:'sub-nav'});
+  const SUBS = [
+    {id:'aktualny', label:'Czerwiec 2026', current:true, data:DATA.grafik.aktualny},
+    {id:'nastepny', label:'Lipiec 2026', current:false, data:DATA.grafik.nastepny},
+  ];
+  SUBS.forEach((s,i) => {
+    const btn = el('button',{class:'sub-tab' + (i===0?' active':''), 'data-sub':s.id});
+    btn.innerHTML = s.label + (s.current ? '<span class="sub-badge">aktualny</span>' : '');
+    btn.addEventListener('click', () => {
+      subNav.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+      sec.querySelectorAll('.sub-section').forEach(x => x.classList.remove('active'));
+      btn.classList.add('active');
+      sec.querySelector('#gr-'+s.id).classList.add('active');
+    });
+    subNav.append(btn);
+  });
+  sec.append(subNav);
+
+  function renderMonth(monthData, subId, isActive){
+    const sub = el('div',{class:'sub-section' + (isActive?' active':''), id:'gr-'+subId});
+    const M = monthData;
+
+    // Alert dla pustego miesiąca (jeszcze nie wypełniony w arkuszu)
+    if(M.pusty){
+      sub.append(el('div',{class:'alert warn',html:`<strong>Grafik jeszcze nie wypełniony.</strong> Arkusz "${M.mc_label}" w Google Sheets nie zawiera jeszcze rozpisanych godzin pracy. Poniżej tylko szkielet miesiąca (dni tygodnia + święta). Plan urlopowy również pusty.`}));
+    }
+
+    // Statystyki dla aktualnego miesiąca - dziś
+    if(M.mc === TODAY.m && M.rok === TODAY.y){
+      const todayIdx = TODAY.d - 1;
+      const inWork = M.handlowcy.filter(h => /^[0-9]+$/.test(h.days[todayIdx])).length;
+      const onLeave = M.handlowcy.filter(h => /^u$/i.test(h.days[todayIdx])).length;
+      const onL4 = M.handlowcy.filter(h => /^[zs]$/i.test(h.days[todayIdx])).length;
+      const offToday = M.handlowcy.filter(h => h.days[todayIdx] === '').length;
+
+      const kpis = el('div',{class:'kpi-row'});
+      function kpi(lbl, v, sub, c=''){
+        const k = el('div',{class:'kpi'});
+        k.append(el('div',{class:'lbl'},lbl));
+        k.append(el('div',{class:'v',style:c?'color:'+c:''}, v));
+        if(sub) k.append(el('div',{class:'delta'},sub));
+        return k;
+      }
+      kpis.append(kpi('Dziś w pracy', inWork, 'handlowcy aktywni', 'var(--good)'));
+      kpis.append(kpi('Dziś na urlopie', onLeave, '', onLeave>0?'var(--warn)':''));
+      kpis.append(kpi('Dziś na L4', onL4, '', onL4>0?'var(--bad)':''));
+      kpis.append(kpi('Dziś nieobecni', offToday, 'brak grafiku / wolne', 'var(--dim)'));
+      sub.append(kpis);
+    }
+
+    // Legenda + tabela
+    const wrap = el('div',{class:'schedule-wrap'});
+
+    const legend = el('div',{class:'schedule-legend'});
+    legend.innerHTML = `
+      <span class="lg"><span class="lg-box" style="background:#f0fdf4"></span>start 8:00</span>
+      <span class="lg"><span class="lg-box" style="background:white;border:1px solid var(--border)"></span>start 9:00</span>
+      <span class="lg"><span class="lg-box" style="background:#eff6ff"></span>start 10:00+</span>
+      <span class="lg"><span class="lg-box" style="background:#fef3c7"></span>U — urlop</span>
+      <span class="lg"><span class="lg-box" style="background:#fee2e2"></span>L4 (z/s)</span>
+      <span class="lg"><span class="lg-box" style="background:var(--bg-sunken)"></span>weekend / wolne</span>
+      <span class="lg"><span class="lg-box" style="background:#fef9c3"></span>święto</span>
+    `;
+    wrap.append(legend);
+
+    const tbl = el('table',{class:'schedule'});
+
+    // Header z dniami
+    let thead = '<thead><tr><th class="name-col" rowspan="2">Handlowiec</th>';
+    for(let d=1; d<=M.dni; d++){
+      const dow = M.weekdays[d-1];
+      const isWeekend = dow === 5 || dow === 6;
+      const isHoliday = M.holidays[d];
+      const isToday = (M.mc === TODAY.m && M.rok === TODAY.y && d === TODAY.d);
+      let cls = 'day-h';
+      if(isToday) cls += ' today';
+      else if(isHoliday) cls += ' holiday';
+      else if(isWeekend) cls += ' weekend';
+      thead += `<th class="${cls}" title="${isHoliday || ''}">${d}</th>`;
+    }
+    thead += '</tr><tr>';
+    for(let d=1; d<=M.dni; d++){
+      const dow = M.weekdays[d-1];
+      const isWeekend = dow === 5 || dow === 6;
+      thead += `<th class="dow ${isWeekend?'weekend':''}">${DOW_PL[dow]}</th>`;
+    }
+    thead += '</tr></thead>';
+    tbl.innerHTML = thead;
+
+    const tbody = document.createElement('tbody');
+
+    function classifyCell(val, d){
+      const dow = M.weekdays[d-1];
+      const isWeekend = dow === 5 || dow === 6;
+      const isHoliday = !!M.holidays[d];
+      const isToday = (M.mc === TODAY.m && M.rok === TODAY.y && d === TODAY.d);
+      let display = val;
+      let cls = 'cell';
+      if(/^u$/i.test(val)){ cls += ' urlop'; display = 'U'; }
+      else if(/^[zs]$/i.test(val) || /l4/i.test(val)){ cls += ' l4'; display = 'L4'; }
+      else if(/^\d+$/.test(val)){
+        const h = parseInt(val,10);
+        if(h <= 8) cls += ' work-early';
+        else if(h >= 10) cls += ' work-late';
+        else cls += ' work';
+        display = val;
+      } else if(val === '-' || val === ''){
+        if(isHoliday) { cls += ' holiday'; display = ''; }
+        else if(isWeekend){ cls += ' weekend'; display = ''; }
+        else { cls += ' empty'; display = ''; }
+      } else {
+        cls += ' work';
+      }
+      if(isToday) cls += ' today';
+      return `<td class="${cls}" title="dzień ${d}${isHoliday?' — '+isHoliday:''}">${display}</td>`;
+    }
+
+    // Handlowcy
+    M.handlowcy.forEach(h => {
+      let row = `<tr><td class="name-cell">${h.short}<div style="font-size:9px;color:var(--dim);font-weight:400;margin-top:1px">${h.name}</div></td>`;
+      h.days.forEach((val, i) => {
+        row += classifyCell(val, i+1);
+      });
+      row += '</tr>';
+      tbody.insertAdjacentHTML('beforeend', row);
+    });
+
+    // Divider Asystenci
+    if(M.asystenci.length){
+      tbody.insertAdjacentHTML('beforeend', `<tr class="assistant-divider"><td colspan="${M.dni+1}">Asystenci / recepcja</td></tr>`);
+      M.asystenci.forEach(h => {
+        let row = `<tr><td class="name-cell assistant">${h.short}</td>`;
+        h.days.forEach((val, i) => {
+          row += classifyCell(val, i+1);
+        });
+        row += '</tr>';
+        tbody.insertAdjacentHTML('beforeend', row);
+      });
+    }
+
+    // Suma w pracy dziennie (handlowcy)
+    let sumRow = `<tr class="summary-row"><td class="name-cell" style="background:var(--bg-soft)">W pracy</td>`;
+    for(let d=1; d<=M.dni; d++){
+      const inWork = M.handlowcy.filter(h => /^\d+$/.test(h.days[d-1])).length;
+      const dow = M.weekdays[d-1];
+      const isWeekend = dow === 5 || dow === 6;
+      const isHoliday = M.holidays[d];
+      let color = inWork === 0 ? 'var(--dim-3)' : (inWork >= 5 ? 'var(--good)' : 'var(--warn)');
+      if(isWeekend || isHoliday) color = 'var(--dim-3)';
+      sumRow += `<td class="cell" style="color:${color};font-weight:700">${inWork || ''}</td>`;
+    }
+    sumRow += '</tr>';
+    tbody.insertAdjacentHTML('beforeend', sumRow);
+
+    tbl.append(tbody);
+    wrap.append(tbl);
+    sub.append(wrap);
+
+    // Plan urlopowy z kalendarza miesięcznego
+    const urlopWrap = el('div',{class:'urlop-list'});
+    urlopWrap.innerHTML = `<div class="table-head"><h3>Plan urlopowy — ${M.mc_label}</h3><span class="count">${M.plan_urlopowy.length} pozycji</span></div>`;
+    if(M.plan_urlopowy.length === 0){
+      urlopWrap.insertAdjacentHTML('beforeend', '<div style="padding:24px;text-align:center;color:var(--dim);font-size:12px">brak zaplanowanych urlopów</div>');
+    } else {
+      M.plan_urlopowy.forEach(p => {
+        const dateRange = p.d_od === p.d_do ? `${p.d_od}.${String(M.mc).padStart(2,'0')}` : `${p.d_od}–${p.d_do}.${String(M.mc).padStart(2,'0')}`;
+        const days = p.d_do - p.d_od + 1;
+        const typClass = p.typ === 'L4' ? 'typ-l4' : (p.typ === 'WOLNE' ? 'typ-wolne' : 'typ-urlop');
+        urlopWrap.insertAdjacentHTML('beforeend', `
+          <div class="urlop-item">
+            <span class="date">${dateRange} <span style="color:var(--dim-3)">(${days} ${days===1?'dzień':'dni'})</span></span>
+            <span class="typ-badge ${typClass}">${p.typ}</span>
+            <span class="who">${p.kto_full}</span>
+          </div>
+        `);
+      });
+    }
+    sub.append(urlopWrap);
+
+    return sub;
+  }
+
+  sec.append(renderMonth(DATA.grafik.aktualny, 'aktualny', true));
+  sec.append(renderMonth(DATA.grafik.nastepny, 'nastepny', false));
+
+  main.append(sec);
+}
+
+// ============================================================
+// SEKCJA 04: STAN AEK
+// ============================================================
+{
+  const sec = el('div',{class:'section',id:'sec-aek'});
+  sec.append(el('div',{class:'section-head'},
+    el('h2',{},'Stan zamówień AEK'),
+    el('div',{class:'pigulka'},`Saldo: Detal RD ${sgn(DATA.stan_aek.DETALICZNY_RD.d)}, Detal reszta ${sgn(DATA.stan_aek.DETALICZNY_reszta.d)}, Flota ${sgn(DATA.stan_aek.FLOTOWY.d)}`),
+    el('span',{class:'filter-info-pill'}, `FILTR: -${DATA.filtered_records_count} ubytków`)
+  ));
+
+  sec.append(el('div',{class:'alert warn',html:filterAlertHTML()}));
+
+  const totalP = Object.values(DATA.stan_aek).reduce((s,o) => s+o.p, 0);
+  const totalU = Object.values(DATA.stan_aek).reduce((s,o) => s+o.u, 0);
+  const totalD = totalP - totalU;
+
+  const kpis = el('div',{class:'kpi-row'});
+  function kpi(lbl, v, sub, c=''){
+    const k = el('div',{class:'kpi'});
+    k.append(el('div',{class:'lbl'},lbl));
+    k.append(el('div',{class:'v', style: c==='pos'?'color:var(--good)':(c==='neg'?'color:var(--bad)':'')}, v));
+    if(sub) k.append(el('div',{class:'delta '+c}, sub));
+    return k;
+  }
+  kpis.append(kpi('Razem przyrosty', '+'+totalP, 'wszystkie obszary','pos'));
+  kpis.append(kpi('Razem ubytki (po filtrze)', '-'+totalU, `pominięto ${DATA.filtered_records_count} wykluczonych`,'neg'));
+  kpis.append(kpi('Saldo netto', sgn(totalD), 'delta zamówień', cls(totalD)));
+  sec.append(kpis);
+
+  const obszary = [
+    {k:'DETALICZNY_RD', label:'Detal Retail Direct'},
+    {k:'DETALICZNY_reszta', label:'Detal — pozostałe'},
+    {k:'FLOTOWY', label:'Flota'},
+  ];
+  const g = el('div',{class:'grid-3'});
+  obszary.forEach(o => {
+    const d = DATA.stan_aek[o.k];
+    const card = el('div',{class:'card ' + (d.d > 0 ? 'good' : (d.d < 0 ? 'bad' : ''))});
+    card.append(el('div',{class:'card-label'}, o.label));
+    card.append(el('div',{class:'card-value', style: 'color:'+(d.d>0?'var(--good)':d.d<0?'var(--bad)':'var(--dim)')}, sgn(d.d)));
+    const sub = el('div',{class:'card-sub'});
+    sub.innerHTML = `przyrost <strong style="color:var(--good)">+${d.p}</strong> &nbsp;·&nbsp; ubytek <strong style="color:var(--bad)">-${d.u}</strong>`;
+    card.append(sub);
+    g.append(card);
+  });
+  sec.append(g);
+
+  main.append(sec);
+}
+
+// ============================================================
+// SEKCJA 05: HANDLOWCY
+// ============================================================
+{
+  const sec = el('div',{class:'section',id:'sec-handlowcy'});
+  sec.append(el('div',{class:'section-head'},
+    el('h2',{},'Handlowcy'),
+    el('div',{class:'pigulka'},'AEK, kanały, KPI i rankingi handlowców'),
+    el('span',{class:'filter-info-pill'}, `FILTR: -${DATA.filtered_records_count} ubytków`)
+  ));
+
+  // Sub-nav
+  const hSubNav = el('nav',{class:'sub-nav'});
+  [{id:'aek-kanaly',label:'AEK & Kanały'},{id:'kpi',label:'KPI',badge:(DATA.kpi_handlowcy||[]).length},{id:'rankingi',label:'Rankingi'}].forEach((s,i)=>{
+    const btn=el('button',{class:'sub-tab'+(i===0?' active':'')});
+    btn.innerHTML=s.label+(s.badge!==undefined?`<span class="sub-badge">${s.badge}</span>`:'');
+    btn.addEventListener('click',()=>{
+      hSubNav.querySelectorAll('.sub-tab').forEach(t=>t.classList.remove('active'));
+      sec.querySelectorAll('.h-sub').forEach(x=>{x.style.display='none';});
+      btn.classList.add('active');
+      sec.querySelector('#hsub-'+s.id).style.display='block';
+    });
+    hSubNav.append(btn);
+  });
+  sec.append(hSubNav);
+
+  // === SUB: AEK & KANAŁY ===
+  const subAek=el('div',{id:'hsub-aek-kanaly',style:'display:block'});
+  subAek.classList.add('h-sub');
+
+  function handlowcyTable(rows, title){
+    const wrap = el('div',{class:'table-wrap'});
+    wrap.append(el('div',{class:'table-head'}, el('h3',{},title), el('span',{class:'count'}, rows.length+' osób')));
+    if(!rows.length){
+      wrap.append(el('div',{style:'padding:24px;text-align:center;color:var(--dim);font-size:12px'},'brak rekordów'));
+      return wrap;
+    }
+    const maxAbs = Math.max(...rows.map(r => Math.max(Math.abs(r.p), Math.abs(r.u))), 1);
+    const t = el('table');
+    let html = `<thead><tr><th>Handlowiec</th><th class="num">Przyrosty</th><th class="num">Ubytki</th><th class="num">Delta</th></tr></thead><tbody>`;
+    rows.forEach(r => {
+      const pw = Math.round(r.p / maxAbs * 80);
+      const uw = Math.round(r.u / maxAbs * 80);
+      html += `<tr>
+        <td>${r.name}</td>
+        <td class="num"><span class="minibar good" style="width:${pw}px"></span>${r.p}</td>
+        <td class="num"><span class="minibar bad" style="width:${uw}px"></span>${r.u}</td>
+        <td class="num ${deltaCls(r.d)}">${sgn(r.d)}</td>
+      </tr>`;
+    });
+    html += '</tbody>';
+    t.innerHTML = html;
+    wrap.append(t);
+    return wrap;
+  }
+
+  const col = el('div',{class:'col-2'});
+  col.append(handlowcyTable(DATA.handlowcy_detal, 'Detal — wg handlowca'));
+  col.append(handlowcyTable(DATA.handlowcy_flota, 'Flota — wg handlowca'));
+  subAek.append(col);
+
+  const kanalyWrap = el('div',{class:'table-wrap',style:'margin-top:16px'});
+  kanalyWrap.append(el('div',{class:'table-head'}, el('h3',{},'Kanały sprzedaży')));
+  const tk = el('table');
+  const maxK = Math.max(...(DATA.kanaly.length ? DATA.kanaly.map(r => Math.max(r.p, r.u, 1)) : [1]));
+  let kh = `<thead><tr><th>Kanał</th><th class="num">Przyrosty</th><th class="num">Ubytki</th><th class="num">Delta</th></tr></thead><tbody>`;
+  DATA.kanaly.forEach(r => {
+    const pw = Math.round(r.p / maxK * 120);
+    const uw = Math.round(r.u / maxK * 120);
+    kh += `<tr>
+      <td><strong>${r.name}</strong></td>
+      <td class="num"><span class="minibar good" style="width:${pw}px"></span>${r.p}</td>
+      <td class="num"><span class="minibar bad" style="width:${uw}px"></span>${r.u}</td>
+      <td class="num ${deltaCls(r.d)}">${sgn(r.d)}</td>
+    </tr>`;
+  });
+  kh += '</tbody>';
+  tk.innerHTML = kh;
+  kanalyWrap.append(tk);
+  subAek.append(kanalyWrap);
+  sec.append(subAek);
+
+  // === SUB: KPI HANDLOWCY ===
+  const subKpi=el('div',{id:'hsub-kpi',style:'display:none'});
+  subKpi.classList.add('h-sub');
+
+  if(DATA.kpi_handlowcy && DATA.kpi_handlowcy.length){
+    const kpiMetrics=[
+      {key:'oferty',label:'Oferty',color:'var(--vw-blue)',cel:0},
+      {key:'klienci',label:'Klienci',color:'var(--vw-navy)',cel:(DATA.kpi_cele||{}).klienci||60},
+      {key:'zamowienia',label:'Zamówienia',color:'var(--good)',cel:0},
+      {key:'wydania',label:'Wydania',color:'#7c3aed',cel:0},
+      {key:'traffic',label:'Traffic',color:'var(--warn)',cel:0},
+      {key:'opinie',label:'Opinie',color:'#db2777',cel:(DATA.kpi_cele||{}).opinie||6},
+      {key:'trade_in',label:'Trade-in',color:'#0891b2',cel:(DATA.kpi_cele||{}).trade_in||12}
+    ];
+
+    // Sumy + karty z celami
+    const sums={};
+    kpiMetrics.forEach(m=>{sums[m.key]=0;});
+    DATA.kpi_handlowcy.forEach(h=>{kpiMetrics.forEach(m=>{sums[m.key]+=(h[m.key]||0);});});
+
+    const sumRow=el('div',{class:'kpi-row',style:'margin-bottom:20px'});
+    kpiMetrics.forEach(m=>{
+      const k=el('div',{class:'kpi'});
+      k.append(el('div',{class:'lbl'},m.label+(m.cel>0?' · cel '+m.cel:'')));
+      const v=el('div',{class:'v',style:'color:'+m.color}); v.textContent=sums[m.key]; k.append(v);
+      if(m.cel>0){
+        const pct=Math.round(sums[m.key]/m.cel*100);
+        const bar=el('div',{style:'height:4px;background:var(--bg-sunken);border-radius:2px;margin-top:6px;overflow:hidden'});
+        const fill=el('div',{style:`height:100%;width:${Math.min(100,pct)}%;background:${pct>=100?'var(--good)':pct>=50?m.color:'var(--bad)'};border-radius:2px`});
+        bar.append(fill); k.append(bar);
+        k.append(el('div',{class:'delta'},pct+'% celu'));
+      } else { k.append(el('div',{class:'delta'},'suma miesiąc')); }
+      sumRow.append(k);
+    });
+    subKpi.append(el('div',{style:'display:flex;align-items:baseline;gap:12px;margin-bottom:12px'},el('h3',{style:'font-size:18px;font-weight:700;letter-spacing:-0.3px;color:var(--vw-navy)'},'Podsumowanie miesiąca')));
+    subKpi.append(sumRow);
+
+    // Tabela per handlowiec
+    const tblW=el('div',{class:'table-wrap'});
+    tblW.append(el('div',{class:'table-head'},el('h3',{},'KPI per handlowiec'),el('span',{class:'count'},`${DATA.kpi_handlowcy.length} doradców · dane z ZWS`)));
+    const t2=el('table');
+    const maxV={}; kpiMetrics.forEach(m=>{maxV[m.key]=Math.max(...DATA.kpi_handlowcy.map(h=>h[m.key]||0),1);});
+    let h2=`<thead><tr><th>Doradca</th>`;
+    kpiMetrics.forEach(m=>{h2+=`<th class="num">${m.label}</th>`;});
+    h2+=`<th class="num">Konwersja</th></tr></thead><tbody>`;
+    DATA.kpi_handlowcy.forEach(h=>{
+      const conv=h.klienci>0?Math.round(h.zamowienia/h.klienci*100):null;
+      const convStr=conv!==null?conv+'%':'—';
+      const convCls=conv!==null?(conv>=50?'pos':conv>=25?'':'neg'):'';
+      h2+=`<tr><td><strong>${h.name}</strong></td>`;
+      kpiMetrics.forEach(m=>{
+        const v=h[m.key]||0; const w=Math.round(v/maxV[m.key]*60);
+        h2+=`<td class="num"><span class="minibar" style="width:${w}px;background:${m.color};opacity:0.4;display:inline-block;height:8px;border-radius:2px;vertical-align:middle;margin-right:4px"></span>${v}</td>`;
+      });
+      h2+=`<td class="num ${convCls}">${convStr}</td></tr>`;
+    });
+    // Wiersz sumy
+    h2+=`<tr style="font-weight:700;border-top:2px solid var(--border)"><td>SUMA</td>`;
+    kpiMetrics.forEach(m=>{h2+=`<td class="num">${sums[m.key]}</td>`;});
+    const tc2=sums.klienci>0?Math.round(sums.zamowienia/sums.klienci*100)+'%':'—';
+    h2+=`<td class="num">${tc2}</td></tr></tbody>`;
+    t2.innerHTML=h2; tblW.append(t2); subKpi.append(tblW);
+
+    // Paski konwersji
+    subKpi.append(el('div',{style:'display:flex;align-items:baseline;gap:12px;margin:24px 0 12px 0'},el('h3',{style:'font-size:18px;font-weight:700;letter-spacing:-0.3px;color:var(--vw-navy)'},'Zamówienia — konwersja')));
+    const progW=el('div',{style:'display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px'});
+    DATA.kpi_handlowcy.forEach(h=>{
+      const pct=h.klienci>0?Math.round(h.zamowienia/h.klienci*100):0;
+      const card=el('div',{class:'card',style:'padding:14px 16px'});
+      const top=el('div',{style:'display:flex;justify-content:space-between;align-items:center;margin-bottom:8px'});
+      top.append(el('span',{style:'font-weight:600;font-size:13px'},h.name));
+      const pEl=el('span',{style:`font-family:'JetBrains Mono';font-size:13px;font-weight:700;color:${pct>=50?'var(--good)':pct>=25?'var(--warn)':'var(--dim)'}`});
+      pEl.textContent=h.klienci>0?pct+'%':'—'; top.append(pEl); card.append(top);
+      const bg=el('div',{style:'height:6px;background:var(--bg-sunken);border-radius:3px;overflow:hidden'});
+      const fill=el('div',{style:`height:100%;width:${pct}%;background:${pct>=50?'var(--good)':pct>=25?'var(--warn)':'var(--bad)'};border-radius:3px`});
+      bg.append(fill); card.append(bg);
+      const sub=el('div',{style:'display:flex;gap:16px;margin-top:8px;font-size:11px;color:var(--dim);font-family:"JetBrains Mono"'});
+      sub.innerHTML=`<span>Klienci: <b>${h.klienci||0}</b></span><span>Zamów: <b>${h.zamowienia||0}</b></span><span>Opinie: <b>${h.opinie||0}</b></span><span>Trade-in: <b>${h.trade_in||0}</b></span>`;
+      card.append(sub); progW.append(card);
+    });
+    subKpi.append(progW);
+  }
+  sec.append(subKpi);
+
+  // === SUB: RANKINGI ===
+  const subRank=el('div',{id:'hsub-rankingi',style:'display:none'});
+  subRank.classList.add('h-sub');
+
+  // Podium + tabela AAK
+  subRank.append(el('div',{style:'display:flex;align-items:baseline;gap:12px;margin:8px 0 12px 0'},
+    el('h3',{style:'font-size:18px;font-weight:700;letter-spacing:-0.3px;color:var(--vw-navy)'},'Ranking AAK'),
+    el('span',{style:'font-size:11px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;font-weight:600'},'wydania w bieżącym miesiącu')
+  ));
+  const aakSorted=[...DATA.aak_handlowcy].sort((a,b)=>b.n-a.n);
+  if(aakSorted.length>=3){
+    const podium=el('div',{class:'podium'});
+    [{idx:1,cls:'silver',medal:'🥈'},{idx:0,cls:'gold',medal:'🥇'},{idx:2,cls:'bronze',medal:'🥉'}].forEach(o=>{
+      const r=aakSorted[o.idx];
+      const card=el('div',{class:'podium-card '+o.cls});
+      card.innerHTML=`<div class="podium-medal">${o.medal}</div><div class="podium-name">${r.name}</div><div class="podium-score">${r.n}</div><div class="podium-sub">AAK · szt.</div>`;
+      podium.append(card);
+    });
+    subRank.append(podium);
+  }
+  const aakWrap=el('div',{class:'table-wrap',style:'margin-bottom:32px'});
+  aakWrap.append(el('div',{class:'table-head'},el('h3',{},'Pełna tabela AAK'),el('span',{class:'count'},aakSorted.length+' osób · łącznie '+aakSorted.reduce((s,r)=>s+r.n,0)+' wydań')));
+  const maxAak=Math.max(...aakSorted.map(r=>r.n),1); const tAak=el('table');
+  let aakHtml='<thead><tr><th style="width:50px">#</th><th>Handlowiec</th><th class="num">AAK</th><th>Skala</th></tr></thead><tbody>';
+  aakSorted.forEach((r,i)=>{const w=Math.round(r.n/maxAak*200);aakHtml+=`<tr><td>${rankNum(i)}</td><td><span class="rank-name ${i===aakSorted.length-1?'last':''}">${r.name}</span></td><td class="num"><strong>${r.n}</strong></td><td><span class="minibar good" style="width:${w}px"></span></td></tr>`;});
+  aakHtml+='</tbody>'; tAak.innerHTML=aakHtml; aakWrap.append(tAak); subRank.append(aakWrap);
+
+  // Podium + tabela AEK
+  subRank.append(el('div',{style:'display:flex;align-items:baseline;gap:12px;margin:8px 0 12px 0'},
+    el('h3',{style:'font-size:18px;font-weight:700;letter-spacing:-0.3px;color:var(--vw-navy)'},'Ranking AEK'),
+    el('span',{style:'font-size:11px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;font-weight:600'},'saldo zamówień (po filtrze)')
+  ));
+  const aekSorted=[...DATA.ranking_aek].sort((a,b)=>b.d-a.d);
+  if(aekSorted.length>=3){
+    const podium2=el('div',{class:'podium'});
+    [{idx:1,cls:'silver',medal:'🥈'},{idx:0,cls:'gold',medal:'🥇'},{idx:2,cls:'bronze',medal:'🥉'}].forEach(o=>{
+      const r=aekSorted[o.idx];
+      const card=el('div',{class:'podium-card '+o.cls});
+      card.innerHTML=`<div class="podium-medal">${o.medal}</div><div class="podium-name">${r.name}</div><div class="podium-score">${sgn(r.d)}</div><div class="podium-sub">P:${r.p} · U:${r.u}</div>`;
+      podium2.append(card);
+    });
+    subRank.append(podium2);
+  }
+  const aekWrap=el('div',{class:'table-wrap'});
+  const totP=aekSorted.reduce((s,r)=>s+r.p,0); const totU=aekSorted.reduce((s,r)=>s+r.u,0);
+  aekWrap.append(el('div',{class:'table-head'},el('h3',{},'Pełna tabela AEK'),el('span',{class:'count'},`${aekSorted.length} osób · P:${totP} U:${totU} Δ:${sgn(totP-totU)}`)));
+  const maxAekAbs=Math.max(...aekSorted.map(r=>Math.abs(r.d)),1); const tAek=el('table');
+  let aekHtml='<thead><tr><th style="width:50px">#</th><th>Handlowiec</th><th class="num">P</th><th class="num">U</th><th class="num">Δ</th><th>Skala</th></tr></thead><tbody>';
+  aekSorted.forEach((r,i)=>{const w=Math.round(Math.abs(r.d)/maxAekAbs*160);const bc=r.d>=0?'good':'bad';aekHtml+=`<tr><td>${rankNum(i)}</td><td><span class="rank-name ${i===aekSorted.length-1&&r.d<0?'last':''}">${r.name}</span></td><td class="num">${r.p}</td><td class="num">${r.u}</td><td class="num ${deltaCls(r.d)}"><strong>${sgn(r.d)}</strong></td><td><span class="minibar ${bc}" style="width:${w}px"></span></td></tr>`;});
+  aekHtml+='</tbody>'; tAek.innerHTML=aekHtml; aekWrap.append(tAek); subRank.append(aekWrap);
+
+  sec.append(subRank);
+  main.append(sec);
+}
+
+// ============================================================
+// SEKCJA 07: STOCK (z podzakładkami)
+// ============================================================
+{
+  const sec = el('div',{class:'section',id:'sec-stock'});
+  sec.append(el('div',{class:'section-head'},
+    el('h2',{},'Stock'),
+    el('div',{class:'pigulka'},'Magazyn · Przeterminowane · Push · Funkcyjne')
+  ));
+
+  // Sub-nav
+  const subNav = el('nav',{class:'sub-nav'});
+  const SUBS = [
+    {id:'magazyn', label:'Magazyn', badge:DATA.magazyn.razem},
+    {id:'przet',   label:'Przeterminowane', badge:DATA.przet.done.length + DATA.przet.w30.length + DATA.przet.w60.length},
+    {id:'dostawy', label:'Dostawy 7 dni', badge:DATA.dostawy.vgp.length + DATA.dostawy.aah.length},
+    {id:'prognoza', label:'Prognoza dostaw', badge:DATA.prognoza.reduce((s,p)=>s+p.razem,0)},
+    {id:'push',    label:'Push', badge:DATA.stock_push.length},
+    {id:'funkcyjne', label:'Funkcyjne', badge:DATA.stock_funkcyjne.uzywane.length + DATA.stock_funkcyjne.salon.length},
+  ];
+  SUBS.forEach((s,i) => {
+    const btn = el('button',{class:'sub-tab' + (i===0?' active':''), 'data-sub':s.id});
+    btn.innerHTML = s.label + (s.badge !== null && s.badge !== undefined ? `<span class="sub-badge">${s.badge}</span>` : '');
+    btn.addEventListener('click', () => {
+      subNav.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+      sec.querySelectorAll('.sub-section').forEach(x => x.classList.remove('active'));
+      btn.classList.add('active');
+      sec.querySelector('#sub-'+s.id).classList.add('active');
+    });
+    subNav.append(btn);
+  });
+  sec.append(subNav);
+
+  // === SUB: MAGAZYN ===
+  const subMag = el('div',{class:'sub-section active',id:'sub-magazyn'});
+  const kpisM = el('div',{class:'kpi-row'});
+  function kpiM(lbl, v, c=''){
+    const k = el('div',{class:'kpi'});
+    k.append(el('div',{class:'lbl'},lbl));
+    k.append(el('div',{class:'v',style:c?'color:'+c:''},v));
+    return k;
+  }
+  kpisM.append(kpiM('RAZEM', DATA.magazyn.razem,'var(--vw-blue)'));
+  kpisM.append(kpiM('Klienckie 1.CU', DATA.magazyn.klienc));
+  kpisM.append(kpiM('Wolne 2.DE', DATA.magazyn.wolne));
+  subMag.append(kpisM);
+
+  function modelTable(rows, title, type){
+    const wrap = el('div',{class:'table-wrap'});
+    wrap.append(el('div',{class:'table-head'}, el('h3',{},title), el('span',{class:'count'}, rows.reduce((s,r) => s+r.n, 0)+' szt.')));
+    const maxN = Math.max(...rows.map(r => r.n));
+    const t = el('table');
+    let html = `<thead><tr><th>Model</th><th class="num">Szt.</th><th>Udział</th></tr></thead><tbody>`;
+    rows.forEach(r => {
+      const w = Math.round(r.n / maxN * 120);
+      const c = type === 'cu' ? '' : ' bad';
+      html += `<tr><td>${r.m}</td><td class="num"><strong>${r.n}</strong></td><td><span class="minibar${c}" style="width:${w}px"></span></td></tr>`;
+    });
+    html += '</tbody>';
+    t.innerHTML = html;
+    wrap.append(t);
+    return wrap;
+  }
+
+  const col2 = el('div',{class:'col-2'});
+  col2.append(modelTable(DATA.magazyn.klienc_modele, 'Klienckie (1.CU)', 'cu'));
+  col2.append(modelTable(DATA.magazyn.wolne_modele, 'Wolne / magazynowe (2.DE)', 'de'));
+  subMag.append(col2);
+  sec.append(subMag);
+
+  // === SUB: PRZETERMINOWANE ===
+  const subPrzet = el('div',{class:'sub-section',id:'sub-przet'});
+  subPrzet.append(el('div',{class:'alert bad',html:`<strong>UWAGA:</strong> 2 sztuki T-ROC FL z 11.09.2025 — w magazynie 259 dni, przeterminowane o 139 dni.`}));
+  function przetTable(rows, title, kind){
+    const wrap = el('div',{class:'table-wrap',style:'margin-top:16px'});
+    wrap.append(el('div',{class:'table-head'}, el('h3',{},title), el('span',{class:'count'}, rows.length+' szt.')));
+    if(rows.length === 0){
+      wrap.append(el('div',{style:'padding:24px;text-align:center;color:var(--dim);font-size:12px'},'brak rekordów'));
+      return wrap;
+    }
+    const scroll = el('div',{class:'table-scroll'});
+    const t = el('table');
+    let html = `<thead><tr><th>VIN</th><th>Model</th><th>PZ VGP</th><th class="num">Dni w mag.</th><th class="num">${kind === 'done' ? 'Przekroczenie' : 'Dni do exp.'}</th><th>Typ</th></tr></thead><tbody>`;
+    rows.forEach(r => {
+      const dni = kind === 'done' ? `<span class="badge-pill pill-bad">+${Math.abs(r.dni_exp)} d</span>` :
+                  (r.dni_exp <= 7 ? `<span class="badge-pill pill-bad">${r.dni_exp} d</span>` :
+                   r.dni_exp <= 14 ? `<span class="badge-pill pill-warn">${r.dni_exp} d</span>` :
+                   `<span class="badge-pill pill-good">${r.dni_exp} d</span>`);
+      const typBadge = `<span class="badge-type ${r.typ==='1.CU'?'cu':'de'}">${r.typ}</span>`;
+      html += `<tr><td class="mono">${r.vin}</td><td><strong>${r.model}</strong></td><td class="mono">${r.pz}</td><td class="num">${r.dni_mag}</td><td class="num">${dni}</td><td>${typBadge}</td></tr>`;
+    });
+    html += '</tbody>';
+    t.innerHTML = html;
+    scroll.append(t);
+    wrap.append(scroll);
+    return wrap;
+  }
+  subPrzet.append(przetTable(DATA.przet.done, '🔴 Już przeterminowane (>120 dni)', 'done'));
+  subPrzet.append(przetTable(DATA.przet.w30, '🟡 Termin w ciągu 30 dni', 'w30'));
+  subPrzet.append(przetTable(DATA.przet.w60, '🟢 Termin 31–60 dni', 'w60'));
+  sec.append(subPrzet);
+
+  // === SUB: DOSTAWY 7 DNI ===
+  const secSub_dostawy = el('div',{class:'sub-section',id:'sub-dostawy'});
+  secSub_dostawy.append(el('div',{class:'section-head'},
+    el('h2',{},'Ostatnie dostawy — 7 dni'),
+    el('div',{class:'pigulka'},`Od ${DATA.dostawy.cutoff} do 2026-05-28 · ${DATA.dostawy.vgp.length} do VGP / ${DATA.dostawy.aah.length} do dealera`)
+  ));
+  const kpis = el('div',{class:'kpi-row'});
+  function kpi(lbl, v, sub){
+    const k = el('div',{class:'kpi'});
+    k.append(el('div',{class:'lbl'},lbl));
+    k.append(el('div',{class:'v',style:'color:var(--vw-blue)'},v));
+    if(sub) k.append(el('div',{class:'delta'},sub));
+    return k;
+  }
+  kpis.append(kpi('Do VGP (importer)', DATA.dostawy.vgp.length, 'PZ VGP w ostatnich 7 dniach'));
+  kpis.append(kpi('Do dealera (AAH)', DATA.dostawy.aah.length, 'AAH w ostatnich 7 dniach'));
+  secSub_dostawy.append(kpis);
+  function dostawyTable(rows, title, dateLbl){
+    const wrap = el('div',{class:'table-wrap',style:'margin-top:16px'});
+    wrap.append(el('div',{class:'table-head'}, el('h3',{},title), el('span',{class:'count'}, rows.length+' szt.')));
+    const filter = el('div',{class:'filter-bar'});
+    const inp = el('input',{type:'text',placeholder:'filtruj po modelu / VIN / handlowcu / wersji...'});
+    filter.append(el('span',{class:'filter-label'}, 'filter'));
+    filter.append(inp);
+    wrap.append(filter);
+    const scroll = el('div',{class:'table-scroll'});
+    const t = el('table');
+    let html = `<thead><tr>
+      <th style="width:90px">${dateLbl}</th>
+      <th>Samochód</th>
+      <th>Wersja / silnik</th>
+      <th>Handlowiec</th>
+      <th class="num">Cena cennik</th>
+      <th>Typ</th>
+    </tr></thead><tbody>`;
+    rows.forEach(r => {
+      const sprz = r.wolny ? `<span class="wolny-tag">⬤ WOLNY</span>` : `<span class="sprzedawca-tag">${r.sprzedawca}</span>`;
+      const typBadge = `<span class="badge-type ${r.typ==='1.CU'?'cu':'de'}">${r.typ}</span>`;
+      html += `<tr>
+        <td><strong class="mono">${r.data}</strong></td>
+        <td>
+          <strong style="font-size:14px">${r.model}</strong>
+          <div class="car-detail"><span class="lbl">VIN:</span> ${r.vin}</div>
+        </td>
+        <td>
+          <div style="font-weight:600">${r.wersja}</div>
+          <div class="car-detail">${r.silnik}</div>
+          <div class="car-detail" style="color:var(--dim-2);font-size:10px">${r.paliwo}</div>
+        </td>
+        <td>${sprz}</td>
+        <td class="num"><span class="car-price">${fmtPln(r.cena)}</span></td>
+        <td>${typBadge}</td>
+      </tr>`;
+    });
+    html += '</tbody>';
+    t.innerHTML = html;
+    scroll.append(t);
+    wrap.append(scroll);
+    inp.addEventListener('input', () => {
+      const q = inp.value.toLowerCase();
+      t.querySelectorAll('tbody tr').forEach(tr => {
+        tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+    return wrap;
+  }
+  secSub_dostawy.append(dostawyTable(DATA.dostawy.vgp, 'Do VGP (importer)', 'PZ VGP'));
+  secSub_dostawy.append(dostawyTable(DATA.dostawy.aah, 'Do dealera (AAH)', 'AAH'));
+  sec.append(secSub_dostawy);
+
+  // === SUB: PROGNOZA ===
+  const secSub_prognoza = el('div',{class:'sub-section',id:'sub-prognoza'});
+  secSub_prognoza.append(el('div',{class:'section-head'},
+    el('h2',{},'Prognoza dostaw (ABH)'),
+    el('div',{class:'pigulka'},'Najbliższe 4 miesiące · czas transportu z IH 26/2026')
+  ));
+  secSub_prognoza.append(el('div',{class:'alert info',html:`<strong>Źródło czasów transportu:</strong> IH 26/2026 z 25.05.2026 (Kalendarz Produkcyjny). T-CROSS/T-ROC: 4 tyg, TAIGO: 5 tyg, POLO: 7 tyg, ID/GOLF/PASSAT/TIGUAN/TAYRON/TOUAREG/TOURAN: do 14 dni. Pominięto ${DATA.pominiete_abh} rekordów bez tygodnia produkcji.`}));
+
+  const maxR = Math.max(...DATA.prognoza.map(p => p.razem));
+  const chartCard = el('div',{class:'card'});
+  chartCard.append(el('div',{class:'card-label'},'Estymowane przyjęcia do VGP wg miesiąca'));
+  const chart = el('div',{style:'display:grid;grid-template-columns:repeat('+DATA.prognoza.length+',1fr);gap:24px;margin-top:24px;align-items:end;height:240px'});
+  DATA.prognoza.forEach(p => {
+    const col = el('div',{style:'display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%'});
+    col.append(el('div',{style:'font-size:22px;font-weight:700;color:var(--ink);margin-bottom:6px;letter-spacing:-0.5px'}, p.razem));
+    const barH = maxR ? Math.round(p.razem / maxR * 160) : 0;
+    const stack = el('div',{style:`width:100%;max-width:80px;display:flex;flex-direction:column;height:${barH}px;border-radius:4px 4px 0 0;overflow:hidden;border:1px solid var(--border)`});
+    if(p.cu){
+      const cuH = Math.round(p.cu/p.razem*100);
+      stack.append(el('div',{style:`background:var(--vw-blue);height:${cuH}%;display:flex;align-items:center;justify-content:center;font-family:JetBrains Mono;font-size:11px;color:white;font-weight:700`}, p.cu));
+    }
+    if(p.de){
+      const deH = Math.round(p.de/p.razem*100);
+      stack.append(el('div',{style:`background:var(--warn);height:${deH}%;display:flex;align-items:center;justify-content:center;font-family:JetBrains Mono;font-size:11px;color:white;font-weight:700`}, p.de));
+    }
+    col.append(stack);
+    col.append(el('div',{style:'font-size:11px;color:var(--dim);margin-top:8px;text-transform:uppercase;letter-spacing:1px;font-weight:600'}, mcLabel(p.mc)));
+    chart.append(col);
+  });
+  chartCard.append(chart);
+  chartCard.append(el('div',{class:'legend'},
+    el('span',{class:'legend-item'}, el('span',{class:'legend-dot',style:'background:var(--vw-blue)'}), '1.CU klienckie'),
+    el('span',{class:'legend-item'}, el('span',{class:'legend-dot',style:'background:var(--warn)'}), '2.DE wolne/magazyn'),
+  ));
+  secSub_prognoza.append(chartCard);
+
+  const ph = el('div',{class:'table-wrap',style:'margin-top:16px'});
+  ph.append(el('div',{class:'table-head'},
+    el('h3',{},'Prognoza dostaw wg handlowca'),
+    el('span',{class:'count'}, DATA.prognoza_handlowcy.reduce((s,r)=>s+r.razem,0)+' aut')
+  ));
+  const tph = el('table');
+  let phh = '<thead><tr><th>Handlowiec</th>';
+  DATA.horizon.forEach(h => { phh += `<th class="num">${mcShort(h)}</th>`; });
+  phh += '<th class="num">Razem</th></tr></thead><tbody>';
+  DATA.prognoza_handlowcy.forEach(r => {
+    const isAnon = r.name.includes('BEZ HANDLOWCA');
+    const nameCell = isAnon
+      ? `<span style="color:var(--warn);font-size:11px;letter-spacing:1px;font-weight:600">⬤ ${r.name}</span>`
+      : `<strong>${r.name}</strong>`;
+    phh += `<tr><td>${nameCell}</td>`;
+    DATA.horizon.forEach(h => {
+      const v = r[h] || 0;
+      phh += `<td class="num" style="${v ? 'color:var(--ink)' : 'color:var(--dim-3)'}">${v}</td>`;
+    });
+    phh += `<td class="num"><strong style="color:var(--vw-blue)">${r.razem}</strong></td></tr>`;
+  });
+  phh += '<tr style="background:var(--bg-soft);font-weight:600"><td><strong>SUMA</strong></td>';
+  DATA.horizon.forEach(h => {
+    const s = DATA.prognoza_handlowcy.reduce((s,r) => s+(r[h]||0), 0);
+    phh += `<td class="num"><strong>${s}</strong></td>`;
+  });
+  const grandTotal = DATA.prognoza_handlowcy.reduce((s,r) => s+r.razem, 0);
+  phh += `<td class="num"><strong style="color:var(--vw-blue);font-size:14px">${grandTotal}</strong></td></tr>`;
+  phh += '</tbody>';
+  tph.innerHTML = phh;
+  ph.append(tph);
+  secSub_prognoza.append(ph);
+
+  const tw = el('div',{class:'table-wrap',style:'margin-top:16px'});
+  tw.append(el('div',{class:'table-head'}, el('h3',{},'Szczegóły miesięczne')));
+  const t = el('table');
+  let html = '<thead><tr><th>Miesiąc</th><th class="num">CU</th><th class="num">DE</th><th class="num">RAZEM</th></tr></thead><tbody>';
+  DATA.prognoza.forEach(p => {
+    html += `<tr><td>${mcLabel(p.mc)} (${p.mc})</td><td class="num">${p.cu}</td><td class="num">${p.de}</td><td class="num"><strong>${p.razem}</strong></td></tr>`;
+  });
+  html += '</tbody>';
+  t.innerHTML = html;
+  tw.append(t);
+  secSub_prognoza.append(tw);
+
+  const tm = el('div',{class:'table-wrap',style:'margin-top:16px'});
+  tm.append(el('div',{class:'table-head'}, el('h3',{},'Top modele w pipeline (4 mc)'), el('span',{class:'count'}, DATA.prognoza_model.reduce((s,r) => s+r.n, 0)+' aut')));
+  const scroll = el('div',{class:'table-scroll'});
+  const t2 = el('table');
+  const maxN = Math.max(...DATA.prognoza_model.map(r => r.n));
+  let h2 = '<thead><tr><th>Model</th><th class="num">Szt.</th><th>Udział</th></tr></thead><tbody>';
+  DATA.prognoza_model.forEach(r => {
+    const w = Math.round(r.n / maxN * 160);
+    h2 += `<tr><td>${r.m}</td><td class="num"><strong>${r.n}</strong></td><td><span class="minibar" style="width:${w}px"></span></td></tr>`;
+  });
+  h2 += '</tbody>';
+  t2.innerHTML = h2;
+  scroll.append(t2);
+  tm.append(scroll);
+  secSub_prognoza.append(tm);
+
+  sec.append(secSub_prognoza);
+
+  // === SUB: PUSH ===
+  const subPush = el('div',{class:'sub-section',id:'sub-push'});
+  subPush.append(el('div',{class:'alert info',html:'<strong>Samochody push</strong> — auta zakwalifikowane przez importera do specjalnych puli (np. zastępcze AAK, ZWS). Dane z pliku <code>Auta_po_AaK.xlsx</code>.'}));
+
+  if(DATA.stock_push.length){
+    const wrap = el('div',{class:'table-wrap'});
+    wrap.append(el('div',{class:'table-head'}, el('h3',{},'Lista push'), el('span',{class:'count'}, DATA.stock_push.length+' szt.')));
+    const filter = el('div',{class:'filter-bar'});
+    const inp = el('input',{type:'text',placeholder:'filtruj po VIN / modelu / uwagach / kolorze...'});
+    filter.append(el('span',{class:'filter-label'}, 'filter'));
+    filter.append(inp);
+    wrap.append(filter);
+
+    const scroll = el('div',{class:'table-scroll'});
+    const t = el('table');
+    let html = `<thead><tr>
+      <th>VIN / Komisja</th>
+      <th>Model</th>
+      <th>Wersja / silnik</th>
+      <th>Kolor / tapicerka</th>
+      <th class="num">Cena sprzedaży</th>
+      <th class="num">Cena zakupu</th>
+      <th>Status</th>
+      <th>Uwagi</th>
+    </tr></thead><tbody>`;
+    DATA.stock_push.forEach(p => {
+      const ml = p.model_long || '';
+      // Wyciągnij wersję (drugi człon) i silnik
+      const longSplit = ml.replace(/^Volkswagen\s+/i,'').trim();
+      html += `<tr>
+        <td>
+          <strong class="mono">${p.vin || '—'}</strong>
+          <div class="car-detail"><span class="lbl">Komisja:</span> ${p.komisja || '—'} · <span class="lbl">Kod:</span> ${p.kod_modelu || '—'}</div>
+        </td>
+        <td><strong>${p.kod_modelu ? p.kod_modelu.substring(0,3) : '—'}</strong></td>
+        <td style="font-size:12px;line-height:1.5">${longSplit || '—'}</td>
+        <td>
+          <span class="mono" style="font-weight:600">${p.kolor || '—'}</span>
+          ${p.tapicerka ? `<div class="car-detail">tap.: ${p.tapicerka}</div>` : ''}
+        </td>
+        <td class="num"><span class="car-price">${fmtPln(p.cena_sprzedazy)}</span></td>
+        <td class="num">${fmtPln(p.cena_zakupu)}</td>
+        <td>${p.sprzedane === 'TAK' ? '<span class="badge-pill pill-good">✓ SPRZEDANE</span>' : '<span class="badge-pill pill-warn">○ NIESPRZEDANE</span>'}</td>
+        <td style="font-size:12px;color:var(--ink-soft)">${p.uwagi || '—'}</td>
+      </tr>`;
+    });
+    html += '</tbody>';
+    t.innerHTML = html;
+    scroll.append(t);
+    wrap.append(scroll);
+    inp.addEventListener('input', () => {
+      const q = inp.value.toLowerCase();
+      t.querySelectorAll('tbody tr').forEach(tr => {
+        tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+    subPush.append(wrap);
+  }
+  sec.append(subPush);
+
+  // === SUB: FUNKCYJNE ===
+  const subFunk = el('div',{class:'sub-section',id:'sub-funkcyjne'});
+  subFunk.append(el('div',{class:'alert info',html:'<strong>Samochody funkcyjne</strong> — demo, jazdy próbne, ZS (zastępcze). Dane z pliku <code>funkcyjne_-_zestawienie.xlsx</code>. Lista podzielona na auta w salonie (do użytku) i przeznaczone do sprzedaży jako używane.'}));
+
+  function typeBadge(t){
+    const tl = (t||'').toLowerCase();
+    let cls = 'other';
+    if(tl.includes('ex-demo') || tl.includes('exdemo')) cls = 'exdemo';
+    else if(tl === 'demo') cls = 'demo';
+    else if(tl === 'zs') cls = 'zs';
+    return `<span class="type-badge ${cls}">${t || '—'}</span>`;
+  }
+
+  function funkTable(rows, title, hasYield){
+    const wrap = el('div',{class:'table-wrap',style:'margin-top:16px'});
+    wrap.append(el('div',{class:'table-head'}, el('h3',{},title), el('span',{class:'count'}, rows.length+' szt.')));
+    const filter = el('div',{class:'filter-bar'});
+    const inp = el('input',{type:'text',placeholder:'filtruj po VIN / modelu / typie...'});
+    filter.append(el('span',{class:'filter-label'}, 'filter'));
+    filter.append(inp);
+    wrap.append(filter);
+
+    const scroll = el('div',{class:'table-scroll'});
+    const t = el('table');
+    let html = `<thead><tr>
+      <th>Typ</th>
+      <th>Model</th>
+      <th>VIN</th>
+      <th class="num">Data rej.</th>
+      <th class="num">Cena sprzedaży</th>
+      <th class="num">Cena zakupu brutto</th>
+    </tr></thead><tbody>`;
+    rows.forEach(r => {
+      html += `<tr>
+        <td>${typeBadge(r.typ)}</td>
+        <td><strong>${r.model || '—'}</strong></td>
+        <td class="mono">${r.vin || '—'}</td>
+        <td class="num">${r.data_rej || '—'}</td>
+        <td class="num"><strong>${fmtPln(r.cena_sprzedazy)}</strong></td>
+        <td class="num">${fmtPln(r.cena_zakupu_brutto)}</td>
+      </tr>`;
+    });
+    html += '</tbody>';
+    t.innerHTML = html;
+    scroll.append(t);
+    wrap.append(scroll);
+    inp.addEventListener('input', () => {
+      const q = inp.value.toLowerCase();
+      t.querySelectorAll('tbody tr').forEach(tr => {
+        tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+    return wrap;
+  }
+
+  // KPI sumaryczne dla funkcyjnych (bez wyników finansowych)
+  const kpisF = el('div',{class:'kpi-row'});
+  function kpiF(lbl, v, sub, c=''){
+    const k = el('div',{class:'kpi'});
+    k.append(el('div',{class:'lbl'},lbl));
+    k.append(el('div',{class:'v',style:c?'color:'+c:''}, v));
+    if(sub) k.append(el('div',{class:'delta'},sub));
+    return k;
+  }
+  kpisF.append(kpiF('Salon (demo/ZS)', DATA.stock_funkcyjne.salon.length+' aut', 'auta w użyciu', ''));
+  kpisF.append(kpiF('Używane (do sprzedaży)', DATA.stock_funkcyjne.uzywane.length+' aut', 'po wyrejestrowaniu', ''));
+  subFunk.append(kpisF);
+
+  subFunk.append(funkTable(DATA.stock_funkcyjne.salon, 'Funkcyjne · SALON (demo / ZS w użyciu)', 'roznica'));
+  subFunk.append(funkTable(DATA.stock_funkcyjne.uzywane, 'Funkcyjne · UŻYWANE (do sprzedaży)', 'wynik'));
+  sec.append(subFunk);
+
+  main.append(sec);
+}
+
+
+
+
+
+// ============================================================
+// SEKCJA 07: INFORMACJA PRODUKCYJNA
+// ============================================================
+{
+  const sec = el('div',{class:'section',id:'sec-informacja_produkcyjna'});
+  sec.append(el('div',{class:'section-head'},
+    el('h2',{},'Informacja Produkcyjna'),
+    el('div',{class:'pigulka'},`Źródło: ${DATA.meta.ih_numer} z ${DATA.meta.ih_data} (tydzień produkcyjny ${DATA.meta.ih_tydzien})`)
+  ));
+
+  // === KOMUNIKATY ===
+  if(DATA.restrykcje.komunikaty && DATA.restrykcje.komunikaty.length){
+    sec.append(el('div',{style:'display:flex;align-items:baseline;gap:12px;margin:8px 0 12px 0'},
+      el('h3',{style:'font-size:18px;font-weight:700;letter-spacing:-0.3px;color:var(--vw-navy)'}, 'Komunikaty'),
+      el('span',{style:'font-size:11px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;font-weight:600'}, 'najważniejsze informacje z IH')
+    ));
+
+    const komWrap = el('div',{style:'display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:12px;margin-bottom:24px'});
+    DATA.restrykcje.komunikaty.forEach(k => {
+      const accentColor = k.priorytet === 'wysoki' ? 'var(--bad)' : (k.priorytet === 'sredni' ? 'var(--vw-blue)' : 'var(--dim-2)');
+      const icon = k.priorytet === 'wysoki' ? '!' : 'i';
+      const iconBg = k.priorytet === 'wysoki' ? 'var(--bad-bg)' : 'var(--vw-blue-pale)';
+      const iconCol = k.priorytet === 'wysoki' ? 'var(--bad)' : 'var(--vw-navy)';
+      const card = el('div',{style:`background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;border-left:3px solid ${accentColor};box-shadow:var(--shadow-sm)`});
+      card.innerHTML = `
+        <div style="display:flex;align-items:flex-start;gap:12px">
+          <div style="flex-shrink:0;width:24px;height:24px;border-radius:50%;background:${iconBg};color:${iconCol};display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;font-family:'Inter'">${icon}</div>
+          <div style="flex:1">
+            <div style="font-weight:700;color:var(--vw-navy);font-size:14px;margin-bottom:6px;letter-spacing:-0.2px">${k.tytul}</div>
+            <div style="font-size:12px;color:var(--ink-soft);line-height:1.6">${k.tresc}</div>
+          </div>
+        </div>
+      `;
+      komWrap.append(card);
+    });
+    sec.append(komWrap);
+  }
+
+  // === PRZERWY PRODUKCYJNE ===
+  if(DATA.restrykcje.przerwy_produkcyjne && DATA.restrykcje.przerwy_produkcyjne.length){
+    const przerwyWrap = el('div',{class:'table-wrap',style:'margin-bottom:16px'});
+    przerwyWrap.append(el('div',{class:'table-head'},
+      el('h3',{},'Przerwy produkcyjne 2026'),
+      el('span',{class:'count'}, DATA.restrykcje.przerwy_produkcyjne.length + ' modeli')
+    ));
+    const t = el('table');
+    let html = '<thead><tr><th>Model</th><th>Tydzień przerwy</th></tr></thead><tbody>';
+    DATA.restrykcje.przerwy_produkcyjne.forEach(p => {
+      const brak = (p.tydzien||'').includes('BRAK');
+      html += `<tr>
+        <td><strong>${p.model}</strong></td>
+        <td class="mono" style="color:${brak?'var(--dim)':'var(--warn)'};font-weight:600">${p.tydzien}</td>
+      </tr>`;
+    });
+    html += '</tbody>';
+    t.innerHTML = html;
+    przerwyWrap.append(t);
+    sec.append(przerwyWrap);
+  }
+
+  // === KALENDARZ PRODUKCYJNY ===
+  const tw3 = el('div',{class:'table-wrap',style:'margin-bottom:16px'});
+  tw3.append(el('div',{class:'table-head'}, el('h3',{},'Kalendarz produkcyjny — czasy transportu do VGP'), el('span',{class:'count'}, DATA.restrykcje.kalendarz.length+' modeli')));
+  const t3 = el('table');
+  let h3html = '<thead><tr><th>Model</th><th>Najbliższy zatw. tydz.</th><th>Najwcześn. mc zatw.</th><th class="num">Czas dostawy</th></tr></thead><tbody>';
+  DATA.restrykcje.kalendarz.forEach(r => {
+    const isQ1 = (r.miesiac||'').includes('Q1');
+    h3html += `<tr>
+      <td><strong>${r.model}</strong></td>
+      <td class="mono">${r.tydzien}</td>
+      <td style="color:${isQ1?'var(--bad)':'inherit'};font-weight:${isQ1?700:400}">${r.miesiac}</td>
+      <td class="num" style="color:var(--vw-navy);font-weight:600">${r.czas_dostawy}</td>
+    </tr>`;
+  });
+  h3html += '</tbody>';
+  t3.innerHTML = h3html;
+  tw3.append(t3);
+  sec.append(tw3);
+
+  // === RESTRYKCJE WYPOSAŻENIA ===
+  sec.append(el('div',{class:'alert info',html:'Wystąpienie któregokolwiek z poniższych elementów w specyfikacji samochodu może wydłużyć czas zatwierdzenia zamówienia do produkcji.'}));
+
+  const tw2 = el('div',{class:'table-wrap'});
+  tw2.append(el('div',{class:'table-head'}, el('h3',{},'Restrykcje wyposażenia'), el('span',{class:'count'}, DATA.restrykcje.pdf.length+' pozycji')));
+  const t2 = el('table');
+  let h2 = '<thead><tr><th>Model</th><th>Kod</th><th>Opis restrykcji</th></tr></thead><tbody>';
+  DATA.restrykcje.pdf.forEach(r => {
+    h2 += `<tr><td><strong>${r.model}</strong></td><td class="mono" style="color:var(--vw-navy);font-weight:600">${r.kod}</td><td>${r.opis}</td></tr>`;
+  });
+  h2 += '</tbody>';
+  t2.innerHTML = h2;
+  tw2.append(t2);
+  sec.append(tw2);
+
+  main.append(sec);
+}
+
+
+
+</script>
+
+<script id="login-script">
+(function() {
+  const HASH = 'f9689197203df75a624fd47bcc58b643fb95a0d3cd71780c728c368b95cab872';
+  const SESSION_KEY = 'vw_gazda_auth';
+
+  async function sha256(str) {
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+  }
+
+  window.checkLogin = async function() {
+    const pwd = document.getElementById('pwd-input').value;
+    const hash = await sha256(pwd);
+    if (hash === HASH) {
+      sessionStorage.setItem(SESSION_KEY, '1');
+      document.getElementById('login-overlay').style.display = 'none';
+      document.body.style.overflow = '';
+    } else {
+      const err = document.getElementById('login-error');
+      err.style.display = 'block';
+      document.getElementById('pwd-input').value = '';
+      document.getElementById('pwd-input').focus();
+      setTimeout(() => err.style.display = 'none', 3000);
+    }
+  };
+
+  // Check session on load
+  if (sessionStorage.getItem(SESSION_KEY) === '1') {
+    document.addEventListener('DOMContentLoaded', () => {
+      const ov = document.getElementById('login-overlay');
+      if (ov) ov.style.display = 'none';
+    });
+  } else {
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.style.overflow = 'hidden';
+    });
+  }
+})();
+</script>
+</body>
+</html>
