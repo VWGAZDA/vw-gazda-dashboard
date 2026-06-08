@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard VW · Gazda Katowice · 04.06.2026</title>
+<title>Dashboard VW · Gazda Katowice · 07.06.2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -537,13 +537,13 @@
     <div class="vw-logo">VW</div>
     <div class="header-title">
       <h1>Dashboard Dzienny · Gazda Katowice</h1>
-      <div class="sub"><span class="pulse" style="background:#22c55e;box-shadow:0 0 8px #22c55e"></span>Stan na 4 czerwca 2026 · tydzień 23/2026</div>
+      <div class="sub"><span class="pulse" style="background:#22c55e;box-shadow:0 0 8px #22c55e"></span>Stan na 7 czerwca 2026 · tydzień 23/2026</div>
     </div>
     <div class="header-meta">
       <div class="meta-cell"><span class="lbl">Dealer</span><span class="val">01380V / ASO 138</span></div>
       <div class="meta-cell"><span class="lbl">Region</span><span class="val">4 · Katowice</span></div>
       <div class="meta-cell"><span class="lbl">IH</span><span class="val">26/2026 · 25.05.2026</span></div>
-      <div class="meta-cell"><span class="lbl">Upływ mc</span><span class="val">14.3%</span></div>
+      <div class="meta-cell"><span class="lbl">Upływ mc</span><span class="val">19.0%</span></div>
     </div>
   </div>
 </header>
@@ -554,7 +554,7 @@
 
 <footer>
   <div>Volkswagen Gazda Katowice · KVPS 01380V · Confidential</div>
-  <div>Wygenerowano · 2026-06-04 · z RAPORT_ZBIORCZY + IH 26/2026 + Push/Funkcyjne</div>
+  <div>Wygenerowano · 2026-06-07 · z RAPORT_ZBIORCZY + IH 26/2026 + Push/Funkcyjne</div>
 </footer>
 
 <script>
@@ -574,8 +574,8 @@
    ============================================================ */
 const DATA = {
   "meta": {
-    "data_raportu": "2026-06-04",
-    "data_raportu_pl": "4 czerwca 2026",
+    "data_raportu": "2026-06-07",
+    "data_raportu_pl": "7 czerwca 2026",
     "dealer": "GAZDA KATOWICE",
     "kvps": "01380V",
     "aso": "138",
@@ -589,35 +589,35 @@ const DATA = {
     "detal": {
       "cel_aak": 0.0,
       "aak": 6.0,
-      "aak_prev": 5.0,
-      "delta_aak": 1.0,
-      "abk_bm": 41.0,
+      "aak_prev": 6.0,
+      "delta_aak": 0.0,
+      "abk_bm": 45.0,
       "cel_aek": 0.0,
-      "aek": -2.0,
-      "aakmax": 64.0,
-      "fk": 1.0,
-      "uplyw": 0.143,
-      "prognoza": 9
+      "aek": 2.0,
+      "aakmax": 70.0,
+      "fk": 2.0,
+      "uplyw": 0.19,
+      "prognoza": 10
     },
     "flota": {
       "cel_aak": 0.0,
-      "aak": 3.0,
+      "aak": 4.0,
       "aak_prev": 3.0,
-      "delta_aak": 0.0,
-      "abk_bm": 3.0,
+      "delta_aak": 1.0,
+      "abk_bm": 2.0,
       "cel_aek": 0.0,
       "aek": 2.0,
       "aakmax": 0.0,
-      "fk": 1.0,
-      "uplyw": 0.143,
+      "fk": 0.0,
+      "uplyw": 0.19,
       "prognoza": 0
     }
   },
   "stan_aek": {
     "DETALICZNY_RD": {
-      "p": 13,
+      "p": 17,
       "u": 4,
-      "d": 9
+      "d": 13
     },
     "FLOTOWY": {
       "p": 2,
@@ -645,15 +645,21 @@ const DATA = {
     },
     {
       "name": "Nowak Anita",
-      "p": 5,
+      "p": 7,
       "u": 2,
-      "d": 3
+      "d": 5
     },
     {
       "name": "Żbik Kacper",
-      "p": 4,
+      "p": 5,
       "u": 0,
-      "d": 4
+      "d": 5
+    },
+    {
+      "name": "Pawlas Małgorzata",
+      "p": 1,
+      "u": 0,
+      "d": 1
     },
     {
       "name": "Kowalska Magdalena",
@@ -685,15 +691,15 @@ const DATA = {
   "kanaly": [
     {
       "name": "true retail",
-      "p": 9,
+      "p": 12,
       "u": 2,
-      "d": 7
+      "d": 10
     },
     {
       "name": "small fleet",
-      "p": 4,
+      "p": 5,
       "u": 2,
-      "d": 2
+      "d": 3
     },
     {
       "name": "strategic fleet",
@@ -703,13 +709,17 @@ const DATA = {
     }
   ],
   "magazyn": {
-    "razem": 54,
-    "klienc": 24,
-    "wolne": 30,
+    "razem": 59,
+    "klienc": 26,
+    "wolne": 33,
     "klienc_modele": [
       {
         "m": "T-ROC NF",
-        "n": 7
+        "n": 9
+      },
+      {
+        "m": "GOLF A8 PA",
+        "n": 5
       },
       {
         "m": "TIGUAN 3",
@@ -717,11 +727,7 @@ const DATA = {
       },
       {
         "m": "TOUAREG NF FL",
-        "n": 4
-      },
-      {
-        "m": "GOLF A8 PA",
-        "n": 4
+        "n": 3
       },
       {
         "m": "TAIGO",
@@ -743,7 +749,7 @@ const DATA = {
       },
       {
         "m": "T-CROSS FL",
-        "n": 4
+        "n": 5
       },
       {
         "m": "TIGUAN 3",
@@ -759,6 +765,10 @@ const DATA = {
       },
       {
         "m": "PASSAT B9 VAR",
+        "n": 3
+      },
+      {
+        "m": "TOUAREG NF FL",
         "n": 2
       },
       {
@@ -767,10 +777,6 @@ const DATA = {
       },
       {
         "m": "GOLF A8  VARIANT PA",
-        "n": 1
-      },
-      {
-        "m": "TOUAREG NF FL",
         "n": 1
       },
       {
@@ -785,72 +791,72 @@ const DATA = {
         "vin": "WVGZZZCT7TW036532",
         "model": "TIGUAN 3",
         "pz": "2026-01-20",
-        "dni_mag": 146,
-        "dni_exp": -15,
+        "dni_mag": 149,
+        "dni_exp": -18,
         "typ": "1.CU"
       },
       {
         "vin": "WVGZZZCS9TY039329",
         "model": "TAIGO",
         "pz": "2026-02-19",
-        "dni_mag": 141,
-        "dni_exp": 15,
+        "dni_mag": 144,
+        "dni_exp": 12,
         "typ": "2.DE"
       },
       {
         "vin": "WVGZZZA29TV028965",
         "model": "T-ROC NF",
         "pz": "2026-02-17",
-        "dni_mag": 141,
-        "dni_exp": 13,
+        "dni_mag": 144,
+        "dni_exp": 10,
         "typ": "1.CU"
       },
       {
         "vin": "WVGZZZC1XTY051724",
         "model": "T-CROSS FL",
         "pz": "2026-02-24",
-        "dni_mag": 147,
-        "dni_exp": 20,
+        "dni_mag": 150,
+        "dni_exp": 17,
         "typ": "2.DE"
       },
       {
         "vin": "WVGZZZA2XTV036377",
         "model": "T-ROC NF",
         "pz": "2026-02-26",
-        "dni_mag": 129,
-        "dni_exp": 22,
+        "dni_mag": 132,
+        "dni_exp": 19,
         "typ": "2.DE"
       },
       {
         "vin": "WVWZZZCJ9TD038331",
         "model": "PASSAT B9 VAR",
         "pz": "2026-02-08",
-        "dni_mag": 125,
-        "dni_exp": 4,
+        "dni_mag": 128,
+        "dni_exp": 1,
         "typ": "2.DE"
       },
       {
         "vin": "WVWZZZCD8TW624842",
         "model": "GOLF A8  VARIANT PA",
         "pz": "2026-02-04",
-        "dni_mag": 126,
-        "dni_exp": 0,
+        "dni_mag": 129,
+        "dni_exp": -3,
         "typ": "2.DE"
       },
       {
         "vin": "WVWZZZE17TP044446",
         "model": "ID.3 FL",
         "pz": "2026-01-30",
-        "dni_mag": 128,
-        "dni_exp": -5,
+        "dni_mag": 131,
+        "dni_exp": -8,
         "typ": "2.DE"
       },
       {
         "vin": "WVWZZZCJXTD038449",
         "model": "PASSAT B9 VAR",
         "pz": "2026-02-05",
-        "dni_mag": 125,
-        "dni_exp": 1,
+        "dni_mag": 128,
+        "dni_exp": -2,
         "typ": "2.DE"
       }
     ],
@@ -859,40 +865,40 @@ const DATA = {
         "vin": "WVGZZZCT9TW047113",
         "model": "TIGUAN 3",
         "pz": "2026-03-13",
-        "dni_mag": 87,
-        "dni_exp": 37,
+        "dni_mag": 90,
+        "dni_exp": 34,
         "typ": "2.DE"
       },
       {
         "vin": "WVGZZZR42TW030704",
         "model": "TAYRON",
         "pz": "2026-03-06",
-        "dni_mag": 111,
-        "dni_exp": 30,
+        "dni_mag": 114,
+        "dni_exp": 27,
         "typ": "2.DE"
       },
       {
         "vin": "WVGZZZA25TV041048",
         "model": "T-ROC NF",
         "pz": "2026-03-13",
-        "dni_mag": 121,
-        "dni_exp": 37,
+        "dni_mag": 124,
+        "dni_exp": 34,
         "typ": "1.CU"
       },
       {
         "vin": "WVGZZZA21TV044402",
         "model": "T-ROC NF",
         "pz": "2026-03-26",
-        "dni_mag": 99,
-        "dni_exp": 50,
+        "dni_mag": 102,
+        "dni_exp": 47,
         "typ": "2.DE"
       },
       {
         "vin": "WVGZZZR44TW030851",
         "model": "TAYRON",
         "pz": "2026-03-05",
-        "dni_mag": 103,
-        "dni_exp": 29,
+        "dni_mag": 106,
+        "dni_exp": 26,
         "typ": "2.DE"
       }
     ],
@@ -901,39 +907,71 @@ const DATA = {
         "vin": "WVGZZZCT5TW576350",
         "model": "TIGUAN 3",
         "pz": "2026-04-01",
-        "dni_mag": 69,
-        "dni_exp": 56,
+        "dni_mag": 72,
+        "dni_exp": 53,
         "typ": "1.CU"
       },
       {
         "vin": "WVGZZZA27TV078747",
         "model": "T-ROC NF",
         "pz": "2026-04-10",
-        "dni_mag": 74,
-        "dni_exp": 65,
+        "dni_mag": 77,
+        "dni_exp": 62,
         "typ": "2.DE"
       },
       {
         "vin": "WVGZZZA20TV045184",
         "model": "T-ROC NF",
         "pz": "2026-04-10",
-        "dni_mag": 76,
-        "dni_exp": 65,
+        "dni_mag": 79,
+        "dni_exp": 62,
         "typ": "2.DE"
       },
       {
         "vin": "WVWZZZCD3TW239933",
         "model": "GOLF A8 PA",
         "pz": "2026-04-02",
-        "dni_mag": 77,
-        "dni_exp": 57,
+        "dni_mag": 80,
+        "dni_exp": 54,
+        "typ": "2.DE"
+      },
+      {
+        "vin": "WVGZZZC13TY051743",
+        "model": "T-CROSS FL",
+        "pz": "2026-05-29",
+        "dni_mag": 150,
+        "dni_exp": 111,
         "typ": "2.DE"
       }
     ]
   },
   "dostawy": {
-    "cutoff": "2026-05-28",
+    "cutoff": "2026-05-31",
     "vgp": [
+      {
+        "data": "2026-06-06",
+        "model": "T-CROSS FL",
+        "vin": "WVGZZZC12VY022057",
+        "wersja": "Life ",
+        "silnik": "1.0 85kw (110 HP) TSI ",
+        "paliwo": "BENZYNA",
+        "sprzedawca": "",
+        "wolny": true,
+        "cena": 124800,
+        "typ": "2.DE"
+      },
+      {
+        "data": "2026-06-05",
+        "model": "T-ROC NF",
+        "vin": "WVGZZZA21TV109524",
+        "wersja": "R-Line",
+        "silnik": "1.5 110 kW 150KM eTsi mhev ",
+        "paliwo": "BENZYNA",
+        "sprzedawca": "MIKUSZ OSKAR",
+        "wolny": false,
+        "cena": 171400,
+        "typ": "1.CU"
+      },
       {
         "data": "2026-06-03",
         "model": "T-ROC NF",
@@ -947,16 +985,16 @@ const DATA = {
         "typ": "1.CU"
       },
       {
-        "data": "2026-05-30",
-        "model": "TOUAREG NF FL",
-        "vin": "WVGZZZCR1TD022898",
-        "wersja": "R-Line",
-        "silnik": "3.0 210 kw (286 HP) TDI ",
-        "paliwo": "DIESEL",
-        "sprzedawca": "",
-        "wolny": true,
-        "cena": 443080,
-        "typ": "2.DE"
+        "data": "2026-06-05",
+        "model": "TAIGO",
+        "vin": "WVGZZZCS4VY012820",
+        "wersja": "Life",
+        "silnik": "1.0 85 kW (116 HP) TSI",
+        "paliwo": "BENZYNA",
+        "sprzedawca": "MIKUSZ OSKAR",
+        "wolny": false,
+        "cena": 98660,
+        "typ": "1.CU"
       },
       {
         "data": "2026-06-03",
@@ -968,6 +1006,42 @@ const DATA = {
         "sprzedawca": "POKUSA KONRAD",
         "wolny": false,
         "cena": 168620,
+        "typ": "1.CU"
+      },
+      {
+        "data": "2026-06-05",
+        "model": "T-ROC NF",
+        "vin": "WVGZZZA21TV120149",
+        "wersja": "Style",
+        "silnik": "1.5 110 kW 150KM eTsi mhev ",
+        "paliwo": "BENZYNA",
+        "sprzedawca": "NOWAK ANITA",
+        "wolny": false,
+        "cena": 179470,
+        "typ": "1.CU"
+      },
+      {
+        "data": "2026-06-05",
+        "model": "TAIGO",
+        "vin": "WVGZZZCSXVY012935",
+        "wersja": "Life",
+        "silnik": "1.0 85 kW (116 HP) TSI",
+        "paliwo": "BENZYNA",
+        "sprzedawca": "DZIURZYŃSKI PATRYK",
+        "wolny": false,
+        "cena": 98660,
+        "typ": "1.CU"
+      },
+      {
+        "data": "2026-06-05",
+        "model": "GOLF A8 PA",
+        "vin": "WVWZZZCDXTW272234",
+        "wersja": "R",
+        "silnik": "2,0 245 kW (333HP) TSI",
+        "paliwo": "BENZYNA",
+        "sprzedawca": "KOWALSKA MAGDALENA",
+        "wolny": false,
+        "cena": 202160,
         "typ": "1.CU"
       },
       {
@@ -983,27 +1057,51 @@ const DATA = {
         "typ": "2.DE"
       },
       {
-        "data": "2026-05-29",
-        "model": "T-ROC NF",
-        "vin": "WVGZZZA21TV109295",
-        "wersja": "Life",
-        "silnik": "1.5 85 kW 116KM eTsi mhev ",
-        "paliwo": "BENZYNA",
-        "sprzedawca": "NOWAK ANITA",
-        "wolny": false,
-        "cena": 141650,
-        "typ": "1.CU"
-      },
-      {
-        "data": "2026-06-01",
-        "model": "PASSAT B9 VAR",
-        "vin": "WVWZZZCJ6TD059153",
-        "wersja": "Passat",
-        "silnik": "1.5  110 kW (150HP) eTsi mhev",
+        "data": "2026-06-05",
+        "model": "TIGUAN 3",
+        "vin": "WVGZZZCT5TW065026",
+        "wersja": "Elegance",
+        "silnik": "1,5 110 kW 150 KM eTSI  mhev",
         "paliwo": "BENZYNA",
         "sprzedawca": "",
         "wolny": true,
-        "cena": 181820,
+        "cena": 193670,
+        "typ": "2.DE"
+      },
+      {
+        "data": "2026-06-05",
+        "model": "T-ROC NF",
+        "vin": "WVGZZZA23TV111338",
+        "wersja": "Style",
+        "silnik": "1.5 110 kW 150KM eTsi mhev ",
+        "paliwo": "BENZYNA",
+        "sprzedawca": "",
+        "wolny": true,
+        "cena": 171160,
+        "typ": "2.DE"
+      },
+      {
+        "data": "2026-06-05",
+        "model": "GOLF A8  VARIANT PA",
+        "vin": "WVWZZZCD6TW644670",
+        "wersja": "R",
+        "silnik": "2,0 245 kW (333HP) TSI",
+        "paliwo": "BENZYNA",
+        "sprzedawca": "NOWAK ANITA",
+        "wolny": false,
+        "cena": 230130,
+        "typ": "1.CU"
+      },
+      {
+        "data": "2026-06-05",
+        "model": "T-ROC NF",
+        "vin": "WVGZZZA21TV121155",
+        "wersja": "Life",
+        "silnik": "1.5 110 kW 150KM eTsi mhev ",
+        "paliwo": "BENZYNA",
+        "sprzedawca": "",
+        "wolny": true,
+        "cena": 151930,
         "typ": "2.DE"
       },
       {
@@ -1031,39 +1129,39 @@ const DATA = {
         "typ": "1.CU"
       },
       {
-        "data": "2026-05-29",
-        "model": "T-CROSS FL",
-        "vin": "WVGZZZC13TY051743",
-        "wersja": "Life",
-        "silnik": "1.0 85 kw (115HP) TSI ",
-        "paliwo": "BENZYNA",
-        "sprzedawca": "",
-        "wolny": true,
-        "cena": 127430,
-        "typ": "2.DE"
-      },
-      {
-        "data": "2026-05-29",
+        "data": "2026-06-05",
         "model": "T-ROC NF",
-        "vin": "WVGZZZA27TV102156",
-        "wersja": "Style",
+        "vin": "WVGZZZA2XTV115077",
+        "wersja": "Life",
         "silnik": "1.5 110 kW 150KM eTsi mhev ",
         "paliwo": "BENZYNA",
         "sprzedawca": "",
         "wolny": true,
-        "cena": 166030,
+        "cena": 151930,
         "typ": "2.DE"
       },
       {
-        "data": "2026-05-29",
-        "model": "GOLF A8 PA",
-        "vin": "WVWZZZCD2TW265293",
-        "wersja": "R",
-        "silnik": "2,0 245 kW (333HP) TSI",
+        "data": "2026-06-06",
+        "model": "TAIGO",
+        "vin": "WVGZZZCS8VY015106",
+        "wersja": "Life",
+        "silnik": "1.0 85 kW (116 HP) TSI",
         "paliwo": "BENZYNA",
         "sprzedawca": "POKUSA KONRAD",
         "wolny": false,
-        "cena": 221890,
+        "cena": 98660,
+        "typ": "1.CU"
+      },
+      {
+        "data": "2026-06-05",
+        "model": "TAIGO",
+        "vin": "WVGZZZCS2VY015070",
+        "wersja": "Life",
+        "silnik": "1.0 85 kW (116 HP) TSI",
+        "paliwo": "BENZYNA",
+        "sprzedawca": "MIKUSZ OSKAR",
+        "wolny": false,
+        "cena": 100550,
         "typ": "1.CU"
       }
     ],
@@ -1072,9 +1170,9 @@ const DATA = {
   "prognoza": [
     {
       "mc": "2026-06",
-      "cu": 68,
-      "de": 38,
-      "razem": 106
+      "cu": 69,
+      "de": 36,
+      "razem": 105
     },
     {
       "mc": "2026-07",
@@ -1130,15 +1228,15 @@ const DATA = {
     },
     {
       "m": "PASSAT B9 VAR",
-      "n": 4
+      "n": 3
     }
   ],
-  "pominiete_abh": 144,
+  "pominiete_abh": 142,
   "prognoza_handlowcy": [
     {
       "name": "— BEZ HANDLOWCA —",
-      "razem": 70,
-      "2026-06": 38,
+      "razem": 68,
+      "2026-06": 36,
       "2026-07": 24,
       "2026-08": 8,
       "2026-09+": 0
@@ -1184,18 +1282,18 @@ const DATA = {
       "2026-09+": 0
     },
     {
-      "name": "KOWALSKA MAGDALENA",
+      "name": "PAWLAS MAŁGORZATA",
       "razem": 7,
-      "2026-06": 6,
-      "2026-07": 1,
+      "2026-06": 5,
+      "2026-07": 2,
       "2026-08": 0,
       "2026-09+": 0
     },
     {
-      "name": "PAWLAS MAŁGORZATA",
-      "razem": 6,
-      "2026-06": 4,
-      "2026-07": 2,
+      "name": "KOWALSKA MAGDALENA",
+      "razem": 7,
+      "2026-06": 6,
+      "2026-07": 1,
       "2026-08": 0,
       "2026-09+": 0
     },
@@ -1244,6 +1342,10 @@ const DATA = {
       "n": 1
     },
     {
+      "name": "Kowalska Magdalena",
+      "n": 1
+    },
+    {
       "name": "Pokusa Konrad",
       "n": 1
     },
@@ -1259,9 +1361,15 @@ const DATA = {
   "ranking_aek": [
     {
       "name": "Żbik Kacper",
-      "p": 4,
+      "p": 5,
       "u": 0,
-      "d": 4
+      "d": 5
+    },
+    {
+      "name": "Nowak Anita",
+      "p": 7,
+      "u": 2,
+      "d": 5
     },
     {
       "name": "Mikusz Oskar",
@@ -1270,16 +1378,16 @@ const DATA = {
       "d": 3
     },
     {
-      "name": "Nowak Anita",
-      "p": 5,
-      "u": 2,
-      "d": 3
-    },
-    {
       "name": "Kowalska Magdalena",
       "p": 3,
       "u": 0,
       "d": 3
+    },
+    {
+      "name": "Pawlas Małgorzata",
+      "p": 1,
+      "u": 0,
+      "d": 1
     },
     {
       "name": "Fudalej Tymoteusz",
@@ -1326,30 +1434,30 @@ const DATA = {
     {
       "name": "Nowak Anita",
       "aak": 1,
-      "aek_p": 5,
+      "aek_p": 7,
       "aek_u": 2,
-      "aek_d": 3
+      "aek_d": 5
     },
     {
       "name": "Pawlas Małgorzata",
       "aak": 1,
-      "aek_p": 0,
+      "aek_p": 1,
       "aek_u": 0,
-      "aek_d": 0
+      "aek_d": 1
+    },
+    {
+      "name": "Kowalska Magdalena",
+      "aak": 1,
+      "aek_p": 3,
+      "aek_u": 0,
+      "aek_d": 3
     },
     {
       "name": "Żbik Kacper",
       "aak": 0,
-      "aek_p": 4,
+      "aek_p": 5,
       "aek_u": 0,
-      "aek_d": 4
-    },
-    {
-      "name": "Kowalska Magdalena",
-      "aak": 0,
-      "aek_p": 3,
-      "aek_u": 0,
-      "aek_d": 3
+      "aek_d": 5
     },
     {
       "name": "Fudalej Tymoteusz",
@@ -1395,11 +1503,11 @@ const DATA = {
     "wykonanie_realne": 6,
     "brakuje": 64,
     "pct": 9,
-    "uplyw": 0.143,
-    "abk_bm": 44,
+    "uplyw": 0.19,
+    "abk_bm": 47,
     "fk": 2,
-    "do_dyspozycji": 46,
-    "prognoza": 9,
+    "do_dyspozycji": 49,
+    "prognoza": 10,
     "cele": [
       {
         "name": "Pawlas Małgorzata",
@@ -1477,7 +1585,7 @@ const DATA = {
       {
         "name": "Kowalska Magdalena",
         "rd": 0,
-        "flota": 0
+        "flota": 1
       }
     ],
     "zadania": [
@@ -1549,7 +1657,7 @@ const DATA = {
             "name": "Konrad Pokusa",
             "short": "Konrad",
             "cel": 4,
-            "wykonanie": 0
+            "wykonanie": 1
           },
           {
             "name": "Oskar Mikusz",
@@ -1561,7 +1669,7 @@ const DATA = {
             "name": "Kacper Żbik",
             "short": "Kacper",
             "cel": 4,
-            "wykonanie": 0
+            "wykonanie": 1
           },
           {
             "name": "Fabian Jóźwiak",
@@ -2455,6 +2563,20 @@ const DATA = {
           "typ": "SZKOLENIE"
         },
         {
+          "d_od": 19,
+          "d_do": 19,
+          "kto_short": "Kacper",
+          "kto_full": "Żbik Kacper",
+          "typ": "URLOP"
+        },
+        {
+          "d_od": 22,
+          "d_do": 22,
+          "kto_short": "Kacper",
+          "kto_full": "Żbik Kacper",
+          "typ": "URLOP"
+        },
+        {
           "d_od": 22,
           "d_do": 24,
           "kto_short": "Magda",
@@ -2978,11 +3100,11 @@ const DATA = {
   "kpi_handlowcy": [
     {
       "name": "Anita Nowak",
-      "oferty": 10,
-      "klienci": 8,
-      "zamowienia": 3,
-      "wydania": 0,
-      "traffic": 6,
+      "oferty": 29,
+      "klienci": 20,
+      "zamowienia": 7,
+      "wydania": 1,
+      "traffic": 7,
       "opinie": 1,
       "trade_in": 1
     },
@@ -2993,13 +3115,13 @@ const DATA = {
       "zamowienia": 0,
       "wydania": 2,
       "traffic": 0,
-      "opinie": 0,
+      "opinie": 1,
       "trade_in": 0
     },
     {
       "name": "Oskar Mikusz",
-      "oferty": 5,
-      "klienci": 5,
+      "oferty": 8,
+      "klienci": 8,
       "zamowienia": 3,
       "wydania": 1,
       "traffic": 2,
@@ -3008,48 +3130,48 @@ const DATA = {
     },
     {
       "name": "Kacper Żbik",
-      "oferty": 14,
-      "klienci": 6,
-      "zamowienia": 4,
-      "wydania": 0,
-      "traffic": 5,
-      "opinie": 0,
+      "oferty": 24,
+      "klienci": 12,
+      "zamowienia": 5,
+      "wydania": 1,
+      "traffic": 6,
+      "opinie": 1,
       "trade_in": 0
     },
     {
       "name": "Fabian Jóźwiak",
-      "oferty": 6,
-      "klienci": 4,
+      "oferty": 20,
+      "klienci": 15,
       "zamowienia": 0,
       "wydania": 1,
-      "traffic": 3,
+      "traffic": 4,
       "opinie": 1,
       "trade_in": 0
     },
     {
       "name": "Małgorzata Pawlas",
-      "oferty": 4,
-      "klienci": 5,
-      "zamowienia": 0,
+      "oferty": 20,
+      "klienci": 20,
+      "zamowienia": 1,
       "wydania": 1,
-      "traffic": 1,
+      "traffic": 2,
       "opinie": 0,
       "trade_in": 0
     },
     {
       "name": "Magdalena Kowalska",
-      "oferty": 2,
+      "oferty": 4,
       "klienci": 0,
-      "zamowienia": 3,
-      "wydania": 1,
+      "zamowienia": 2,
+      "wydania": 2,
       "traffic": 0,
       "opinie": 1,
       "trade_in": 0
     },
     {
       "name": "Patryk Dziurzyński",
-      "oferty": 4,
-      "klienci": 10,
+      "oferty": 8,
+      "klienci": 19,
       "zamowienia": 0,
       "wydania": 0,
       "traffic": 0,
