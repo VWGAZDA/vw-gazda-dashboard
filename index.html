@@ -3702,13 +3702,10 @@ function mcLabel(mc){const [y,m] = mc.split('-').map(Number);return MONTHS_PL[m-
 function mcShort(mc){const [y,m] = mc.split('-').map(Number);return MONTHS_PL_SHORT[m-1] + ' ' + (y % 100);}
 
 const SECTIONS = [
-  {id:'realizacja', num:'01', label:'Realizacja AAK'},
-  {id:'cele',       num:'02', label:'Cele i zadania', badge:null, badgeBad:false},
-  {id:'grafik',     num:'03', label:'Grafik'},
-  {id:'aek',        num:'04', label:'Stan zamówień AEK'},
-  {id:'handlowcy',  num:'05', label:'Handlowcy'},
-  {id:'stock',      num:'06', label:'Stock', badge:DATA.magazyn.razem, badgeInfo:true},
-  {id:'informacja_produkcyjna', num:'07', label:'Informacja Produkcyjna'},
+  {id:'cele',                   num:'01', label:'Cele i zadania'},
+  {id:'handlowcy',              num:'02', label:'Handlowcy'},
+  {id:'stock',                  num:'03', label:'Stock', badge:DATA.magazyn.razem, badgeInfo:true},
+  {id:'informacja_produkcyjna', num:'04', label:'Informacja Produkcyjna'},
 ];
 
 const nav = $('#nav');
@@ -3750,81 +3747,42 @@ function filterAlertHTML(){
 }
 
 // ============================================================
-// SEKCJA 01: REALIZACJA AAK
-// ============================================================
-{
-  const sec = el('div', {class:'section active', id:'sec-realizacja'});
-  sec.append(el('div',{class:'section-head'},
-    el('h2',{},'Realizacja AAK'),
-    el('div',{class:'pigulka'},'Detal +2 od początku miesiąca · prognoza 2 · cel AAK: 64 szt.')
-  ));
 
-  sec.append(el('div',{class:'alert info',html:'<strong>CEL_AAK = 0</strong> w pliku — pole nie wypełnione przez importera. Cele indywidualne i zespołowe zarządzane ręcznie znajdziesz w zakładce <strong>Cele i zadania</strong>.<br><strong>AAK</strong> = wykonanie dzisiejsze · <strong>AAK-1</strong> = stan z poprzedniego raportu · <strong>Δ</strong> = przyrost od poprzedniego raportu (dzienny)'}));
-
-  function realCard(title, d){
-    const card = el('div',{class:'card accent'});
-    card.append(el('div',{class:'card-label'}, title));
-    const row = el('div',{class:'kpi-row',style:'grid-template-columns:repeat(4,1fr);margin-top:14px;margin-bottom:0'});
-    row.append(makeKpi('AAK bm', fmt(d.aak), `Δ od poprz.: ${sgn(d.delta_aak)} (z ${fmt(d.aak_prev)})`, cls(d.delta_aak)));
-    row.append(makeKpi('ABK na bm', fmt(d.abk_bm), 'zamówienia z terminem'));
-    row.append(makeKpi('AEK bm', fmt(d.aek), 'saldo zamówień (z pliku)', d.aek > 0 ? 'pos' : (d.aek < 0 ? 'neg' : '')));
-    row.append(makeKpi('Prognoza', fmt(d.prognoza), `przy upływie ${Math.round(d.uplyw*100)}%`));
-    card.append(row);
-    if(d.aakmax){
-      const pct = Math.round(d.aak / d.aakmax * 100);
-      const block = el('div',{class:'progress-block'});
-      block.append(el('div',{class:'progress-label'}, el('span',{},'Realizacja vs AAK max'), el('span',{}, `${d.aak} / ${d.aakmax} (${pct}%)`)));
-      const bar = el('div',{class:'progress'});
-      bar.append(el('div',{class:'progress-bar' + (pct>=80?' good':(pct>=50?'':' warn')),style:`width:${pct}%`}));
-      block.append(bar);
-      card.append(block);
-    }
-    return card;
-  }
-  function makeKpi(lbl, v, sub, c=''){
-    const k = el('div',{class:'kpi'});
-    k.append(el('div',{class:'lbl'},lbl));
-    k.append(el('div',{class:'v'},v));
-    if(sub) k.append(el('div',{class:'delta '+c},sub));
-    return k;
-  }
-
-  const wrap = el('div',{class:'grid-2'});
-  wrap.append(realCard('DETAL', DATA.realizacja.detal));
-  wrap.append(realCard('FLOTA', DATA.realizacja.flota));
-  sec.append(wrap);
-
-  const compare = el('div',{class:'table-wrap',style:'margin-top:16px'});
-  compare.append(el('div',{class:'table-head'}, el('h3',{},'Pełne wskaźniki realizacji')));
-  const tc = el('table');
-  tc.innerHTML = `
-    <thead><tr><th>Wskaźnik</th><th class="num">Detal</th><th class="num">Flota</th><th>Opis</th></tr></thead>
-    <tbody>
-      <tr><td>CEL_AAK</td><td class="num">${DATA.realizacja.detal.cel_aak || '—'}</td><td class="num">${DATA.realizacja.flota.cel_aak || '—'}</td><td>Cel sprzedaży z pliku (niewyznaczony)</td></tr>
-      <tr><td><strong>AAK</strong></td><td class="num"><strong>${DATA.realizacja.detal.aak}</strong></td><td class="num"><strong>${DATA.realizacja.flota.aak}</strong></td><td>Wykonanie bm (dzisiejsze)</td></tr>
-      <tr><td>AAK-1</td><td class="num">${DATA.realizacja.detal.aak_prev}</td><td class="num">${DATA.realizacja.flota.aak_prev}</td><td>Wykonanie z poprzedniego raportu</td></tr>
-      <tr><td><strong>Δ AAK</strong></td><td class="num ${deltaCls(DATA.realizacja.detal.delta_aak)}">${sgn(DATA.realizacja.detal.delta_aak)}</td><td class="num ${deltaCls(DATA.realizacja.flota.delta_aak)}">${sgn(DATA.realizacja.flota.delta_aak)}</td><td>Przyrost od poprzedniego raportu</td></tr>
-      <tr><td>ABK_bm</td><td class="num">${DATA.realizacja.detal.abk_bm}</td><td class="num">${DATA.realizacja.flota.abk_bm}</td><td>Zamówienia z terminem na bm</td></tr>
-      <tr><td>FK bez AAK</td><td class="num">${DATA.realizacja.detal.fk}</td><td class="num">${DATA.realizacja.flota.fk}</td><td>Faktury bez wydania</td></tr>
-      <tr><td>AEK</td><td class="num">${DATA.realizacja.detal.aek}</td><td class="num ${deltaCls(DATA.realizacja.flota.aek)}">${DATA.realizacja.flota.aek}</td><td>Saldo zamówień bm (z pliku, bez filtra)</td></tr>
-      <tr><td>AAK max</td><td class="num">${DATA.realizacja.detal.aakmax}</td><td class="num">${DATA.realizacja.flota.aakmax}</td><td>Potencjał maksymalny (AAK+ABK+FK)</td></tr>
-      <tr><td>Prognoza</td><td class="num"><strong style="color:var(--vw-blue)">${DATA.realizacja.detal.prognoza}</strong></td><td class="num"><strong style="color:var(--vw-blue)">${DATA.realizacja.flota.prognoza}</strong></td><td>Ekstrapolacja liniowa (AAK / upływ)</td></tr>
-    </tbody>`;
-  compare.append(tc);
-  sec.append(compare);
-
-  main.append(sec);
-}
 
 // ============================================================
 // SEKCJA 02: CELE I ZADANIA
 // ============================================================
 {
-  const sec = el('div',{class:'section',id:'sec-cele'});
+  const sec = el('div',{class:'section active',id:'sec-cele'});
   sec.append(el('div',{class:'section-head'},
     el('h2',{},'Cele i zadania'),
     el('div',{class:'pigulka'},`Cel zespołowy ${DATA.cele.cel_zespolowy} AAK RD · wykonanie ${DATA.cele.wykonanie_realne} (${DATA.cele.pct}%) · brakuje ${DATA.cele.brakuje}`)
-  ));
+  ))
+
+  // ── Sub-nav CELE I ZADANIA ──
+  const czSubNav = el('nav',{class:'sub-nav'});
+  const czTabs = [
+    {id:'cz-cele',        label:'Cele AAK'},
+    {id:'cz-zadania',     label:'Zadania'},
+    {id:'cz-realizacja',  label:'Realizacja'},
+    {id:'cz-aek',         label:'Stan zamówień AEK'},
+  ];
+  czTabs.forEach((tab,i) => {
+    const btn = el('button',{class:'sub-tab'+(i===0?' active':'')});
+    btn.textContent = tab.label;
+    btn.addEventListener('click', () => {
+      czSubNav.querySelectorAll('.sub-tab').forEach(t=>t.classList.remove('active'));
+      sec.querySelectorAll('.cz-sub').forEach(x=>{x.style.display='none';});
+      btn.classList.add('active');
+      sec.querySelector('#'+tab.id).style.display='block';
+    });
+    czSubNav.append(btn);
+  });
+  sec.append(czSubNav);
+
+  // ── SUB: CELE AAK ──
+  const czCeleDiv = el('div',{id:'cz-cele',class:'cz-sub',style:'display:block'});
+  // Content of Cele sub-tab:;
 
   const C = DATA.cele;
   const pctClass = C.pct >= 100 ? 'good' : (C.pct >= 80 ? 'good' : (C.pct >= 50 ? 'warn' : 'bad'));
@@ -3873,12 +3831,12 @@ function filterAlertHTML(){
       </div>
     </div>
   `;
-  sec.append(banner);
+  czCeleDiv.append(banner);
 
   const prognoza = DATA.realizacja.detal.prognoza;
   if(prognoza < C.cel_zespolowy){
     const luka = C.cel_zespolowy - prognoza;
-    sec.append(el('div',{class:'alert bad',html:`<strong>PROGNOZA POD CELEM:</strong> przy obecnym tempie zamknięcie miesiąca to ~${prognoza} szt., co oznacza lukę <strong>${luka} szt.</strong> względem celu zespołowego ${C.cel_zespolowy}. Do dyspozycji jest ${C.do_dyspozycji} potencjalnych domknięć (ABK ${C.abk_bm} + FK ${C.fk}).`}));
+    czCeleDiv.append(el('div',{class:'alert bad',html:`<strong>PROGNOZA POD CELEM:</strong> przy obecnym tempie zamknięcie miesiąca to ~${prognoza} szt., co oznacza lukę <strong>${luka} szt.</strong> względem celu zespołowego ${C.cel_zespolowy}. Do dyspozycji jest ${C.do_dyspozycji} potencjalnych domknięć (ABK ${C.abk_bm} + FK ${C.fk}).`}));
   }
 
   const wrap = el('div',{class:'table-wrap'});
@@ -3951,7 +3909,7 @@ function filterAlertHTML(){
   html += '</tbody>';
   t.innerHTML = html;
   wrap.append(t);
-  sec.append(wrap);
+  czCeleDiv.append(wrap);
 
   const bezCelu = DATA.cele.bez_celu;
   if(bezCelu.length){
@@ -3974,12 +3932,17 @@ function filterAlertHTML(){
     h2 += '</tbody>';
     t2.innerHTML = h2;
     wrap2.append(t2);
-    sec.append(wrap2);
+    czCeleDiv.append(wrap2);
   }
 
-  // === ZADANIA — sub-section ===
+  
+  sec.append(czCeleDiv);
+
+  // ── SUB: ZADANIA ──
+  const czZadaniaDiv = el('div',{id:'cz-zadania',class:'cz-sub',style:'display:none'});
+// === ZADANIA — sub-section ===
   if(DATA.cele.zadania && DATA.cele.zadania.length){
-    sec.append(el('div',{style:'margin-top:32px;padding-top:24px;border-top:2px solid var(--border)'},
+    czZadaniaDiv.append(el('div',{style:'margin-top:32px;padding-top:24px;border-top:2px solid var(--border)'},
       el('div',{style:'display:flex;align-items:baseline;gap:12px;margin-bottom:16px'},
         el('h3',{style:'font-size:20px;font-weight:700;letter-spacing:-0.3px;color:var(--vw-navy)'},'Zadania miesięczne'),
         el('span',{style:'font-size:11px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;font-weight:600'},'cele dodatkowe per handlowiec')
@@ -4014,228 +3977,86 @@ function filterAlertHTML(){
         grid.append(card);
       });
       zWrap.append(grid);
-      sec.append(zWrap);
+      czZadaniaDiv.append(zWrap);
     });
   }
 
-  main.append(sec);
-}
+  sec.append(czZadaniaDiv);
 
+  // ── SUB: REALIZACJA AAK ──
 
-// ============================================================
-// SEKCJA 03: GRAFIK
-// ============================================================
-{
-  const sec = el('div',{class:'section',id:'sec-grafik'});
-  sec.append(el('div',{class:'section-head'},
-    el('h2',{},'Grafik pracy'),
-    el('div',{class:'pigulka'},'Aktualny miesiąc + następny · godziny rozpoczęcia 8/9/10 (8h pracy) · u = urlop · z/s = L4')
+  const czRealDiv = el('div',{id:'cz-realizacja',class:'cz-sub',style:'display:none'});
+  czRealDiv.append(el('div',{class:'section-head'},
+    el('h2',{},'Realizacja AAK'),
+    el('div',{class:'pigulka'},'Detal +2 od początku miesiąca · prognoza 2 · cel AAK: 64 szt.')
   ));
 
-  const TODAY = {y: 2026, m: 6, d: 1};
-  const DOW_PL = ['pn','wt','śr','cz','pt','sb','nd'];
+  czRealDiv.append(el('div',{class:'alert info',html:'<strong>CEL_AAK = 0</strong> w pliku — pole nie wypełnione przez importera. Cele indywidualne i zespołowe zarządzane ręcznie znajdziesz w zakładce <strong>Cele i zadania</strong>.<br><strong>AAK</strong> = wykonanie dzisiejsze · <strong>AAK-1</strong> = stan z poprzedniego raportu · <strong>Δ</strong> = przyrost od poprzedniego raportu (dzienny)'}));
 
-  // Sub-nav: maj / czerwiec
-  const subNav = el('nav',{class:'sub-nav'});
-  const SUBS = [
-    {id:'aktualny', label:'Czerwiec 2026', current:true, data:DATA.grafik.aktualny},
-    {id:'nastepny', label:'Lipiec 2026', current:false, data:DATA.grafik.nastepny},
-  ];
-  SUBS.forEach((s,i) => {
-    const btn = el('button',{class:'sub-tab' + (i===0?' active':''), 'data-sub':s.id});
-    btn.innerHTML = s.label + (s.current ? '<span class="sub-badge">aktualny</span>' : '');
-    btn.addEventListener('click', () => {
-      subNav.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
-      sec.querySelectorAll('.sub-section').forEach(x => x.classList.remove('active'));
-      btn.classList.add('active');
-      sec.querySelector('#gr-'+s.id).classList.add('active');
-    });
-    subNav.append(btn);
-  });
-  sec.append(subNav);
-
-  function renderMonth(monthData, subId, isActive){
-    const sub = el('div',{class:'sub-section' + (isActive?' active':''), id:'gr-'+subId});
-    const M = monthData;
-
-    // Alert dla pustego miesiąca (jeszcze nie wypełniony w arkuszu)
-    if(M.pusty){
-      sub.append(el('div',{class:'alert warn',html:`<strong>Grafik jeszcze nie wypełniony.</strong> Arkusz "${M.mc_label}" w Google Sheets nie zawiera jeszcze rozpisanych godzin pracy. Poniżej tylko szkielet miesiąca (dni tygodnia + święta). Plan urlopowy również pusty.`}));
+  function realCard(title, d){
+    const card = el('div',{class:'card accent'});
+    card.append(el('div',{class:'card-label'}, title));
+    const row = el('div',{class:'kpi-row',style:'grid-template-columns:repeat(4,1fr);margin-top:14px;margin-bottom:0'});
+    row.append(makeKpi('AAK bm', fmt(d.aak), `Δ od poprz.: ${sgn(d.delta_aak)} (z ${fmt(d.aak_prev)})`, cls(d.delta_aak)));
+    row.append(makeKpi('ABK na bm', fmt(d.abk_bm), 'zamówienia z terminem'));
+    row.append(makeKpi('AEK bm', fmt(d.aek), 'saldo zamówień (z pliku)', d.aek > 0 ? 'pos' : (d.aek < 0 ? 'neg' : '')));
+    row.append(makeKpi('Prognoza', fmt(d.prognoza), `przy upływie ${Math.round(d.uplyw*100)}%`));
+    card.append(row);
+    if(d.aakmax){
+      const pct = Math.round(d.aak / d.aakmax * 100);
+      const block = el('div',{class:'progress-block'});
+      block.append(el('div',{class:'progress-label'}, el('span',{},'Realizacja vs AAK max'), el('span',{}, `${d.aak} / ${d.aakmax} (${pct}%)`)));
+      const bar = el('div',{class:'progress'});
+      bar.append(el('div',{class:'progress-bar' + (pct>=80?' good':(pct>=50?'':' warn')),style:`width:${pct}%`}));
+      block.append(bar);
+      card.append(block);
     }
-
-    // Statystyki dla aktualnego miesiąca - dziś
-    if(M.mc === TODAY.m && M.rok === TODAY.y){
-      const todayIdx = TODAY.d - 1;
-      const inWork = M.handlowcy.filter(h => /^[0-9]+$/.test(h.days[todayIdx])).length;
-      const onLeave = M.handlowcy.filter(h => /^u$/i.test(h.days[todayIdx])).length;
-      const onL4 = M.handlowcy.filter(h => /^[zs]$/i.test(h.days[todayIdx])).length;
-      const offToday = M.handlowcy.filter(h => h.days[todayIdx] === '').length;
-
-      const kpis = el('div',{class:'kpi-row'});
-      function kpi(lbl, v, sub, c=''){
-        const k = el('div',{class:'kpi'});
-        k.append(el('div',{class:'lbl'},lbl));
-        k.append(el('div',{class:'v',style:c?'color:'+c:''}, v));
-        if(sub) k.append(el('div',{class:'delta'},sub));
-        return k;
-      }
-      kpis.append(kpi('Dziś w pracy', inWork, 'handlowcy aktywni', 'var(--good)'));
-      kpis.append(kpi('Dziś na urlopie', onLeave, '', onLeave>0?'var(--warn)':''));
-      kpis.append(kpi('Dziś na L4', onL4, '', onL4>0?'var(--bad)':''));
-      kpis.append(kpi('Dziś nieobecni', offToday, 'brak grafiku / wolne', 'var(--dim)'));
-      sub.append(kpis);
-    }
-
-    // Legenda + tabela
-    const wrap = el('div',{class:'schedule-wrap'});
-
-    const legend = el('div',{class:'schedule-legend'});
-    legend.innerHTML = `
-      <span class="lg"><span class="lg-box" style="background:#f0fdf4"></span>start 8:00</span>
-      <span class="lg"><span class="lg-box" style="background:white;border:1px solid var(--border)"></span>start 9:00</span>
-      <span class="lg"><span class="lg-box" style="background:#eff6ff"></span>start 10:00+</span>
-      <span class="lg"><span class="lg-box" style="background:#fef3c7"></span>U — urlop</span>
-      <span class="lg"><span class="lg-box" style="background:#fee2e2"></span>L4 (z/s)</span>
-      <span class="lg"><span class="lg-box" style="background:var(--bg-sunken)"></span>weekend / wolne</span>
-      <span class="lg"><span class="lg-box" style="background:#fef9c3"></span>święto</span>
-    `;
-    wrap.append(legend);
-
-    const tbl = el('table',{class:'schedule'});
-
-    // Header z dniami
-    let thead = '<thead><tr><th class="name-col" rowspan="2">Handlowiec</th>';
-    for(let d=1; d<=M.dni; d++){
-      const dow = M.weekdays[d-1];
-      const isWeekend = dow === 5 || dow === 6;
-      const isHoliday = M.holidays[d];
-      const isToday = (M.mc === TODAY.m && M.rok === TODAY.y && d === TODAY.d);
-      let cls = 'day-h';
-      if(isToday) cls += ' today';
-      else if(isHoliday) cls += ' holiday';
-      else if(isWeekend) cls += ' weekend';
-      thead += `<th class="${cls}" title="${isHoliday || ''}">${d}</th>`;
-    }
-    thead += '</tr><tr>';
-    for(let d=1; d<=M.dni; d++){
-      const dow = M.weekdays[d-1];
-      const isWeekend = dow === 5 || dow === 6;
-      thead += `<th class="dow ${isWeekend?'weekend':''}">${DOW_PL[dow]}</th>`;
-    }
-    thead += '</tr></thead>';
-    tbl.innerHTML = thead;
-
-    const tbody = document.createElement('tbody');
-
-    function classifyCell(val, d){
-      const dow = M.weekdays[d-1];
-      const isWeekend = dow === 5 || dow === 6;
-      const isHoliday = !!M.holidays[d];
-      const isToday = (M.mc === TODAY.m && M.rok === TODAY.y && d === TODAY.d);
-      let display = val;
-      let cls = 'cell';
-      if(/^u$/i.test(val)){ cls += ' urlop'; display = 'U'; }
-      else if(/^[zs]$/i.test(val) || /l4/i.test(val)){ cls += ' l4'; display = 'L4'; }
-      else if(/^\d+$/.test(val)){
-        const h = parseInt(val,10);
-        if(h <= 8) cls += ' work-early';
-        else if(h >= 10) cls += ' work-late';
-        else cls += ' work';
-        display = val;
-      } else if(val === '-' || val === ''){
-        if(isHoliday) { cls += ' holiday'; display = ''; }
-        else if(isWeekend){ cls += ' weekend'; display = ''; }
-        else { cls += ' empty'; display = ''; }
-      } else {
-        cls += ' work';
-      }
-      if(isToday) cls += ' today';
-      return `<td class="${cls}" title="dzień ${d}${isHoliday?' — '+isHoliday:''}">${display}</td>`;
-    }
-
-    // Handlowcy
-    M.handlowcy.forEach(h => {
-      let row = `<tr><td class="name-cell">${h.short}<div style="font-size:9px;color:var(--dim);font-weight:400;margin-top:1px">${h.name}</div></td>`;
-      h.days.forEach((val, i) => {
-        row += classifyCell(val, i+1);
-      });
-      row += '</tr>';
-      tbody.insertAdjacentHTML('beforeend', row);
-    });
-
-    // Divider Asystenci
-    if(M.asystenci.length){
-      tbody.insertAdjacentHTML('beforeend', `<tr class="assistant-divider"><td colspan="${M.dni+1}">Asystenci / recepcja</td></tr>`);
-      M.asystenci.forEach(h => {
-        let row = `<tr><td class="name-cell assistant">${h.short}</td>`;
-        h.days.forEach((val, i) => {
-          row += classifyCell(val, i+1);
-        });
-        row += '</tr>';
-        tbody.insertAdjacentHTML('beforeend', row);
-      });
-    }
-
-    // Suma w pracy dziennie (handlowcy)
-    let sumRow = `<tr class="summary-row"><td class="name-cell" style="background:var(--bg-soft)">W pracy</td>`;
-    for(let d=1; d<=M.dni; d++){
-      const inWork = M.handlowcy.filter(h => /^\d+$/.test(h.days[d-1])).length;
-      const dow = M.weekdays[d-1];
-      const isWeekend = dow === 5 || dow === 6;
-      const isHoliday = M.holidays[d];
-      let color = inWork === 0 ? 'var(--dim-3)' : (inWork >= 5 ? 'var(--good)' : 'var(--warn)');
-      if(isWeekend || isHoliday) color = 'var(--dim-3)';
-      sumRow += `<td class="cell" style="color:${color};font-weight:700">${inWork || ''}</td>`;
-    }
-    sumRow += '</tr>';
-    tbody.insertAdjacentHTML('beforeend', sumRow);
-
-    tbl.append(tbody);
-    wrap.append(tbl);
-    sub.append(wrap);
-
-    // Plan urlopowy z kalendarza miesięcznego
-    const urlopWrap = el('div',{class:'urlop-list'});
-    urlopWrap.innerHTML = `<div class="table-head"><h3>Plan urlopowy — ${M.mc_label}</h3><span class="count">${M.plan_urlopowy.length} pozycji</span></div>`;
-    if(M.plan_urlopowy.length === 0){
-      urlopWrap.insertAdjacentHTML('beforeend', '<div style="padding:24px;text-align:center;color:var(--dim);font-size:12px">brak zaplanowanych urlopów</div>');
-    } else {
-      M.plan_urlopowy.forEach(p => {
-        const dateRange = p.d_od === p.d_do ? `${p.d_od}.${String(M.mc).padStart(2,'0')}` : `${p.d_od}–${p.d_do}.${String(M.mc).padStart(2,'0')}`;
-        const days = p.d_do - p.d_od + 1;
-        const typClass = p.typ === 'L4' ? 'typ-l4' : (p.typ === 'WOLNE' ? 'typ-wolne' : 'typ-urlop');
-        urlopWrap.insertAdjacentHTML('beforeend', `
-          <div class="urlop-item">
-            <span class="date">${dateRange} <span style="color:var(--dim-3)">(${days} ${days===1?'dzień':'dni'})</span></span>
-            <span class="typ-badge ${typClass}">${p.typ}</span>
-            <span class="who">${p.kto_full}</span>
-          </div>
-        `);
-      });
-    }
-    sub.append(urlopWrap);
-
-    return sub;
+    return card;
+  }
+  function makeKpi(lbl, v, sub, c=''){
+    const k = el('div',{class:'kpi'});
+    k.append(el('div',{class:'lbl'},lbl));
+    k.append(el('div',{class:'v'},v));
+    if(sub) k.append(el('div',{class:'delta '+c},sub));
+    return k;
   }
 
-  sec.append(renderMonth(DATA.grafik.aktualny, 'aktualny', true));
-  sec.append(renderMonth(DATA.grafik.nastepny, 'nastepny', false));
+  const wrap = el('div',{class:'grid-2'});
+  wrap.append(realCard('DETAL', DATA.realizacja.detal));
+  wrap.append(realCard('FLOTA', DATA.realizacja.flota));
+  czRealDiv.append(wrap);
 
-  main.append(sec);
-}
+  const compare = el('div',{class:'table-wrap',style:'margin-top:16px'});
+  compare.append(el('div',{class:'table-head'}, el('h3',{},'Pełne wskaźniki realizacji')));
+  const tc = el('table');
+  tc.innerHTML = `
+    <thead><tr><th>Wskaźnik</th><th class="num">Detal</th><th class="num">Flota</th><th>Opis</th></tr></thead>
+    <tbody>
+      <tr><td>CEL_AAK</td><td class="num">${DATA.realizacja.detal.cel_aak || '—'}</td><td class="num">${DATA.realizacja.flota.cel_aak || '—'}</td><td>Cel sprzedaży z pliku (niewyznaczony)</td></tr>
+      <tr><td><strong>AAK</strong></td><td class="num"><strong>${DATA.realizacja.detal.aak}</strong></td><td class="num"><strong>${DATA.realizacja.flota.aak}</strong></td><td>Wykonanie bm (dzisiejsze)</td></tr>
+      <tr><td>AAK-1</td><td class="num">${DATA.realizacja.detal.aak_prev}</td><td class="num">${DATA.realizacja.flota.aak_prev}</td><td>Wykonanie z poprzedniego raportu</td></tr>
+      <tr><td><strong>Δ AAK</strong></td><td class="num ${deltaCls(DATA.realizacja.detal.delta_aak)}">${sgn(DATA.realizacja.detal.delta_aak)}</td><td class="num ${deltaCls(DATA.realizacja.flota.delta_aak)}">${sgn(DATA.realizacja.flota.delta_aak)}</td><td>Przyrost od poprzedniego raportu</td></tr>
+      <tr><td>ABK_bm</td><td class="num">${DATA.realizacja.detal.abk_bm}</td><td class="num">${DATA.realizacja.flota.abk_bm}</td><td>Zamówienia z terminem na bm</td></tr>
+      <tr><td>FK bez AAK</td><td class="num">${DATA.realizacja.detal.fk}</td><td class="num">${DATA.realizacja.flota.fk}</td><td>Faktury bez wydania</td></tr>
+      <tr><td>AEK</td><td class="num">${DATA.realizacja.detal.aek}</td><td class="num ${deltaCls(DATA.realizacja.flota.aek)}">${DATA.realizacja.flota.aek}</td><td>Saldo zamówień bm (z pliku, bez filtra)</td></tr>
+      <tr><td>AAK max</td><td class="num">${DATA.realizacja.detal.aakmax}</td><td class="num">${DATA.realizacja.flota.aakmax}</td><td>Potencjał maksymalny (AAK+ABK+FK)</td></tr>
+      <tr><td>Prognoza</td><td class="num"><strong style="color:var(--vw-blue)">${DATA.realizacja.detal.prognoza}</strong></td><td class="num"><strong style="color:var(--vw-blue)">${DATA.realizacja.flota.prognoza}</strong></td><td>Ekstrapolacja liniowa (AAK / upływ)</td></tr>
+    </tbody>`;
+  compare.append(tc);
+  czRealDiv.append(compare);
 
-// ============================================================
-// SEKCJA 04: STAN AEK
-// ============================================================
-{
-  const sec = el('div',{class:'section',id:'sec-aek'});
-  sec.append(el('div',{class:'section-head'},
+  sec.append(czRealDiv);
+
+  // ── SUB: STAN ZAMÓWIEŃ AEK ──
+
+  const czAekDiv = el('div',{id:'cz-aek',class:'cz-sub',style:'display:none'});
+  czAekDiv.append(el('div',{class:'section-head'},
     el('h2',{},'Stan zamówień AEK'),
     el('div',{class:'pigulka'},`Saldo: Detal RD ${sgn(DATA.stan_aek.DETALICZNY_RD.d)}, Detal reszta ${sgn(DATA.stan_aek.DETALICZNY_reszta.d)}, Flota ${sgn(DATA.stan_aek.FLOTOWY.d)}`),
     el('span',{class:'filter-info-pill'}, `FILTR: -${DATA.filtered_records_count} ubytków`)
   ));
 
-  sec.append(el('div',{class:'alert warn',html:filterAlertHTML()}));
+  czAekDiv.append(el('div',{class:'alert warn',html:filterAlertHTML()}));
 
   const totalP = Object.values(DATA.stan_aek).reduce((s,o) => s+o.p, 0);
   const totalU = Object.values(DATA.stan_aek).reduce((s,o) => s+o.u, 0);
@@ -4252,7 +4073,7 @@ function filterAlertHTML(){
   kpis.append(kpi('Razem przyrosty', '+'+totalP, 'wszystkie obszary','pos'));
   kpis.append(kpi('Razem ubytki (po filtrze)', '-'+totalU, `pominięto ${DATA.filtered_records_count} wykluczonych`,'neg'));
   kpis.append(kpi('Saldo netto', sgn(totalD), 'delta zamówień', cls(totalD)));
-  sec.append(kpis);
+  czAekDiv.append(kpis);
 
   const obszary = [
     {k:'DETALICZNY_RD', label:'Detal Retail Direct'},
@@ -4270,10 +4091,19 @@ function filterAlertHTML(){
     card.append(sub);
     g.append(card);
   });
-  sec.append(g);
+  czAekDiv.append(g);
+
+  sec.append(czAekDiv);
 
   main.append(sec);
 }
+
+
+// ============================================================
+
+
+// ============================================================
+
 
 // ============================================================
 // SEKCJA 05: HANDLOWCY
@@ -4288,7 +4118,7 @@ function filterAlertHTML(){
 
   // Sub-nav
   const hSubNav = el('nav',{class:'sub-nav'});
-  [{id:'aek-kanaly',label:'AEK & Kanały'},{id:'kpi',label:'KPI',badge:(DATA.kpi_handlowcy||[]).length},{id:'rankingi',label:'Rankingi'}].forEach((s,i)=>{
+  [{id:'aek-kanaly',label:'AEK & Kanały'},{id:'kpi',label:'KPI',badge:(DATA.kpi_handlowcy||[]).length},{id:'rankingi',label:'Rankingi'},{id:'grafik-h',label:'Grafik'}].forEach((s,i)=>{
     const btn=el('button',{class:'sub-tab'+(i===0?' active':'')});
     btn.innerHTML=s.label+(s.badge!==undefined?`<span class="sub-badge">${s.badge}</span>`:'');
     btn.addEventListener('click',()=>{
@@ -4493,6 +4323,202 @@ function filterAlertHTML(){
   aekHtml+='</tbody>'; tAek.innerHTML=aekHtml; aekWrap.append(tAek); subRank.append(aekWrap);
 
   sec.append(subRank);
+
+  // ── SUB: GRAFIK ──
+
+  const grafDiv = el('div',{id:'hsub-grafik-h',class:'h-sub',style:'display:none'});
+  
+  const TODAY = {y: 2026, m: 6, d: 1};
+  const DOW_PL = ['pn','wt','śr','cz','pt','sb','nd'];
+
+  // Sub-nav: maj / czerwiec
+  const subNav = el('nav',{class:'sub-nav'});
+  const SUBS = [
+    {id:'aktualny', label:'Czerwiec 2026', current:true, data:DATA.grafik.aktualny},
+    {id:'nastepny', label:'Lipiec 2026', current:false, data:DATA.grafik.nastepny},
+  ];
+  SUBS.forEach((s,i) => {
+    const btn = el('button',{class:'sub-tab' + (i===0?' active':''), 'data-sub':s.id});
+    btn.innerHTML = s.label + (s.current ? '<span class="sub-badge">aktualny</span>' : '');
+    btn.addEventListener('click', () => {
+      subNav.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+      sec.querySelectorAll('.sub-section').forEach(x => x.classList.remove('active'));
+      btn.classList.add('active');
+      sec.querySelector('#gr-'+s.id).classList.add('active');
+    });
+    subNav.append(btn);
+  });
+  grafDiv.append(subNav);
+
+  function renderMonth(monthData, subId, isActive){
+    const sub = el('div',{class:'sub-section' + (isActive?' active':''), id:'gr-'+subId});
+    const M = monthData;
+
+    // Alert dla pustego miesiąca (jeszcze nie wypełniony w arkuszu)
+    if(M.pusty){
+      sub.append(el('div',{class:'alert warn',html:`<strong>Grafik jeszcze nie wypełniony.</strong> Arkusz "${M.mc_label}" w Google Sheets nie zawiera jeszcze rozpisanych godzin pracy. Poniżej tylko szkielet miesiąca (dni tygodnia + święta). Plan urlopowy również pusty.`}));
+    }
+
+    // Statystyki dla aktualnego miesiąca - dziś
+    if(M.mc === TODAY.m && M.rok === TODAY.y){
+      const todayIdx = TODAY.d - 1;
+      const inWork = M.handlowcy.filter(h => /^[0-9]+$/.test(h.days[todayIdx])).length;
+      const onLeave = M.handlowcy.filter(h => /^u$/i.test(h.days[todayIdx])).length;
+      const onL4 = M.handlowcy.filter(h => /^[zs]$/i.test(h.days[todayIdx])).length;
+      const offToday = M.handlowcy.filter(h => h.days[todayIdx] === '').length;
+
+      const kpis = el('div',{class:'kpi-row'});
+      function kpi(lbl, v, sub, c=''){
+        const k = el('div',{class:'kpi'});
+        k.append(el('div',{class:'lbl'},lbl));
+        k.append(el('div',{class:'v',style:c?'color:'+c:''}, v));
+        if(sub) k.append(el('div',{class:'delta'},sub));
+        return k;
+      }
+      kpis.append(kpi('Dziś w pracy', inWork, 'handlowcy aktywni', 'var(--good)'));
+      kpis.append(kpi('Dziś na urlopie', onLeave, '', onLeave>0?'var(--warn)':''));
+      kpis.append(kpi('Dziś na L4', onL4, '', onL4>0?'var(--bad)':''));
+      kpis.append(kpi('Dziś nieobecni', offToday, 'brak grafiku / wolne', 'var(--dim)'));
+      sub.append(kpis);
+    }
+
+    // Legenda + tabela
+    const wrap = el('div',{class:'schedule-wrap'});
+
+    const legend = el('div',{class:'schedule-legend'});
+    legend.innerHTML = `
+      <span class="lg"><span class="lg-box" style="background:#f0fdf4"></span>start 8:00</span>
+      <span class="lg"><span class="lg-box" style="background:white;border:1px solid var(--border)"></span>start 9:00</span>
+      <span class="lg"><span class="lg-box" style="background:#eff6ff"></span>start 10:00+</span>
+      <span class="lg"><span class="lg-box" style="background:#fef3c7"></span>U — urlop</span>
+      <span class="lg"><span class="lg-box" style="background:#fee2e2"></span>L4 (z/s)</span>
+      <span class="lg"><span class="lg-box" style="background:var(--bg-sunken)"></span>weekend / wolne</span>
+      <span class="lg"><span class="lg-box" style="background:#fef9c3"></span>święto</span>
+    `;
+    wrap.append(legend);
+
+    const tbl = el('table',{class:'schedule'});
+
+    // Header z dniami
+    let thead = '<thead><tr><th class="name-col" rowspan="2">Handlowiec</th>';
+    for(let d=1; d<=M.dni; d++){
+      const dow = M.weekdays[d-1];
+      const isWeekend = dow === 5 || dow === 6;
+      const isHoliday = M.holidays[d];
+      const isToday = (M.mc === TODAY.m && M.rok === TODAY.y && d === TODAY.d);
+      let cls = 'day-h';
+      if(isToday) cls += ' today';
+      else if(isHoliday) cls += ' holiday';
+      else if(isWeekend) cls += ' weekend';
+      thead += `<th class="${cls}" title="${isHoliday || ''}">${d}</th>`;
+    }
+    thead += '</tr><tr>';
+    for(let d=1; d<=M.dni; d++){
+      const dow = M.weekdays[d-1];
+      const isWeekend = dow === 5 || dow === 6;
+      thead += `<th class="dow ${isWeekend?'weekend':''}">${DOW_PL[dow]}</th>`;
+    }
+    thead += '</tr></thead>';
+    tbl.innerHTML = thead;
+
+    const tbody = document.createElement('tbody');
+
+    function classifyCell(val, d){
+      const dow = M.weekdays[d-1];
+      const isWeekend = dow === 5 || dow === 6;
+      const isHoliday = !!M.holidays[d];
+      const isToday = (M.mc === TODAY.m && M.rok === TODAY.y && d === TODAY.d);
+      let display = val;
+      let cls = 'cell';
+      if(/^u$/i.test(val)){ cls += ' urlop'; display = 'U'; }
+      else if(/^[zs]$/i.test(val) || /l4/i.test(val)){ cls += ' l4'; display = 'L4'; }
+      else if(/^\d+$/.test(val)){
+        const h = parseInt(val,10);
+        if(h <= 8) cls += ' work-early';
+        else if(h >= 10) cls += ' work-late';
+        else cls += ' work';
+        display = val;
+      } else if(val === '-' || val === ''){
+        if(isHoliday) { cls += ' holiday'; display = ''; }
+        else if(isWeekend){ cls += ' weekend'; display = ''; }
+        else { cls += ' empty'; display = ''; }
+      } else {
+        cls += ' work';
+      }
+      if(isToday) cls += ' today';
+      return `<td class="${cls}" title="dzień ${d}${isHoliday?' — '+isHoliday:''}">${display}</td>`;
+    }
+
+    // Handlowcy
+    M.handlowcy.forEach(h => {
+      let row = `<tr><td class="name-cell">${h.short}<div style="font-size:9px;color:var(--dim);font-weight:400;margin-top:1px">${h.name}</div></td>`;
+      h.days.forEach((val, i) => {
+        row += classifyCell(val, i+1);
+      });
+      row += '</tr>';
+      tbody.insertAdjacentHTML('beforeend', row);
+    });
+
+    // Divider Asystenci
+    if(M.asystenci.length){
+      tbody.insertAdjacentHTML('beforeend', `<tr class="assistant-divider"><td colspan="${M.dni+1}">Asystenci / recepcja</td></tr>`);
+      M.asystenci.forEach(h => {
+        let row = `<tr><td class="name-cell assistant">${h.short}</td>`;
+        h.days.forEach((val, i) => {
+          row += classifyCell(val, i+1);
+        });
+        row += '</tr>';
+        tbody.insertAdjacentHTML('beforeend', row);
+      });
+    }
+
+    // Suma w pracy dziennie (handlowcy)
+    let sumRow = `<tr class="summary-row"><td class="name-cell" style="background:var(--bg-soft)">W pracy</td>`;
+    for(let d=1; d<=M.dni; d++){
+      const inWork = M.handlowcy.filter(h => /^\d+$/.test(h.days[d-1])).length;
+      const dow = M.weekdays[d-1];
+      const isWeekend = dow === 5 || dow === 6;
+      const isHoliday = M.holidays[d];
+      let color = inWork === 0 ? 'var(--dim-3)' : (inWork >= 5 ? 'var(--good)' : 'var(--warn)');
+      if(isWeekend || isHoliday) color = 'var(--dim-3)';
+      sumRow += `<td class="cell" style="color:${color};font-weight:700">${inWork || ''}</td>`;
+    }
+    sumRow += '</tr>';
+    tbody.insertAdjacentHTML('beforeend', sumRow);
+
+    tbl.append(tbody);
+    wrap.append(tbl);
+    sub.append(wrap);
+
+    // Plan urlopowy z kalendarza miesięcznego
+    const urlopWrap = el('div',{class:'urlop-list'});
+    urlopWrap.innerHTML = `<div class="table-head"><h3>Plan urlopowy — ${M.mc_label}</h3><span class="count">${M.plan_urlopowy.length} pozycji</span></div>`;
+    if(M.plan_urlopowy.length === 0){
+      urlopWrap.insertAdjacentHTML('beforeend', '<div style="padding:24px;text-align:center;color:var(--dim);font-size:12px">brak zaplanowanych urlopów</div>');
+    } else {
+      M.plan_urlopowy.forEach(p => {
+        const dateRange = p.d_od === p.d_do ? `${p.d_od}.${String(M.mc).padStart(2,'0')}` : `${p.d_od}–${p.d_do}.${String(M.mc).padStart(2,'0')}`;
+        const days = p.d_do - p.d_od + 1;
+        const typClass = p.typ === 'L4' ? 'typ-l4' : (p.typ === 'WOLNE' ? 'typ-wolne' : 'typ-urlop');
+        urlopWrap.insertAdjacentHTML('beforeend', `
+          <div class="urlop-item">
+            <span class="date">${dateRange} <span style="color:var(--dim-3)">(${days} ${days===1?'dzień':'dni'})</span></span>
+            <span class="typ-badge ${typClass}">${p.typ}</span>
+            <span class="who">${p.kto_full}</span>
+          </div>
+        `);
+      });
+    }
+    sub.append(urlopWrap);
+
+    return sub;
+  }
+
+  grafDiv.append(renderMonth(DATA.grafik.aktualny, 'aktualny', true));
+  grafDiv.append(renderMonth(DATA.grafik.nastepny, 'nastepny', false));
+
+  sec.append(grafDiv);
+
   main.append(sec);
 }
 
@@ -5045,6 +5071,116 @@ function filterAlertHTML(){
     });
   }
 })();
+// ── SPLASH SCREEN (ekran powitalny) ──
+(function() {
+  const SPLASH_KEY = 'vw_gazda_splash_' + (DATA.meta?.data_raportu || '');
+  
+  function buildSplash() {
+    const D = DATA;
+    const uplyw   = Math.round((D.realizacja?.detal?.uplyw || 0) * 100);
+    const aakDetal = D.realizacja?.detal?.aak || 0;
+    const aakFlota = D.realizacja?.flota?.aak || 0;
+    const aakTotal = aakDetal + aakFlota;
+    const cel      = D.cele?.cel_zespolowy || 70;
+    const pct      = Math.round(aakTotal / cel * 100);
+    const brakuje  = Math.max(0, cel - (D.cele?.wykonanie_realne || 0));
+    const mag      = D.magazyn?.razem || 0;
+    const aekTop   = [...(D.ranking_aek || [])].sort((a,b)=>b.d-a.d).slice(0,3);
+    const filtCnt  = D.filtered_records_count || 0;
+    const ih       = D.meta?.ih_numer || '';
+
+    const overlay = document.createElement('div');
+    overlay.id = 'splash-overlay';
+    overlay.style.cssText = 'position:fixed;inset:0;z-index:9998;background:var(--bg,#0d1b2e);display:flex;align-items:center;justify-content:center;font-family:Inter,sans-serif;overflow-y:auto;padding:32px 16px';
+
+    overlay.innerHTML = `
+      <div style="max-width:640px;width:100%">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--dim,#4a6080)">GAZDA KATOWICE</div>
+          <div style="height:1px;flex:1;background:var(--border,#1e3a5f)"></div>
+          <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--dim,#4a6080)">${D.meta?.data_raportu_pl || ''}</div>
+        </div>
+        <h1 style="font-size:32px;font-weight:800;letter-spacing:-1px;color:#fff;margin:0 0 4px 0">Dzień dobry!</h1>
+        <p style="font-size:14px;color:var(--dim,#4a6080);margin:0 0 32px 0">Oto co się zmieniło od ostatniego raportu</p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+          <div style="background:#162032;border:1px solid #1e3a5f;border-radius:12px;padding:20px">
+            <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#4a6080;margin-bottom:8px">Realizacja AAK</div>
+            <div style="font-size:40px;font-weight:800;color:#fff;letter-spacing:-1px;line-height:1">${aakTotal}</div>
+            <div style="font-size:12px;color:#4a6080;margin-top:4px">z ${cel} celu · ${pct}% · upływ mc ${uplyw}%</div>
+            <div style="height:4px;background:#0d1b2e;border-radius:2px;margin-top:12px;overflow:hidden">
+              <div style="height:100%;width:${Math.min(100,pct)}%;background:${pct>=80?'#22c55e':pct>=50?'#00b0f0':'#f59e0b'};border-radius:2px"></div>
+            </div>
+            <div style="font-size:11px;color:#4a6080;margin-top:6px">brakuje: <strong style="color:#fff">${brakuje}</strong> szt.</div>
+          </div>
+          <div style="background:#162032;border:1px solid #1e3a5f;border-radius:12px;padding:20px">
+            <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#4a6080;margin-bottom:8px">Magazyn</div>
+            <div style="font-size:40px;font-weight:800;color:#fff;letter-spacing:-1px;line-height:1">${mag}</div>
+            <div style="font-size:12px;color:#4a6080;margin-top:4px">aut na stanie (CU+DE)</div>
+            <div style="margin-top:12px;font-size:12px;color:#4a6080">
+              <span style="color:#fff;font-weight:700">${D.magazyn?.klienc || 0}</span> klienckich &nbsp;·&nbsp;
+              <span style="color:#fff;font-weight:700">${D.magazyn?.wolne || 0}</span> wolnych
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#162032;border:1px solid #1e3a5f;border-radius:12px;padding:20px;margin-bottom:12px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#4a6080;margin-bottom:12px">Top AEK (saldo zamówień po filtrze)</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            ${aekTop.map((r,i) => `
+              <div style="display:flex;align-items:center;gap:12px">
+                <div style="width:20px;font-size:12px;font-weight:700;color:#4a6080;text-align:center">${i+1}</div>
+                <div style="flex:1;font-size:13px;color:#fff;font-weight:600">${r.name}</div>
+                <div style="font-size:13px;font-family:'JetBrains Mono',monospace;color:${r.d>0?'#22c55e':r.d<0?'#dc2626':'#4a6080'};font-weight:700">${r.d>0?'+':''}${r.d}</div>
+                <div style="font-size:11px;color:#4a6080">P:${r.p} U:${r.u}</div>
+              </div>
+            `).join('')}
+          </div>
+          ${filtCnt > 0 ? `<div style="margin-top:10px;font-size:11px;color:#4a6080">filtr AEK: -${filtCnt} wykluczonych ubytków</div>` : ''}
+        </div>
+
+        <div style="background:#162032;border:1px solid #1e3a5f;border-radius:12px;padding:20px;margin-bottom:24px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#4a6080;margin-bottom:12px">Aktualności</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;gap:10px;font-size:12px">
+              <div style="color:#00b0f0;font-weight:700;flex-shrink:0">IH</div>
+              <div style="color:#cbd5e1">Nowa ${ih} — zaktualizowany kalendarz produkcyjny i przerwy</div>
+            </div>
+            <div style="display:flex;gap:10px;font-size:12px">
+              <div style="color:#f59e0b;font-weight:700;flex-shrink:0">AEK</div>
+              <div style="color:#cbd5e1">Ubytki TAIGO wykluczone z obliczeń</div>
+            </div>
+            <div style="display:flex;gap:10px;font-size:12px">
+              <div style="color:#a78bfa;font-weight:700;flex-shrink:0">CEL</div>
+              <div style="color:#cbd5e1">Trade-in: 10 szt. · Opinie Google: 5 szt.</div>
+            </div>
+          </div>
+        </div>
+
+        <button onclick="document.getElementById('splash-overlay').style.display='none';sessionStorage.setItem('${SPLASH_KEY}','1')" 
+          style="width:100%;padding:16px;border:none;border-radius:12px;background:#00b0f0;color:#fff;font-size:15px;font-weight:700;cursor:pointer;letter-spacing:0.3px;transition:background .2s"
+          onmouseover="this.style.background='#0090cc'" onmouseout="this.style.background='#00b0f0'">
+          Przejdź do dashboardu →
+        </button>
+      </div>
+    `;
+    return overlay;
+  }
+
+  function initSplash() {
+    const SPLASH_KEY = 'vw_gazda_splash_' + (DATA.meta?.data_raportu || '');
+    if (sessionStorage.getItem(SPLASH_KEY)) return; // już widziany dziś
+    const splash = buildSplash();
+    document.body.appendChild(splash);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSplash);
+  } else {
+    initSplash();
+  }
+})();
+
 </script>
 </body>
 </html>
