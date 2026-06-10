@@ -5079,94 +5079,76 @@ function filterAlertHTML(){
     });
   }
 })();
-// ── SPLASH SCREEN (ekran powitalny) ──
+// ── SPLASH SCREEN (ekran powitalny — delta od poprzedniego raportu) ──
 (function() {
   const SPLASH_KEY = 'vw_gazda_splash_' + (DATA.meta?.data_raportu || '');
   
   function buildSplash() {
     const D = DATA;
-    const uplyw   = Math.round((D.realizacja?.detal?.uplyw || 0) * 100);
-    const aakDetal = D.realizacja?.detal?.aak || 0;
-    const aakFlota = D.realizacja?.flota?.aak || 0;
-    const aakTotal = aakDetal + aakFlota;
+    const aakTotal = (D.realizacja?.detal?.aak||0) + (D.realizacja?.flota?.aak||0);
     const cel      = D.cele?.cel_zespolowy || 70;
-    const pct      = Math.round(aakTotal / cel * 100);
-    const brakuje  = Math.max(0, cel - (D.cele?.wykonanie_realne || 0));
+    const wyk      = D.cele?.wykonanie_realne || 0;
+    const pct      = Math.round(wyk/cel*100);
+    const brakuje  = Math.max(0, cel-wyk);
+    const uplyw    = Math.round((D.realizacja?.detal?.uplyw||0)*100);
     const mag      = D.magazyn?.razem || 0;
-    const aekTop   = [...(D.ranking_aek || [])].sort((a,b)=>b.d-a.d).slice(0,3);
-    const filtCnt  = D.filtered_records_count || 0;
-    const ih       = D.meta?.ih_numer || '';
+    const przet    = (D.przet?.done?.length||0)+(D.przet?.w30?.length||0)+(D.przet?.w60?.length||0);
+    const zamAll   = Object.values(D.stan_aek||{}).reduce((s,o)=>s+(o.p||0),0);
+    const kpi      = D.kpi_handlowcy || [];
+    const tradeIn  = kpi.reduce((s,h)=>s+(h.trade_in||0),0);
+    const opinie   = kpi.reduce((s,h)=>s+(h.opinie||0),0);
+
+    // Lider AAK
+    const aakList  = [...(D.aak_handlowcy||[])].sort((a,b)=>b.n-a.n);
+    const liderAAK = aakList[0] ? `${aakList[0].name} (${aakList[0].n} szt.)` : '—';
+
+    // Lider AEK
+    const aekList  = [...(D.ranking_aek||[])].sort((a,b)=>b.d-a.d);
+    const liderAEK = aekList[0] ? `${aekList[0].name} (+${aekList[0].d})` : '—';
+
+    function row(icon, label, value, color='#fff') {
+      return `<div style="display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid #1e3a5f">
+        <div style="font-size:16px;width:24px;text-align:center">${icon}</div>
+        <div style="flex:1;font-size:13px;color:#94a3b8">${label}</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:${color}">${value}</div>
+      </div>`;
+    }
 
     const overlay = document.createElement('div');
     overlay.id = 'splash-overlay';
-    overlay.style.cssText = 'position:fixed;inset:0;z-index:9998;background:var(--bg,#0d1b2e);display:flex;align-items:center;justify-content:center;font-family:Inter,sans-serif;overflow-y:auto;padding:32px 16px';
+    overlay.style.cssText = 'position:fixed;inset:0;z-index:9998;background:#0d1b2e;display:flex;align-items:center;justify-content:center;font-family:Inter,sans-serif;overflow-y:auto;padding:32px 16px';
 
     overlay.innerHTML = `
-      <div style="max-width:640px;width:100%">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
-          <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--dim,#4a6080)">GAZDA KATOWICE</div>
-          <div style="height:1px;flex:1;background:var(--border,#1e3a5f)"></div>
-          <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--dim,#4a6080)">${D.meta?.data_raportu_pl || ''}</div>
+      <div style="max-width:520px;width:100%">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#4a6080">GAZDA KATOWICE</div>
+          <div style="font-size:11px;color:#4a6080">${D.meta?.data_raportu_pl||''} · tydzień ${D.meta?.ih_tydzien||''}</div>
         </div>
-        <h1 style="font-size:32px;font-weight:800;letter-spacing:-1px;color:#fff;margin:0 0 4px 0">Dzień dobry!</h1>
-        <p style="font-size:14px;color:var(--dim,#4a6080);margin:0 0 32px 0">Oto co się zmieniło od ostatniego raportu</p>
+        <h1 style="font-size:26px;font-weight:800;letter-spacing:-0.5px;color:#fff;margin:0 0 20px 0">Dzień dobry!</h1>
 
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
-          <div style="background:#162032;border:1px solid #1e3a5f;border-radius:12px;padding:20px">
-            <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#4a6080;margin-bottom:8px">Realizacja AAK</div>
-            <div style="font-size:40px;font-weight:800;color:#fff;letter-spacing:-1px;line-height:1">${aakTotal}</div>
-            <div style="font-size:12px;color:#4a6080;margin-top:4px">z ${cel} celu · ${pct}% · upływ mc ${uplyw}%</div>
-            <div style="height:4px;background:#0d1b2e;border-radius:2px;margin-top:12px;overflow:hidden">
-              <div style="height:100%;width:${Math.min(100,pct)}%;background:${pct>=80?'#22c55e':pct>=50?'#00b0f0':'#f59e0b'};border-radius:2px"></div>
-            </div>
-            <div style="font-size:11px;color:#4a6080;margin-top:6px">brakuje: <strong style="color:#fff">${brakuje}</strong> szt.</div>
-          </div>
-          <div style="background:#162032;border:1px solid #1e3a5f;border-radius:12px;padding:20px">
-            <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#4a6080;margin-bottom:8px">Magazyn</div>
-            <div style="font-size:40px;font-weight:800;color:#fff;letter-spacing:-1px;line-height:1">${mag}</div>
-            <div style="font-size:12px;color:#4a6080;margin-top:4px">aut na stanie (CU+DE)</div>
-            <div style="margin-top:12px;font-size:12px;color:#4a6080">
-              <span style="color:#fff;font-weight:700">${D.magazyn?.klienc || 0}</span> klienckich &nbsp;·&nbsp;
-              <span style="color:#fff;font-weight:700">${D.magazyn?.wolne || 0}</span> wolnych
-            </div>
-          </div>
+        <div style="background:#162032;border:1px solid #1e3a5f;border-radius:12px;padding:4px 16px;margin-bottom:12px">
+          ${row('🚗','AAK bieżący miesiąc', `${wyk} / ${cel} szt.`, pct>=80?'#22c55e':pct>=50?'#00b0f0':'#f59e0b')}
+          ${row('📋','Zamówienia AEK (przyrosty)', `+${zamAll} szt.`,'#00b0f0')}
+          ${row('🏢','Aut na magazynie', `${mag} szt.`)}
+          ${row('⚠️','Przeterminowane (60d+)', `${przet} szt.`, przet>10?'#f87171':'#fff')}
+          ${row('🔄','Trade-in (miesiąc)', `${tradeIn} szt.`,'#a78bfa')}
+          ${row('⭐','Opinie Google (miesiąc)', `${opinie} szt.`,'#fbbf24')}
         </div>
 
-        <div style="background:#162032;border:1px solid #1e3a5f;border-radius:12px;padding:20px;margin-bottom:12px">
-          <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#4a6080;margin-bottom:12px">Top AEK (saldo zamówień po filtrze)</div>
-          <div style="display:flex;flex-direction:column;gap:8px">
-            ${aekTop.map((r,i) => `
-              <div style="display:flex;align-items:center;gap:12px">
-                <div style="width:20px;font-size:12px;font-weight:700;color:#4a6080;text-align:center">${i+1}</div>
-                <div style="flex:1;font-size:13px;color:#fff;font-weight:600">${r.name}</div>
-                <div style="font-size:13px;font-family:'JetBrains Mono',monospace;color:${r.d>0?'#22c55e':r.d<0?'#dc2626':'#4a6080'};font-weight:700">${r.d>0?'+':''}${r.d}</div>
-                <div style="font-size:11px;color:#4a6080">P:${r.p} U:${r.u}</div>
-              </div>
-            `).join('')}
-          </div>
-          ${filtCnt > 0 ? `<div style="margin-top:10px;font-size:11px;color:#4a6080">filtr AEK: -${filtCnt} wykluczonych ubytków</div>` : ''}
+        <div style="background:#162032;border:1px solid #1e3a5f;border-radius:12px;padding:4px 16px;margin-bottom:16px">
+          ${row('🏆','Lider AAK', liderAAK,'#fbbf24')}
+          ${row('📈','Lider AEK (saldo)', liderAEK,'#22c55e')}
         </div>
 
-        <div style="background:#162032;border:1px solid #1e3a5f;border-radius:12px;padding:20px;margin-bottom:24px">
-          <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#4a6080;margin-bottom:12px">Aktualności</div>
-          <div style="display:flex;flex-direction:column;gap:8px">
-            <div style="display:flex;gap:10px;font-size:12px">
-              <div style="color:#00b0f0;font-weight:700;flex-shrink:0">IH</div>
-              <div style="color:#cbd5e1">Nowa ${ih} — zaktualizowany kalendarz produkcyjny i przerwy</div>
-            </div>
-            <div style="display:flex;gap:10px;font-size:12px">
-              <div style="color:#f59e0b;font-weight:700;flex-shrink:0">AEK</div>
-              <div style="color:#cbd5e1">Ubytki TAIGO wykluczone z obliczeń</div>
-            </div>
-            <div style="display:flex;gap:10px;font-size:12px">
-              <div style="color:#a78bfa;font-weight:700;flex-shrink:0">CEL</div>
-              <div style="color:#cbd5e1">Trade-in: 10 szt. · Opinie Google: 5 szt.</div>
-            </div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px">
+          <div style="flex:1;height:4px;background:#1e3a5f;border-radius:2px;overflow:hidden">
+            <div style="height:100%;width:${Math.min(100,pct)}%;background:${pct>=80?'#22c55e':pct>=50?'#00b0f0':'#f59e0b'};border-radius:2px"></div>
           </div>
+          <div style="font-size:11px;color:#4a6080;white-space:nowrap">upływ mc: ${uplyw}% · cel ${cel} szt. · brakuje ${brakuje}</div>
         </div>
 
-        <button onclick="document.getElementById('splash-overlay').style.display='none';sessionStorage.setItem('${SPLASH_KEY}','1')" 
-          style="width:100%;padding:16px;border:none;border-radius:12px;background:#00b0f0;color:#fff;font-size:15px;font-weight:700;cursor:pointer;letter-spacing:0.3px;transition:background .2s"
+        <button onclick="document.getElementById('splash-overlay').style.display='none';sessionStorage.setItem(SPLASH_KEY,'1')"
+          style="width:100%;padding:14px;border:none;border-radius:10px;background:#00b0f0;color:#fff;font-size:14px;font-weight:700;cursor:pointer;letter-spacing:0.3px"
           onmouseover="this.style.background='#0090cc'" onmouseout="this.style.background='#00b0f0'">
           Przejdź do dashboardu →
         </button>
@@ -5174,7 +5156,6 @@ function filterAlertHTML(){
     `;
     return overlay;
   }
-
   function initSplash() {
     if (sessionStorage.getItem(SPLASH_KEY)) return; // już widziany dziś
     const splash = buildSplash();
