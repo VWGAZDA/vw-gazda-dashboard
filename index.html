@@ -3780,6 +3780,7 @@ function filterAlertHTML(){
   });
   sec.append(czSubNav);
 
+  {
   // ── SUB: CELE AAK ──
   const czCeleDiv = el('div',{id:'cz-cele',class:'cz-sub',style:'display:block'});
   // Content of Cele sub-tab:;
@@ -3937,7 +3938,9 @@ function filterAlertHTML(){
 
   
   sec.append(czCeleDiv);
+  }
 
+  {
   // ── SUB: ZADANIA ──
   const czZadaniaDiv = el('div',{id:'cz-zadania',class:'cz-sub',style:'display:none'});
 // === ZADANIA — sub-section ===
@@ -3982,7 +3985,9 @@ function filterAlertHTML(){
   }
 
   sec.append(czZadaniaDiv);
+  }
 
+  {
   // ── SUB: REALIZACJA AAK ──
 
   const czRealDiv = el('div',{id:'cz-realizacja',class:'cz-sub',style:'display:none'});
@@ -4046,7 +4051,9 @@ function filterAlertHTML(){
   czRealDiv.append(compare);
 
   sec.append(czRealDiv);
+  }
 
+  {
   // ── SUB: STAN ZAMÓWIEŃ AEK ──
 
   const czAekDiv = el('div',{id:'cz-aek',class:'cz-sub',style:'display:none'});
@@ -4094,6 +4101,7 @@ function filterAlertHTML(){
   czAekDiv.append(g);
 
   sec.append(czAekDiv);
+  }
 
   main.append(sec);
 }
@@ -5168,7 +5176,6 @@ function filterAlertHTML(){
   }
 
   function initSplash() {
-    const SPLASH_KEY = 'vw_gazda_splash_' + (DATA.meta?.data_raportu || '');
     if (sessionStorage.getItem(SPLASH_KEY)) return; // już widziany dziś
     const splash = buildSplash();
     document.body.appendChild(splash);
