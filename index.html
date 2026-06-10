@@ -5092,7 +5092,7 @@ function filterAlertHTML(){
     const brakuje  = Math.max(0, cel-wyk);
     const uplyw    = Math.round((D.realizacja?.detal?.uplyw||0)*100);
     const mag      = D.magazyn?.razem || 0;
-    const przet    = (D.przet?.done?.length||0)+(D.przet?.w30?.length||0)+(D.przet?.w60?.length||0);
+    const przet    = D.przet?.done?.length||0;
     const zamAll   = Object.values(D.stan_aek||{}).reduce((s,o)=>s+(o.p||0),0);
     const kpi      = D.kpi_handlowcy || [];
     const tradeIn  = kpi.reduce((s,h)=>s+(h.trade_in||0),0);
@@ -5130,7 +5130,7 @@ function filterAlertHTML(){
           ${row('🚗','AAK bieżący miesiąc', `${wyk} / ${cel} szt.`, pct>=80?'#22c55e':pct>=50?'#00b0f0':'#f59e0b')}
           ${row('📋','Zamówienia AEK (przyrosty)', `+${zamAll} szt.`,'#00b0f0')}
           ${row('🏢','Aut na magazynie', `${mag} szt.`)}
-          ${row('⚠️','Przeterminowane (60d+)', `${przet} szt.`, przet>10?'#f87171':'#fff')}
+          ${row('⚠️','Przeterminowane (120d+)', `${przet} szt.`, przet>5?'#f87171':'#fff')}
           ${row('🔄','Trade-in (miesiąc)', `${tradeIn} szt.`,'#a78bfa')}
           ${row('⭐','Opinie Google (miesiąc)', `${opinie} szt.`,'#fbbf24')}
         </div>
