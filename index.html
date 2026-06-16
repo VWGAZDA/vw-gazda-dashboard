@@ -4027,7 +4027,80 @@ const DATA = {
       "raw": 32,
       "wknd": false
     }
-  ]
+  ],
+  "opinie_google": [
+    {
+      "data": "14.06.2026",
+      "nazwa": "WŁODZIMIERZ WOJTKOWIAK",
+      "tresc": "Wyrazy szacunku dla Pana Konrada. Dzięki za wsparcie i dużo cierpliwości. Oraz jeszcze za taką przyjazną atmosferę podczas całego procesu zakupowego. To zresztą czuło się w całej firmie.",
+      "handlowiec": "Pokusa Konrad",
+      "nowa": true
+    },
+    {
+      "data": "10.06.2026",
+      "nazwa": "JAKUB WOJTASZEK",
+      "tresc": "Chciałbym bardzo podziękować Panu Konradowi Pokusie za pomoc przy zakupie mojego Golfa GTI. Od samego początku cały proces przebiegał w bardzo profesjonalnej i jednocześnie luźnej atmosferze. Zdecydowanie polecam!",
+      "handlowiec": "Pokusa Konrad",
+      "nowa": false
+    },
+    {
+      "data": "10.06.2026",
+      "nazwa": "MAŁGORZATA GÓRAL",
+      "tresc": "Odwiedziliśmy dzisiaj salon. Pan Oskar Mikusz specjalista ds. sprzedaży — bardzo szczegółowo wszystkie informacje nam przekazał. Wiedzę na temat samochodu ma ogromną. Polecam wstąpić do Volkswagena!",
+      "handlowiec": "Mikusz Oskar",
+      "nowa": false
+    },
+    {
+      "data": "09.06.2026",
+      "nazwa": "KAZIMIERZ STĘPIEŃ",
+      "tresc": "Samochód kupiony przy pierwszej wizycie. Serdecznie polecamy obsługę P. Anity i cieszymy się na odbiór nowego T-Roca już niebawem.",
+      "handlowiec": "Nowak Anita",
+      "nowa": false
+    },
+    {
+      "data": "08.06.2026",
+      "nazwa": "DARIUSZ ŻABCZYŃSKI",
+      "tresc": "Pierwszy raz udało mi się tak szybko i bezproblemowo kupić samochód. Przewidywałem dużo późniejszy termin odbioru niż ten, który nastąpił, dzięki czemu nie musiałem na urlop jechać starym niepewnym autem.",
+      "handlowiec": "",
+      "nowa": false
+    },
+    {
+      "data": "07.06.2026",
+      "nazwa": "JANINA",
+      "tresc": "Wizyty jak gwiazdki na niebie. Pan Kacper podarował nam jedną z 5 wystawionych przez zadowolonych klientów.",
+      "handlowiec": "Żbik Kacper",
+      "nowa": false
+    },
+    {
+      "data": "04.06.2026",
+      "nazwa": "BARBARA WOJTOWIAK",
+      "tresc": "Salon samochodowy i nasz dealer pan Konrad to pełny profesjonalizm. Miejsce i kompetencje pana Konrada sprawiły, że obecnie jesteśmy właścicielami Tayrona.",
+      "handlowiec": "Pokusa Konrad",
+      "nowa": false
+    },
+    {
+      "data": "01.06.2026",
+      "nazwa": "JAROSŁAW GULEWSKI",
+      "tresc": "Gorąco polecam salon Gazda w Katowicach! Zakup Volkswagena T-Roc przebiegł w doskonałej atmosferze. Szczególne podziękowania dla Pana Fabiana – to absolutny profesjonalista i prawdziwy pasjonat motoryzacji. Świetne doradztwo i obsługa na najwyższym poziomie!",
+      "handlowiec": "Fabian Jóźwiak",
+      "nowa": false
+    },
+    {
+      "data": "01.06.2026",
+      "nazwa": "HANNA DITRICH",
+      "tresc": "Dzisiaj wyjechałam z Salonu Gazda Group w Katowicach pięknym nowym samochodem Volkswagen T-Cross. Wszystko zawdzięczam wspaniałej prowadzącej nasz zakup Pani Magdalenie Kowalskiej. Pełny profesjonalizm, życzliwość i bardzo miła atmosfera. Bardzo dziękuję i polecam w 100%!",
+      "handlowiec": "Magdalena Kowalska",
+      "nowa": false
+    },
+    {
+      "data": "01.06.2026",
+      "nazwa": "EUGENIA JAN",
+      "tresc": "Serdeczne podziękowania dla salonu Volkswagen Gazda w Katowicach za profesjonalną obsługę. Szczególne podziękowania dla Pani Anity N. za fachowe doradztwo, zaangażowanie, cierpliwość i miłą atmosferę.",
+      "handlowiec": "Nowak Anita",
+      "nowa": false
+    }
+  ],
+  "opinie_poprzedni_raport": "13.06.2026"
 };
 
 const $ = (s, p=document) => p.querySelector(s);
@@ -4477,7 +4550,7 @@ function filterAlertHTML(){
 
   // Sub-nav
   const hSubNav = el('nav',{class:'sub-nav'});
-  [{id:'aek-kanaly',label:'AEK & Kanały'},{id:'kpi',label:'KPI',badge:(DATA.kpi_handlowcy||[]).length},{id:'rankingi',label:'Rankingi'},{id:'grafik-h',label:'Grafik'}].forEach((s,i)=>{
+  [{id:'aek-kanaly',label:'AEK & Kanały'},{id:'kpi',label:'KPI',badge:(DATA.kpi_handlowcy||[]).length},{id:'rankingi',label:'Rankingi'},{id:'grafik-h',label:'Grafik'},{id:'opinie-h',label:'Opinie Google'}].forEach((s,i)=>{
     const btn=el('button',{class:'sub-tab'+(i===0?' active':'')});
     btn.innerHTML=s.label+(s.badge!==undefined?`<span class="sub-badge">${s.badge}</span>`:'');
     btn.addEventListener('click',()=>{
@@ -4877,6 +4950,57 @@ function filterAlertHTML(){
   grafDiv.append(renderMonth(DATA.grafik.nastepny, 'nastepny', false));
 
   sec.append(grafDiv);
+
+  // ── SUB: OPINIE GOOGLE ──
+  {
+    const opinieDiv = el('div',{id:'hsub-opinie-h',class:'h-sub',style:'display:none'});
+    opinieDiv.append(el('div',{class:'section-head'},
+      el('h2',{},'Opinie Google'),
+      el('div',{class:'pigulka'},`${(DATA.opinie_google||[]).length} opinii czerwiec`)
+    ));
+
+    const opinie = DATA.opinie_google || [];
+    const nowe = opinie.filter(o=>o.nowa);
+
+    if (nowe.length) {
+      const noweBlok = el('div',{style:'margin-bottom:20px'});
+      noweBlok.append(el('div',{style:'font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#00b0f0;margin-bottom:10px'},'🆕 Nowe od ostatniego raportu'));
+      nowe.forEach(o => {
+        const card = el('div',{style:'background:#0d2235;border:1px solid #00b0f0;border-radius:10px;padding:14px 16px;margin-bottom:10px'});
+        card.append(
+          el('div',{style:'display:flex;justify-content:space-between;margin-bottom:6px'},
+            el('strong',{style:'color:#fff;font-size:13px'},o.nazwa),
+            el('span',{style:'font-size:11px;color:#4a6080'},o.data)
+          )
+        );
+        if(o.handlowiec) card.append(el('div',{style:'font-size:11px;color:#00b0f0;margin-bottom:6px'},'→ '+o.handlowiec));
+        card.append(el('div',{style:'font-size:12px;color:#94a3b8;line-height:1.6'},o.tresc));
+        noweBlok.append(card);
+      });
+      opinieDiv.append(noweBlok);
+    }
+
+    if (opinie.length > nowe.length) {
+      const wszystkieBlok = el('div',{});
+      wszystkieBlok.append(el('div',{style:'font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#4a6080;margin-bottom:10px'},'Wszystkie opinie — czerwiec 2026'));
+      opinie.filter(o=>!o.nowa).forEach(o => {
+        const card = el('div',{style:'background:#162032;border:1px solid #1e3a5f;border-radius:10px;padding:14px 16px;margin-bottom:8px'});
+        card.append(
+          el('div',{style:'display:flex;justify-content:space-between;margin-bottom:6px'},
+            el('strong',{style:'color:#cbd5e1;font-size:13px'},o.nazwa),
+            el('span',{style:'font-size:11px;color:#4a6080'},o.data)
+          )
+        );
+        if(o.handlowiec) card.append(el('div',{style:'font-size:11px;color:#4a6080;margin-bottom:6px'},'→ '+o.handlowiec));
+        card.append(el('div',{style:'font-size:12px;color:#64748b;line-height:1.6'},o.tresc));
+        card.append(el('div',{style:'display:flex;gap:2px;margin-top:8px'},...'★★★★★'.split('').map(()=>el('span',{style:'color:#fbbf24;font-size:14px'},'★'))));
+        wszystkieBlok.append(card);
+      });
+      opinieDiv.append(wszystkieBlok);
+    }
+
+    sec.append(opinieDiv);
+  }
 
   main.append(sec);
 }
@@ -5522,6 +5646,24 @@ function filterAlertHTML(){
           <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#4a6080;margin-bottom:10px">Koniunktura — wskaźnik aktywności dzienny</div>
           ${koniunkturaHTML}
         </div>
+
+        ${(function(){
+          const nowe = (D.opinie_google||[]).filter(o=>o.nowa);
+          if(!nowe.length) return '';
+          const cards = nowe.map(o =>
+            '<div style="background:#0d2235;border:1px solid #00b0f0;border-radius:8px;padding:10px 12px;margin-bottom:8px">'
+            + '<div style="display:flex;justify-content:space-between;margin-bottom:4px">'
+            + '<strong style="color:#fff;font-size:12px">'+o.nazwa+'</strong>'
+            + '<span style="font-size:10px;color:#4a6080">'+o.data+'</span>'
+            + '</div>'
+            + (o.handlowiec ? '<div style="font-size:10px;color:#00b0f0;margin-bottom:4px">→ '+o.handlowiec+'</div>' : '')
+            + '<div style="font-size:11px;color:#94a3b8;line-height:1.5;max-height:48px;overflow:hidden">'+o.tresc.substring(0,180)+(o.tresc.length>180?'…':'')+'</div>'
+            + '</div>'
+          ).join('');
+          return '<div style="background:#162032;border:1px solid #1e3a5f;border-radius:12px;padding:16px;margin-bottom:12px">'
+            + '<div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#00b0f0;margin-bottom:8px">🆕 Nowe opinie Google</div>'
+            + cards + '</div>';
+        })()}
 
         <button onclick="document.getElementById('splash-overlay').style.display='none';sessionStorage.setItem(SPLASH_KEY,'1')"
           style="width:100%;padding:14px;border:none;border-radius:10px;background:#00b0f0;color:#fff;font-size:14px;font-weight:700;cursor:pointer;letter-spacing:0.3px"
