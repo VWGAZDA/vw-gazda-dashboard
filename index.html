@@ -635,55 +635,81 @@ const DATA = {
       "name": "Pokusa Konrad",
       "p": 13,
       "u": 3,
-      "d": 10
+      "d": 10,
+      "p_rd": 11,
+      "u_rd": 3,
+      "p_fl": 2,
+      "u_fl": 0
     },
     {
       "name": "Mikusz Oskar",
       "p": 12,
       "u": 4,
-      "d": 8
+      "d": 8,
+      "p_rd": 11,
+      "u_rd": 4,
+      "p_fl": 1,
+      "u_fl": 0
     },
     {
       "name": "Jóźwiak Fabian",
       "p": 5,
       "u": 0,
-      "d": 5
+      "d": 5,
+      "p_rd": 5,
+      "u_rd": 0,
+      "p_fl": 0,
+      "u_fl": 0
     },
     {
       "name": "Nowak Anita",
       "p": 12,
       "u": 4,
-      "d": 8
+      "d": 8,
+      "p_rd": 12,
+      "u_rd": 4,
+      "p_fl": 0,
+      "u_fl": 0
     },
     {
       "name": "Żbik Kacper",
       "p": 10,
       "u": 1,
-      "d": 9
+      "d": 9,
+      "p_rd": 10,
+      "u_rd": 1,
+      "p_fl": 0,
+      "u_fl": 0
     },
     {
       "name": "Pawlas Małgorzata",
       "p": 8,
       "u": 1,
-      "d": 7
+      "d": 7,
+      "p_rd": 8,
+      "u_rd": 1,
+      "p_fl": 0,
+      "u_fl": 0
     },
     {
       "name": "Dziurzyński Patryk",
       "p": 5,
       "u": 0,
-      "d": 5
+      "d": 5,
+      "p_rd": 1,
+      "u_rd": 0,
+      "p_fl": 4,
+      "u_fl": 0
     },
     {
       "name": "Kowalska Magdalena",
       "p": 5,
       "u": 0,
-      "d": 5
-    },
-    {
-      "name": "Fudalej Tymoteusz",
-      "p": 0,
-      "u": 2,
-      "d": -2
+      "d": 5,
+      "p_rd": 3,
+      "u_rd": 0,
+      "p_fl": 2,
+      "u_fl": 0
     }
   ],
   "handlowcy_flota": [
@@ -2093,55 +2119,81 @@ const DATA = {
       "name": "Pokusa Konrad",
       "p": 13,
       "u": 3,
-      "d": 10
+      "d": 10,
+      "p_rd": 11,
+      "u_rd": 3,
+      "p_fl": 2,
+      "u_fl": 0
     },
     {
       "name": "Żbik Kacper",
       "p": 10,
       "u": 1,
-      "d": 9
+      "d": 9,
+      "p_rd": 10,
+      "u_rd": 1,
+      "p_fl": 0,
+      "u_fl": 0
     },
     {
       "name": "Mikusz Oskar",
       "p": 12,
       "u": 4,
-      "d": 8
+      "d": 8,
+      "p_rd": 11,
+      "u_rd": 4,
+      "p_fl": 1,
+      "u_fl": 0
     },
     {
       "name": "Nowak Anita",
       "p": 12,
       "u": 4,
-      "d": 8
+      "d": 8,
+      "p_rd": 12,
+      "u_rd": 4,
+      "p_fl": 0,
+      "u_fl": 0
     },
     {
       "name": "Pawlas Małgorzata",
       "p": 8,
       "u": 1,
-      "d": 7
-    },
-    {
-      "name": "Dziurzyński Patryk",
-      "p": 5,
-      "u": 0,
-      "d": 5
+      "d": 7,
+      "p_rd": 8,
+      "u_rd": 1,
+      "p_fl": 0,
+      "u_fl": 0
     },
     {
       "name": "Jóźwiak Fabian",
       "p": 5,
       "u": 0,
-      "d": 5
+      "d": 5,
+      "p_rd": 5,
+      "u_rd": 0,
+      "p_fl": 0,
+      "u_fl": 0
+    },
+    {
+      "name": "Dziurzyński Patryk",
+      "p": 5,
+      "u": 0,
+      "d": 5,
+      "p_rd": 1,
+      "u_rd": 0,
+      "p_fl": 4,
+      "u_fl": 0
     },
     {
       "name": "Kowalska Magdalena",
       "p": 5,
       "u": 0,
-      "d": 5
-    },
-    {
-      "name": "Fudalej Tymoteusz",
-      "p": 0,
-      "u": 2,
-      "d": -2
+      "d": 5,
+      "p_rd": 3,
+      "u_rd": 0,
+      "p_fl": 2,
+      "u_fl": 0
     }
   ],
   "ranking_combined": [
@@ -5031,16 +5083,29 @@ function filterAlertHTML(){
     }
     const maxAbs = Math.max(...rows.map(r => Math.max(Math.abs(r.p), Math.abs(r.u))), 1);
     const t = el('table');
-    let html = `<thead><tr><th>Handlowiec</th><th class="num">Przyrosty</th><th class="num">Ubytki</th><th class="num">Delta</th></tr></thead><tbody>`;
+    const hasSplit = rows.some(r => r.p_rd !== undefined);
+    let html = hasSplit
+      ? `<thead><tr><th>Handlowiec</th><th class="num">+RD</th><th class="num">+Flota</th><th class="num">Ubytki</th><th class="num">Delta</th></tr></thead><tbody>`
+      : `<thead><tr><th>Handlowiec</th><th class="num">Przyrosty</th><th class="num">Ubytki</th><th class="num">Delta</th></tr></thead><tbody>`;
     rows.forEach(r => {
       const pw = Math.round(r.p / maxAbs * 80);
       const uw = Math.round(r.u / maxAbs * 80);
-      html += `<tr>
-        <td>${r.name}</td>
-        <td class="num"><span class="minibar good" style="width:${pw}px"></span>${r.p}</td>
-        <td class="num"><span class="minibar bad" style="width:${uw}px"></span>${r.u}</td>
-        <td class="num ${deltaCls(r.d)}">${sgn(r.d)}</td>
-      </tr>`;
+      if(hasSplit){
+        html += `<tr>
+          <td>${r.name}</td>
+          <td class="num"><span class="minibar good" style="width:${Math.round((r.p_rd||0)/maxAbs*80)}px"></span>${r.p_rd||0}</td>
+          <td class="num" style="color:var(--dim)">${r.p_fl||0}</td>
+          <td class="num"><span class="minibar bad" style="width:${uw}px"></span>${r.u}</td>
+          <td class="num ${deltaCls(r.d)}">${sgn(r.d)}</td>
+        </tr>`;
+      } else {
+        html += `<tr>
+          <td>${r.name}</td>
+          <td class="num"><span class="minibar good" style="width:${pw}px"></span>${r.p}</td>
+          <td class="num"><span class="minibar bad" style="width:${uw}px"></span>${r.u}</td>
+          <td class="num ${deltaCls(r.d)}">${sgn(r.d)}</td>
+        </tr>`;
+      }
     });
     html += '</tbody>';
     t.innerHTML = html;
