@@ -180,64 +180,54 @@ const DATA = {
   "marka": "Volkswagen",
   "miasto": "Katowice",
   "kvps": "01380V",
-  "data_raportu": "2026-07-20",
-  "data_raportu_pl": "20 lipca 2026",
+  "data_raportu": "2026-07-22",
+  "data_raportu_pl": "22 lipca 2026",
   "ih_numer": "IH —/2026",
-  "zrodlo": "RAPORT_ZBIORCZY lipiec, stan na 2026-07-20, GAZDA KATOWICE 01380V",
+  "zrodlo": "RAPORT_ZBIORCZY lipiec, stan na 2026-07-22, GAZDA KATOWICE 01380V",
   "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT · Trade-in: CRM — stan 08.07.2026"
  },
  "realizacja": {
   "detal": {
-   "aak": 27,
-   "aakmax": 36,
-   "fk": 9,
-   "abk_bm": 35,
-   "aek": 23,
-   "uplyw": 0.609,
-   "prognoza": 36
+   "aak": 32,
+   "aakmax": 46,
+   "fk": 14,
+   "abk_bm": 32,
+   "aek": 25,
+   "uplyw": 0.696,
+   "prognoza": 46
   },
   "flota": {
    "aak": 4,
-   "aek": 5,
-   "abk_bm": 5,
+   "aek": 8,
+   "abk_bm": 6,
    "fk": 2,
-   "uplyw": 0.609
+   "uplyw": 0.696
   },
   "razem": {
-   "aak": 33,
-   "aek": 28,
-   "abk_bm": 40,
-   "fk": 11,
-   "aakmax": 44,
-   "aeh": 423,
-   "d_aeh": -4,
-   "s180bm": 5,
-   "mag_de": 107,
-   "kswbm": 9
+   "aak": 38,
+   "aek": 33,
+   "abk_bm": 38,
+   "fk": 16,
+   "aakmax": 54,
+   "aeh": 421,
+   "d_aeh": -1,
+   "s180bm": 4,
+   "mag_de": 126,
+   "kswbm": 8
   }
  },
  "cele": {
   "cel_zespolowy": 70,
-  "wykonanie_realne": 33,
-  "brakuje": 37,
-  "pct": 47,
-  "uplyw": 0.609,
-  "abk_bm": 40,
-  "fk": 11,
+  "wykonanie_realne": 38,
+  "brakuje": 32,
+  "pct": 54,
+  "uplyw": 0.696,
+  "abk_bm": 38,
+  "fk": 16,
   "cele": [
    {
     "name": "Kacper Żbik",
     "short": "Kacper",
-    "cel": 13,
-    "wykonanie": 3,
-    "flota": 0,
-    "pct": 23,
-    "brakuje": 10,
-    "status": "risk"
-   },
-   {
-    "name": "Konrad Pokusa",
-    "short": "Konrad",
     "cel": 13,
     "wykonanie": 4,
     "flota": 0,
@@ -246,13 +236,23 @@ const DATA = {
     "status": "risk"
    },
    {
+    "name": "Konrad Pokusa",
+    "short": "Konrad",
+    "cel": 13,
+    "wykonanie": 7,
+    "flota": 0,
+    "pct": 54,
+    "brakuje": 6,
+    "status": "mid"
+   },
+   {
     "name": "Oskar Mikusz",
     "short": "Oskar",
     "cel": 13,
-    "wykonanie": 9,
+    "wykonanie": 10,
     "flota": 0,
-    "pct": 69,
-    "brakuje": 4,
+    "pct": 77,
+    "brakuje": 3,
     "status": "mid"
    },
    {
@@ -364,7 +364,7 @@ const DATA = {
      {
       "name": "Oskar Mikusz",
       "cel": 5,
-      "wykonanie": 4
+      "wykonanie": 5
      },
      {
       "name": "Fabian Jóźwiak",
@@ -387,45 +387,45 @@ const DATA = {
  },
  "stan_aek": {
   "DETALICZNY_RD": {
-   "p": 38,
-   "u": 7,
-   "d": 31
+   "p": 41,
+   "u": 8,
+   "d": 33
   },
   "FLOTOWY": {
-   "p": 6,
+   "p": 9,
    "u": 1,
-   "d": 5
+   "d": 8
   }
  },
  "handlowcy_detal": [
   {
    "name": "Kacper Żbik",
-   "p": 5,
+   "p": 6,
    "u": 0,
-   "d": 5,
+   "d": 6,
    "p_rd": 3,
    "u_rd": 0,
-   "p_fl": 2,
+   "p_fl": 3,
    "u_fl": 0
   },
   {
    "name": "Konrad Pokusa",
    "p": 6,
-   "u": 1,
-   "d": 5,
+   "u": 2,
+   "d": 4,
    "p_rd": 4,
    "u_rd": 1,
    "p_fl": 2,
-   "u_fl": 0
+   "u_fl": 1
   },
   {
    "name": "Oskar Mikusz",
-   "p": 6,
+   "p": 7,
    "u": 1,
-   "d": 5,
+   "d": 6,
    "p_rd": 4,
    "u_rd": 0,
-   "p_fl": 2,
+   "p_fl": 3,
    "u_fl": 1
   },
   {
@@ -450,10 +450,10 @@ const DATA = {
   },
   {
    "name": "Anita Nowak",
-   "p": 5,
+   "p": 6,
    "u": 3,
-   "d": 2,
-   "p_rd": 3,
+   "d": 3,
+   "p_rd": 4,
    "u_rd": 1,
    "p_fl": 2,
    "u_fl": 2
@@ -462,9 +462,9 @@ const DATA = {
  "handlowcy_flota": [
   {
    "name": "Magdalena Kowalska",
-   "p": 5,
+   "p": 7,
    "u": 1,
-   "d": 4,
+   "d": 6,
    "p_rd": 0,
    "u_rd": 0,
    "p_fl": 0,
@@ -472,9 +472,9 @@ const DATA = {
   },
   {
    "name": "Patryk Dziurzyński",
-   "p": 1,
+   "p": 2,
    "u": 0,
-   "d": 1,
+   "d": 2,
    "p_rd": 0,
    "u_rd": 0,
    "p_fl": 0,
@@ -484,41 +484,41 @@ const DATA = {
  "kanaly": [
   {
    "kanal": "1.retail",
-   "aek": 22
+   "aek": 23
   },
   {
    "kanal": "2.small fleet",
-   "aek": 16
+   "aek": 18
   },
   {
    "kanal": "3.strategic fleet",
-   "aek": 6
+   "aek": 9
   }
  ],
  "magazyn": {
-  "razem": 107,
-  "klienc": 48,
-  "wolne": 59,
+  "razem": 126,
+  "klienc": 63,
+  "wolne": 63,
   "klienc_modele": [
    {
-    "model": "T-ROC NF",
-    "n": 13
+    "model": "TAIGO",
+    "n": 24
    },
    {
-    "model": "TAIGO",
-    "n": 12
+    "model": "T-ROC NF",
+    "n": 15
    },
    {
     "model": "TIGUAN 3",
-    "n": 6
-   },
-   {
-    "model": "GOLF A8 PA",
-    "n": 6
+    "n": 8
    },
    {
     "model": "TAYRON",
-    "n": 4
+    "n": 5
+   },
+   {
+    "model": "GOLF A8 PA",
+    "n": 5
    },
    {
     "model": "TOUAREG NF FL",
@@ -526,7 +526,7 @@ const DATA = {
    },
    {
     "model": "GOLF A8  VARIANT PA",
-    "n": 3
+    "n": 2
    },
    {
     "model": "POLO A06 FL",
@@ -543,20 +543,16 @@ const DATA = {
     "n": 9
    },
    {
-    "model": "TAYRON",
-    "n": 6
+    "model": "TAIGO",
+    "n": 9
    },
    {
-    "model": "TAIGO",
-    "n": 6
+    "model": "TAYRON",
+    "n": 7
    },
    {
     "model": "PASSAT B9 VAR",
     "n": 6
-   },
-   {
-    "model": "TIGUAN 3",
-    "n": 5
    },
    {
     "model": "GOLF A8  VARIANT PA",
@@ -564,7 +560,11 @@ const DATA = {
    },
    {
     "model": "GOLF A8 PA",
-    "n": 3
+    "n": 4
+   },
+   {
+    "model": "TIGUAN 3",
+    "n": 4
    }
   ]
  },
@@ -574,7 +574,7 @@ const DATA = {
     "vin": "WVGZZZA2XTV036377",
     "model": "T-ROC NF",
     "pz": "2026-02-26",
-    "dni": 175,
+    "dni": 177,
     "wiek": 186,
     "typ": "DE",
     "aak6": "Tymoteusz Fudalej"
@@ -583,7 +583,7 @@ const DATA = {
     "vin": "WVWZZZCD8TW624842",
     "model": "GOLF A8  VARIANT PA",
     "pz": "2026-02-04",
-    "dni": 172,
+    "dni": 174,
     "wiek": 183,
     "typ": "DE",
     "aak6": ""
@@ -592,7 +592,7 @@ const DATA = {
     "vin": "WVWZZZCJ9TD038331",
     "model": "PASSAT B9 VAR",
     "pz": "2026-02-08",
-    "dni": 171,
+    "dni": 173,
     "wiek": 182,
     "typ": "DE",
     "aak6": ""
@@ -601,7 +601,7 @@ const DATA = {
     "vin": "WVWZZZCJXTD038449",
     "model": "PASSAT B9 VAR",
     "pz": "2026-02-05",
-    "dni": 171,
+    "dni": 173,
     "wiek": 182,
     "typ": "DE",
     "aak6": ""
@@ -610,7 +610,7 @@ const DATA = {
     "vin": "WVWZZZCD6TW626802",
     "model": "GOLF A8  VARIANT PA",
     "pz": "2026-02-14",
-    "dni": 160,
+    "dni": 162,
     "wiek": 171,
     "typ": "CU",
     "aak6": "Patryk Dziurzyński"
@@ -619,25 +619,16 @@ const DATA = {
     "vin": "WVWZZZCD2TW626912",
     "model": "GOLF A8  VARIANT PA",
     "pz": "2026-02-25",
-    "dni": 159,
+    "dni": 161,
     "wiek": 170,
     "typ": "CU",
     "aak6": "Magdalena Kowalska"
    },
    {
-    "vin": "WVGZZZR42TW030704",
-    "model": "TAYRON",
-    "pz": "2026-03-06",
-    "dni": 157,
-    "wiek": 168,
-    "typ": "CU",
-    "aak6": "Oskar Mikusz"
-   },
-   {
     "vin": "WVGZZZR44TW030851",
     "model": "TAYRON",
     "pz": "2026-03-05",
-    "dni": 149,
+    "dni": 151,
     "wiek": 160,
     "typ": "DE",
     "aak6": ""
@@ -646,7 +637,7 @@ const DATA = {
     "vin": "WVGZZZCT5TW576350",
     "model": "TIGUAN 3",
     "pz": "2026-04-01",
-    "dni": 115,
+    "dni": 117,
     "wiek": 126,
     "typ": "CU",
     "aak6": "Anita Nowak"
@@ -657,7 +648,7 @@ const DATA = {
     "vin": "WVGZZZA26TV057260",
     "model": "T-ROC NF",
     "pz": "2026-04-02",
-    "dni": 145,
+    "dni": 147,
     "wiek": 156,
     "typ": "CU",
     "aak6": "Magdalena Kowalska"
@@ -666,7 +657,7 @@ const DATA = {
     "vin": "WVGZZZC10TY085039",
     "model": "T-CROSS FL",
     "pz": "2026-04-23",
-    "dni": 131,
+    "dni": 133,
     "wiek": 142,
     "typ": "DE",
     "aak6": ""
@@ -675,7 +666,7 @@ const DATA = {
     "vin": "WVGZZZA20TV045184",
     "model": "T-ROC NF",
     "pz": "2026-04-10",
-    "dni": 122,
+    "dni": 124,
     "wiek": 133,
     "typ": "DE",
     "aak6": ""
@@ -684,7 +675,7 @@ const DATA = {
     "vin": "WVGZZZA27TV078747",
     "model": "T-ROC NF",
     "pz": "2026-04-10",
-    "dni": 120,
+    "dni": 122,
     "wiek": 131,
     "typ": "DE",
     "aak6": ""
@@ -693,7 +684,7 @@ const DATA = {
     "vin": "WVGZZZCRXTD021961",
     "model": "TOUAREG NF FL",
     "pz": "2026-04-17",
-    "dni": 98,
+    "dni": 100,
     "wiek": 109,
     "typ": "CU",
     "aak6": "Oskar Mikusz"
@@ -702,7 +693,7 @@ const DATA = {
     "vin": "WVWZZZCD0TW252090",
     "model": "GOLF A8 PA",
     "pz": "2026-04-24",
-    "dni": 95,
+    "dni": 97,
     "wiek": 106,
     "typ": "DE",
     "aak6": ""
@@ -711,7 +702,7 @@ const DATA = {
     "vin": "WVGZZZCR7TD022582",
     "model": "TOUAREG NF FL",
     "pz": "2026-04-23",
-    "dni": 91,
+    "dni": 93,
     "wiek": 102,
     "typ": "CU",
     "aak6": "Oskar Mikusz"
@@ -720,185 +711,206 @@ const DATA = {
   "w60": []
  },
  "dostawy": {
-  "cutoff": "2026-07-13",
+  "cutoff": "2026-07-15",
   "vgp": [
    {
-    "data": "2026-07-20",
-    "model": "GOLF A8 PA",
-    "vin": "WVWZZZCD5TW293881",
-    "typ": "DE",
-    "sprzedawca": ""
-   },
-   {
-    "data": "2026-07-19",
-    "model": "TAIGO",
-    "vin": "WVGZZZCS5VY023745",
-    "typ": "DE",
-    "sprzedawca": ""
-   },
-   {
-    "data": "2026-07-19",
-    "model": "TAIGO",
-    "vin": "WVGZZZCS5VY025687",
-    "typ": "DE",
-    "sprzedawca": ""
-   },
-   {
-    "data": "2026-07-18",
-    "model": "TAIGO",
-    "vin": "WVGZZZCS9VY019231",
+    "data": "2026-07-22",
+    "model": "T-ROC NF",
+    "vin": "WVGZZZA20TV145415",
     "typ": "CU",
-    "sprzedawca": "Patryk Dziurzyński"
+    "sprzedawca": "Anita Nowak"
    },
    {
-    "data": "2026-07-18",
-    "model": "TAIGO",
-    "vin": "WVGZZZCS5VY017864",
+    "data": "2026-07-21",
+    "model": "T-ROC NF",
+    "vin": "WVGZZZA20TV145690",
     "typ": "CU",
     "sprzedawca": "Fabian Jóźwiak"
    },
    {
-    "data": "2026-07-18",
-    "model": "TAIGO",
-    "vin": "WVGZZZCS3VY017748",
+    "data": "2026-07-21",
+    "model": "T-ROC NF",
+    "vin": "WVGZZZA25TV144986",
     "typ": "CU",
-    "sprzedawca": "Konrad Pokusa"
-   },
+    "sprzedawca": "Małgorzata Pawlas-Poloczek"
+   }
+  ],
+  "aah": [
    {
-    "data": "2026-07-17",
+    "data": "2026-07-22",
     "model": "T-ROC NF",
     "vin": "WVGZZZA22TV132729",
     "typ": "CU",
     "sprzedawca": "Kacper Żbik"
    },
    {
-    "data": "2026-07-17",
+    "data": "2026-07-22",
+    "model": "GOLF A8 PA",
+    "vin": "WVWZZZCD5TW293881",
+    "typ": "DE",
+    "sprzedawca": ""
+   },
+   {
+    "data": "2026-07-22",
+    "model": "TAIGO",
+    "vin": "WVGZZZCS5VY023745",
+    "typ": "DE",
+    "sprzedawca": ""
+   },
+   {
+    "data": "2026-07-22",
     "model": "TAYRON",
     "vin": "WVGZZZR46TW053693",
     "typ": "DE",
     "sprzedawca": ""
    },
    {
-    "data": "2026-07-17",
+    "data": "2026-07-22",
     "model": "TAIGO",
     "vin": "WVGZZZCS0VY020719",
     "typ": "CU",
     "sprzedawca": "Fabian Jóźwiak"
    },
    {
-    "data": "2026-07-17",
+    "data": "2026-07-22",
+    "model": "TAIGO",
+    "vin": "WVGZZZCS9VY019231",
+    "typ": "CU",
+    "sprzedawca": "Patryk Dziurzyński"
+   },
+   {
+    "data": "2026-07-22",
     "model": "TAIGO",
     "vin": "WVGZZZCS2VY022228",
     "typ": "CU",
     "sprzedawca": "Kacper Żbik"
    },
    {
-    "data": "2026-07-17",
+    "data": "2026-07-22",
+    "model": "TAIGO",
+    "vin": "WVGZZZCS5VY017864",
+    "typ": "CU",
+    "sprzedawca": "Fabian Jóźwiak"
+   },
+   {
+    "data": "2026-07-22",
     "model": "TAIGO",
     "vin": "WVGZZZCS3VY022240",
     "typ": "CU",
     "sprzedawca": "Konrad Pokusa"
    },
    {
-    "data": "2026-07-17",
+    "data": "2026-07-22",
     "model": "T-ROC NF",
     "vin": "WVGZZZA29TV131609",
     "typ": "CU",
     "sprzedawca": "Oskar Mikusz"
    },
    {
-    "data": "2026-07-17",
-    "model": "TAYRON",
-    "vin": "WVGZZZR41TW055075",
-    "typ": "CU",
-    "sprzedawca": "Oskar Mikusz"
-   },
-   {
-    "data": "2026-07-17",
-    "model": "TIGUAN 3",
-    "vin": "WVGZZZCT3TW074243",
+    "data": "2026-07-22",
+    "model": "TAIGO",
+    "vin": "WVGZZZCS3VY017748",
     "typ": "CU",
     "sprzedawca": "Konrad Pokusa"
    },
    {
-    "data": "2026-07-17",
+    "data": "2026-07-22",
     "model": "TAIGO",
     "vin": "WVGZZZCSXVY020744",
     "typ": "CU",
     "sprzedawca": "Anita Nowak"
    },
    {
-    "data": "2026-07-17",
+    "data": "2026-07-22",
     "model": "T-ROC NF",
     "vin": "WVGZZZA20TV127268",
     "typ": "CU",
     "sprzedawca": "Anita Nowak"
    },
    {
-    "data": "2026-07-16",
+    "data": "2026-07-22",
+    "model": "TAIGO",
+    "vin": "WVGZZZCS5VY025687",
+    "typ": "DE",
+    "sprzedawca": ""
+   },
+   {
+    "data": "2026-07-21",
     "model": "TAIGO",
     "vin": "WVGZZZCS3VY021279",
     "typ": "CU",
     "sprzedawca": "Konrad Pokusa"
    },
    {
-    "data": "2026-07-16",
+    "data": "2026-07-21",
     "model": "TAIGO",
     "vin": "WVGZZZCS5VY022563",
     "typ": "CU",
     "sprzedawca": "Anita Nowak"
    },
    {
-    "data": "2026-07-16",
+    "data": "2026-07-21",
+    "model": "TAYRON",
+    "vin": "WVGZZZR44TW054521",
+    "typ": "DE",
+    "sprzedawca": ""
+   },
+   {
+    "data": "2026-07-21",
     "model": "T-CROSS FL",
     "vin": "WVGZZZC10VY024728",
     "typ": "DE",
     "sprzedawca": ""
    },
    {
-    "data": "2026-07-16",
+    "data": "2026-07-21",
     "model": "TAIGO",
     "vin": "WVGZZZCS3VY023176",
     "typ": "DE",
     "sprzedawca": ""
    },
    {
-    "data": "2026-07-16",
+    "data": "2026-07-21",
     "model": "T-ROC NF",
     "vin": "WVGZZZA24TV140301",
     "typ": "CU",
     "sprzedawca": "Robert Potoczny"
    },
    {
-    "data": "2026-07-16",
+    "data": "2026-07-21",
     "model": "TAIGO",
     "vin": "WVGZZZCS1VY018252",
     "typ": "CU",
     "sprzedawca": "Fabian Jóźwiak"
    },
    {
-    "data": "2026-07-16",
+    "data": "2026-07-21",
     "model": "TAIGO",
     "vin": "WVGZZZCS5VY017394",
     "typ": "CU",
     "sprzedawca": "Małgorzata Pawlas-Poloczek"
    },
    {
-    "data": "2026-07-16",
+    "data": "2026-07-21",
     "model": "TAIGO",
     "vin": "WVGZZZCS0VY021305",
     "typ": "CU",
     "sprzedawca": "Konrad Pokusa"
    },
    {
-    "data": "2026-07-15",
+    "data": "2026-07-21",
     "model": "TAYRON",
-    "vin": "WVGZZZR44TW054521",
-    "typ": "DE",
-    "sprzedawca": ""
-   }
-  ],
-  "aah": [
+    "vin": "WVGZZZR41TW055075",
+    "typ": "CU",
+    "sprzedawca": "Oskar Mikusz"
+   },
+   {
+    "data": "2026-07-21",
+    "model": "TIGUAN 3",
+    "vin": "WVGZZZCT3TW074243",
+    "typ": "CU",
+    "sprzedawca": "Konrad Pokusa"
+   },
    {
     "data": "2026-07-17",
     "model": "TIGUAN 3",
@@ -954,71 +966,15 @@ const DATA = {
     "vin": "WVGZZZCS1VY018512",
     "typ": "CU",
     "sprzedawca": "Oskar Mikusz"
-   },
-   {
-    "data": "2026-07-14",
-    "model": "POLO A06 FL",
-    "vin": "WVWZZZAW0VU011553",
-    "typ": "CU",
-    "sprzedawca": "Konrad Pokusa"
-   },
-   {
-    "data": "2026-07-14",
-    "model": "TAIGO",
-    "vin": "WVGZZZCS5VY023311",
-    "typ": "DE",
-    "sprzedawca": ""
-   },
-   {
-    "data": "2026-07-14",
-    "model": "GOLF A8 PA",
-    "vin": "WVWZZZCDXTW424030",
-    "typ": "CU",
-    "sprzedawca": "Oskar Mikusz"
-   },
-   {
-    "data": "2026-07-14",
-    "model": "GOLF A8 PA",
-    "vin": "WVWZZZCD2TW284121",
-    "typ": "CU",
-    "sprzedawca": "Oskar Mikusz"
-   },
-   {
-    "data": "2026-07-14",
-    "model": "GOLF A8 PA",
-    "vin": "WVWZZZCD0TW288846",
-    "typ": "CU",
-    "sprzedawca": "Magdalena Kowalska"
-   },
-   {
-    "data": "2026-07-14",
-    "model": "GOLF A8  VARIANT PA",
-    "vin": "WVWZZZCD9TW647918",
-    "typ": "CU",
-    "sprzedawca": "Konrad Pokusa"
-   },
-   {
-    "data": "2026-07-14",
-    "model": "TAIGO",
-    "vin": "WVGZZZCS2VY025176",
-    "typ": "DE",
-    "sprzedawca": ""
-   },
-   {
-    "data": "2026-07-14",
-    "model": "T-ROC NF",
-    "vin": "WVGZZZA22TV141172",
-    "typ": "CU",
-    "sprzedawca": "Konrad Pokusa"
    }
   ]
  },
  "prognoza": [
   {
    "mc": "2026-07",
-   "cu": 23,
+   "cu": 20,
    "de": 13,
-   "razem": 36
+   "razem": 33
   },
   {
    "mc": "2026-08",
@@ -1034,9 +990,9 @@ const DATA = {
   },
   {
    "mc": "2026-10",
-   "cu": 2,
+   "cu": 5,
    "de": 4,
-   "razem": 6
+   "razem": 9
   },
   {
    "mc": "2026-11",
@@ -1077,40 +1033,10 @@ const DATA = {
    "2026-07": 4,
    "2026-08": 0,
    "2026-09": 2,
-   "2026-10": 1,
-   "2026-11": 0,
-   "brak": 7,
-   "razem": 14
-  },
-  {
-   "name": "Fabian Jóźwiak",
-   "2026-07": 5,
-   "2026-08": 0,
-   "2026-09": 2,
-   "2026-10": 0,
-   "2026-11": 0,
-   "brak": 4,
-   "razem": 11
-  },
-  {
-   "name": "Małgorzata Pawlas-Poloczek",
-   "2026-07": 2,
-   "2026-08": 0,
-   "2026-09": 1,
-   "2026-10": 0,
-   "2026-11": 0,
-   "brak": 8,
-   "razem": 11
-  },
-  {
-   "name": "Anita Nowak",
-   "2026-07": 2,
-   "2026-08": 2,
-   "2026-09": 1,
-   "2026-10": 0,
+   "2026-10": 2,
    "2026-11": 0,
    "brak": 6,
-   "razem": 11
+   "razem": 14
   },
   {
    "name": "Magdalena Kowalska",
@@ -1119,7 +1045,37 @@ const DATA = {
    "2026-09": 4,
    "2026-10": 1,
    "2026-11": 0,
-   "brak": 5,
+   "brak": 7,
+   "razem": 12
+  },
+  {
+   "name": "Anita Nowak",
+   "2026-07": 1,
+   "2026-08": 2,
+   "2026-09": 1,
+   "2026-10": 0,
+   "2026-11": 0,
+   "brak": 7,
+   "razem": 11
+  },
+  {
+   "name": "Fabian Jóźwiak",
+   "2026-07": 4,
+   "2026-08": 0,
+   "2026-09": 2,
+   "2026-10": 0,
+   "2026-11": 0,
+   "brak": 4,
+   "razem": 10
+  },
+  {
+   "name": "Małgorzata Pawlas-Poloczek",
+   "2026-07": 1,
+   "2026-08": 0,
+   "2026-09": 1,
+   "2026-10": 2,
+   "2026-11": 0,
+   "brak": 6,
    "razem": 10
   },
   {
@@ -1160,20 +1116,26 @@ const DATA = {
   },
   {
    "name": "Oskar Mikusz",
-   "aak": 9,
-   "aek": 5,
-   "suma": 14
+   "aak": 10,
+   "aek": 6,
+   "suma": 16
   },
   {
    "name": "Konrad Pokusa",
-   "aak": 4,
-   "aek": 5,
-   "suma": 9
+   "aak": 7,
+   "aek": 4,
+   "suma": 11
   },
   {
    "name": "Kacper Żbik",
-   "aak": 3,
-   "aek": 5,
+   "aak": 4,
+   "aek": 6,
+   "suma": 10
+  },
+  {
+   "name": "Magdalena Kowalska",
+   "aak": 2,
+   "aek": 6,
    "suma": 8
   },
   {
@@ -1183,32 +1145,26 @@ const DATA = {
    "suma": 7
   },
   {
-   "name": "Magdalena Kowalska",
-   "aak": 2,
-   "aek": 4,
-   "suma": 6
-  },
-  {
    "name": "Patryk Dziurzyński",
    "aak": 4,
-   "aek": 1,
-   "suma": 5
+   "aek": 2,
+   "suma": 6
   },
   {
    "name": "Anita Nowak",
    "aak": 1,
-   "aek": 2,
-   "suma": 3
+   "aek": 3,
+   "suma": 4
   }
  ],
  "kpi_handlowcy": [
   {
    "name": "Anita Nowak",
-   "oferty": 37,
-   "klienci": 25,
-   "zamowienia": 7,
+   "oferty": 49,
+   "klienci": 34,
+   "zamowienia": 9,
    "wydania": 5,
-   "traffic": 30,
+   "traffic": 37,
    "opinie": 0,
    "trade_in": 10,
    "flota": false
@@ -1216,51 +1172,51 @@ const DATA = {
   {
    "name": "Konrad Pokusa",
    "oferty": 40,
-   "klienci": 22,
+   "klienci": 23,
    "zamowienia": 9,
-   "wydania": 9,
-   "traffic": 17,
+   "wydania": 11,
+   "traffic": 21,
    "opinie": 0,
    "trade_in": 7,
    "flota": false
   },
   {
    "name": "Oskar Mikusz",
-   "oferty": 32,
-   "klienci": 26,
-   "zamowienia": 5,
-   "wydania": 5,
-   "traffic": 7,
-   "opinie": 4,
+   "oferty": 44,
+   "klienci": 34,
+   "zamowienia": 7,
+   "wydania": 6,
+   "traffic": 8,
+   "opinie": 5,
    "trade_in": 2,
    "flota": false
   },
   {
    "name": "Kacper Żbik",
-   "oferty": 88,
-   "klienci": 40,
-   "zamowienia": 6,
-   "wydania": 5,
-   "traffic": 16,
+   "oferty": 95,
+   "klienci": 45,
+   "zamowienia": 7,
+   "wydania": 6,
+   "traffic": 20,
    "opinie": 2,
    "trade_in": 13,
    "flota": false
   },
   {
    "name": "Fabian Jóźwiak",
-   "oferty": 28,
-   "klienci": 19,
+   "oferty": 33,
+   "klienci": 22,
    "zamowienia": 4,
    "wydania": 7,
-   "traffic": 23,
+   "traffic": 25,
    "opinie": 0,
    "trade_in": 3,
    "flota": false
   },
   {
    "name": "Małgorzata Pawlas-Poloczek",
-   "oferty": 68,
-   "klienci": 40,
+   "oferty": 72,
+   "klienci": 44,
    "zamowienia": 12,
    "wydania": 8,
    "traffic": 28,
@@ -1270,23 +1226,23 @@ const DATA = {
   },
   {
    "name": "Magdalena Kowalska",
-   "oferty": 36,
-   "klienci": 5,
-   "zamowienia": 3,
+   "oferty": 45,
+   "klienci": 6,
+   "zamowienia": 6,
    "wydania": 2,
-   "traffic": 1,
+   "traffic": 2,
    "opinie": 0,
    "trade_in": 0,
    "flota": true
   },
   {
    "name": "Patryk Dziurzyński",
-   "oferty": 27,
-   "klienci": 25,
-   "zamowienia": 7,
+   "oferty": 36,
+   "klienci": 36,
+   "zamowienia": 8,
    "wydania": 1,
    "traffic": 0,
-   "opinie": 0,
+   "opinie": 1,
    "trade_in": 0,
    "flota": true
   }
@@ -1419,14 +1375,14 @@ const DATA = {
   },
   {
    "d": 21,
-   "raw": 3,
-   "v": 0.04,
+   "raw": 57,
+   "v": 0.77,
    "wknd": false
   },
   {
    "d": 22,
-   "raw": 0,
-   "v": 0.0,
+   "raw": 65,
+   "v": 0.88,
    "wknd": false
   },
   {
@@ -1528,7 +1484,7 @@ const DATA = {
    "tresc": "Profesjonalna i empatyczna obsługa. (pełna treść opinii ucięta w podglądzie arkusza — uzupełnij przy aktualizacji)"
   }
  ],
- "opinie_poprzedni_raport": "14.07.2026",
+ "opinie_poprzedni_raport": "20.07.2026",
  "trade_in_crm": {
   "miesiac": "2026-07",
   "miesiac_label": "Lipiec 2026",
