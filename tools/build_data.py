@@ -176,6 +176,8 @@ def apply_manual(new, man, rap_d, roster, flota_keys):
     """Nadpisuje sekcje pochodzace z arkuszy Google / wpisow recznych."""
     if man.get('ih_numer'):
         new['meta']['ih_numer'] = man['ih_numer']
+    if man.get('ih_plik'):
+        new['meta']['ih_plik'] = man['ih_plik']
     if man.get('zrodla_dodatkowe'):
         new['meta']['zrodla_dodatkowe'] = man['zrodla_dodatkowe']
     if man.get('cel_zespolowy'):
@@ -648,6 +650,7 @@ def main():
     ap.add_argument('--html', required=True)
     ap.add_argument('--out')
     ap.add_argument('--manual', help='JSON z danymi recznymi / z arkuszy Google')
+    ap.add_argument('--produkcja', help='JSON z parse_ih.py (Informacja Produkcyjna)')
     ap.add_argument('--dump-json')
     a = ap.parse_args()
 
@@ -655,6 +658,15 @@ def main():
     decl, s, e = find_data_span(html)
     old = json.loads(html[s:e])
     man = json.load(open(a.manual, encoding='utf-8')) if a.manual else None
+
+    if a.produkcja:
+        ih = json.load(open(a.produkcja, encoding='utf-8'))
+        man = dict(man or {})
+        man['produkcja'] = ih.get('produkcja') or man.get('produkcja')
+        if ih.get('ih_numer'):
+            man['ih_numer'] = ih['ih_numer']
+        if ih.get('ih_plik'):
+            man['ih_plik'] = ih['ih_plik']
 
     new, summary = build(a.xlsx, old, man)
 

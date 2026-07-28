@@ -1,0 +1,211 @@
+{
+ "ih_numer": "IH 40/2026",
+ "ih_tydzien": "31/2026",
+ "ih_data": "27 lipca 2026",
+ "ih_plik": "Informacja handlowa 40_2026 Załącznik1_Informacja produkcyjna na tydzień 31_2026.pdf",
+ "produkcja": {
+  "komunikaty": [
+   {
+    "tytul": "Zmiana roku modelowego na RM 2027",
+    "data": "IH 40/2026 · Informacja Produkcyjna na tydzień 31/2026",
+    "tresc": "Zmiana roku modelowego na RM 2027 Trwają zmiany roku modelowego w modelach T-Roc, Golf, Golf Variant, Passat, Tiguan oraz Tayron W związku z tym, na komisjach w tych modelach mogą występować tymczasowe błędy produkcyjne (komunikat \"F\" w polu \"IFA EC„). O zakresie zmian oraz postępowaniu z bankiem zamówień poinformujemy Sieć wkrótce w odrębnym komunikacie. Komisje wymagające interwencji po stronie Sieci dealerskiej zostaną oznaczone jako „DO POPRAWY DEALER”. Inne chwilowe niedogodności: - brak widoczności cen a tym samym brak możliwości wyboru kodu incentive. - \"wykrzyknik\" przy incentive wybranym w czasie, gdy cena była widoczna."
+   },
+   {
+    "tytul": "Plac centralny Importera",
+    "data": "IH 40/2026 · Informacja Produkcyjna na tydzień 31/2026",
+    "tresc": "zachęcamy do zapoznania się z bogatą ofertą samochodów w ramach tzw. „Oferty pod ZWS” importera w ramach locatinguVGP, szczegóły w Piśmie okólnym 29/2026. Obecnie na stoku znajduje się blisko 200 aut dostępnych od ręki."
+   },
+   {
+    "tytul": "Podwyżka inflacyjna",
+    "data": "IH 40/2026 · Informacja Produkcyjna na tydzień 31/2026",
+    "tresc": "informujemy o zmianach cenowych na kody silnika oraz wersje wyposażenia we wszystkich pojazdach z RM 2026 oraz 2027, szczegóły znajdują się w Piśmie okólnym 62/2026"
+   },
+   {
+    "tytul": "Passat",
+    "data": "IH 40/2026 · Informacja Produkcyjna na tydzień 31/2026",
+    "tresc": "od dnia 2.07 nastąpiła zmiana oferty produktowej w modelu Passat, szczegóły znajdują się w Piśmie okólnym 63/2026"
+   },
+   {
+    "tytul": "Akcja lato 2026",
+    "data": "IH 40/2026 · Informacja Produkcyjna na tydzień 31/2026",
+    "tresc": "w związku z chęcią poprawienia atrakcyjności samochodów magazynowych w wybranych modelach wprowadzamy dodatkowe wsparcie kwotowe dla wybranych komisji, szczegóły znajdują się w Piśmie okólnym 65/2026."
+   },
+   {
+    "tytul": "Pakiety przeglądów",
+    "data": "IH 40/2026 · Informacja Produkcyjna na tydzień 31/2026",
+    "tresc": "informujemy o aktualizacji oferty Pakietów przeglądów oraz VW Safe+ na rok 2026, szczegóły w PO 66/2026"
+   },
+   {
+    "tytul": "Golf, Golf VAR, T-Roc.Tiguan, Tayron, Passat",
+    "data": "IH 40/2026 · Informacja Produkcyjna na tydzień 31/2026",
+    "tresc": "informujemy o zmianach produktowych w wybranych modelach, szczegóły w PO 67/2026"
+   },
+   {
+    "tytul": "Oferta F&I",
+    "data": "IH 40/2026 · Informacja Produkcyjna na tydzień 31/2026",
+    "tresc": "informujemy o aktualizacji oferty finansowej VW, szczegóły znajdują się w PO 68/2026"
+   },
+   {
+    "tytul": "ID.Cross",
+    "data": "IH 40/2026 · Informacja Produkcyjna na tydzień 31/2026",
+    "tresc": "informujemy o rozpoczęciu przyjmowania zamówień, szczegóły znajdują się w PO 69/2026"
+   },
+   {
+    "tytul": "Market IntroductionID.3 Neo",
+    "data": "IH 40/2026 · Informacja Produkcyjna na tydzień 31/2026",
+    "tresc": "informujemy o opublikowaniu oferty samochodów wprowadzeniowych dostępne, w locatingu importera, szczegóły w IH 38/2026"
+   },
+   {
+    "tytul": "Tiguan & T-Roc",
+    "data": "IH 40/2026 · Informacja Produkcyjna na tydzień 31/2026",
+    "tresc": "dodanie do oferty nowych wersji silnikowych, szczegóły w PO 70/2026"
+   },
+   {
+    "tytul": "Tiguan",
+    "data": "IH 40/2026 · Informacja Produkcyjna na tydzień 31/2026",
+    "tresc": "nowa wersja wyposażenia Tiguan – Edition 20, szczegóły w PO 71/2026"
+   },
+   {
+    "tytul": "Tiguan & Tayron",
+    "data": "IH 40/2026 · Informacja Produkcyjna na tydzień 31/2026",
+    "tresc": "repozycja silników 2.0 TSI 265 KM 4 Motion, szczegóły w PO 72/2026"
+   }
+  ],
+  "przerwy": [
+   {
+    "tytul": "Brak informacji o przerwach",
+    "data": "IH 40/2026 · Informacja Produkcyjna na tydzień 31/2026",
+    "tresc": "Załącznik IH 40/2026 nie zawiera sekcji o przerwach produkcyjnych."
+   }
+  ],
+  "kalendarz": [
+   {
+    "tytul": "Kalendarz produkcyjny — tydzień 31/2026",
+    "data": "IH 40/2026 · Informacja Produkcyjna na tydzień 31/2026",
+    "tabela": [
+     [
+      "Model",
+      "Najbliższy zatw. tydzień",
+      "Najwcześniejszy m-c dla nowych komisji",
+      "Opóźnienie prod.",
+      "Dostawa fabryka → VGP"
+     ],
+     [
+      "POLO (AE1)",
+      "41/2026",
+      "PAŹDZIERNIK",
+      "-",
+      "7 TYGODNI"
+     ],
+     [
+      "T-CROSS (D31)",
+      "36/2026",
+      "WRZESIEŃ",
+      "-",
+      "4 TYGODNIE"
+     ],
+     [
+      "TAIGO (CS1)",
+      "36/2026",
+      "Q1 2027",
+      "-",
+      "5 TYGODNI"
+     ],
+     [
+      "T-ROC (D41)",
+      "-",
+      "WRZESIEŃ",
+      "-",
+      "4 TYGODNIE"
+     ],
+     [
+      "GOLF HB (DA1)",
+      "-",
+      "WRZESIEŃ",
+      "-",
+      "3 –14 DNI"
+     ],
+     [
+      "GOLF VAR (DB5)",
+      "-",
+      "PAŹDZIERNIK",
+      "-",
+      "3 –14 DNI"
+     ],
+     [
+      "PASSAT (CJ5)",
+      "-",
+      "WRZESIEŃ",
+      "-",
+      "3 –14 DNI"
+     ],
+     [
+      "TIGUAN (CT1)",
+      "-",
+      "WRZESIEŃ",
+      "-",
+      "3 –14 DNI"
+     ],
+     [
+      "TAYRON (R41)",
+      "-",
+      "WRZESIEŃ",
+      "-",
+      "3 –14 DNI"
+     ],
+     [
+      "ID. POLO (ES1)",
+      "38/2026",
+      "LISTOPAD",
+      "-",
+      "3 –14 DNI"
+     ],
+     [
+      "ID.3 NEO (E13)",
+      "-",
+      "LISTOPAD",
+      "-",
+      "3 –14 DNI"
+     ],
+     [
+      "ID.4 (E21)",
+      "-",
+      "ZAKOŃCZENIE PRODUKCJI",
+      "-",
+      "3 –14 DNI"
+     ],
+     [
+      "ID.5 (E39)",
+      "-",
+      "PAŹDZIERNIK",
+      "-",
+      "3 –14 DNI"
+     ],
+     [
+      "ID.7 (ED2)",
+      "-",
+      "PAŹDZIERNIK",
+      "-",
+      "3 –14 DNI"
+     ],
+     [
+      "ID.7 TOURER (ED5)",
+      "-",
+      "LISTOPAD",
+      "-",
+      "3 –14 DNI"
+     ]
+    ],
+    "tresc": "Terminy orientacyjne — mogą się wydłużyć. Uwzględnij też restrykcje."
+   }
+  ],
+  "restrykcje": [
+   {
+    "tytul": "Elementy restrykcyjne — 31/2026",
+    "data": "IH 40/2026 · Informacja Produkcyjna na tydzień 31/2026",
+    "pre": true,
+    "tresc": "1M6/1M9/1D2 Hak holowniczy\nDla wszystkich modeli\n3FU/3FG Dach panoramiczny\nU50 Obręcze ze stopu metali lekkich Lima 7J x 17, czarne, szlif diamentowy\nT-ROC (D41) 8IT Światła mijania i drogowe w technologii LED ze światłami do jazdy dziennej LED\nN28 Wersja R-line/ Tapicerka siedzeń materiałowa \"R-Line\"\nSilniki mHEV\nPakiet Performance Plus / GTI Performance / R-Performance / GTI Edition 50 Performance / pakiet Black Edition\nGOLF (DA1)/(DB5)\nCzarny dach\n40P/PJN/PI9/C7M Obręcze aluminiowe Nottingham 7.5J x 17 / Warmenau19” /\nSilniki PHEV\nTIGUAN (CT1) V11 Obręcze aluminiowe Venezia7J x 17, czarne, szlif diamentowy\nF15/F14/PJU/PJR Obręcze aluminiowe York 8J x 20, czarne / czarne, szlif diamentowy\nU50 Obręcze ze stopu metali lekkich Lima 7J x 17, czarne, szlif diamentowy\n8IT Światła mijania i drogowe w technologii LED ze światłami do jazdy dziennej LED\nT-ROC (D41)\nN28 Wersja R-line/ Tapicerka siedzeń materiałowa \"R-Line\"\nWBS Pakiet stylistyczny Black Style\nF14/F15/PJI/PJM Felgi York 20\"\nTAYRON (R41) V11 Obręcze aluminiowe Venezia7J x 17, czarne, szlif diamentowy\nSilniki PHEV i mHEV\nID.3 (E13) 49G/53P/PJN Felgi Wellington 19’’\nPBF,PBN,PBM,\nID.4 (E21) ID.5 (E39) Wnętrze Style Plus, Pakiet wnętrze Plus\nPAK,WAJ,WAK,1R3\nID.7 (ED2 / ED5) 64Q Obręcze aluminiowe Trondheim8,5J x 20 z przodu 9,5J x 20 z tyłu\n\nWystąpienie któregokolwiek z powyższych elementów w specyfikacji może wydłużyć czas zatwierdzenia zamówienia do produkcji, a tym samym czas dostawy do Klienta."
+   }
+  ]
+ }
+}
