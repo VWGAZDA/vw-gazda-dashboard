@@ -187,6 +187,12 @@ def apply_manual(new, man, rap_d, roster, flota_keys):
         new['cele']['bez_celu'] = man['bez_celu']
 
     # --- KPI handlowcy -------------------------------------------------
+    # trade-in bierzemy z CRM (to samo zrodlo co zakladka Trade-in CRM)
+    crm_leady = {}
+    _t = man.get('trade_in_crm') or {}
+    for row in ((_t.get('biezacy') or {}).get('ranking') or []):
+        crm_leady[norm(row.get('name'))] = i(row.get('przekazane'))
+
     kpi = man.get('kpi')
     if kpi:
         name_by_key = {k: n for k, n, s, c in roster}
@@ -198,7 +204,7 @@ def apply_manual(new, man, rap_d, roster, flota_keys):
                 'oferty': i(h.get('oferty')), 'klienci': i(h.get('klienci')),
                 'zamowienia': i(h.get('zamowienia')), 'wydania': i(h.get('wydania')),
                 'traffic': i(h.get('traffic')), 'opinie': i(h.get('opinie')),
-                'trade_in': i(h.get('trade_in')),
+                'trade_in': crm_leady.get(k, 0) if crm_leady else i(h.get('trade_in')),
                 'flota': bool(h.get('flota', k in flota_keys)),
             })
         new['kpi_handlowcy'] = rows
@@ -347,8 +353,10 @@ def build(xlsx_path, old, man=None):
     new['realizacja']['detal']['aakmax'] = max(new['realizacja']['detal']['aakmax'],
                                                new['realizacja']['detal']['aak'])
 
-    # ---- AAK per handlowiec ----------------------------------------
-    aak_cnt = defaultdict(int)
+    # ---- AAK per handlowiec, z podzialem detal / flota --------------
+    # DETAL = true retail + small fleet + grupy zawodowe/others + funkcyjne
+    # FLOTA = strategic fleet (medium/big fleet), obszar FLOTOWY
+    aak_detal = defaultdict(int)
     aak_flota = defaultdict(int)
     aak_names = {}
     for r in b_aak:
@@ -357,14 +365,24 @@ def build(xlsx_path, old, man=None):
             continue
         k = norm(who)
         aak_names.setdefault(k, pretty_name(who))
-        aak_cnt[k] += 1
-        if b_aak.s(r, 'obszar').upper().startswith('FLOT'):
+        obszar = b_aak.s(r, 'obszar').upper()
+        kanal = b_aak.s(r, 'kanał_rodzaj_użytkownik').lower()
+        funkcyjny = b_aak.s(r, 'status').upper() == 'FUNKCYJNY'
+        if (not funkcyjny) and (obszar.startswith('FLOT') or 'strategic' in kanal):
             aak_flota[k] += 1
+        else:
+            aak_detal[k] += 1
+    aak_cnt = {k: aak_detal.get(k, 0) + aak_flota.get(k, 0)
+               for k in set(aak_detal) | set(aak_flota)}
 
     # ---- AEK per handlowiec / obszar / kanal ------------------------
     # Uwzgledniamy tylko obszary handlowe. Rekordy z innych obszarow
     # (np. DETALICZNY_reszta) to techniczne duplikaty w bazie AEK -
     # odfiltrowujemy je i raportujemy w filtered_records_count/_clients.
+    # aek_licz_reszta=True scala pozostale obszary DETALICZNY_* do detalu
+    # (kanal 7.others). Domyslnie False - w bazie AEK siedza tam techniczne
+    # duplikaty ubytkow z poprzednich miesiecy.
+    licz_reszta = bool((man or {}).get('aek_licz_reszta'))
     OBSZARY = ['DETALICZNY_RD', 'FLOTOWY']
     stan = OrderedDict((o, {'p': 0, 'u': 0, 'd': 0}) for o in OBSZARY)
     aek = defaultdict(lambda: {'p': 0, 'u': 0, 'd': 0, 'p_rd': 0, 'u_rd': 0, 'p_fl': 0, 'u_fl': 0})
@@ -378,6 +396,8 @@ def build(xlsx_path, old, man=None):
         if not (plus or minus):
             continue
         obszar = b_aek.s(r, 'obszar').upper()
+        if licz_reszta and obszar.startswith('DETALICZNY'):
+            obszar = 'DETALICZNY_RD'
         if obszar not in stan:
             key = (b_aek.s(r, 'model'), pretty_name(b_aek.s(r, 'odpowiedzialny')),
                    b_aek.s(r, 'kanał_rodzaj'), b_aek.s(r, 'obszar'),
@@ -435,14 +455,14 @@ def build(xlsx_path, old, man=None):
             seen.add(k)
             roster.append((k, n, n.split()[0], 0))
 
-    # ---- cele -------------------------------------------------------
+    # ---- cele (TYLKO DETAL) -----------------------------------------
     cel_zesp = i((old.get('cele') or {}).get('cel_zespolowy'), 0)
-    wyk_real = new['realizacja']['razem']['aak']
+    wyk_real = new['realizacja']['detal']['aak']      # AAK detaliczne z REALIZACJA_detal
     cele_rows = []
     for k, name, short, cel in roster:
         if k in flota_keys:
             continue
-        wyk = aak_cnt.get(k, 0)
+        wyk = aak_detal.get(k, 0)
         pct = int(round(wyk / cel * 100)) if cel else 0
         cele_rows.append({
             'name': name, 'short': short, 'cel': cel, 'wykonanie': wyk,
@@ -453,9 +473,9 @@ def build(xlsx_path, old, man=None):
     for k, name, short, cel in roster:
         if k not in flota_keys:
             continue
-        wyk = aak_cnt.get(k, 0)
         cele_rows.append({
-            'name': name, 'short': short, 'cel': 0, 'wykonanie': wyk,
+            'name': name, 'short': short, 'cel': 0,
+            'wykonanie': aak_flota.get(k, 0) + aak_detal.get(k, 0),
             'flota': 1, 'aak_flotowe': aak_flota.get(k, 0),
             'pct': 0, 'brakuje': 0, 'status': 'flota',
         })
@@ -469,8 +489,8 @@ def build(xlsx_path, old, man=None):
         'brakuje': max(0, cel_zesp - wyk_real),
         'pct': int(round(wyk_real / cel_zesp * 100)) if cel_zesp else 0,
         'uplyw': uplyw,
-        'abk_bm': new['realizacja']['razem']['abk_bm'],
-        'fk': new['realizacja']['razem']['fk'],
+        'abk_bm': new['realizacja']['detal']['abk_bm'],
+        'fk': new['realizacja']['detal']['fk'],
         'cele': cele_rows,
     })
 
@@ -495,7 +515,8 @@ def build(xlsx_path, old, man=None):
     # ---- ranking combined ------------------------------------------
     rank = []
     for k, name, short, cel in roster:
-        a = aak_cnt.get(k, 0)
+        # detal liczy AAK detaliczne, zespol flotowy - swoje AAK flotowe
+        a = aak_flota.get(k, 0) if k in flota_keys else aak_detal.get(k, 0)
         e = (aek.get(k) or {}).get('d', 0)
         if a or e:
             rank.append({'name': name, 'aak': a, 'aek': e, 'suma': a + e})
