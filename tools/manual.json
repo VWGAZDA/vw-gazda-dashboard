@@ -1,5 +1,7 @@
 {
   "_zrodlo": "Google Sheets: RAPORT (zakładki Tygodniowy + Opinie) oraz CRM Klienci — Baza danych (zakładka Klienci)",
+  "_uwaga_aek": "aek_licz_reszta=false: obszar DETALICZNY_reszta (kanał 7.others) NIE jest naliczany. Siedzą tam techniczne duplikaty ubytków z poprzednich miesięcy (8× TAIGO datowane 18.03.2026) — nie mają wpływać na deltę handlowca. NIE zmieniać bez decyzji Roberta.",
+  "aek_licz_reszta": false,
   "cel_zespolowy": 68,
   "bez_celu": ["Tymoteusz Fudalej", "Robert Potoczny"],
   "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 28.07.2026",
