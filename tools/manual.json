@@ -1,613 +1,613 @@
 {
-  "_zrodlo": "Google Sheets: RAPORT (zakładki Tygodniowy + Opinie) oraz CRM Klienci — Baza danych (zakładka Klienci)",
-  "_uwaga_aek": "aek_licz_reszta=false: obszar DETALICZNY_reszta (kanał 7.others) NIE jest naliczany. Siedzą tam techniczne duplikaty ubytków z poprzednich miesięcy (8× TAIGO datowane 18.03.2026) — nie mają wpływać na deltę handlowca. NIE zmieniać bez decyzji Roberta.",
-  "aek_licz_reszta": false,
-  "cel_zespolowy": 68,
-  "bez_celu": [
-    "Tymoteusz Fudalej",
-    "Robert Potoczny"
-  ],
-  "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 29.07.2026",
-  "zadania_cele": {
-    "Trade-in": 10,
-    "Opinie Google": 5
+ "_zrodlo": "Google Sheets: RAPORT (zakładki Tygodniowy + Opinie) oraz CRM Klienci — Baza danych (zakładka Klienci)",
+ "_uwaga_aek": "aek_licz_reszta=false: obszar DETALICZNY_reszta (kanał 7.others) NIE jest naliczany. Siedzą tam techniczne duplikaty ubytków z poprzednich miesięcy (8× TAIGO datowane 18.03.2026) — nie mają wpływać na deltę handlowca. NIE zmieniać bez decyzji Roberta.",
+ "aek_licz_reszta": false,
+ "cel_zespolowy": 68,
+ "bez_celu": [
+  "Tymoteusz Fudalej",
+  "Robert Potoczny"
+ ],
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 30.07.2026",
+ "zadania_cele": {
+  "Trade-in": 10,
+  "Opinie Google": 5
+ },
+ "kpi": [
+  {
+   "name": "Anita Nowak",
+   "oferty": 70,
+   "klienci": 48,
+   "zamowienia": 12,
+   "wydania": 11,
+   "traffic": 51,
+   "opinie": 1,
+   "trade_in": 9,
+   "flota": false
   },
-  "kpi": [
-    {
-      "name": "Anita Nowak",
-      "oferty": 61,
-      "klienci": 44,
-      "zamowienia": 12,
-      "wydania": 7,
-      "traffic": 48,
-      "opinie": 1,
-      "trade_in": 9,
-      "flota": false
-    },
-    {
-      "name": "Konrad Pokusa",
-      "oferty": 55,
-      "klienci": 35,
-      "zamowienia": 11,
-      "wydania": 18,
-      "traffic": 28,
-      "opinie": 1,
-      "trade_in": 5,
-      "flota": false
-    },
-    {
-      "name": "Oskar Mikusz",
-      "oferty": 61,
-      "klienci": 41,
-      "zamowienia": 7,
-      "wydania": 7,
-      "traffic": 10,
-      "opinie": 6,
-      "trade_in": 12,
-      "flota": false
-    },
-    {
-      "name": "Kacper Żbik",
-      "oferty": 102,
-      "klienci": 48,
-      "zamowienia": 8,
-      "wydania": 7,
-      "traffic": 23,
-      "opinie": 3,
-      "trade_in": 12,
-      "flota": false
-    },
-    {
-      "name": "Fabian Jóźwiak",
-      "oferty": 47,
-      "klienci": 30,
-      "zamowienia": 7,
-      "wydania": 8,
-      "traffic": 32,
-      "opinie": 0,
-      "trade_in": 10,
-      "flota": false
-    },
-    {
-      "name": "Małgorzata Pawlas-Poloczek",
-      "oferty": 85,
-      "klienci": 49,
-      "zamowienia": 13,
-      "wydania": 9,
-      "traffic": 33,
-      "opinie": 4,
-      "trade_in": 1,
-      "flota": false
-    },
-    {
-      "name": "Magdalena Kowalska",
-      "oferty": 59,
-      "klienci": 13,
-      "zamowienia": 6,
-      "wydania": 3,
-      "traffic": 2,
-      "opinie": 0,
-      "trade_in": 0,
-      "flota": true
-    },
-    {
-      "name": "Patryk Dziurzyński",
-      "oferty": 47,
-      "klienci": 45,
-      "zamowienia": 8,
-      "wydania": 2,
-      "traffic": 0,
-      "opinie": 1,
-      "trade_in": 2,
-      "flota": true
-    }
-  ],
-  "koniunktura_daily": {
-    "oferty": [
-      36,
-      28,
-      18,
-      12,
-      0,
-      30,
-      29,
-      20,
-      22,
-      15,
-      14,
-      0,
-      17,
-      18,
-      28,
-      24,
-      20,
-      6,
-      0,
-      19,
-      24,
-      34,
-      27,
-      24,
-      9,
-      0,
-      16,
-      27,
-      0,
-      0,
-      0
-    ],
-    "klienci": [
-      25,
-      17,
-      2,
-      4,
-      0,
-      22,
-      17,
-      3,
-      9,
-      14,
-      10,
-      0,
-      10,
-      19,
-      12,
-      14,
-      8,
-      5,
-      0,
-      11,
-      22,
-      20,
-      13,
-      11,
-      6,
-      0,
-      17,
-      14,
-      0,
-      0,
-      0
-    ],
-    "traffic": [
-      13,
-      9,
-      7,
-      18,
-      0,
-      7,
-      10,
-      0,
-      0,
-      0,
-      0,
-      0,
-      5,
-      8,
-      11,
-      12,
-      10,
-      0,
-      0,
-      9,
-      11,
-      11,
-      13,
-      8,
-      0,
-      0,
-      5,
-      5,
-      4,
-      0,
-      0
-    ]
+  {
+   "name": "Konrad Pokusa",
+   "oferty": 55,
+   "klienci": 35,
+   "zamowienia": 11,
+   "wydania": 19,
+   "traffic": 28,
+   "opinie": 1,
+   "trade_in": 5,
+   "flota": false
   },
-  "opinie_poprzedni_raport": "27.07.2026",
-  "opinie": [
-    {
-      "data": "27.07.2026",
-      "nazwa": "ARTUR MULLER",
-      "handlowiec": "Kacper Żbik",
-      "tresc": "Polecamy obsługę przez pana Kacpra sprzedawca bardzo kompetentny i profesjonalna obsługa z jego strony."
-    },
-    {
-      "data": "27.07.2026",
-      "nazwa": "MARCIN ŻUREK",
-      "handlowiec": "Anita Nowak",
-      "tresc": "Serdecznie dziękuję Pani Anicie Nowak za profesjonalną obsługę i fachowe doradztwo. Miła atmosferze i pełne zaangażowanie. Zdecydowanie polecam ten salon."
-    },
-    {
-      "data": "24.07.2026",
-      "nazwa": "BOGUMIŁA",
-      "handlowiec": "Konrad Pokusa",
-      "tresc": "Serdeczne podziękowania dla Pana Konrada, który poprowadził Nas przez cały proces zakupu samochodu, a dzień odbioru samochodu długo zostanie w Naszej pamięci, odbyło się to profesjonalnie i w bardzo przyjemnej atmosferze. Do ostatniego momentu Pan Konrad udzielam Nam potrzebnych informacji, Polecamy Pana Konrada jak i salon Gazda Katowice."
-    },
-    {
-      "data": "24.07.2026",
-      "nazwa": "MICHAŁ KOWALSKI",
-      "handlowiec": "Oskar Mikusz",
-      "tresc": "Polecam salon VW Gazda Group w Katowicach! Cały proces zakupu samochodu – od pierwszego zapytania ofertowego, przez wszystkie formalności, aż po sam moment wydania auta – przebiegł niezwykle sprawnie, profesjonalnie i w bardzo miłej atmosferze. Szczególne podziękowania należą się Panu Oskarowi, który opiekował się moim zamówieniem na każdym etapie. To świetny doradca z doskonałym podejściem do klienta."
-    },
-    {
-      "data": "20.07.2026",
-      "nazwa": "ALINA ROBOK",
-      "handlowiec": "Oskar Mikusz",
-      "tresc": "Miła obsługa klienta. Szybki kontakt, czy to telefonicznie, czy mailowo. Jestem bardzo zadowolona z samochodu po odbiorze. Serdecznie polecam ten salon samochodowy. Mnie obsługiwał Pan Oskar Mikusz."
-    },
-    {
-      "data": "20.07.2026",
-      "nazwa": "WITOLD RĘBACZ",
-      "handlowiec": "Patryk Dziurzyński",
-      "tresc": "Świetna obsługa, profesjonalne podejście do klienta. Polecam Pana Patryka Durzyńskiego, kompetentny, miły, pomocny i ogromna wiedza motoryzacyjna!"
-    },
-    {
-      "data": "20.07.2026",
-      "nazwa": "MARCIN PROKOP",
-      "handlowiec": "Kacper Żbik",
-      "tresc": "Serdecznie polecam Volkswagen Gazda Group Katowice. Profesjonalna i miła obsługa - serdeczne podziękowania dla Pana Kacpra Żbika za fachową i kompetentną pomoc w zakupie VW Taigo. Gorąco polecam tego sprzedawcę i bardzo dziękuję."
-    },
-    {
-      "data": "20.07.2026",
-      "nazwa": "JAROSŁAW WACŁOWIAK",
-      "handlowiec": "Małgorzata Pawlas-Poloczek",
-      "tresc": "Małgorzata Pawlas-Poloczek dziękuję bardzo za miłą i profesjonalną obsługę, pomoc przy przyznaniu kredytu, wyjaśnienie wszystkich moich pytań oraz niejasnosci odnośnie wyboru samochodu Serdecznie polecam Panią Małgorzate"
-    },
-    {
-      "data": "20.07.2026",
-      "nazwa": "DARIUSZ KRUSZYŃSKI",
-      "handlowiec": "Oskar Mikusz",
-      "tresc": "W lutym odbieraliśmy Tiguana e hybrid. Obsługa sprzedażowa była prowadzona przez Pana Oskara Mikusza, który wykazał się wysokim profesjonalizmem oraz bardzo sympatycznym podejściem do klienta :-) Pan Oskar udzielił nam wszelkich niezbędnych informacji zarówno przy podejmowaniu decyzji, jak również na etapie realizacji zamówienia. Śmiało możemy polecić ten salon innym klientom. Dziękujemy !"
-    },
-    {
-      "data": "20.07.2026",
-      "nazwa": "MAGDALENA PRZYBYLAK",
-      "handlowiec": "Małgorzata Pawlas-Poloczek",
-      "tresc": "Dziękuję Pani Małgosi Pawlas za pomoc i obsługę przy zakupie auta, zaskoczyło mnie szybkie, profesjonalne i bardzo sprawne załatwienie wszelkich formalności, wszystko załatwione zdalnie, sama przyjemność współpracować z Panią"
-    },
-    {
-      "data": "20.07.2026",
-      "nazwa": "MONIKA PILIP",
-      "handlowiec": "Oskar Mikusz",
-      "tresc": "W piątek odebrałam nowe autko TRoc. Cały proces sprzedaży przebiegał bardzo sprawnie i komfortowo przy dużym wsparciu i zaangażowaniu Pana Oskara Mikusza. Serdecznie polecam ten salon i osobę Pana Oskara - pełen profesjonalizm"
-    },
-    {
-      "data": "20.07.2026",
-      "nazwa": "TOMASZ DOBICZEK",
-      "handlowiec": "Oskar Mikusz",
-      "tresc": "Vw Touareg - kupiony w VW Gazda, rozmowa prowadzona od początku z p.Oskarem. Polecam firmę, polecam p.Oskara. Wszystko tak jak uzgodniliśmy."
-    },
-    {
-      "data": "18.07.2026",
-      "nazwa": "MAREKK SZOSTAK",
-      "handlowiec": "Kacper Żbik",
-      "tresc": "Dzisiaj odebrałem samochód. Cały proces zakupowy przebiegł niezwykle sprawnie. Bardzo profesjonalna obsługa. Szczególne podziękowania dla Pana Kacpra, za profesjonalizm, fachowe doradztwo. Polecam wszystkim to miejsce"
-    },
-    {
-      "data": "17.07.2026",
-      "nazwa": "AMIR MORSHEDIZADEH",
-      "handlowiec": "Małgorzata Pawlas-Poloczek",
-      "tresc": "I recently purchased a Golf R from Volkswagen Gazda Group Katowice. The purchase process was smooth overall, and Małgorzata was very helpful throughout. She was responsive, supportive, and made the experience much easier. Thank you for the professional service, and I'm enjoying the car."
-    },
-    {
-      "data": "13.07.2026",
-      "nazwa": "MARCIN MNICHOWSKI",
-      "handlowiec": "Małgorzata Pawlas-Poloczek",
-      "tresc": "Z czystym sumieniem polecam salon Volkswagen Gazda Group Katowice, a w szczególności Panią Małgorzatę Pawlas-Poloczek! Miałem przyjemność współpracować z Panią Małgorzatą przy zakupie limitowanej wersji VW Touarega Final Edition. Od samego początku, przez twarde negocjacje ceny, aż po niezwykle wymagające procedury leasingowe dla gospodarstwa rolnego – pełen profesjonalizm, ogromna cierpliwość i stały kontakt o każdej porze. Pani Małgorzata osobiście dopilnowała każdego detalu, wywalczyła dla mnie świetne warunki finansowe i sprawiła, że samochód odebrałem przygotowany perfekcyjnie. Jeśli kupować nowego Volkswagena, to tylko u niej. Klasa sama w sobie! Pozdrawiam, Marcin."
-    },
-    {
-      "data": "02.07.2026",
-      "nazwa": "ILETUJEST ROBOTY",
-      "handlowiec": "Oskar Mikusz",
-      "tresc": "Mimo, że tego dnia nie zdecydowaliśmy ostatecznie sie na zakup to muszę polecić to miejsce. Bardzo miła i uzbrojona w wiedzę obsługa. Szczególnie Pan Oskar"
-    },
-    {
-      "data": "30.06.2026",
-      "nazwa": "OLA MALINOWSKA",
-      "handlowiec": "Kacper Żbik",
-      "tresc": "Polecam serdecznie Pana Kacpra Żbik. Cała transakcja przebiegła bardzo sprawnie i szybko. Nie mam najmniejszych zastrzeżeń. Na pewno będę polecać innym. Pozdrawiam."
-    },
-    {
-      "data": "30.06.2026",
-      "nazwa": "MM",
-      "handlowiec": "Oskar Mikusz",
-      "tresc": "Bardzo pozytywnie oceniam obsługę Pana Oskara Mikusza. Jest osobą niezwykle uprzejmą, kompetentną i zaangażowaną. Z dużą cierpliwością odpowiadał na wszystkie pytania, wszystko dokładnie wyjaśniał i zadbał o miłą atmosferę podczas wizyty. Profesjonalne podejście oraz wysoka kultura osobista sprawiły, że czułam się bardzo dobrze obsłużona. Zdecydowanie polecam kontakt z Panem Oskarem – to osoba, która potrafi zadbać o klienta na najwyższym poziomie."
-    },
-    {
-      "data": "30.06.2026",
-      "nazwa": "MACIEJ DOMIN",
-      "handlowiec": "Małgorzata Pawlas-Poloczek",
-      "tresc": "Zakup samochodu przy obsłudze Pani Małgorzaty przebiegł sprawnie i bez żadnych komplikacji. Jestem bardzo zadowolony z obsługi oraz profesjonalnego podejścia do klienta."
-    },
-    {
-      "data": "30.06.2026",
-      "nazwa": "WIKTOR FURS",
-      "handlowiec": "Małgorzata Pawlas-Poloczek",
-      "tresc": "estem bardzo zadowolony z kontaktu i podejścia do klienta. Pani Małgorzata wykazała się dużą wiedzą i zaangażowaniem. Serdecznie polecam!"
-    },
-    {
-      "data": "29.06.2026",
-      "nazwa": "RADOSŁAW BIEGAJ",
-      "handlowiec": "Oskar Mikusz",
-      "tresc": "Zdecydowanie polecam ten salon! Odbierałem tutaj swojego Golfa R i cały proces przebiegł wzorowo. Świetna cena, profesjonalna obsługa oraz pełne zaangażowanie na każdym etapie zakupu. Szczególne podziękowania dla sprzedawcy Oskara Mikusza pełen profesjonalizm, bardzo dobry kontakt i ogromna wiedza. Co ważne, obsługa nie kończy się w momencie wydania auta. Wsparcie posprzedażowe również stoi na najwyższym poziomie, a na każde pytanie można liczyć na szybką i konkretną odpowiedź. Z czystym sumieniem polecam zarówno salon, jak i współpracę z Oskarem. Tak powinien wyglądać zakup nowego samochodu!"
-    },
-    {
-      "data": "29.06.2026",
-      "nazwa": "MAGIKPFK5",
-      "handlowiec": "Oskar Mikusz",
-      "tresc": "Polecam serdecznie obsługę Pana Oskara Mikusza, gościu zna się na rzeczy. 100% zadowolenia"
-    },
-    {
-      "data": "25.06.2026",
-      "nazwa": "HENRYK WÓJCIK",
-      "handlowiec": "Kacper Żbik",
-      "tresc": "Polecam salon i Pana Kacpra jestem mega zadowolony"
-    },
-    {
-      "data": "25.06.2026",
-      "nazwa": "RYSZARD ZAPART",
-      "handlowiec": "Kacper Żbik",
-      "tresc": "Serdecznie polecam salon oraz współpracę z Panem Kacprem"
-    },
-    {
-      "data": "24.06.2026",
-      "nazwa": "RAFAŁ FLASZKA",
-      "handlowiec": "Konrad Pokusa",
-      "tresc": "Serdecznie polecam ten salon, a w szczególności pana Konrada Pokusę. Pan Konrad świetnie poprowadził mnie przez cały proces - od zamówienia po odbiór samochodu. Komunikacja stała zawsze na najwyższym poziomie. Pan Konrad poświęcił mi naprawdę dużo czasu i dzięki niemu doświadczenie z zakupu było bardzo pozytywne. Ciężko być bardziej zadowolonym. Polecam!"
-    },
-    {
-      "data": "24.06.2026",
-      "nazwa": "MAŁGORZATA MICHALIK",
-      "handlowiec": "Małgorzata Pawlas-Poloczek",
-      "tresc": "Bardzo miła obsługa i profesjonalna Pani Małgorzata Pawlas która nas obsługiwała mimo młodego wieku okazało się że posiada dużo wiedzy i na każde zadane pytanie dostawaliśmy wyczerpującą odpowiedź ."
-    },
-    {
-      "data": "23.06.2026",
-      "nazwa": "ARTUR BACHOWSI",
-      "handlowiec": "Konrad Pokusa",
-      "tresc": "Wspaniała obsługa, Pan Konrad Pokusa super profesjonalne podejście, atmosfera super. Świetny kontakt ze sprzedającym, pomoc i doradztwo w każdym calu. Czujemy się dopieszczeni i zaopiekowania. Polecamy gorąco, będziemy polecać znajomym ! Pozdrawiamy Katarzyna i Artur Bachowscy"
-    },
-    {
-      "data": "22.06.2026",
-      "nazwa": "PATRY PALCZAK",
-      "handlowiec": "Anita Nowak",
-      "tresc": "Serdecznie polecam Pania Anitę Nowak, od początku do konca pełen profesjonalizm, anielska cierpliwość mimo wielu pytań i zmian konfiguracji. Od miesiąca Golf R świetnie sie sprawuje. Dzieki pomocy Pani Anity oraz pełnemu zaangażowaniu, wybór marki oraz salonu byl oczywisty."
-    },
-    {
-      "data": "22.06.2026",
-      "nazwa": "CONNOR 91",
-      "handlowiec": "Anita Nowak",
-      "tresc": "Polecam salon Volkswagen Gazda Group Katowice. Na szczególną pochwałę zasługuje Pani Anita Nowak, która była z nami od pierwszego dnia, przedstawiając ofertę i pomagając w doborze odpowiedniej wersji wyposażenia, należy podkreślić jej wysokie kompetencje, znajomość modelu, opcji doposażenia i funkcji samochodu, także wysoką kulturę osobistą i umiejętność pracy z klientem, dzięki czemu nasz zakup od pierwszego dnia i złożenia zamówienia aż po odbiór gotowego do wydania samochodu i wyjazdu z salonu przebiegał nienagannie, żadnych problemów, wszystko zgodnie z ustaleniami w momencie złożenia zamówienia, jesteśmy wraz z żoną bardzo usatysfakcjonowani przebiegiem zakupu, liczymy również na równie owocną współpracę w kwestii serwisowania naszego pojazdu w Państwa serwisie, pozdrawiamy, zadowoleni wlasciciele nowego Volkswagen T-roc Style."
-    },
-    {
-      "data": "20.06.2026",
-      "nazwa": "JACEK ZJAWIN",
-      "handlowiec": "Anita Nowak",
-      "tresc": "Świetne doradztwo i profesjonalne podejscie ze strony Pani Anity. Dziękuję"
-    },
-    {
-      "data": "19.06.2026",
-      "nazwa": "ŁUKASZ MISIEJKO",
-      "handlowiec": "Fabian Jóźwiak",
-      "tresc": "W zeszłym miesiącu kupiłem zdalnie nowego T-crossa w bardzo dobrej ofercie. Pozdrawiam Pana Fabiana i ponownie dziękuję za pomoc, opłacało się przyjechać z Gdańska :) pozdrawiam również panią Aleksandrę za pomoc i super ofertę ubezpieczenia na miejscu!"
-    },
-    {
-      "data": "15.06.2026",
-      "nazwa": "AGNIESZKA WOLAŃSKA",
-      "handlowiec": "Kacper Żbik",
-      "tresc": "Odbiór i zakup nowego samochodu był dla naszej rodziny doświadczeniem, które wyznacza nowe standardy obsługi w motoryzacji. Jako osoba na co dzień pracująca w biznesie, bardzo doceniam profesjonalizm, transparentność i dbałość o każdy etap procesu, a tutaj wszystko zagrało idealnie. To nie była tylko standardowa sprzedaż auta, to była przemyślana logistyka i kompleksowa opieka nad klientem na każdym etapie tej transakcji. Szczególne słowa uznania należą się Panu Kacprowi Żbikowi. Jako nasz specjalista ds. sprzedaży i koordynator całej inwestycji, Pan Kacper wykazał się niezwykłą proaktywnością i merytoryczną elegancją. Dzięki jego zaangażowaniu cały proces przebiegł bezstresowo, pozwalając nam skupić się wyłącznie na radości z zakupu. Wisienką na torcie był kreatywny akcent ze strony działu marketingu – konkurs piłkarski z okazji Mistrzostw Świata. To pokazuje, że salon rozumie, iż w relacjach biznesowych liczą się nie tylko cyfry, ale i emocje oraz pozytywna energia, które budują trwałe wspomnienia. Jeśli szukacie Państwo miejsca, gdzie najwyższa jakość obsługi spotyka się z nieszablonowym, ludzkim podejściem, z pełnym przekonaniem rekomenduję ten salon oraz współpracę z Panem Kacprem. Dziękujemy za ten świetny początek przygody z nowym autem!"
-    },
-    {
-      "data": "14.06.2026",
-      "nazwa": "WŁODZIMIERZ WOJTKOWIAK",
-      "handlowiec": "Konrad Pokusa",
-      "tresc": "Wyrazy szacunku dla Pana Konrada. Dzięki za wsparcie i dużo cierpliwości. Oraz jeszcze za taką przyjazną atmosferę podczas całego procesu zakupowego. To zresztą czuło się w całej firmie. Raz jeszcze dziękuję."
-    },
-    {
-      "data": "10.06.2026",
-      "nazwa": "MAŁGORZATA GÓRAL",
-      "handlowiec": "Oskar Mikusz",
-      "tresc": "Odwiedziliśmy dzisiaj salon .Mamy zamiar zakupu.Bylismy pod wrażeniem.Podszedl młody człowiek P.Oskar Mikusz specjalista ds.sprzedaży samochodów.Bardzo szczegółowo wszystkie informacje jakimi byliśmy zainteresowani nam przekazał.Wiedzę na temat samochodu które nas interesuje ma ogromną.Jest to człowiek odpowiedni.Klient wychodzi z salonu z wiedzą która nas interesowała.Skorzystamy z jazdy próbnej i będziemy w kontakcie.Polecam wstąpić do Volkswagena.I uzyska się wszelkie wyczerpujące informację"
-    },
-    {
-      "data": "10.06.2026",
-      "nazwa": "JAKUB WOJTASZEK",
-      "handlowiec": "Konrad Pokusa",
-      "tresc": "Chciałbym bardzo podziękować Panu Konradowi Pokusie za pomoc przy zakupie mojego Golfa GTI. Od samego początku cały proces przebiegał w bardzo profesjonalnej i jednocześnie luźnej atmosferze. Konrad był zawsze dostępny, odpowiadał na wszystkie pytania i pomagał na każdym etapie zakupu. Dziękuję za zaangażowanie oraz podejście do klienta. Wszystko zostało dopięte sprawnie i bezproblemowo, a odbiór auta był czystą przyjemnością. Zdecydowanie polecam kontakt z Konradem i salonem Gazda Group w Katowicach każdemu, kto szuka nowego VW i oczekuje profesjonalnej obsługi."
-    },
-    {
-      "data": "09.06.2026",
-      "nazwa": "KAZIMIERZ STĘPIEŃ",
-      "handlowiec": "Anita Nowak",
-      "tresc": "Samochód kupiony przy pierwszej wizycie. Serdecznie polecamy obsługę P.Anity i cieszymy się na odbiór nowego TRoca już niebawem."
-    },
-    {
-      "data": "08.06.2026",
-      "nazwa": "DARIUSZ ŻABCZYŃSKI",
-      "handlowiec": "",
-      "tresc": "Pierwszy raz udało mi się tak szybko i bezproblemowo kupić samochód. Przewidywałem dużo późniejsze termin odbioru niż ten, który nastąpił, dzięki czemu nie musiałem na urlop jechać starym niepewnym autem."
-    },
-    {
-      "data": "07.06.2026",
-      "nazwa": "JANINA",
-      "handlowiec": "Kacper Żbik",
-      "tresc": "Walizeczka dla JaNinki, bym nie miała smutnej minki. Taka pięknie ułożona, Ona dla i jest stworzona. Wizyty jak gwiazdki na niebie. Pan Kacper, podarował nam jedną z 5 wystawionych przez zadowolonych klientów. Pozdrawiamy"
-    },
-    {
-      "data": "04.06.2026",
-      "nazwa": "BARBARA WOJTOWIAK",
-      "handlowiec": "Konrad Pokusa",
-      "tresc": "Salon samochodowy i nasz dealer pan Konrad to pełny profesjonalizm. Miejsce i kompetencje pana Konrada sprawily, że obecnie jesteśmy właścicielami Tayron'a. W dni otwarte Salonu VW można poznać modele samochodów i bardzo miło spędzić czas. Żadne pytanie nie zostanie bez odpowiedzi."
-    },
-    {
-      "data": "01.06.2026",
-      "nazwa": "EUGENIA JAN",
-      "handlowiec": "Anita Nowak",
-      "tresc": "Serdeczne podziękowania dla salonu Volkswagen Gazda w Katowicach przy ul. Murckowskiej za profesjonalną obsługę podczas zakupu samochodu. Szczególne podziękowania dla Pani Anity N. za fachowe doradztwo, zaangażowanie, cierpliwość i miłą atmosferę. Dzięki Pani profesjonalizmowi cały proces zakupu przebiegł sprawnie i bezproblemowo. Z przyjemnością polecam ten salon wszystkim poszukującym profesjonalnej obsługi."
-    },
-    {
-      "data": "01.06.2026",
-      "nazwa": "HANNA DITRICH",
-      "handlowiec": "Magdalena Kowalska",
-      "tresc": "Dzisiaj wyjechałam z Salonu Gazda Group w Katowicach pięknym nowym samochodem Volkswagen T - Cross. Wszystko zawdzięczam wspaniałej prowadzącej nasz zakup Pani Magdalenie Kowalskiej. Od pierwszego spotkania Pani Magda wykazywała się wiedzą, kompetencją, rzetelnością, odpowiadała na wszystkie pytania. Zawsze była gotowa i chętna do pomocy również w kontaktach telefonicznych. Przedstawiała temat zakupu samochodu w wielu aspektach, a Jej dorady były rzeczowe i cenne. W dniu odbierania pojazdu rzeczowo i w łatwy sposób wytłumaczyła podstawy obsługi samochodu dzięki czemu bezpiecznie dotarliśmy do celu. Pełny profesjonalizm, życzliwość i bardzo miła atmosfera. Bardzo, bardzo dziękuję za wspaniałą obsługę i polecam w 100% Panią Magdalenę Kowalską i Wasz salon"
-    },
-    {
-      "data": "01.06.2026",
-      "nazwa": "JAROSŁAW GULEWSKI",
-      "handlowiec": "Fabian Jóźwiak",
-      "tresc": "Gorąco polecam salon Gazda w Katowicach! Zakup Volkswagena T-Roc przebiegł w doskonałej atmosferze. Szczególne podziękowania dla Pana Fabiana – to absolutny profesjonalista i prawdziwy pasjonat motoryzacji. Świetne doradztwo i obsługa na najwyższym poziomie!"
-    }
-  ],
-  "trade_in_crm": {
-    "miesiac": "2026-07",
-    "biezacy": {
-      "label": "Lipiec 2026",
-      "total_leads": 51,
-      "ranking": [
-        {
-          "name": "Kacper Żbik",
-          "przekazane": 12,
-          "odkupione": 0,
-          "konwersja": 0
-        },
-        {
-          "name": "Oskar Mikusz",
-          "przekazane": 12,
-          "odkupione": 3,
-          "konwersja": 25
-        },
-        {
-          "name": "Fabian Jóźwiak",
-          "przekazane": 10,
-          "odkupione": 0,
-          "konwersja": 0
-        },
-        {
-          "name": "Anita Nowak",
-          "przekazane": 9,
-          "odkupione": 1,
-          "konwersja": 11
-        },
-        {
-          "name": "Konrad Pokusa",
-          "przekazane": 5,
-          "odkupione": 0,
-          "konwersja": 0
-        },
-        {
-          "name": "Patryk Dziurzyński",
-          "przekazane": 2,
-          "odkupione": 0,
-          "konwersja": 0
-        },
-        {
-          "name": "Małgorzata Pawlas-Poloczek",
-          "przekazane": 1,
-          "odkupione": 0,
-          "konwersja": 0
-        }
-      ],
-      "wygrane": [
-        {
-          "data": "2026-07-27",
-          "klient": "Łukasz Celiński",
-          "pojazd": "VW T-Roc",
-          "vin": "",
-          "handlowiec": "Oskar Mikusz"
-        },
-        {
-          "data": "2026-07-21",
-          "klient": "Piotr Pluta",
-          "pojazd": "Volkswagen T-Cross",
-          "vin": "",
-          "handlowiec": "Anita Nowak"
-        },
-        {
-          "data": "2026-07-13",
-          "klient": "Arkadiusz Kowalczyk",
-          "pojazd": "Ford Focus",
-          "vin": "",
-          "handlowiec": "Oskar Mikusz"
-        },
-        {
-          "data": "2026-07-10",
-          "klient": "Monika Pilip",
-          "pojazd": "Volkswagen Tiguan",
-          "vin": "",
-          "handlowiec": "Oskar Mikusz"
-        }
-      ]
-    },
-    "poprzedni": {
-      "label": "Czerwiec 2026",
-      "total_leads": 33,
-      "ranking": [
-        {
-          "name": "Konrad Pokusa",
-          "przekazane": 9,
-          "odkupione": 0,
-          "konwersja": 0
-        },
-        {
-          "name": "Anita Nowak",
-          "przekazane": 7,
-          "odkupione": 0,
-          "konwersja": 0
-        },
-        {
-          "name": "Kacper Żbik",
-          "przekazane": 6,
-          "odkupione": 2,
-          "konwersja": 33
-        },
-        {
-          "name": "Małgorzata Pawlas-Poloczek",
-          "przekazane": 6,
-          "odkupione": 0,
-          "konwersja": 0
-        },
-        {
-          "name": "Fabian Jóźwiak",
-          "przekazane": 2,
-          "odkupione": 1,
-          "konwersja": 50
-        },
-        {
-          "name": "Robert Potoczny",
-          "przekazane": 2,
-          "odkupione": 0,
-          "konwersja": 0
-        },
-        {
-          "name": "Oskar Mikusz",
-          "przekazane": 1,
-          "odkupione": 0,
-          "konwersja": 0
-        }
-      ],
-      "wygrane": [
-        {
-          "data": "2026-06-24",
-          "klient": "Nikola Kalupa",
-          "pojazd": "Volkswagen T-Cross",
-          "vin": "WVGZZZC1ZLY056674",
-          "handlowiec": "Kacper Żbik"
-        },
-        {
-          "data": "2026-06-19",
-          "klient": "Andrzej Roskosz",
-          "pojazd": "Hyundai Tucson",
-          "vin": "",
-          "handlowiec": "Fabian Jóźwiak"
-        },
-        {
-          "data": "2026-06-15",
-          "klient": "HousGarden",
-          "pojazd": "Volkswagen T-Roc",
-          "vin": "",
-          "handlowiec": "Kacper Żbik"
-        }
-      ]
-    }
+  {
+   "name": "Oskar Mikusz",
+   "oferty": 66,
+   "klienci": 44,
+   "zamowienia": 8,
+   "wydania": 9,
+   "traffic": 10,
+   "opinie": 6,
+   "trade_in": 12,
+   "flota": false
+  },
+  {
+   "name": "Kacper Żbik",
+   "oferty": 106,
+   "klienci": 48,
+   "zamowienia": 8,
+   "wydania": 8,
+   "traffic": 25,
+   "opinie": 3,
+   "trade_in": 12,
+   "flota": false
+  },
+  {
+   "name": "Fabian Jóźwiak",
+   "oferty": 52,
+   "klienci": 35,
+   "zamowienia": 7,
+   "wydania": 8,
+   "traffic": 34,
+   "opinie": 0,
+   "trade_in": 11,
+   "flota": false
+  },
+  {
+   "name": "Małgorzata Pawlas-Poloczek",
+   "oferty": 85,
+   "klienci": 49,
+   "zamowienia": 13,
+   "wydania": 9,
+   "traffic": 33,
+   "opinie": 4,
+   "trade_in": 1,
+   "flota": false
+  },
+  {
+   "name": "Magdalena Kowalska",
+   "oferty": 59,
+   "klienci": 16,
+   "zamowienia": 6,
+   "wydania": 4,
+   "traffic": 2,
+   "opinie": 0,
+   "trade_in": 0,
+   "flota": true
+  },
+  {
+   "name": "Patryk Dziurzyński",
+   "oferty": 48,
+   "klienci": 45,
+   "zamowienia": 8,
+   "wydania": 2,
+   "traffic": 0,
+   "opinie": 1,
+   "trade_in": 2,
+   "flota": true
   }
+ ],
+ "koniunktura_daily": {
+  "oferty": [
+   36,
+   28,
+   18,
+   12,
+   0,
+   30,
+   29,
+   20,
+   22,
+   15,
+   14,
+   0,
+   17,
+   18,
+   28,
+   24,
+   20,
+   6,
+   0,
+   19,
+   24,
+   34,
+   27,
+   24,
+   9,
+   0,
+   16,
+   27,
+   24,
+   0,
+   0
+  ],
+  "klienci": [
+   25,
+   17,
+   2,
+   4,
+   0,
+   22,
+   17,
+   3,
+   9,
+   14,
+   10,
+   0,
+   10,
+   19,
+   12,
+   14,
+   8,
+   5,
+   0,
+   11,
+   22,
+   20,
+   13,
+   11,
+   6,
+   0,
+   17,
+   14,
+   15,
+   0,
+   0
+  ],
+  "traffic": [
+   13,
+   9,
+   7,
+   18,
+   0,
+   7,
+   10,
+   0,
+   0,
+   0,
+   0,
+   0,
+   5,
+   8,
+   11,
+   12,
+   10,
+   0,
+   0,
+   9,
+   11,
+   11,
+   13,
+   8,
+   0,
+   0,
+   5,
+   5,
+   7,
+   4,
+   0
+  ]
+ },
+ "opinie_poprzedni_raport": "28.07.2026",
+ "opinie": [
+  {
+   "data": "27.07.2026",
+   "nazwa": "ARTUR MULLER",
+   "handlowiec": "Kacper Żbik",
+   "tresc": "Polecamy obsługę przez pana Kacpra sprzedawca bardzo kompetentny i profesjonalna obsługa z jego strony."
+  },
+  {
+   "data": "27.07.2026",
+   "nazwa": "MARCIN ŻUREK",
+   "handlowiec": "Anita Nowak",
+   "tresc": "Serdecznie dziękuję Pani Anicie Nowak za profesjonalną obsługę i fachowe doradztwo. Miła atmosferze i pełne zaangażowanie. Zdecydowanie polecam ten salon."
+  },
+  {
+   "data": "24.07.2026",
+   "nazwa": "BOGUMIŁA",
+   "handlowiec": "Konrad Pokusa",
+   "tresc": "Serdeczne podziękowania dla Pana Konrada, który poprowadził Nas przez cały proces zakupu samochodu, a dzień odbioru samochodu długo zostanie w Naszej pamięci, odbyło się to profesjonalnie i w bardzo przyjemnej atmosferze. Do ostatniego momentu Pan Konrad udzielam Nam potrzebnych informacji, Polecamy Pana Konrada jak i salon Gazda Katowice."
+  },
+  {
+   "data": "24.07.2026",
+   "nazwa": "MICHAŁ KOWALSKI",
+   "handlowiec": "Oskar Mikusz",
+   "tresc": "Polecam salon VW Gazda Group w Katowicach! Cały proces zakupu samochodu – od pierwszego zapytania ofertowego, przez wszystkie formalności, aż po sam moment wydania auta – przebiegł niezwykle sprawnie, profesjonalnie i w bardzo miłej atmosferze. Szczególne podziękowania należą się Panu Oskarowi, który opiekował się moim zamówieniem na każdym etapie. To świetny doradca z doskonałym podejściem do klienta."
+  },
+  {
+   "data": "20.07.2026",
+   "nazwa": "ALINA ROBOK",
+   "handlowiec": "Oskar Mikusz",
+   "tresc": "Miła obsługa klienta. Szybki kontakt, czy to telefonicznie, czy mailowo. Jestem bardzo zadowolona z samochodu po odbiorze. Serdecznie polecam ten salon samochodowy. Mnie obsługiwał Pan Oskar Mikusz."
+  },
+  {
+   "data": "20.07.2026",
+   "nazwa": "WITOLD RĘBACZ",
+   "handlowiec": "Patryk Dziurzyński",
+   "tresc": "Świetna obsługa, profesjonalne podejście do klienta. Polecam Pana Patryka Durzyńskiego, kompetentny, miły, pomocny i ogromna wiedza motoryzacyjna!"
+  },
+  {
+   "data": "20.07.2026",
+   "nazwa": "MARCIN PROKOP",
+   "handlowiec": "Kacper Żbik",
+   "tresc": "Serdecznie polecam Volkswagen Gazda Group Katowice. Profesjonalna i miła obsługa - serdeczne podziękowania dla Pana Kacpra Żbika za fachową i kompetentną pomoc w zakupie VW Taigo. Gorąco polecam tego sprzedawcę i bardzo dziękuję."
+  },
+  {
+   "data": "20.07.2026",
+   "nazwa": "JAROSŁAW WACŁOWIAK",
+   "handlowiec": "Małgorzata Pawlas-Poloczek",
+   "tresc": "Małgorzata Pawlas-Poloczek dziękuję bardzo za miłą i profesjonalną obsługę, pomoc przy przyznaniu kredytu, wyjaśnienie wszystkich moich pytań oraz niejasnosci odnośnie wyboru samochodu Serdecznie polecam Panią Małgorzate"
+  },
+  {
+   "data": "20.07.2026",
+   "nazwa": "DARIUSZ KRUSZYŃSKI",
+   "handlowiec": "Oskar Mikusz",
+   "tresc": "W lutym odbieraliśmy Tiguana e hybrid. Obsługa sprzedażowa była prowadzona przez Pana Oskara Mikusza, który wykazał się wysokim profesjonalizmem oraz bardzo sympatycznym podejściem do klienta :-) Pan Oskar udzielił nam wszelkich niezbędnych informacji zarówno przy podejmowaniu decyzji, jak również na etapie realizacji zamówienia. Śmiało możemy polecić ten salon innym klientom. Dziękujemy !"
+  },
+  {
+   "data": "20.07.2026",
+   "nazwa": "MAGDALENA PRZYBYLAK",
+   "handlowiec": "Małgorzata Pawlas-Poloczek",
+   "tresc": "Dziękuję Pani Małgosi Pawlas za pomoc i obsługę przy zakupie auta, zaskoczyło mnie szybkie, profesjonalne i bardzo sprawne załatwienie wszelkich formalności, wszystko załatwione zdalnie, sama przyjemność współpracować z Panią"
+  },
+  {
+   "data": "20.07.2026",
+   "nazwa": "MONIKA PILIP",
+   "handlowiec": "Oskar Mikusz",
+   "tresc": "W piątek odebrałam nowe autko TRoc. Cały proces sprzedaży przebiegał bardzo sprawnie i komfortowo przy dużym wsparciu i zaangażowaniu Pana Oskara Mikusza. Serdecznie polecam ten salon i osobę Pana Oskara - pełen profesjonalizm"
+  },
+  {
+   "data": "20.07.2026",
+   "nazwa": "TOMASZ DOBICZEK",
+   "handlowiec": "Oskar Mikusz",
+   "tresc": "Vw Touareg - kupiony w VW Gazda, rozmowa prowadzona od początku z p.Oskarem. Polecam firmę, polecam p.Oskara. Wszystko tak jak uzgodniliśmy."
+  },
+  {
+   "data": "18.07.2026",
+   "nazwa": "MAREKK SZOSTAK",
+   "handlowiec": "Kacper Żbik",
+   "tresc": "Dzisiaj odebrałem samochód. Cały proces zakupowy przebiegł niezwykle sprawnie. Bardzo profesjonalna obsługa. Szczególne podziękowania dla Pana Kacpra, za profesjonalizm, fachowe doradztwo. Polecam wszystkim to miejsce"
+  },
+  {
+   "data": "17.07.2026",
+   "nazwa": "AMIR MORSHEDIZADEH",
+   "handlowiec": "Małgorzata Pawlas-Poloczek",
+   "tresc": "I recently purchased a Golf R from Volkswagen Gazda Group Katowice. The purchase process was smooth overall, and Małgorzata was very helpful throughout. She was responsive, supportive, and made the experience much easier. Thank you for the professional service, and I'm enjoying the car."
+  },
+  {
+   "data": "13.07.2026",
+   "nazwa": "MARCIN MNICHOWSKI",
+   "handlowiec": "Małgorzata Pawlas-Poloczek",
+   "tresc": "Z czystym sumieniem polecam salon Volkswagen Gazda Group Katowice, a w szczególności Panią Małgorzatę Pawlas-Poloczek! Miałem przyjemność współpracować z Panią Małgorzatą przy zakupie limitowanej wersji VW Touarega Final Edition. Od samego początku, przez twarde negocjacje ceny, aż po niezwykle wymagające procedury leasingowe dla gospodarstwa rolnego – pełen profesjonalizm, ogromna cierpliwość i stały kontakt o każdej porze. Pani Małgorzata osobiście dopilnowała każdego detalu, wywalczyła dla mnie świetne warunki finansowe i sprawiła, że samochód odebrałem przygotowany perfekcyjnie. Jeśli kupować nowego Volkswagena, to tylko u niej. Klasa sama w sobie! Pozdrawiam, Marcin."
+  },
+  {
+   "data": "02.07.2026",
+   "nazwa": "ILETUJEST ROBOTY",
+   "handlowiec": "Oskar Mikusz",
+   "tresc": "Mimo, że tego dnia nie zdecydowaliśmy ostatecznie sie na zakup to muszę polecić to miejsce. Bardzo miła i uzbrojona w wiedzę obsługa. Szczególnie Pan Oskar"
+  },
+  {
+   "data": "30.06.2026",
+   "nazwa": "OLA MALINOWSKA",
+   "handlowiec": "Kacper Żbik",
+   "tresc": "Polecam serdecznie Pana Kacpra Żbik. Cała transakcja przebiegła bardzo sprawnie i szybko. Nie mam najmniejszych zastrzeżeń. Na pewno będę polecać innym. Pozdrawiam."
+  },
+  {
+   "data": "30.06.2026",
+   "nazwa": "MM",
+   "handlowiec": "Oskar Mikusz",
+   "tresc": "Bardzo pozytywnie oceniam obsługę Pana Oskara Mikusza. Jest osobą niezwykle uprzejmą, kompetentną i zaangażowaną. Z dużą cierpliwością odpowiadał na wszystkie pytania, wszystko dokładnie wyjaśniał i zadbał o miłą atmosferę podczas wizyty. Profesjonalne podejście oraz wysoka kultura osobista sprawiły, że czułam się bardzo dobrze obsłużona. Zdecydowanie polecam kontakt z Panem Oskarem – to osoba, która potrafi zadbać o klienta na najwyższym poziomie."
+  },
+  {
+   "data": "30.06.2026",
+   "nazwa": "MACIEJ DOMIN",
+   "handlowiec": "Małgorzata Pawlas-Poloczek",
+   "tresc": "Zakup samochodu przy obsłudze Pani Małgorzaty przebiegł sprawnie i bez żadnych komplikacji. Jestem bardzo zadowolony z obsługi oraz profesjonalnego podejścia do klienta."
+  },
+  {
+   "data": "30.06.2026",
+   "nazwa": "WIKTOR FURS",
+   "handlowiec": "Małgorzata Pawlas-Poloczek",
+   "tresc": "estem bardzo zadowolony z kontaktu i podejścia do klienta. Pani Małgorzata wykazała się dużą wiedzą i zaangażowaniem. Serdecznie polecam!"
+  },
+  {
+   "data": "29.06.2026",
+   "nazwa": "RADOSŁAW BIEGAJ",
+   "handlowiec": "Oskar Mikusz",
+   "tresc": "Zdecydowanie polecam ten salon! Odbierałem tutaj swojego Golfa R i cały proces przebiegł wzorowo. Świetna cena, profesjonalna obsługa oraz pełne zaangażowanie na każdym etapie zakupu. Szczególne podziękowania dla sprzedawcy Oskara Mikusza pełen profesjonalizm, bardzo dobry kontakt i ogromna wiedza. Co ważne, obsługa nie kończy się w momencie wydania auta. Wsparcie posprzedażowe również stoi na najwyższym poziomie, a na każde pytanie można liczyć na szybką i konkretną odpowiedź. Z czystym sumieniem polecam zarówno salon, jak i współpracę z Oskarem. Tak powinien wyglądać zakup nowego samochodu!"
+  },
+  {
+   "data": "29.06.2026",
+   "nazwa": "MAGIKPFK5",
+   "handlowiec": "Oskar Mikusz",
+   "tresc": "Polecam serdecznie obsługę Pana Oskara Mikusza, gościu zna się na rzeczy. 100% zadowolenia"
+  },
+  {
+   "data": "25.06.2026",
+   "nazwa": "HENRYK WÓJCIK",
+   "handlowiec": "Kacper Żbik",
+   "tresc": "Polecam salon i Pana Kacpra jestem mega zadowolony"
+  },
+  {
+   "data": "25.06.2026",
+   "nazwa": "RYSZARD ZAPART",
+   "handlowiec": "Kacper Żbik",
+   "tresc": "Serdecznie polecam salon oraz współpracę z Panem Kacprem"
+  },
+  {
+   "data": "24.06.2026",
+   "nazwa": "RAFAŁ FLASZKA",
+   "handlowiec": "Konrad Pokusa",
+   "tresc": "Serdecznie polecam ten salon, a w szczególności pana Konrada Pokusę. Pan Konrad świetnie poprowadził mnie przez cały proces - od zamówienia po odbiór samochodu. Komunikacja stała zawsze na najwyższym poziomie. Pan Konrad poświęcił mi naprawdę dużo czasu i dzięki niemu doświadczenie z zakupu było bardzo pozytywne. Ciężko być bardziej zadowolonym. Polecam!"
+  },
+  {
+   "data": "24.06.2026",
+   "nazwa": "MAŁGORZATA MICHALIK",
+   "handlowiec": "Małgorzata Pawlas-Poloczek",
+   "tresc": "Bardzo miła obsługa i profesjonalna Pani Małgorzata Pawlas która nas obsługiwała mimo młodego wieku okazało się że posiada dużo wiedzy i na każde zadane pytanie dostawaliśmy wyczerpującą odpowiedź ."
+  },
+  {
+   "data": "23.06.2026",
+   "nazwa": "ARTUR BACHOWSI",
+   "handlowiec": "Konrad Pokusa",
+   "tresc": "Wspaniała obsługa, Pan Konrad Pokusa super profesjonalne podejście, atmosfera super. Świetny kontakt ze sprzedającym, pomoc i doradztwo w każdym calu. Czujemy się dopieszczeni i zaopiekowania. Polecamy gorąco, będziemy polecać znajomym ! Pozdrawiamy Katarzyna i Artur Bachowscy"
+  },
+  {
+   "data": "22.06.2026",
+   "nazwa": "PATRY PALCZAK",
+   "handlowiec": "Anita Nowak",
+   "tresc": "Serdecznie polecam Pania Anitę Nowak, od początku do konca pełen profesjonalizm, anielska cierpliwość mimo wielu pytań i zmian konfiguracji. Od miesiąca Golf R świetnie sie sprawuje. Dzieki pomocy Pani Anity oraz pełnemu zaangażowaniu, wybór marki oraz salonu byl oczywisty."
+  },
+  {
+   "data": "22.06.2026",
+   "nazwa": "CONNOR 91",
+   "handlowiec": "Anita Nowak",
+   "tresc": "Polecam salon Volkswagen Gazda Group Katowice. Na szczególną pochwałę zasługuje Pani Anita Nowak, która była z nami od pierwszego dnia, przedstawiając ofertę i pomagając w doborze odpowiedniej wersji wyposażenia, należy podkreślić jej wysokie kompetencje, znajomość modelu, opcji doposażenia i funkcji samochodu, także wysoką kulturę osobistą i umiejętność pracy z klientem, dzięki czemu nasz zakup od pierwszego dnia i złożenia zamówienia aż po odbiór gotowego do wydania samochodu i wyjazdu z salonu przebiegał nienagannie, żadnych problemów, wszystko zgodnie z ustaleniami w momencie złożenia zamówienia, jesteśmy wraz z żoną bardzo usatysfakcjonowani przebiegiem zakupu, liczymy również na równie owocną współpracę w kwestii serwisowania naszego pojazdu w Państwa serwisie, pozdrawiamy, zadowoleni wlasciciele nowego Volkswagen T-roc Style."
+  },
+  {
+   "data": "20.06.2026",
+   "nazwa": "JACEK ZJAWIN",
+   "handlowiec": "Anita Nowak",
+   "tresc": "Świetne doradztwo i profesjonalne podejscie ze strony Pani Anity. Dziękuję"
+  },
+  {
+   "data": "19.06.2026",
+   "nazwa": "ŁUKASZ MISIEJKO",
+   "handlowiec": "Fabian Jóźwiak",
+   "tresc": "W zeszłym miesiącu kupiłem zdalnie nowego T-crossa w bardzo dobrej ofercie. Pozdrawiam Pana Fabiana i ponownie dziękuję za pomoc, opłacało się przyjechać z Gdańska :) pozdrawiam również panią Aleksandrę za pomoc i super ofertę ubezpieczenia na miejscu!"
+  },
+  {
+   "data": "15.06.2026",
+   "nazwa": "AGNIESZKA WOLAŃSKA",
+   "handlowiec": "Kacper Żbik",
+   "tresc": "Odbiór i zakup nowego samochodu był dla naszej rodziny doświadczeniem, które wyznacza nowe standardy obsługi w motoryzacji. Jako osoba na co dzień pracująca w biznesie, bardzo doceniam profesjonalizm, transparentność i dbałość o każdy etap procesu, a tutaj wszystko zagrało idealnie. To nie była tylko standardowa sprzedaż auta, to była przemyślana logistyka i kompleksowa opieka nad klientem na każdym etapie tej transakcji. Szczególne słowa uznania należą się Panu Kacprowi Żbikowi. Jako nasz specjalista ds. sprzedaży i koordynator całej inwestycji, Pan Kacper wykazał się niezwykłą proaktywnością i merytoryczną elegancją. Dzięki jego zaangażowaniu cały proces przebiegł bezstresowo, pozwalając nam skupić się wyłącznie na radości z zakupu. Wisienką na torcie był kreatywny akcent ze strony działu marketingu – konkurs piłkarski z okazji Mistrzostw Świata. To pokazuje, że salon rozumie, iż w relacjach biznesowych liczą się nie tylko cyfry, ale i emocje oraz pozytywna energia, które budują trwałe wspomnienia. Jeśli szukacie Państwo miejsca, gdzie najwyższa jakość obsługi spotyka się z nieszablonowym, ludzkim podejściem, z pełnym przekonaniem rekomenduję ten salon oraz współpracę z Panem Kacprem. Dziękujemy za ten świetny początek przygody z nowym autem!"
+  },
+  {
+   "data": "14.06.2026",
+   "nazwa": "WŁODZIMIERZ WOJTKOWIAK",
+   "handlowiec": "Konrad Pokusa",
+   "tresc": "Wyrazy szacunku dla Pana Konrada. Dzięki za wsparcie i dużo cierpliwości. Oraz jeszcze za taką przyjazną atmosferę podczas całego procesu zakupowego. To zresztą czuło się w całej firmie. Raz jeszcze dziękuję."
+  },
+  {
+   "data": "10.06.2026",
+   "nazwa": "MAŁGORZATA GÓRAL",
+   "handlowiec": "Oskar Mikusz",
+   "tresc": "Odwiedziliśmy dzisiaj salon .Mamy zamiar zakupu.Bylismy pod wrażeniem.Podszedl młody człowiek P.Oskar Mikusz specjalista ds.sprzedaży samochodów.Bardzo szczegółowo wszystkie informacje jakimi byliśmy zainteresowani nam przekazał.Wiedzę na temat samochodu które nas interesuje ma ogromną.Jest to człowiek odpowiedni.Klient wychodzi z salonu z wiedzą która nas interesowała.Skorzystamy z jazdy próbnej i będziemy w kontakcie.Polecam wstąpić do Volkswagena.I uzyska się wszelkie wyczerpujące informację"
+  },
+  {
+   "data": "10.06.2026",
+   "nazwa": "JAKUB WOJTASZEK",
+   "handlowiec": "Konrad Pokusa",
+   "tresc": "Chciałbym bardzo podziękować Panu Konradowi Pokusie za pomoc przy zakupie mojego Golfa GTI. Od samego początku cały proces przebiegał w bardzo profesjonalnej i jednocześnie luźnej atmosferze. Konrad był zawsze dostępny, odpowiadał na wszystkie pytania i pomagał na każdym etapie zakupu. Dziękuję za zaangażowanie oraz podejście do klienta. Wszystko zostało dopięte sprawnie i bezproblemowo, a odbiór auta był czystą przyjemnością. Zdecydowanie polecam kontakt z Konradem i salonem Gazda Group w Katowicach każdemu, kto szuka nowego VW i oczekuje profesjonalnej obsługi."
+  },
+  {
+   "data": "09.06.2026",
+   "nazwa": "KAZIMIERZ STĘPIEŃ",
+   "handlowiec": "Anita Nowak",
+   "tresc": "Samochód kupiony przy pierwszej wizycie. Serdecznie polecamy obsługę P.Anity i cieszymy się na odbiór nowego TRoca już niebawem."
+  },
+  {
+   "data": "08.06.2026",
+   "nazwa": "DARIUSZ ŻABCZYŃSKI",
+   "handlowiec": "",
+   "tresc": "Pierwszy raz udało mi się tak szybko i bezproblemowo kupić samochód. Przewidywałem dużo późniejsze termin odbioru niż ten, który nastąpił, dzięki czemu nie musiałem na urlop jechać starym niepewnym autem."
+  },
+  {
+   "data": "07.06.2026",
+   "nazwa": "JANINA",
+   "handlowiec": "Kacper Żbik",
+   "tresc": "Walizeczka dla JaNinki, bym nie miała smutnej minki. Taka pięknie ułożona, Ona dla i jest stworzona. Wizyty jak gwiazdki na niebie. Pan Kacper, podarował nam jedną z 5 wystawionych przez zadowolonych klientów. Pozdrawiamy"
+  },
+  {
+   "data": "04.06.2026",
+   "nazwa": "BARBARA WOJTOWIAK",
+   "handlowiec": "Konrad Pokusa",
+   "tresc": "Salon samochodowy i nasz dealer pan Konrad to pełny profesjonalizm. Miejsce i kompetencje pana Konrada sprawily, że obecnie jesteśmy właścicielami Tayron'a. W dni otwarte Salonu VW można poznać modele samochodów i bardzo miło spędzić czas. Żadne pytanie nie zostanie bez odpowiedzi."
+  },
+  {
+   "data": "01.06.2026",
+   "nazwa": "EUGENIA JAN",
+   "handlowiec": "Anita Nowak",
+   "tresc": "Serdeczne podziękowania dla salonu Volkswagen Gazda w Katowicach przy ul. Murckowskiej za profesjonalną obsługę podczas zakupu samochodu. Szczególne podziękowania dla Pani Anity N. za fachowe doradztwo, zaangażowanie, cierpliwość i miłą atmosferę. Dzięki Pani profesjonalizmowi cały proces zakupu przebiegł sprawnie i bezproblemowo. Z przyjemnością polecam ten salon wszystkim poszukującym profesjonalnej obsługi."
+  },
+  {
+   "data": "01.06.2026",
+   "nazwa": "HANNA DITRICH",
+   "handlowiec": "Magdalena Kowalska",
+   "tresc": "Dzisiaj wyjechałam z Salonu Gazda Group w Katowicach pięknym nowym samochodem Volkswagen T - Cross. Wszystko zawdzięczam wspaniałej prowadzącej nasz zakup Pani Magdalenie Kowalskiej. Od pierwszego spotkania Pani Magda wykazywała się wiedzą, kompetencją, rzetelnością, odpowiadała na wszystkie pytania. Zawsze była gotowa i chętna do pomocy również w kontaktach telefonicznych. Przedstawiała temat zakupu samochodu w wielu aspektach, a Jej dorady były rzeczowe i cenne. W dniu odbierania pojazdu rzeczowo i w łatwy sposób wytłumaczyła podstawy obsługi samochodu dzięki czemu bezpiecznie dotarliśmy do celu. Pełny profesjonalizm, życzliwość i bardzo miła atmosfera. Bardzo, bardzo dziękuję za wspaniałą obsługę i polecam w 100% Panią Magdalenę Kowalską i Wasz salon"
+  },
+  {
+   "data": "01.06.2026",
+   "nazwa": "JAROSŁAW GULEWSKI",
+   "handlowiec": "Fabian Jóźwiak",
+   "tresc": "Gorąco polecam salon Gazda w Katowicach! Zakup Volkswagena T-Roc przebiegł w doskonałej atmosferze. Szczególne podziękowania dla Pana Fabiana – to absolutny profesjonalista i prawdziwy pasjonat motoryzacji. Świetne doradztwo i obsługa na najwyższym poziomie!"
+  }
+ ],
+ "trade_in_crm": {
+  "miesiac": "2026-07",
+  "biezacy": {
+   "label": "Lipiec 2026",
+   "total_leads": 52,
+   "ranking": [
+    {
+     "name": "Kacper Żbik",
+     "przekazane": 12,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Oskar Mikusz",
+     "przekazane": 12,
+     "odkupione": 3,
+     "konwersja": 25
+    },
+    {
+     "name": "Fabian Jóźwiak",
+     "przekazane": 11,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Anita Nowak",
+     "przekazane": 9,
+     "odkupione": 1,
+     "konwersja": 11
+    },
+    {
+     "name": "Konrad Pokusa",
+     "przekazane": 5,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Patryk Dziurzyński",
+     "przekazane": 2,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Małgorzata Pawlas-Poloczek",
+     "przekazane": 1,
+     "odkupione": 0,
+     "konwersja": 0
+    }
+   ],
+   "wygrane": [
+    {
+     "data": "2026-07-27",
+     "klient": "Łukasz Celiński",
+     "pojazd": "VW T-Roc",
+     "vin": "",
+     "handlowiec": "Oskar Mikusz"
+    },
+    {
+     "data": "2026-07-21",
+     "klient": "Piotr Pluta",
+     "pojazd": "Volkswagen T-Cross",
+     "vin": "",
+     "handlowiec": "Anita Nowak"
+    },
+    {
+     "data": "2026-07-13",
+     "klient": "Arkadiusz Kowalczyk",
+     "pojazd": "Ford Focus",
+     "vin": "",
+     "handlowiec": "Oskar Mikusz"
+    },
+    {
+     "data": "2026-07-10",
+     "klient": "Monika Pilip",
+     "pojazd": "Volkswagen Tiguan",
+     "vin": "",
+     "handlowiec": "Oskar Mikusz"
+    }
+   ]
+  },
+  "poprzedni": {
+   "label": "Czerwiec 2026",
+   "total_leads": 33,
+   "ranking": [
+    {
+     "name": "Konrad Pokusa",
+     "przekazane": 9,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Anita Nowak",
+     "przekazane": 7,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Kacper Żbik",
+     "przekazane": 6,
+     "odkupione": 2,
+     "konwersja": 33
+    },
+    {
+     "name": "Małgorzata Pawlas-Poloczek",
+     "przekazane": 6,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Fabian Jóźwiak",
+     "przekazane": 2,
+     "odkupione": 1,
+     "konwersja": 50
+    },
+    {
+     "name": "Robert Potoczny",
+     "przekazane": 2,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Oskar Mikusz",
+     "przekazane": 1,
+     "odkupione": 0,
+     "konwersja": 0
+    }
+   ],
+   "wygrane": [
+    {
+     "data": "2026-06-24",
+     "klient": "Nikola Kalupa",
+     "pojazd": "Volkswagen T-Cross",
+     "vin": "WVGZZZC1ZLY056674",
+     "handlowiec": "Kacper Żbik"
+    },
+    {
+     "data": "2026-06-19",
+     "klient": "Andrzej Roskosz",
+     "pojazd": "Hyundai Tucson",
+     "vin": "",
+     "handlowiec": "Fabian Jóźwiak"
+    },
+    {
+     "data": "2026-06-15",
+     "klient": "HousGarden",
+     "pojazd": "Volkswagen T-Roc",
+     "vin": "",
+     "handlowiec": "Kacper Żbik"
+    }
+   ]
+  }
+ }
 }
