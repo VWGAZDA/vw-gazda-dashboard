@@ -37,7 +37,13 @@ def norm(s):
     s = ''.join(c for c in s if not unicodedata.combining(c))
     s = s.replace('ł', 'l').replace('Ł', 'L')
     s = re.sub(r'[^A-Za-z\- ]', ' ', s).upper()
-    return ' '.join(sorted(t for t in re.split(r'[\s\-]+', s) if t))
+    k = ' '.join(sorted(t for t in re.split(r'[\s\-]+', s) if t))
+    # 'Anita Nowak', 'NOWAK ANITA' i 'Anita' musza dawac ten sam klucz -
+    # inaczej po anonimizacji generator zobaczylby dwie rozne osoby.
+    return _KANON.get(k, k)
+
+
+_KANON = {}          # wypelniane po definicji HANDLOWCY_IMIONA
 
 
 def pretty_name(s):
@@ -662,6 +668,11 @@ HANDLOWCY_IMIONA = {
 }
 _ANON_PARY = sorted(HANDLOWCY_IMIONA.items(), key=lambda kv: -len(kv[0]))
 
+for _pelne, _imie in HANDLOWCY_IMIONA.items():
+    _kan = norm(_imie)
+    _KANON[norm(_pelne)] = _kan
+    _KANON[_kan] = _kan
+
 # Nazwiska handlowcow w tekscie swobodnym (opinie) wystepuja w formach
 # odmienionych: 'Anity Nowak', 'Oskara Mikusza', 'Kacprowi Zbikowi'. Usuwamy
 # sam czlon nazwiskowy razem z koncowka fleksyjna, imie zostaje.
@@ -708,6 +719,19 @@ def inicjaly(n):
     return ''.join(c[0].upper() + '.' for c in czesci)
 
 
+def autor_opinii(n):
+    """'GIZELA ROZYCKA' -> 'GIZELA R.'  (imie w calosci, reszta do inicjalu)"""
+    n = (n or '').strip()
+    if not n:
+        return n
+    czesci = [c for c in re.split(r'\s+', n) if c]
+    if len(czesci) < 2:
+        return n
+    if all(len(c) == 2 and c.endswith('.') for c in czesci[1:]):
+        return n
+    return czesci[0] + ' ' + ' '.join(c[0].upper() + '.' for c in czesci[1:])
+
+
 def anonimizuj(obj, klucz=None):
     """Rekurencyjnie czysci dane osobowe w strukturze przeznaczonej do publikacji."""
     if isinstance(obj, dict):
@@ -719,6 +743,8 @@ def anonimizuj(obj, klucz=None):
             return skroc_vin(obj)
         if klucz == 'klient':
             return inicjaly(obj)
+        if klucz == 'nazwa':
+            return autor_opinii(obj)
         return imie_tylko(obj)
     return obj
 
