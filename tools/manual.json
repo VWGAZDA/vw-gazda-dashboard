@@ -7,7 +7,7 @@
   "Tymoteusz Fudalej",
   "Robert Potoczny"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 30.07.2026",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 06.08.2026",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -15,196 +15,328 @@
  "kpi": [
   {
    "name": "Anita Nowak",
-   "oferty": 70,
-   "klienci": 48,
-   "zamowienia": 12,
-   "wydania": 11,
-   "traffic": 51,
-   "opinie": 1,
+   "oferty": 15,
+   "klienci": 12,
+   "zamowienia": 2,
+   "wydania": 3,
+   "traffic": 6,
+   "opinie": 2,
    "trade_in": 9,
    "flota": false
   },
   {
    "name": "Konrad Pokusa",
-   "oferty": 55,
-   "klienci": 35,
-   "zamowienia": 11,
-   "wydania": 19,
-   "traffic": 28,
-   "opinie": 1,
+   "oferty": 15,
+   "klienci": 10,
+   "zamowienia": 3,
+   "wydania": 1,
+   "traffic": 3,
+   "opinie": 0,
    "trade_in": 5,
    "flota": false
   },
   {
    "name": "Oskar Mikusz",
-   "oferty": 66,
-   "klienci": 44,
-   "zamowienia": 8,
-   "wydania": 9,
-   "traffic": 10,
-   "opinie": 6,
+   "oferty": 1,
+   "klienci": 4,
+   "zamowienia": 3,
+   "wydania": 2,
+   "traffic": 1,
+   "opinie": 0,
    "trade_in": 12,
    "flota": false
   },
   {
    "name": "Kacper Żbik",
-   "oferty": 106,
-   "klienci": 48,
-   "zamowienia": 8,
-   "wydania": 8,
-   "traffic": 25,
-   "opinie": 3,
+   "oferty": 21,
+   "klienci": 13,
+   "zamowienia": 0,
+   "wydania": 0,
+   "traffic": 5,
+   "opinie": 0,
    "trade_in": 12,
    "flota": false
   },
   {
    "name": "Fabian Jóźwiak",
-   "oferty": 52,
-   "klienci": 35,
-   "zamowienia": 7,
-   "wydania": 8,
-   "traffic": 34,
+   "oferty": 10,
+   "klienci": 13,
+   "zamowienia": 0,
+   "wydania": 1,
+   "traffic": 3,
    "opinie": 0,
    "trade_in": 11,
    "flota": false
   },
   {
    "name": "Małgorzata Pawlas-Poloczek",
-   "oferty": 85,
-   "klienci": 49,
-   "zamowienia": 13,
-   "wydania": 9,
-   "traffic": 33,
-   "opinie": 4,
+   "oferty": 0,
+   "klienci": 4,
+   "zamowienia": 0,
+   "wydania": 1,
+   "traffic": 0,
+   "opinie": 0,
    "trade_in": 1,
    "flota": false
   },
   {
    "name": "Magdalena Kowalska",
-   "oferty": 59,
-   "klienci": 16,
-   "zamowienia": 6,
-   "wydania": 4,
-   "traffic": 2,
+   "oferty": 1,
+   "klienci": 1,
+   "zamowienia": 0,
+   "wydania": 1,
+   "traffic": 0,
    "opinie": 0,
    "trade_in": 0,
    "flota": true
   },
   {
    "name": "Patryk Dziurzyński",
-   "oferty": 48,
-   "klienci": 45,
-   "zamowienia": 8,
-   "wydania": 2,
+   "oferty": 0,
+   "klienci": 9,
+   "zamowienia": 0,
+   "wydania": 0,
    "traffic": 0,
-   "opinie": 1,
+   "opinie": 0,
    "trade_in": 2,
    "flota": true
   }
  ],
  "koniunktura_daily": {
   "oferty": [
-   36,
-   28,
-   18,
-   12,
    0,
-   30,
-   29,
-   20,
-   22,
-   15,
-   14,
-   0,
-   17,
-   18,
-   28,
-   24,
-   20,
-   6,
    0,
    19,
+   20,
    24,
-   34,
-   27,
-   24,
-   9,
    0,
-   16,
-   27,
-   24,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
    0,
    0
   ],
   "klienci": [
    25,
-   17,
-   2,
-   4,
-   0,
-   22,
-   17,
-   3,
-   9,
-   14,
-   10,
-   0,
-   10,
-   19,
-   12,
-   14,
-   8,
-   5,
    0,
    11,
-   22,
-   20,
-   13,
-   11,
-   6,
-   0,
-   17,
    14,
-   15,
+   16,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
    0,
    0
   ],
   "traffic": [
-   13,
-   9,
-   7,
-   18,
-   0,
-   7,
-   10,
    0,
    0,
-   0,
-   0,
-   0,
-   5,
-   8,
-   11,
-   12,
-   10,
-   0,
-   0,
-   9,
-   11,
-   11,
-   13,
-   8,
-   0,
-   0,
-   5,
-   5,
-   7,
+   6,
    4,
+   8,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
    0
   ]
  },
- "opinie_poprzedni_raport": "28.07.2026",
+ "opinie_poprzedni_raport": "29.07.2026",
  "opinie": [
+  {
+   "data": "05.08.2026",
+   "nazwa": "GIZELA RÓŻYCKA",
+   "handlowiec": "Anita Nowak",
+   "tresc": "Serdecznie polecam salon Volkswagen Gazda w Katowicach! Wczoraj odbierałam swoje nowe auto i jestem bardzo zadowolona z obsługi. Szczególne podziękowania dla Pani Anity Nowak za profesjonalizm, życzliwość i cierpliwość. Wszystko dokładnie wyjaśniła i sprawiła, że odbiór samochodu przebiegł w bardzo miłej atmosferze. Obsługa na najwyższym poziomie. Dziękuję!"
+  },
+  {
+   "data": "05.08.2026",
+   "nazwa": "GRZEGORZ URBAN",
+   "handlowiec": "Anita Nowak",
+   "tresc": "Tydzień temu wyjechałem z salonu VW Gazda Grup Katowice nowym T-ROC. Podziękowania dla Pani Anity Nowak – pełen profesjonalizm. Dziękuję i pozdrawiam."
+  },
+  {
+   "data": "31.07.2026",
+   "nazwa": "PIOTREK XZA",
+   "handlowiec": "Konrad Pokusa",
+   "tresc": "Już prawie miesiąc jestem szczęśliwym posiadaczem GTI. Bardzo się cieszę że trafiłem właśnie do GG Katowice i Pana Konrada Pokusy. Cały proces zakupu przebiegł bardzo sprawnie, o wszystkich jego etapach zostałem bardzo dokładnie poinformowany, można powiedzieć że \"poprowadzony za rączkę\". Kontakt z Panem Konradem super, jego wiedza motoryzacyjna na wysokim poziomie, miło było pogadać. Pozdrawiam"
+  },
+  {
+   "data": "31.07.2026",
+   "nazwa": "HUMAN LEX INSTYTUT",
+   "handlowiec": "Oskar Mikusz",
+   "tresc": "Niesamowita obsługa. Jestem na maksa pozytywnie zaskoczony profesjonalizmem, szybkością oraz dotrzymywanym słowom. Zarówno dział sprzedaży aut nowych i Pan Oskar jak również dział aut używanych Pan Patryk spisali się na medal. Dziękuję. Tayron spisuje się również na medal :)"
+  },
+  {
+   "data": "31.07.2026",
+   "nazwa": "OSKAR CHWILA",
+   "handlowiec": "Konrad Pokusa",
+   "tresc": "Pełen profesjonalizm i świetna obsługa. Pan Konrad Pokusa to osoba kompetentna, pomocna i zaangażowana. Wszystko zostało jasno wyjaśnione, a cały proces przebiegł sprawnie. Zdecydowanie polecam współpracę z Panem Konradem!"
+  },
+  {
+   "data": "31.07.2026",
+   "nazwa": "DAMIAN BUŁKA",
+   "handlowiec": "Konrad Pokusa",
+   "tresc": "Dziękuję Panu Konradowi Pokusie za miłą i profesjonalną obsługę podczas zakupu nowego pojazdu. Pozdrawiam i polecam kontakt z Panem Konradem."
+  },
+  {
+   "data": "31.07.2026",
+   "nazwa": "AGNIESZKA BUŁKA",
+   "handlowiec": "Konrad Pokusa",
+   "tresc": "Wczoraj odebrałam wymarzone auto w Salonie GG. Bardzo serdecznie dziękuję panu Konradowi Pokusa za wszelką miłą oraz profesjonalną pomoc."
+  },
+  {
+   "data": "31.07.2026",
+   "nazwa": "SYLWIA GARDZIŃSKA",
+   "handlowiec": "Oskar Mikusz",
+   "tresc": "Dzień dobry. Wczoraj odebraliśmy z mężem pięknego Volkswagena T-Roc. Obsługa w tym salonie jest na najwyższym poziomie!!! Pan Oskar Mikusz od momentu naszego pomysłu o nowym samochodzie udzielał nam wszystkich niezbędnych rad, służył pomocą, zrozumieniem, a jego wiedza była bardzo pomocna i na wysokim poziomie. Podał nam kilka pomysłów, których nie braliśmy pod uwagę. Pan Oskar jest odpowiednią osobą na odpowiednim miejscu i współpracę z nim polecamy z całego serca!!! Dziękujemy – Sylwia i Rafał"
+  },
+  {
+   "data": "31.07.2026",
+   "nazwa": "IWONA CHWILA",
+   "handlowiec": "Konrad Pokusa",
+   "tresc": "Z całego serca polecam Konrada Pokusa! Profesjonalna obsługa od pierwszego kontaktu aż do finalizacji zakupu. Samochód był dokładnie taki, jak w opisie – zadbany, sprawdzony i bez żadnych ukrytych niespodzianek. Sprzedawca cierpliwie odpowiedział na wszystkie pytania, umożliwił dokładne oględziny oraz jazdę próbną. Cała transakcja przebiegła sprawnie, uczciwie i w bardzo miłej atmosferze. Widać, że zależy mu na zadowoleniu klienta. Zdecydowanie polecam każdemu, kto szuka pewnego auta i rzetelnego sprzedawcy. 10/10!"
+  },
+  {
+   "data": "31.07.2026",
+   "nazwa": "SEBASTIAN CHWILA",
+   "handlowiec": "Konrad Pokusa",
+   "tresc": "Gorąco polecam salon Volkswagena, a w szczególności pana Konrada Pokusę! Obsługa klienta jest tutaj na najwyższym, światowym poziomie. Pan Konrad to profesjonalista w każdym calu – jest niezwykle cierpliwy, pomocny i rzetelny. Odpowiedział na wszystkie moje pytania, doradził najlepsze rozwiązania i sprawił, że cały proces zakupu przebiegł w świetnej, bezstresowej atmosferze. Jeśli szukacie idealnego samochodu i super obsługi, kierujcie się prosto do niego!"
+  },
+  {
+   "data": "31.07.2026",
+   "nazwa": "DAWID",
+   "handlowiec": "Kacper Żbik",
+   "tresc": "Polecam salon i obsługę Pana Kacpra"
+  },
+  {
+   "data": "31.07.2026",
+   "nazwa": "KOCIK",
+   "handlowiec": "Kacper Żbik",
+   "tresc": "Zdecydowanie polecam ten salon! Cały proces przebiegł sprawnie, w bardzo miłej i profesjonalnej atmosferze. Szczególne podziękowania dla pana Kacpra – handlowiec z ogromną wiedzą, świetnym podejściem do klienta i pełnym zaangażowaniem."
+  },
+  {
+   "data": "31.07.2026",
+   "nazwa": "ANNA PAŁKA",
+   "handlowiec": "Anita Nowak",
+   "tresc": "Profesjonalny doradca, pani Anita N. Rozważam skorzystanie z jej oferty."
+  },
+  {
+   "data": "31.07.2026",
+   "nazwa": "STEFAN PRADELOK",
+   "handlowiec": "Kacper Żbik",
+   "tresc": "Bardzo kompetentna i pomocna obsługa (Robert Potoczny i Kacper Żbik) przy zakupie samochodu. Dzięki temu sprawnie przebiegł cały proces zakupu, rejestracji, ubezpieczenia i odbioru samochodu. Polecam salon Volkswagen Gazda Group Katowice :)"
+  },
+  {
+   "data": "31.07.2026",
+   "nazwa": "ARKADIUSZ GRZEBINOGA",
+   "handlowiec": "Kacper Żbik",
+   "tresc": "Serdecznie polecam ten salon, Pan Kacper to niezwykle miły i kompetentny doradca. Obsługa na najwyższym poziomie – bardzo polecam!"
+  },
+  {
+   "data": "31.07.2026",
+   "nazwa": "SEBASTIAN K",
+   "handlowiec": "Anita Nowak",
+   "tresc": "Kolejny kupiony piękny VW u Gazdy. Bardzo dziękuję Pani Anicie za przygotowanie wydania samochodu, byliśmy pod ogromnym wrażeniem. I dalej jesteśmy – nowy T-Roc jest rewelacyjny!"
+  },
+  {
+   "data": "31.07.2026",
+   "nazwa": "ŁUKASZ RSC",
+   "handlowiec": "Anita Nowak",
+   "tresc": "Transakcja zakupu przebiegła tak, jakbym mógł sobie wymarzyć. Pani Anita Nowak pomogła skonfigurować, była w stałym kontakcie, a na koniec zorganizowała piękne wydanie pojazdu."
+  },
+  {
+   "data": "31.07.2026",
+   "nazwa": "KOALA",
+   "handlowiec": "Anita Nowak",
+   "tresc": "Bardzo dziękuję Pani Anicie Nowak za sprawną i profesjonalną obsługę podczas zakupu samochodu. Cały proces przebiegł bezproblemowo, a wszystkie kwestie zostały jasno wyjaśnione. Pani Anita była pomocna, uprzejma i pozostawała w stałym kontakcie na każdym etapie zakupu. Zdecydowanie polecam współpracę."
+  },
+  {
+   "data": "31.07.2026",
+   "nazwa": "PATRYK CHWILA",
+   "handlowiec": "Konrad Pokusa",
+   "tresc": "Bardzo polecam Pana Konrada Pokusa, super obsługa od samego początku zamówienia do wydania samochodu, super przygotowane wydanie pojazdu, ekstra kontakt, ogromna wiedza na temat sprzedawanych modeli i super doradztwo. Jestem bardzo zadowolony z przebiegu całej transakcji. Polecam"
+  },
+  {
+   "data": "31.07.2026",
+   "nazwa": "FILIP CHMIEL",
+   "handlowiec": "Konrad Pokusa",
+   "tresc": "Polecam sprzedawcę, Konrad Pokusa – super obsługa"
+  },
+  {
+   "data": "31.07.2026",
+   "nazwa": "ALICJA NOWAK",
+   "handlowiec": "Konrad Pokusa",
+   "tresc": "Pan Konrad Pokusa świetny sprzedawca. Wzorowo zbadał potrzeby i wspólnie wybraliśmy samochód, który idealnie spełniał nasze wymagania. Polecam z całego serca!"
+  },
+  {
+   "data": "30.07.2026",
+   "nazwa": "TOMASZ MICHAŁOWSKI",
+   "handlowiec": "Kacper Żbik",
+   "tresc": "Super obsługa. Pan Kacper świetny w kontakcie i obsłudze"
+  },
   {
    "data": "27.07.2026",
    "nazwa": "ARTUR MULLER",
@@ -459,22 +591,77 @@
   }
  ],
  "trade_in_crm": {
-  "miesiac": "2026-07",
+  "miesiac": "2026-08",
   "biezacy": {
+   "label": "Sierpień 2026",
+   "total_leads": 4,
+   "ranking": [
+    {
+     "name": "Fabian Jóźwiak",
+     "przekazane": 2,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Kacper Żbik",
+     "przekazane": 1,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Konrad Pokusa",
+     "przekazane": 1,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Anita Nowak",
+     "przekazane": 0,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Oskar Mikusz",
+     "przekazane": 0,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Małgorzata Pawlas-Poloczek",
+     "przekazane": 0,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Magdalena Kowalska",
+     "przekazane": 0,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Patryk Dziurzyński",
+     "przekazane": 0,
+     "odkupione": 0,
+     "konwersja": 0
+    }
+   ],
+   "wygrane": []
+  },
+  "poprzedni": {
    "label": "Lipiec 2026",
-   "total_leads": 52,
+   "total_leads": 55,
    "ranking": [
     {
      "name": "Kacper Żbik",
-     "przekazane": 12,
+     "przekazane": 13,
      "odkupione": 0,
      "konwersja": 0
     },
     {
      "name": "Oskar Mikusz",
      "przekazane": 12,
-     "odkupione": 3,
-     "konwersja": 25
+     "odkupione": 4,
+     "konwersja": 33
     },
     {
      "name": "Fabian Jóźwiak",
@@ -484,13 +671,13 @@
     },
     {
      "name": "Anita Nowak",
-     "przekazane": 9,
+     "przekazane": 10,
      "odkupione": 1,
-     "konwersja": 11
+     "konwersja": 10
     },
     {
      "name": "Konrad Pokusa",
-     "przekazane": 5,
+     "przekazane": 6,
      "odkupione": 0,
      "konwersja": 0
     },
@@ -505,9 +692,22 @@
      "przekazane": 1,
      "odkupione": 0,
      "konwersja": 0
+    },
+    {
+     "name": "Magdalena Kowalska",
+     "przekazane": 0,
+     "odkupione": 0,
+     "konwersja": 0
     }
    ],
    "wygrane": [
+    {
+     "data": "2026-07-28",
+     "klient": "Sylwia Gardzińska",
+     "pojazd": "Seat Arona",
+     "vin": "",
+     "handlowiec": "Oskar Mikusz"
+    },
     {
      "data": "2026-07-27",
      "klient": "Łukasz Celiński",
@@ -535,77 +735,6 @@
      "pojazd": "Volkswagen Tiguan",
      "vin": "",
      "handlowiec": "Oskar Mikusz"
-    }
-   ]
-  },
-  "poprzedni": {
-   "label": "Czerwiec 2026",
-   "total_leads": 33,
-   "ranking": [
-    {
-     "name": "Konrad Pokusa",
-     "przekazane": 9,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Anita Nowak",
-     "przekazane": 7,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Kacper Żbik",
-     "przekazane": 6,
-     "odkupione": 2,
-     "konwersja": 33
-    },
-    {
-     "name": "Małgorzata Pawlas-Poloczek",
-     "przekazane": 6,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Fabian Jóźwiak",
-     "przekazane": 2,
-     "odkupione": 1,
-     "konwersja": 50
-    },
-    {
-     "name": "Robert Potoczny",
-     "przekazane": 2,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Oskar Mikusz",
-     "przekazane": 1,
-     "odkupione": 0,
-     "konwersja": 0
-    }
-   ],
-   "wygrane": [
-    {
-     "data": "2026-06-24",
-     "klient": "Nikola Kalupa",
-     "pojazd": "Volkswagen T-Cross",
-     "vin": "WVGZZZC1ZLY056674",
-     "handlowiec": "Kacper Żbik"
-    },
-    {
-     "data": "2026-06-19",
-     "klient": "Andrzej Roskosz",
-     "pojazd": "Hyundai Tucson",
-     "vin": "",
-     "handlowiec": "Fabian Jóźwiak"
-    },
-    {
-     "data": "2026-06-15",
-     "klient": "HousGarden",
-     "pojazd": "Volkswagen T-Roc",
-     "vin": "",
-     "handlowiec": "Kacper Żbik"
     }
    ]
   }
