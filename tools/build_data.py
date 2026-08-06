@@ -193,14 +193,14 @@ def apply_manual(new, man, rap_d, roster, flota_keys):
     crm_leady = {}
     _t = man.get('trade_in_crm') or {}
     for row in ((_t.get('biezacy') or {}).get('ranking') or []):
-        crm_leady[norm(row.get('name'))] = i(row.get('przekazane'))
+        crm_leady[klucz_handlowca(row.get('name'), roster)] = i(row.get('przekazane'))
 
     kpi = man.get('kpi')
     if kpi:
         name_by_key = {k: n for k, n, s, c in roster}
         rows = []
         for h in kpi:
-            k = norm(h.get('name'))
+            k = klucz_handlowca(h.get('name'), roster)
             rows.append({
                 'name': name_by_key.get(k, h.get('name')),
                 'oferty': i(h.get('oferty')), 'klienci': i(h.get('klienci')),
@@ -642,6 +642,99 @@ def build(xlsx_path, old, man=None):
     }
 
 
+# ---------------------------------------------------------------- anonimizacja
+# Dashboard jest publikowany publicznie, wiec przed zapisem redukujemy dane
+# osobowe: handlowcy -> samo imie, klienci -> inicjaly, VIN -> 8 ostatnich
+# znakow. Wszystkie funkcje sa idempotentne (mozna stosowac wielokrotnie).
+
+HANDLOWCY_IMIONA = {
+    'Ma\u0142gorzata Pawlas-Poloczek': 'Ma\u0142gorzata',
+    'Ma\u0142gorzata Pawlas': 'Ma\u0142gorzata',
+    'Patryk Dziurzy\u0144ski': 'Patryk',
+    'Magdalena Kowalska': 'Magdalena',
+    'Tymoteusz Fudalej': 'Tymoteusz',
+    'Fabian J\u00f3\u017awiak': 'Fabian',
+    'Robert Potoczny': 'Robert',
+    'Konrad Pokusa': 'Konrad',
+    'Oskar Mikusz': 'Oskar',
+    'Kacper \u017bbik': 'Kacper',
+    'Anita Nowak': 'Anita',
+}
+_ANON_PARY = sorted(HANDLOWCY_IMIONA.items(), key=lambda kv: -len(kv[0]))
+
+# Nazwiska handlowcow w tekscie swobodnym (opinie) wystepuja w formach
+# odmienionych: 'Anity Nowak', 'Oskara Mikusza', 'Kacprowi Zbikowi'. Usuwamy
+# sam czlon nazwiskowy razem z koncowka fleksyjna, imie zostaje.
+_NAZWISKA_RE = [re.compile(w) for w in (
+    r'\s*Pawlas-Poloczek\w{0,3}',
+    r'\s*Pawlas\w{0,2}',
+    r'\s*Dziurzy\u0144sk\w{0,3}',
+    r'\s*J\u00f3\u017awiak\w{0,3}',
+    r'\s*Kowalsk\w{0,3}',
+    r'\s*Potoczn\w{0,3}',
+    r'\s*Fudalej\w{0,3}',
+    r'\s*Mikusz\w{0,2}',
+    r'\s*Pokus\w{0,2}',
+    r'\s*Nowak\w{0,3}',
+    r'\s*\u017bbik\w{0,3}',
+)]
+_RE_INICJALY = re.compile(r'(?:[^\W\d_]\.)+$', re.UNICODE)
+
+
+def imie_tylko(s):
+    """'Anita Nowak' -> 'Anita' (dziala takze wewnatrz dluzszego tekstu)."""
+    if not s:
+        return s
+    for pelne, imie in _ANON_PARY:
+        if pelne in s:
+            s = s.replace(pelne, imie)
+    for rx in _NAZWISKA_RE:
+        s = rx.sub('', s)
+    return s
+
+
+def skroc_vin(v):
+    """'WVWZZZCD8TW624842' -> 'TW624842'. Krotsze wartosci bez zmian."""
+    v = (v or '').strip()
+    return v[-8:] if len(v) > 8 else v
+
+
+def inicjaly(n):
+    """'Sylwia Gardzinska' -> 'S.G.'"""
+    n = (n or '').strip()
+    if not n or _RE_INICJALY.fullmatch(n):
+        return n
+    czesci = [c for c in re.split(r'[\s\-]+', n) if c]
+    return ''.join(c[0].upper() + '.' for c in czesci)
+
+
+def anonimizuj(obj, klucz=None):
+    """Rekurencyjnie czysci dane osobowe w strukturze przeznaczonej do publikacji."""
+    if isinstance(obj, dict):
+        return dict((k, anonimizuj(v, k)) for k, v in obj.items())
+    if isinstance(obj, list):
+        return [anonimizuj(v, klucz) for v in obj]
+    if isinstance(obj, str):
+        if klucz == 'vin':
+            return skroc_vin(obj)
+        if klucz == 'klient':
+            return inicjaly(obj)
+        return imie_tylko(obj)
+    return obj
+
+
+def klucz_handlowca(nazwa, roster):
+    """Klucz rosteru odporny na skrocenie nazwiska do samego imienia."""
+    k = norm(nazwa)
+    for rk, rn, rs, rc in roster:
+        if rk == k:
+            return rk
+    for rk, rn, rs, rc in roster:
+        if rn and norm(rn.split()[0]) == k:
+            return rk
+    return k
+
+
 # ---------------------------------------------------------------- main
 
 def main():
@@ -669,6 +762,14 @@ def main():
             man['ih_plik'] = ih['ih_plik']
 
     new, summary = build(a.xlsx, old, man)
+
+    new = anonimizuj(new)
+
+    # tools/manual.json jest serwowany razem ze strona - czyscimy takze jego
+    if a.manual:
+        _m = json.load(open(a.manual, encoding='utf-8'))
+        open(a.manual, 'w', encoding='utf-8', newline='\n').write(
+            json.dumps(anonimizuj(_m), ensure_ascii=False, indent=1))
 
     body = json.dumps(new, ensure_ascii=False, separators=(', ', ': '))
     out_html = html[:s] + body + html[e:]
