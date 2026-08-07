@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 06.08.2026",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 07.08.2026",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -203,7 +203,7 @@
    0
   ]
  },
- "opinie_poprzedni_raport": "04.08.2026",
+ "opinie_poprzedni_raport": "06.08.2026",
  "opinie": [
   {
    "data": "05.08.2026",
