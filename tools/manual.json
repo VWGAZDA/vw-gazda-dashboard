@@ -15,24 +15,24 @@
  "kpi": [
   {
    "name": "Anita",
-   "oferty": 15,
-   "klienci": 12,
+   "oferty": 18,
+   "klienci": 14,
    "zamowienia": 2,
    "wydania": 3,
-   "traffic": 6,
+   "traffic": 8,
    "opinie": 2,
-   "trade_in": 9,
+   "trade_in": 0,
    "flota": false
   },
   {
    "name": "Konrad",
-   "oferty": 15,
-   "klienci": 10,
+   "oferty": 17,
+   "klienci": 11,
    "zamowienia": 3,
    "wydania": 1,
-   "traffic": 3,
+   "traffic": 5,
    "opinie": 0,
-   "trade_in": 5,
+   "trade_in": 0,
    "flota": false
   },
   {
@@ -43,18 +43,18 @@
    "wydania": 2,
    "traffic": 1,
    "opinie": 0,
-   "trade_in": 12,
+   "trade_in": 0,
    "flota": false
   },
   {
    "name": "Kacper",
-   "oferty": 21,
-   "klienci": 13,
+   "oferty": 29,
+   "klienci": 18,
    "zamowienia": 0,
-   "wydania": 0,
-   "traffic": 5,
+   "wydania": 1,
+   "traffic": 6,
    "opinie": 0,
-   "trade_in": 12,
+   "trade_in": 0,
    "flota": false
   },
   {
@@ -65,18 +65,18 @@
    "wydania": 1,
    "traffic": 3,
    "opinie": 0,
-   "trade_in": 11,
+   "trade_in": 0,
    "flota": false
   },
   {
    "name": "Małgorzata",
-   "oferty": 0,
-   "klienci": 4,
+   "oferty": 10,
+   "klienci": 10,
    "zamowienia": 0,
    "wydania": 1,
-   "traffic": 0,
+   "traffic": 2,
    "opinie": 0,
-   "trade_in": 1,
+   "trade_in": 0,
    "flota": false
   },
   {
@@ -84,7 +84,7 @@
    "oferty": 1,
    "klienci": 1,
    "zamowienia": 0,
-   "wydania": 1,
+   "wydania": 2,
    "traffic": 0,
    "opinie": 0,
    "trade_in": 0,
@@ -98,7 +98,7 @@
    "wydania": 0,
    "traffic": 0,
    "opinie": 0,
-   "trade_in": 2,
+   "trade_in": 0,
    "flota": true
   }
  ],
@@ -109,7 +109,7 @@
    19,
    20,
    24,
-   0,
+   23,
    0,
    0,
    0,
@@ -142,7 +142,7 @@
    11,
    14,
    16,
-   0,
+   14,
    0,
    0,
    0,
@@ -175,7 +175,7 @@
    6,
    4,
    8,
-   0,
+   7,
    0,
    0,
    0,
@@ -203,7 +203,7 @@
    0
   ]
  },
- "opinie_poprzedni_raport": "29.07.2026",
+ "opinie_poprzedni_raport": "04.08.2026",
  "opinie": [
   {
    "data": "05.08.2026",
@@ -594,8 +594,14 @@
   "miesiac": "2026-08",
   "biezacy": {
    "label": "Sierpień 2026",
-   "total_leads": 4,
+   "total_leads": 6,
    "ranking": [
+    {
+     "name": "Kacper",
+     "przekazane": 2,
+     "odkupione": 0,
+     "konwersja": 0
+    },
     {
      "name": "Fabian",
      "przekazane": 2,
@@ -603,7 +609,7 @@
      "konwersja": 0
     },
     {
-     "name": "Kacper",
+     "name": "Anita",
      "przekazane": 1,
      "odkupione": 0,
      "konwersja": 0
@@ -611,12 +617,6 @@
     {
      "name": "Konrad",
      "przekazane": 1,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Anita",
-     "przekazane": 0,
      "odkupione": 0,
      "konwersja": 0
     },
