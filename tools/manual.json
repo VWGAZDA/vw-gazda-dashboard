@@ -594,7 +594,7 @@
   "miesiac": "2026-08",
   "biezacy": {
    "label": "Sierpień 2026",
-   "total_leads": 7,
+   "total_leads": 6,
    "ranking": [
     {
      "name": "Fabian",
@@ -609,13 +609,13 @@
      "konwersja": 0
     },
     {
-     "name": "Konrad",
-     "przekazane": 2,
+     "name": "Anita",
+     "przekazane": 1,
      "odkupione": 0,
      "konwersja": 0
     },
     {
-     "name": "Anita",
+     "name": "Konrad",
      "przekazane": 1,
      "odkupione": 0,
      "konwersja": 0
