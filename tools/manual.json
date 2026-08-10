@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 07.08.2026",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 10.08.2026",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -594,8 +594,14 @@
   "miesiac": "2026-08",
   "biezacy": {
    "label": "Sierpień 2026",
-   "total_leads": 6,
+   "total_leads": 7,
    "ranking": [
+    {
+     "name": "Fabian",
+     "przekazane": 2,
+     "odkupione": 0,
+     "konwersja": 0
+    },
     {
      "name": "Kacper",
      "przekazane": 2,
@@ -603,7 +609,7 @@
      "konwersja": 0
     },
     {
-     "name": "Fabian",
+     "name": "Konrad",
      "przekazane": 2,
      "odkupione": 0,
      "konwersja": 0
@@ -615,13 +621,7 @@
      "konwersja": 0
     },
     {
-     "name": "Konrad",
-     "przekazane": 1,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Oskar",
+     "name": "Magdalena",
      "przekazane": 0,
      "odkupione": 0,
      "konwersja": 0
@@ -633,7 +633,7 @@
      "konwersja": 0
     },
     {
-     "name": "Magdalena",
+     "name": "Oskar",
      "przekazane": 0,
      "odkupione": 0,
      "konwersja": 0
