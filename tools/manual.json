@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 10.08.2026",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 11.08.2026",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -15,23 +15,23 @@
  "kpi": [
   {
    "name": "Anita",
-   "oferty": 18,
-   "klienci": 14,
+   "oferty": 21,
+   "klienci": 16,
    "zamowienia": 2,
-   "wydania": 3,
-   "traffic": 8,
-   "opinie": 2,
+   "wydania": 5,
+   "traffic": 10,
+   "opinie": 3,
    "trade_in": 0,
    "flota": false
   },
   {
    "name": "Konrad",
-   "oferty": 17,
-   "klienci": 11,
-   "zamowienia": 3,
-   "wydania": 1,
-   "traffic": 5,
-   "opinie": 0,
+   "oferty": 24,
+   "klienci": 17,
+   "zamowienia": 5,
+   "wydania": 6,
+   "traffic": 12,
+   "opinie": 2,
    "trade_in": 0,
    "flota": false
   },
@@ -48,34 +48,34 @@
   },
   {
    "name": "Kacper",
-   "oferty": 29,
-   "klienci": 18,
-   "zamowienia": 0,
-   "wydania": 1,
-   "traffic": 6,
-   "opinie": 0,
+   "oferty": 37,
+   "klienci": 22,
+   "zamowienia": 2,
+   "wydania": 4,
+   "traffic": 9,
+   "opinie": 2,
    "trade_in": 0,
    "flota": false
   },
   {
    "name": "Fabian",
-   "oferty": 10,
-   "klienci": 13,
+   "oferty": 14,
+   "klienci": 15,
    "zamowienia": 0,
    "wydania": 1,
-   "traffic": 3,
-   "opinie": 0,
+   "traffic": 4,
+   "opinie": 1,
    "trade_in": 0,
    "flota": false
   },
   {
    "name": "Małgorzata",
-   "oferty": 10,
-   "klienci": 10,
-   "zamowienia": 0,
+   "oferty": 29,
+   "klienci": 26,
+   "zamowienia": 2,
    "wydania": 1,
-   "traffic": 2,
-   "opinie": 0,
+   "traffic": 8,
+   "opinie": 3,
    "trade_in": 0,
    "flota": false
   },
@@ -86,7 +86,7 @@
    "zamowienia": 0,
    "wydania": 2,
    "traffic": 0,
-   "opinie": 0,
+   "opinie": 1,
    "trade_in": 0,
    "flota": true
   },
@@ -110,10 +110,10 @@
    20,
    24,
    23,
+   17,
+   6,
    0,
-   0,
-   0,
-   0,
+   18,
    0,
    0,
    0,
@@ -143,10 +143,10 @@
    14,
    16,
    14,
+   11,
+   4,
    0,
-   0,
-   0,
-   0,
+   15,
    0,
    0,
    0,
@@ -176,10 +176,10 @@
    4,
    8,
    7,
+   5,
+   7,
    0,
-   0,
-   0,
-   0,
+   7,
    0,
    0,
    0,
@@ -205,6 +205,24 @@
  },
  "opinie_poprzedni_raport": "06.08.2026",
  "opinie": [
+  {
+   "data": "10.08.2026",
+   "nazwa": "SEBASTIAN S.",
+   "handlowiec": "Kacper",
+   "tresc": "Kontakt z P. Kacprem od samego początku wzorowy, bardzo polecam"
+  },
+  {
+   "data": "10.08.2026",
+   "nazwa": "BARTOSZ R.",
+   "handlowiec": "Małgorzata",
+   "tresc": "Z czystym sumieniem polecam VW Gazda Group! Świetna obsługa, pełen profesjonalizm i bardzo dobre podejście do klienta. Szczególne podziękowania dla Pani Małgorzaty za pomoc przy konfiguracji samochodu oraz sprawne przygotowanie finansowania. Dziękuję również Pani Anicie, która w zastępstwie zajęła się wydaniem samochodu. Cały proces przebiegł sprawnie, szybko i bezproblemowo."
+  },
+  {
+   "data": "07.08.2026",
+   "nazwa": "BARBARA R.",
+   "handlowiec": "Małgorzata",
+   "tresc": "Gorąco polecamy Panią Małgorzatę za jej podejscie do klienta, cierpliwość i ogromną wiedzę. Dzięki niej zdecydowaliśmy się na VW Tiguana."
+  },
   {
    "data": "05.08.2026",
    "nazwa": "GIZELA R.",
@@ -594,16 +612,22 @@
   "miesiac": "2026-08",
   "biezacy": {
    "label": "Sierpień 2026",
-   "total_leads": 6,
+   "total_leads": 10,
    "ranking": [
     {
      "name": "Fabian",
-     "przekazane": 2,
+     "przekazane": 4,
      "odkupione": 0,
      "konwersja": 0
     },
     {
      "name": "Kacper",
+     "przekazane": 2,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Konrad",
      "przekazane": 2,
      "odkupione": 0,
      "konwersja": 0
@@ -615,19 +639,13 @@
      "konwersja": 0
     },
     {
-     "name": "Konrad",
+     "name": "Małgorzata",
      "przekazane": 1,
      "odkupione": 0,
      "konwersja": 0
     },
     {
      "name": "Magdalena",
-     "przekazane": 0,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Małgorzata",
      "przekazane": 0,
      "odkupione": 0,
      "konwersja": 0
@@ -652,28 +670,28 @@
    "total_leads": 55,
    "ranking": [
     {
-     "name": "Kacper",
-     "przekazane": 13,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
      "name": "Oskar",
      "przekazane": 12,
      "odkupione": 4,
      "konwersja": 33
     },
     {
-     "name": "Fabian",
-     "przekazane": 11,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
      "name": "Anita",
      "przekazane": 10,
      "odkupione": 1,
      "konwersja": 10
+    },
+    {
+     "name": "Kacper",
+     "przekazane": 13,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Fabian",
+     "przekazane": 11,
+     "odkupione": 0,
+     "konwersja": 0
     },
     {
      "name": "Konrad",
@@ -718,7 +736,7 @@
     {
      "data": "2026-07-21",
      "klient": "P.P.",
-     "pojazd": "Volkswagen T-Cross",
+     "pojazd": "VW T-Cross",
      "vin": "",
      "handlowiec": "Anita"
     },
@@ -732,7 +750,7 @@
     {
      "data": "2026-07-10",
      "klient": "M.P.",
-     "pojazd": "Volkswagen Tiguan",
+     "pojazd": "VW Tiguan",
      "vin": "",
      "handlowiec": "Oskar"
     }
