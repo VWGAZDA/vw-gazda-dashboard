@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 11.08.2026",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 14.08.2026",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -15,23 +15,23 @@
  "kpi": [
   {
    "name": "Anita",
-   "oferty": 21,
-   "klienci": 16,
-   "zamowienia": 2,
+   "oferty": 24,
+   "klienci": 17,
+   "zamowienia": 3,
    "wydania": 5,
-   "traffic": 10,
+   "traffic": 13,
    "opinie": 3,
    "trade_in": 0,
    "flota": false
   },
   {
    "name": "Konrad",
-   "oferty": 24,
-   "klienci": 17,
+   "oferty": 31,
+   "klienci": 23,
    "zamowienia": 5,
    "wydania": 6,
-   "traffic": 12,
-   "opinie": 2,
+   "traffic": 17,
+   "opinie": 0,
    "trade_in": 0,
    "flota": false
   },
@@ -48,52 +48,52 @@
   },
   {
    "name": "Kacper",
-   "oferty": 37,
-   "klienci": 22,
+   "oferty": 50,
+   "klienci": 24,
    "zamowienia": 2,
    "wydania": 4,
-   "traffic": 9,
+   "traffic": 11,
    "opinie": 2,
    "trade_in": 0,
    "flota": false
   },
   {
    "name": "Fabian",
-   "oferty": 14,
-   "klienci": 15,
+   "oferty": 17,
+   "klienci": 18,
    "zamowienia": 0,
    "wydania": 1,
-   "traffic": 4,
-   "opinie": 1,
+   "traffic": 6,
+   "opinie": 0,
    "trade_in": 0,
    "flota": false
   },
   {
    "name": "Małgorzata",
-   "oferty": 29,
-   "klienci": 26,
-   "zamowienia": 2,
+   "oferty": 35,
+   "klienci": 28,
+   "zamowienia": 3,
    "wydania": 1,
-   "traffic": 8,
-   "opinie": 3,
+   "traffic": 10,
+   "opinie": 1,
    "trade_in": 0,
    "flota": false
   },
   {
    "name": "Magdalena",
-   "oferty": 1,
-   "klienci": 1,
+   "oferty": 8,
+   "klienci": 10,
    "zamowienia": 0,
    "wydania": 2,
-   "traffic": 0,
-   "opinie": 1,
+   "traffic": 1,
+   "opinie": 0,
    "trade_in": 0,
    "flota": true
   },
   {
    "name": "Patryk",
-   "oferty": 0,
-   "klienci": 9,
+   "oferty": 1,
+   "klienci": 11,
    "zamowienia": 0,
    "wydania": 0,
    "traffic": 0,
@@ -114,7 +114,7 @@
    6,
    0,
    18,
-   0,
+   40,
    0,
    0,
    0,
@@ -147,7 +147,7 @@
    4,
    0,
    15,
-   0,
+   25,
    0,
    0,
    0,
@@ -180,8 +180,8 @@
    7,
    0,
    7,
-   0,
-   0,
+   10,
+   5,
    0,
    0,
    0,
@@ -203,8 +203,14 @@
    0
   ]
  },
- "opinie_poprzedni_raport": "06.08.2026",
+ "opinie_poprzedni_raport": "10.08.2026",
  "opinie": [
+  {
+   "data": "11.08.2026",
+   "nazwa": "MATEUSZ S.",
+   "handlowiec": "Kacper",
+   "tresc": "Bardzo polecam! Wszystko przebiegło szybko, sprawnie i bez żadnych problemów. Duży plus za profesjonalne podejście, dobry kontakt i przede wszystkim terminowość. Wszystkie formalności zostały załatwione bardzo szybko, a cały proces przeszedł bardzo sprawnie od zamówienia po wydanie samochodu. Widać, że Pan Kacper podchodzi do swojej pracy naprawdę solidnie. Jestem bardzo zadowolony z obsługi i zdecydowanie polecam!"
+  },
   {
    "data": "10.08.2026",
    "nazwa": "SEBASTIAN S.",
@@ -612,35 +618,35 @@
   "miesiac": "2026-08",
   "biezacy": {
    "label": "Sierpień 2026",
-   "total_leads": 10,
+   "total_leads": 19,
    "ranking": [
     {
      "name": "Fabian",
-     "przekazane": 4,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Kacper",
-     "przekazane": 2,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Konrad",
-     "przekazane": 2,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Anita",
-     "przekazane": 1,
+     "przekazane": 6,
      "odkupione": 0,
      "konwersja": 0
     },
     {
      "name": "Małgorzata",
-     "przekazane": 1,
+     "przekazane": 4,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Anita",
+     "przekazane": 3,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Kacper",
+     "przekazane": 3,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Konrad",
+     "przekazane": 3,
      "odkupione": 0,
      "konwersja": 0
     },
@@ -678,8 +684,8 @@
     {
      "name": "Anita",
      "przekazane": 10,
-     "odkupione": 1,
-     "konwersja": 10
+     "odkupione": 2,
+     "konwersja": 20
     },
     {
      "name": "Kacper",
@@ -720,39 +726,46 @@
    ],
    "wygrane": [
     {
-     "data": "2026-07-28",
-     "klient": "S.G.",
-     "pojazd": "Seat Arona",
+     "data": "10.07.2026",
+     "klient": "M.P.",
+     "pojazd": "Volkswagen Tiguan",
      "vin": "",
      "handlowiec": "Oskar"
     },
     {
-     "data": "2026-07-27",
-     "klient": "Ł.C.",
-     "pojazd": "VW T-Roc",
-     "vin": "",
-     "handlowiec": "Oskar"
-    },
-    {
-     "data": "2026-07-21",
-     "klient": "P.P.",
-     "pojazd": "VW T-Cross",
-     "vin": "",
-     "handlowiec": "Anita"
-    },
-    {
-     "data": "2026-07-13",
+     "data": "13.07.2026",
      "klient": "A.K.",
      "pojazd": "Ford Focus",
      "vin": "",
      "handlowiec": "Oskar"
     },
     {
-     "data": "2026-07-10",
-     "klient": "M.P.",
-     "pojazd": "VW Tiguan",
+     "data": "21.07.2026",
+     "klient": "P.P.",
+     "pojazd": "Volkswagen T-Cross",
+     "vin": "",
+     "handlowiec": "Anita"
+    },
+    {
+     "data": "27.07.2026",
+     "klient": "Ł.C.",
+     "pojazd": "Volkswagen T-Roc",
      "vin": "",
      "handlowiec": "Oskar"
+    },
+    {
+     "data": "28.07.2026",
+     "klient": "S.G.",
+     "pojazd": "Seat Arona",
+     "vin": "",
+     "handlowiec": "Oskar"
+    },
+    {
+     "data": "29.07.2026",
+     "klient": "D.P.",
+     "pojazd": "Volkswagen T-Roc",
+     "vin": "NV120839",
+     "handlowiec": "Anita"
     }
    ]
   }
