@@ -30,7 +30,7 @@
    "klienci": 31,
    "zamowienia": 5,
    "wydania": 10,
-   "traffic": 18,
+   "traffic": 19,
    "opinie": 1,
    "trade_in": 0,
    "flota": false
@@ -63,7 +63,7 @@
    "klienci": 34,
    "zamowienia": 0,
    "wydania": 4,
-   "traffic": 6,
+   "traffic": 7,
    "opinie": 0,
    "trade_in": 0,
    "flota": false
@@ -186,7 +186,7 @@
    0,
    0,
    0,
-   1,
+   3,
    0,
    0,
    0,
@@ -203,7 +203,7 @@
    0
   ]
  },
- "opinie_poprzedni_raport": "11.08.2026",
+ "opinie_poprzedni_raport": "16.08.2026",
  "opinie": [
   {
    "data": "16.08.2026",
@@ -642,7 +642,7 @@
   "miesiac": "2026-08",
   "biezacy": {
    "label": "Sierpień 2026",
-   "total_leads": 21,
+   "total_leads": 24,
    "ranking": [
     {
      "name": "Fabian",
@@ -652,6 +652,12 @@
     },
     {
      "name": "Anita",
+     "przekazane": 5,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Kacper",
      "przekazane": 4,
      "odkupione": 0,
      "konwersja": 0
@@ -669,19 +675,13 @@
      "konwersja": 0
     },
     {
-     "name": "Kacper",
-     "przekazane": 3,
+     "name": "Oskar",
+     "przekazane": 1,
      "odkupione": 0,
      "konwersja": 0
     },
     {
      "name": "Magdalena",
-     "przekazane": 0,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Oskar",
      "przekazane": 0,
      "odkupione": 0,
      "konwersja": 0
