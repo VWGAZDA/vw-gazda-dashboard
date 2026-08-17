@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 14.08.2026",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 17.08.2026",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -15,23 +15,23 @@
  "kpi": [
   {
    "name": "Anita",
-   "oferty": 24,
-   "klienci": 17,
-   "zamowienia": 3,
-   "wydania": 5,
+   "oferty": 34,
+   "klienci": 24,
+   "zamowienia": 6,
+   "wydania": 13,
    "traffic": 13,
-   "opinie": 3,
+   "opinie": 4,
    "trade_in": 0,
    "flota": false
   },
   {
    "name": "Konrad",
-   "oferty": 31,
-   "klienci": 23,
+   "oferty": 38,
+   "klienci": 31,
    "zamowienia": 5,
-   "wydania": 6,
-   "traffic": 17,
-   "opinie": 0,
+   "wydania": 10,
+   "traffic": 18,
+   "opinie": 1,
    "trade_in": 0,
    "flota": false
   },
@@ -51,18 +51,18 @@
    "oferty": 50,
    "klienci": 24,
    "zamowienia": 2,
-   "wydania": 4,
+   "wydania": 5,
    "traffic": 11,
-   "opinie": 2,
+   "opinie": 4,
    "trade_in": 0,
    "flota": false
   },
   {
    "name": "Fabian",
-   "oferty": 17,
-   "klienci": 18,
+   "oferty": 32,
+   "klienci": 34,
    "zamowienia": 0,
-   "wydania": 1,
+   "wydania": 4,
    "traffic": 6,
    "opinie": 0,
    "trade_in": 0,
@@ -70,10 +70,10 @@
   },
   {
    "name": "Małgorzata",
-   "oferty": 35,
-   "klienci": 28,
-   "zamowienia": 3,
-   "wydania": 1,
+   "oferty": 47,
+   "klienci": 38,
+   "zamowienia": 4,
+   "wydania": 2,
    "traffic": 10,
    "opinie": 1,
    "trade_in": 0,
@@ -81,8 +81,8 @@
   },
   {
    "name": "Magdalena",
-   "oferty": 8,
-   "klienci": 10,
+   "oferty": 17,
+   "klienci": 11,
    "zamowienia": 0,
    "wydania": 2,
    "traffic": 1,
@@ -92,9 +92,9 @@
   },
   {
    "name": "Patryk",
-   "oferty": 1,
-   "klienci": 11,
-   "zamowienia": 0,
+   "oferty": 14,
+   "klienci": 15,
+   "zamowienia": 1,
    "wydania": 0,
    "traffic": 0,
    "opinie": 0,
@@ -115,9 +115,9 @@
    0,
    18,
    40,
-   0,
-   0,
-   0,
+   25,
+   29,
+   12,
    0,
    0,
    0,
@@ -148,9 +148,9 @@
    0,
    15,
    25,
-   0,
-   0,
-   0,
+   14,
+   16,
+   16,
    0,
    0,
    0,
@@ -186,7 +186,7 @@
    0,
    0,
    0,
-   0,
+   1,
    0,
    0,
    0,
@@ -203,8 +203,32 @@
    0
   ]
  },
- "opinie_poprzedni_raport": "10.08.2026",
+ "opinie_poprzedni_raport": "11.08.2026",
  "opinie": [
+  {
+   "data": "16.08.2026",
+   "nazwa": "MARCIN C.",
+   "handlowiec": "Kacper",
+   "tresc": "Zdecydowanie polecam salon Volkswagen Gazda Group w Katowicach, w ramach poszukiwań nowego samochodu odwiedziłem i kontaktowałem się z kilkoma salonami, ale to tutaj Pan Kacper wzbudził moje największe zaufanie jako handlowiec. Faktycznie od początku do końca zadbał o cały proces zakupu. Wszystkie zapewnienia dotyczące czy to terminu odbioru pojazdu czy warunków finansowania zostały w pełni dochowane, oferta była bardzo dobra i przedstawiona w sposób czytelny i uczciwy. Z dużym prawdopodobieństwem wrócę tu po raz kolejny."
+  },
+  {
+   "data": "15.08.2026",
+   "nazwa": "VICTORIA Ł.",
+   "handlowiec": "Anita",
+   "tresc": "Zakup samochodu oraz polisy przebiegł sprawnie i bezproblemowo. Dzięki Pani Anicie wszystko odbyło się w swobodnej i miłej atmosferze. Jestem bardzo zadowolona z całej obsługi i zdecydowanie polecam!"
+  },
+  {
+   "data": "13.08.2026",
+   "nazwa": "WIESŁAW",
+   "handlowiec": "Kacper",
+   "tresc": "Sprzedaż ze strony dealera prowadził Pan Kacper. Obsługa prowadzona wzorcowo. Pozostali pracownicy również uczynliwi. Zakup VW Taigo jestem bardzo zadowolony z obsługi i samochodu."
+  },
+  {
+   "data": "13.08.2026",
+   "nazwa": "DAMIAN I.",
+   "handlowiec": "Konrad",
+   "tresc": "Bardzo polecam Pana Konrada, profesjonalna obsługa od pierwszego dnia. Stały kontakt przez cały okres oczekiwania na auto."
+  },
   {
    "data": "11.08.2026",
    "nazwa": "MATEUSZ S.",
@@ -618,11 +642,23 @@
   "miesiac": "2026-08",
   "biezacy": {
    "label": "Sierpień 2026",
-   "total_leads": 19,
+   "total_leads": 21,
    "ranking": [
     {
      "name": "Fabian",
      "przekazane": 6,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Anita",
+     "przekazane": 4,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Konrad",
+     "przekazane": 4,
      "odkupione": 0,
      "konwersja": 0
     },
@@ -633,19 +669,7 @@
      "konwersja": 0
     },
     {
-     "name": "Anita",
-     "przekazane": 3,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
      "name": "Kacper",
-     "przekazane": 3,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Konrad",
      "przekazane": 3,
      "odkupione": 0,
      "konwersja": 0
@@ -678,8 +702,8 @@
     {
      "name": "Oskar",
      "przekazane": 12,
-     "odkupione": 4,
-     "konwersja": 33
+     "odkupione": 5,
+     "konwersja": 42
     },
     {
      "name": "Anita",
@@ -751,6 +775,13 @@
      "klient": "Ł.C.",
      "pojazd": "Volkswagen T-Roc",
      "vin": "",
+     "handlowiec": "Oskar"
+    },
+    {
+     "data": "27.07.2026",
+     "klient": "A.Z.",
+     "pojazd": "Skoda Scala",
+     "vin": "M3129133",
      "handlowiec": "Oskar"
     },
     {
