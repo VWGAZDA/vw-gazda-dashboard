@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 17.08.2026",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 19.08.2026",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -15,67 +15,67 @@
  "kpi": [
   {
    "name": "Anita",
-   "oferty": 34,
-   "klienci": 24,
-   "zamowienia": 6,
+   "oferty": 42,
+   "klienci": 27,
+   "zamowienia": 10,
    "wydania": 13,
-   "traffic": 13,
-   "opinie": 4,
+   "traffic": 17,
+   "opinie": 5,
    "trade_in": 0,
    "flota": false
   },
   {
    "name": "Konrad",
-   "oferty": 38,
-   "klienci": 31,
-   "zamowienia": 5,
-   "wydania": 10,
-   "traffic": 19,
+   "oferty": 48,
+   "klienci": 35,
+   "zamowienia": 6,
+   "wydania": 11,
+   "traffic": 21,
    "opinie": 1,
    "trade_in": 0,
    "flota": false
   },
   {
    "name": "Oskar",
-   "oferty": 1,
-   "klienci": 4,
-   "zamowienia": 3,
+   "oferty": 11,
+   "klienci": 9,
+   "zamowienia": 4,
    "wydania": 2,
-   "traffic": 1,
+   "traffic": 2,
    "opinie": 0,
    "trade_in": 0,
    "flota": false
   },
   {
    "name": "Kacper",
-   "oferty": 50,
-   "klienci": 24,
-   "zamowienia": 2,
+   "oferty": 55,
+   "klienci": 34,
+   "zamowienia": 3,
    "wydania": 5,
-   "traffic": 11,
-   "opinie": 4,
+   "traffic": 12,
+   "opinie": 5,
    "trade_in": 0,
    "flota": false
   },
   {
    "name": "Fabian",
-   "oferty": 32,
-   "klienci": 34,
+   "oferty": 47,
+   "klienci": 45,
    "zamowienia": 0,
    "wydania": 4,
-   "traffic": 7,
+   "traffic": 8,
    "opinie": 0,
    "trade_in": 0,
    "flota": false
   },
   {
    "name": "Małgorzata",
-   "oferty": 47,
-   "klienci": 38,
+   "oferty": 59,
+   "klienci": 44,
    "zamowienia": 4,
-   "wydania": 2,
-   "traffic": 10,
-   "opinie": 1,
+   "wydania": 3,
+   "traffic": 14,
+   "opinie": 3,
    "trade_in": 0,
    "flota": false
   },
@@ -92,7 +92,7 @@
   },
   {
    "name": "Patryk",
-   "oferty": 14,
+   "oferty": 18,
    "klienci": 15,
    "zamowienia": 1,
    "wydania": 0,
@@ -120,7 +120,7 @@
    12,
    0,
    0,
-   0,
+   64,
    0,
    0,
    0,
@@ -153,7 +153,7 @@
    16,
    0,
    0,
-   0,
+   39,
    0,
    0,
    0,
@@ -186,8 +186,8 @@
    0,
    0,
    0,
-   3,
-   0,
+   5,
+   11,
    0,
    0,
    0,
@@ -205,6 +205,18 @@
  },
  "opinie_poprzedni_raport": "16.08.2026",
  "opinie": [
+  {
+   "data": "18.08.2026",
+   "nazwa": "ALDONA G.",
+   "handlowiec": "Anita",
+   "tresc": "Zakup samochodu w tym salonie to była czysta przyjemność, a wszystko to zasługa Anity. Od pierwszego kontaktu wykazała się ogromnym profesjonalizmem i świetnym doradztwem. Sam moment wydania auta całkowicie przerósł moje oczekiwania – piękna czerwona kokarda, winko i wspaniała atmosfera sprawiły, że ten dzień był naprawdę wyjątkowy. Serdecznie dziękuję za poświęcony czas i pomoc w spełnieniu mojego marzenia! Jeśli planujecie zakup nowego VW, gorąco polecam Volkswagen Gazda Group Katowice."
+  },
+  {
+   "data": "17.08.2026",
+   "nazwa": "ZDZISŁAW K.",
+   "handlowiec": "Kacper",
+   "tresc": "Bardzo porządna obsługa. Doradca Pan Kacper to profesjonalista. Troszczył się o klienta od pierwszego telefonu po oddanie kluczyków auta. Doradził wytłumaczył i był zawsze pomocny. Z takimi doradcami sprzedaży volkswagen nie zginie. Ocena na 6+ jestem zadowolony z całego procesu zakupu."
+  },
   {
    "data": "16.08.2026",
    "nazwa": "MARCIN C.",
@@ -642,23 +654,23 @@
   "miesiac": "2026-08",
   "biezacy": {
    "label": "Sierpień 2026",
-   "total_leads": 24,
+   "total_leads": 28,
    "ranking": [
     {
-     "name": "Fabian",
-     "przekazane": 6,
+     "name": "Anita",
+     "przekazane": 7,
      "odkupione": 0,
      "konwersja": 0
     },
     {
-     "name": "Anita",
-     "przekazane": 5,
+     "name": "Fabian",
+     "przekazane": 7,
      "odkupione": 0,
      "konwersja": 0
     },
     {
      "name": "Kacper",
-     "przekazane": 4,
+     "przekazane": 5,
      "odkupione": 0,
      "konwersja": 0
     },
