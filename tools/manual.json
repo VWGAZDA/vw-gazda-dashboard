@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 19.08.2026",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 20.08.2026",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -29,8 +29,8 @@
    "oferty": 48,
    "klienci": 35,
    "zamowienia": 6,
-   "wydania": 11,
-   "traffic": 21,
+   "wydania": 12,
+   "traffic": 24,
    "opinie": 1,
    "trade_in": 0,
    "flota": false
@@ -41,7 +41,7 @@
    "klienci": 9,
    "zamowienia": 4,
    "wydania": 2,
-   "traffic": 2,
+   "traffic": 4,
    "opinie": 0,
    "trade_in": 0,
    "flota": false
@@ -51,8 +51,8 @@
    "oferty": 55,
    "klienci": 34,
    "zamowienia": 3,
-   "wydania": 5,
-   "traffic": 12,
+   "wydania": 6,
+   "traffic": 14,
    "opinie": 5,
    "trade_in": 0,
    "flota": false
@@ -62,8 +62,8 @@
    "oferty": 47,
    "klienci": 45,
    "zamowienia": 0,
-   "wydania": 4,
-   "traffic": 8,
+   "wydania": 5,
+   "traffic": 10,
    "opinie": 0,
    "trade_in": 0,
    "flota": false
@@ -74,7 +74,7 @@
    "klienci": 44,
    "zamowienia": 4,
    "wydania": 3,
-   "traffic": 14,
+   "traffic": 17,
    "opinie": 3,
    "trade_in": 0,
    "flota": false
@@ -188,7 +188,7 @@
    0,
    5,
    11,
-   0,
+   12,
    0,
    0,
    0,
@@ -203,7 +203,7 @@
    0
   ]
  },
- "opinie_poprzedni_raport": "16.08.2026",
+ "opinie_poprzedni_raport": "18.08.2026",
  "opinie": [
   {
    "data": "18.08.2026",
@@ -654,8 +654,14 @@
   "miesiac": "2026-08",
   "biezacy": {
    "label": "Sierpień 2026",
-   "total_leads": 28,
+   "total_leads": 34,
    "ranking": [
+    {
+     "name": "Małgorzata",
+     "przekazane": 8,
+     "odkupione": 0,
+     "konwersja": 0
+    },
     {
      "name": "Anita",
      "przekazane": 7,
@@ -676,19 +682,13 @@
     },
     {
      "name": "Konrad",
-     "przekazane": 4,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Małgorzata",
-     "przekazane": 4,
+     "przekazane": 5,
      "odkupione": 0,
      "konwersja": 0
     },
     {
      "name": "Oskar",
-     "przekazane": 1,
+     "przekazane": 2,
      "odkupione": 0,
      "konwersja": 0
     },
