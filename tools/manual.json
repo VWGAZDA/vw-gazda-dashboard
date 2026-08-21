@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 20.08.2026",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 21.08.2026",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -15,90 +15,90 @@
  "kpi": [
   {
    "name": "Anita",
+   "trade_in": 0,
    "oferty": 42,
    "klienci": 27,
    "zamowienia": 10,
    "wydania": 13,
-   "traffic": 17,
+   "traffic": 20,
    "opinie": 5,
-   "trade_in": 0,
    "flota": false
   },
   {
    "name": "Konrad",
+   "trade_in": 0,
    "oferty": 48,
    "klienci": 35,
    "zamowienia": 6,
    "wydania": 12,
-   "traffic": 24,
+   "traffic": 27,
    "opinie": 1,
-   "trade_in": 0,
    "flota": false
   },
   {
    "name": "Oskar",
+   "trade_in": 0,
    "oferty": 11,
    "klienci": 9,
    "zamowienia": 4,
    "wydania": 2,
-   "traffic": 4,
+   "traffic": 5,
    "opinie": 0,
-   "trade_in": 0,
    "flota": false
   },
   {
    "name": "Kacper",
+   "trade_in": 0,
    "oferty": 55,
    "klienci": 34,
    "zamowienia": 3,
    "wydania": 6,
-   "traffic": 14,
+   "traffic": 16,
    "opinie": 5,
-   "trade_in": 0,
    "flota": false
   },
   {
    "name": "Fabian",
+   "trade_in": 0,
    "oferty": 47,
    "klienci": 45,
    "zamowienia": 0,
    "wydania": 5,
-   "traffic": 10,
+   "traffic": 12,
    "opinie": 0,
-   "trade_in": 0,
    "flota": false
   },
   {
    "name": "Małgorzata",
+   "trade_in": 0,
    "oferty": 59,
    "klienci": 44,
    "zamowienia": 4,
    "wydania": 3,
-   "traffic": 17,
+   "traffic": 19,
    "opinie": 3,
-   "trade_in": 0,
    "flota": false
   },
   {
    "name": "Magdalena",
+   "trade_in": 0,
    "oferty": 17,
    "klienci": 11,
    "zamowienia": 0,
    "wydania": 2,
    "traffic": 1,
    "opinie": 0,
-   "trade_in": 0,
    "flota": true
   },
   {
    "name": "Patryk",
+   "trade_in": 0,
    "oferty": 18,
    "klienci": 15,
    "zamowienia": 1,
    "wydania": 0,
    "traffic": 0,
    "opinie": 0,
-   "trade_in": 0,
    "flota": true
   }
  ],
@@ -189,7 +189,7 @@
    5,
    11,
    12,
-   0,
+   13,
    0,
    0,
    0,
@@ -205,6 +205,18 @@
  },
  "opinie_poprzedni_raport": "18.08.2026",
  "opinie": [
+  {
+   "data": "21.08.2026",
+   "nazwa": "MICHAŁ S.",
+   "handlowiec": "Konrad",
+   "tresc": "Jestem bardzo zadowolony z Pana Konrada. Pan Konrad zrobił super ofertę na samochód, podczas przekazania Golfa wszystko wytłumaczył i pokazał każdą opcję w aucie. Pan Konrad to prawdziwy pasjonata w tym fachu i widać że ta praca sprawia mu satysfakcję. Po zakupie auta nadal był kontakt i pomoc w drobnych pytaniach na temat samochodu. Naprawdę polecam Pana Konrada."
+  },
+  {
+   "data": "21.08.2026",
+   "nazwa": "ŁUKASZ",
+   "handlowiec": "Oskar",
+   "tresc": "Polecam p. Oskara! super opieka i obsługa na najwyższym poziomie. przeprowadził mnie przez cały proces związany z najmem auta 🙂"
+  },
   {
    "data": "18.08.2026",
    "nazwa": "ALDONA G.",
@@ -654,11 +666,11 @@
   "miesiac": "2026-08",
   "biezacy": {
    "label": "Sierpień 2026",
-   "total_leads": 34,
+   "total_leads": 35,
    "ranking": [
     {
      "name": "Małgorzata",
-     "przekazane": 8,
+     "przekazane": 9,
      "odkupione": 0,
      "konwersja": 0
     },
