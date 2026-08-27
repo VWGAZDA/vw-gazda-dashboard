@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 25.08.2026",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 27.08.2026",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -203,7 +203,7 @@
    0
   ]
  },
- "opinie_poprzedni_raport": "23.08.2026",
+ "opinie_poprzedni_raport": "24.08.2026",
  "opinie": [
   {
    "data": "22.08.2026",
@@ -672,7 +672,7 @@
   "miesiac": "2026-08",
   "biezacy": {
    "label": "Sierpień 2026",
-   "total_leads": 40,
+   "total_leads": 47,
    "ranking": [
     {
      "name": "Małgorzata",
@@ -681,32 +681,32 @@
      "konwersja": 0
     },
     {
-     "name": "Fabian",
-     "przekazane": 8,
-     "odkupione": 0,
-     "konwersja": 0
+     "name": "Anita",
+     "przekazane": 9,
+     "odkupione": 1,
+     "konwersja": 11
     },
     {
-     "name": "Anita",
-     "przekazane": 7,
+     "name": "Fabian",
+     "przekazane": 9,
      "odkupione": 0,
      "konwersja": 0
     },
     {
      "name": "Kacper",
-     "przekazane": 6,
+     "przekazane": 7,
      "odkupione": 0,
      "konwersja": 0
     },
     {
      "name": "Konrad",
-     "przekazane": 5,
+     "przekazane": 6,
      "odkupione": 0,
      "konwersja": 0
     },
     {
      "name": "Oskar",
-     "przekazane": 3,
+     "przekazane": 5,
      "odkupione": 0,
      "konwersja": 0
     },
@@ -723,7 +723,15 @@
      "konwersja": 0
     }
    ],
-   "wygrane": []
+   "wygrane": [
+    {
+     "data": "26.08.2026",
+     "klient": "S.K.",
+     "pojazd": "Volkswagen T-Roc",
+     "vin": "",
+     "handlowiec": "Anita"
+    }
+   ]
   },
   "poprzedni": {
    "label": "Lipiec 2026",
