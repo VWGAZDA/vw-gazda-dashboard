@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 27.08.2026",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) · Trade-in: CRM Klienci — stan 01.09.2026",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -16,76 +16,76 @@
   {
    "name": "Anita",
    "trade_in": 0,
-   "oferty": 53,
-   "klienci": 37,
-   "zamowienia": 14,
-   "wydania": 13,
-   "traffic": 25,
-   "opinie": 5,
+   "oferty": 79,
+   "klienci": 55,
+   "zamowienia": 16,
+   "wydania": 17,
+   "traffic": 37,
+   "opinie": 7,
    "flota": false
   },
   {
    "name": "Konrad",
    "trade_in": 0,
-   "oferty": 62,
-   "klienci": 48,
-   "zamowienia": 11,
-   "wydania": 13,
-   "traffic": 30,
+   "oferty": 67,
+   "klienci": 52,
+   "zamowienia": 14,
+   "wydania": 17,
+   "traffic": 36,
    "opinie": 3,
    "flota": false
   },
   {
    "name": "Oskar",
    "trade_in": 0,
-   "oferty": 26,
-   "klienci": 19,
-   "zamowienia": 8,
+   "oferty": 42,
+   "klienci": 32,
+   "zamowienia": 11,
    "wydania": 2,
-   "traffic": 12,
+   "traffic": 15,
    "opinie": 1,
    "flota": false
   },
   {
    "name": "Kacper",
    "trade_in": 0,
-   "oferty": 72,
-   "klienci": 46,
-   "zamowienia": 5,
-   "wydania": 7,
-   "traffic": 19,
-   "opinie": 5,
+   "oferty": 105,
+   "klienci": 71,
+   "zamowienia": 7,
+   "wydania": 8,
+   "traffic": 27,
+   "opinie": 7,
    "flota": false
   },
   {
    "name": "Fabian",
    "trade_in": 0,
-   "oferty": 92,
-   "klienci": 70,
-   "zamowienia": 1,
-   "wydania": 5,
-   "traffic": 17,
+   "oferty": 110,
+   "klienci": 82,
+   "zamowienia": 4,
+   "wydania": 6,
+   "traffic": 23,
    "opinie": 0,
    "flota": false
   },
   {
    "name": "Małgorzata",
    "trade_in": 0,
-   "oferty": 89,
-   "klienci": 71,
-   "zamowienia": 7,
-   "wydania": 3,
-   "traffic": 23,
-   "opinie": 3,
+   "oferty": 118,
+   "klienci": 103,
+   "zamowienia": 8,
+   "wydania": 4,
+   "traffic": 31,
+   "opinie": 4,
    "flota": false
   },
   {
    "name": "Magdalena",
    "trade_in": 0,
    "oferty": 17,
-   "klienci": 12,
+   "klienci": 13,
    "zamowienia": 0,
-   "wydania": 2,
+   "wydania": 3,
    "traffic": 1,
    "opinie": 0,
    "flota": true
@@ -93,10 +93,10 @@
   {
    "name": "Patryk",
    "trade_in": 0,
-   "oferty": 34,
-   "klienci": 41,
-   "zamowienia": 2,
-   "wydania": 0,
+   "oferty": 61,
+   "klienci": 50,
+   "zamowienia": 7,
+   "wydania": 1,
    "traffic": 0,
    "opinie": 0,
    "flota": true
@@ -127,12 +127,12 @@
    22,
    12,
    0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
+   29,
+   43,
+   32,
+   23,
+   16,
+   11,
    0,
    0
   ],
@@ -160,12 +160,12 @@
    30,
    8,
    0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
+   26,
+   23,
+   18,
+   23,
+   16,
+   8,
    0,
    0
   ],
@@ -193,18 +193,78 @@
    15,
    6,
    0,
+   8,
+   15,
+   10,
    6,
-   0,
-   0,
-   0,
-   0,
-   0,
+   6,
+   4,
    0,
    0
   ]
  },
- "opinie_poprzedni_raport": "25.08.2026",
+ "opinie_poprzedni_raport": "27.08.2026",
  "opinie": [
+  {
+   "data": "31.08.2026",
+   "nazwa": "BARTŁOMIEJ C.",
+   "handlowiec": "Małgorzata",
+   "tresc": "Serdecznie polecam Panią Małgorzatę ! Bardzo miła doradczyni!"
+  },
+  {
+   "data": "31.08.2026",
+   "nazwa": "LOKROSS",
+   "handlowiec": "Oskar",
+   "tresc": "Dzięki Panu Oskarowi udało spełnić się marzenia :) Świetny obsługa finansowa, wydanie auta, kontakt oraz cały proces. Polecam"
+  },
+  {
+   "data": "31.08.2026",
+   "nazwa": "TYMOTEUSZ P.",
+   "handlowiec": "Konrad",
+   "tresc": "Polecam. Bardzo profesjonalnie. Szczególne podziękowania dla Pana Konrada."
+  },
+  {
+   "data": "31.08.2026",
+   "nazwa": "MARCIN S.",
+   "handlowiec": "Konrad",
+   "tresc": "Wspaniała obsługa od początku do końca! Chciałbym serdecznie podziękować panu Konradowi za pełen profesjonalizm, ogromną cierpliwość i indywidualne podejście do klienta w salonie Gazda VW Katowice. Cały proces zakupu przebiegł w miłej atmosferze, a wszystkie formalności zostały załatwione sprawnie i bezstresowo. Zdecydowanie polecam każdemu, kto szuka wymarzonego auta!"
+  },
+  {
+   "data": "31.08.2026",
+   "nazwa": "ROBERT K.",
+   "handlowiec": "Oskar",
+   "tresc": "Chciałbym bardzo serdecznie podziękować Panu Oskarowii za bardzo profesjonalne podejście jeżeli chodzi o proces zamówienia VW Taigo oraz świetny kontakt w trakcie oczekiwania na pojazd. Samochód był do odbioru miesiąc przed wyznaczoną datą. Przy odbiorze otrzymaliśmy jeszcze miły upominek oraz vouchery. Kawa w salonie bardzo smaczna :) Polecam z czystym sumieniem współpracę z Panem Oskarem :)"
+  },
+  {
+   "data": "28.08.2026",
+   "nazwa": "WIKTOR L.",
+   "handlowiec": "Anita",
+   "tresc": "Polecam z całego serca ofertę tego salonu. Pani Anita pomogła w wyborze samochodu dla mnie. Od samego pomysłu i poszukiwania oferty, do podpisania dokumentów i odbioru końcowego służyła fachową radą oraz pomocą. Efekt końcowy był fantastyczny, wszystko wyszło dokładnie jak sobie wymarzyłem. Pozdrawiam oraz polecam"
+  },
+  {
+   "data": "27.08.2026",
+   "nazwa": "ALINA G.",
+   "handlowiec": "Kacper",
+   "tresc": "Wspaniała obsługa, wysoki profesjonalizm, a wszystko w bardzo przyjemnej atmosferze. Pan Kacper nieocenione wsparcie w tym procesie."
+  },
+  {
+   "data": "26.08.2026",
+   "nazwa": "KRZYSIEK H.",
+   "handlowiec": "Anita",
+   "tresc": "Pani Anita bardzo dobra specjalistka godna polecenia."
+  },
+  {
+   "data": "25.08.2026",
+   "nazwa": "PAULINA G.",
+   "handlowiec": "Kacper",
+   "tresc": "Gorąco polecam współpracę z Panem Kacprem. Świetne podejście do klienta. Genialnie doradził przy wyborze auta. Każda kwestia została ogarnięta bez najmniejszego problemu, a transakcja przebiegła bezstresowo i profesjonalnie."
+  },
+  {
+   "data": "24.08.2026",
+   "nazwa": "PIOTR",
+   "handlowiec": "Małgorzata",
+   "tresc": "Chciałabym serdecznie polecić Panią Małgorzatę z salonu Volkswagen. Od początku kontakt był bardzo miły i profesjonalny. Pani Małgorzata wykazała się dużą wiedzą, cierpliwością i zaangażowaniem, a przy tym wszystko dokładnie i przystępnie wyjaśniła. Cały proces przebiegł sprawnie i w bardzo przyjaznej atmosferze. Widać, że naprawdę zależy jej na zadowoleniu klienta. Zdecydowanie polecam i dziękuję za świetną obsługę!"
+  },
   {
    "data": "22.08.2026",
    "nazwa": "TOMEK L.",
@@ -672,29 +732,29 @@
   "miesiac": "2026-08",
   "biezacy": {
    "label": "Sierpień 2026",
-   "total_leads": 47,
+   "total_leads": 54,
    "ranking": [
     {
      "name": "Małgorzata",
-     "przekazane": 11,
+     "przekazane": 12,
      "odkupione": 0,
      "konwersja": 0
     },
     {
      "name": "Anita",
-     "przekazane": 9,
+     "przekazane": 10,
      "odkupione": 1,
-     "konwersja": 11
+     "konwersja": 10
     },
     {
      "name": "Fabian",
-     "przekazane": 9,
+     "przekazane": 10,
      "odkupione": 0,
      "konwersja": 0
     },
     {
      "name": "Kacper",
-     "przekazane": 7,
+     "przekazane": 10,
      "odkupione": 0,
      "konwersja": 0
     },
@@ -706,7 +766,7 @@
     },
     {
      "name": "Oskar",
-     "przekazane": 5,
+     "przekazane": 6,
      "odkupione": 0,
      "konwersja": 0
     },
@@ -738,28 +798,28 @@
    "total_leads": 55,
    "ranking": [
     {
-     "name": "Oskar",
-     "przekazane": 12,
-     "odkupione": 5,
-     "konwersja": 42
-    },
-    {
-     "name": "Anita",
-     "przekazane": 10,
-     "odkupione": 2,
-     "konwersja": 20
-    },
-    {
      "name": "Kacper",
      "przekazane": 13,
      "odkupione": 0,
      "konwersja": 0
     },
     {
+     "name": "Oskar",
+     "przekazane": 12,
+     "odkupione": 5,
+     "konwersja": 42
+    },
+    {
      "name": "Fabian",
      "przekazane": 11,
      "odkupione": 0,
      "konwersja": 0
+    },
+    {
+     "name": "Anita",
+     "przekazane": 10,
+     "odkupione": 2,
+     "konwersja": 20
     },
     {
      "name": "Konrad",
@@ -778,34 +838,26 @@
      "przekazane": 1,
      "odkupione": 0,
      "konwersja": 0
+    },
+    {
+     "name": "Magdalena",
+     "przekazane": 0,
+     "odkupione": 0,
+     "konwersja": 0
     }
    ],
    "wygrane": [
     {
-     "data": "10.07.2026",
-     "klient": "M.P.",
-     "pojazd": "Volkswagen Tiguan",
-     "vin": "",
-     "handlowiec": "Oskar"
-    },
-    {
-     "data": "13.07.2026",
-     "klient": "A.K.",
-     "pojazd": "Ford Focus",
-     "vin": "",
-     "handlowiec": "Oskar"
-    },
-    {
-     "data": "21.07.2026",
-     "klient": "P.P.",
-     "pojazd": "Volkswagen T-Cross",
-     "vin": "",
+     "data": "29.07.2026",
+     "klient": "D.P.",
+     "pojazd": "Volkswagen T-Roc",
+     "vin": "NV120839",
      "handlowiec": "Anita"
     },
     {
-     "data": "27.07.2026",
-     "klient": "Ł.C.",
-     "pojazd": "VW T-Roc",
+     "data": "28.07.2026",
+     "klient": "S.G.",
+     "pojazd": "Seat Arona",
      "vin": "",
      "handlowiec": "Oskar"
     },
@@ -817,18 +869,32 @@
      "handlowiec": "Oskar"
     },
     {
-     "data": "28.07.2026",
-     "klient": "S.G.",
-     "pojazd": "Seat Arona",
+     "data": "27.07.2026",
+     "klient": "Ł.C.",
+     "pojazd": "Volkswagen T-Roc",
      "vin": "",
      "handlowiec": "Oskar"
     },
     {
-     "data": "29.07.2026",
-     "klient": "D.P.",
-     "pojazd": "Volkswagen T-Roc",
-     "vin": "NV120839",
+     "data": "21.07.2026",
+     "klient": "P.P.",
+     "pojazd": "Volkswagen T-Cross",
+     "vin": "",
      "handlowiec": "Anita"
+    },
+    {
+     "data": "13.07.2026",
+     "klient": "A.K.",
+     "pojazd": "Ford Focus",
+     "vin": "",
+     "handlowiec": "Oskar"
+    },
+    {
+     "data": "10.07.2026",
+     "klient": "M.P.",
+     "pojazd": "Volkswagen Tiguan",
+     "vin": "",
+     "handlowiec": "Oskar"
     }
    ]
   }
