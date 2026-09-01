@@ -203,7 +203,7 @@
    0
   ]
  },
- "opinie_poprzedni_raport": "27.08.2026",
+ "opinie_poprzedni_raport": "31.08.2026",
  "opinie": [
   {
    "data": "31.08.2026",
@@ -729,8 +729,63 @@
   }
  ],
  "trade_in_crm": {
-  "miesiac": "2026-08",
+  "miesiac": "2026-09",
   "biezacy": {
+   "label": "Wrzesień 2026",
+   "total_leads": 4,
+   "ranking": [
+    {
+     "name": "Anita",
+     "przekazane": 1,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Konrad",
+     "przekazane": 1,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Fabian",
+     "przekazane": 1,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Małgorzata",
+     "przekazane": 1,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Oskar",
+     "przekazane": 0,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Kacper",
+     "przekazane": 0,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Magdalena",
+     "przekazane": 0,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Patryk",
+     "przekazane": 0,
+     "odkupione": 0,
+     "konwersja": 0
+    }
+   ],
+   "wygrane": []
+  },
+  "poprzedni": {
    "label": "Sierpień 2026",
    "total_leads": 54,
    "ranking": [
@@ -747,13 +802,13 @@
      "konwersja": 10
     },
     {
-     "name": "Fabian",
+     "name": "Kacper",
      "przekazane": 10,
      "odkupione": 0,
      "konwersja": 0
     },
     {
-     "name": "Kacper",
+     "name": "Fabian",
      "przekazane": 10,
      "odkupione": 0,
      "konwersja": 0
@@ -790,111 +845,6 @@
      "pojazd": "Volkswagen T-Roc",
      "vin": "",
      "handlowiec": "Anita"
-    }
-   ]
-  },
-  "poprzedni": {
-   "label": "Lipiec 2026",
-   "total_leads": 55,
-   "ranking": [
-    {
-     "name": "Kacper",
-     "przekazane": 13,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Oskar",
-     "przekazane": 12,
-     "odkupione": 5,
-     "konwersja": 42
-    },
-    {
-     "name": "Fabian",
-     "przekazane": 11,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Anita",
-     "przekazane": 10,
-     "odkupione": 2,
-     "konwersja": 20
-    },
-    {
-     "name": "Konrad",
-     "przekazane": 6,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Patryk",
-     "przekazane": 2,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Małgorzata",
-     "przekazane": 1,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Magdalena",
-     "przekazane": 0,
-     "odkupione": 0,
-     "konwersja": 0
-    }
-   ],
-   "wygrane": [
-    {
-     "data": "29.07.2026",
-     "klient": "D.P.",
-     "pojazd": "Volkswagen T-Roc",
-     "vin": "NV120839",
-     "handlowiec": "Anita"
-    },
-    {
-     "data": "28.07.2026",
-     "klient": "S.G.",
-     "pojazd": "Seat Arona",
-     "vin": "",
-     "handlowiec": "Oskar"
-    },
-    {
-     "data": "27.07.2026",
-     "klient": "A.Z.",
-     "pojazd": "Skoda Scala",
-     "vin": "M3129133",
-     "handlowiec": "Oskar"
-    },
-    {
-     "data": "27.07.2026",
-     "klient": "Ł.C.",
-     "pojazd": "Volkswagen T-Roc",
-     "vin": "",
-     "handlowiec": "Oskar"
-    },
-    {
-     "data": "21.07.2026",
-     "klient": "P.P.",
-     "pojazd": "Volkswagen T-Cross",
-     "vin": "",
-     "handlowiec": "Anita"
-    },
-    {
-     "data": "13.07.2026",
-     "klient": "A.K.",
-     "pojazd": "Ford Focus",
-     "vin": "",
-     "handlowiec": "Oskar"
-    },
-    {
-     "data": "10.07.2026",
-     "klient": "M.P.",
-     "pojazd": "Volkswagen Tiguan",
-     "vin": "",
-     "handlowiec": "Oskar"
     }
    ]
   }
