@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za sierpień 2026 (arkusz nie przełączony jeszcze na wrzesień) · Trade-in: CRM Klienci — stan 04.09.2026",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za sierpień 2026 (arkusz nie przełączony jeszcze na wrzesień) · Trade-in: CRM Klienci — stan 07.09.2026",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -203,7 +203,7 @@
    0
   ]
  },
- "opinie_poprzedni_raport": "02.09.2026",
+ "opinie_poprzedni_raport": "03.09.2026",
  "opinie": [
   {
    "data": "31.08.2026",
@@ -732,11 +732,23 @@
   "miesiac": "2026-09",
   "biezacy": {
    "label": "Wrzesień 2026",
-   "total_leads": 16,
+   "total_leads": 20,
    "ranking": [
     {
      "name": "Fabian",
-     "przekazane": 5,
+     "przekazane": 6,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Małgorzata",
+     "przekazane": 4,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Oskar",
+     "przekazane": 4,
      "odkupione": 0,
      "konwersja": 0
     },
@@ -747,19 +759,7 @@
      "konwersja": 0
     },
     {
-     "name": "Oskar",
-     "przekazane": 3,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
      "name": "Konrad",
-     "przekazane": 2,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Małgorzata",
      "przekazane": 2,
      "odkupione": 0,
      "konwersja": 0
