@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za wrzesień 2026, stan 12.09.2026 · Trade-in: CRM Klienci — stan 14.09.2026",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za październik 2026, stan 20.10.2026 · Trade-in: CRM Klienci — stan 20.10.2026 · Grafik: arkusz GRAFIK — stan 20.10.2026 (zakładka „Grafik listopad” jeszcze nie istnieje)",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -15,88 +15,88 @@
  "kpi": [
   {
    "name": "Anita",
-   "trade_in": 0,
-   "oferty": 13,
-   "klienci": 13,
-   "zamowienia": 3,
-   "wydania": 2,
-   "traffic": 23,
-   "opinie": 0,
+   "trade_in": 2,
+   "oferty": 40,
+   "klienci": 37,
+   "zamowienia": 14,
+   "wydania": 7,
+   "traffic": 14,
+   "opinie": 4,
    "flota": false
   },
   {
    "name": "Konrad",
    "trade_in": 0,
-   "oferty": 40,
-   "klienci": 20,
-   "zamowienia": 4,
-   "wydania": 9,
-   "traffic": 20,
-   "opinie": 0,
+   "oferty": 55,
+   "klienci": 57,
+   "zamowienia": 13,
+   "wydania": 7,
+   "traffic": 28,
+   "opinie": 1,
    "flota": false
   },
   {
    "name": "Oskar",
-   "trade_in": 0,
-   "oferty": 37,
-   "klienci": 24,
-   "zamowienia": 9,
-   "wydania": 3,
-   "traffic": 9,
-   "opinie": 1,
+   "trade_in": 2,
+   "oferty": 45,
+   "klienci": 55,
+   "zamowienia": 24,
+   "wydania": 7,
+   "traffic": 14,
+   "opinie": 3,
    "flota": false
   },
   {
    "name": "Kacper",
    "trade_in": 0,
-   "oferty": 50,
-   "klienci": 30,
-   "zamowienia": 9,
-   "wydania": 1,
-   "traffic": 20,
-   "opinie": 2,
+   "oferty": 26,
+   "klienci": 26,
+   "zamowienia": 12,
+   "wydania": 5,
+   "traffic": 10,
+   "opinie": 1,
    "flota": false
   },
   {
    "name": "Fabian",
-   "trade_in": 0,
-   "oferty": 46,
-   "klienci": 26,
+   "trade_in": 2,
+   "oferty": 32,
+   "klienci": 37,
    "zamowienia": 6,
-   "wydania": 4,
-   "traffic": 24,
-   "opinie": 3,
+   "wydania": 3,
+   "traffic": 13,
+   "opinie": 0,
    "flota": false
   },
   {
    "name": "Małgorzata",
-   "trade_in": 0,
+   "trade_in": 3,
    "oferty": 49,
-   "klienci": 36,
-   "zamowienia": 7,
-   "wydania": 3,
-   "traffic": 17,
-   "opinie": 1,
+   "klienci": 47,
+   "zamowienia": 14,
+   "wydania": 4,
+   "traffic": 14,
+   "opinie": 2,
    "flota": false
   },
   {
    "name": "Magdalena",
    "trade_in": 0,
-   "oferty": 10,
-   "klienci": 8,
-   "zamowienia": 0,
-   "wydania": 0,
-   "traffic": 2,
+   "oferty": 34,
+   "klienci": 12,
+   "zamowienia": 4,
+   "wydania": 2,
+   "traffic": 7,
    "opinie": 0,
    "flota": true
   },
   {
    "name": "Patryk",
-   "trade_in": 0,
-   "oferty": 26,
-   "klienci": 14,
-   "zamowienia": 4,
-   "wydania": 0,
+   "trade_in": 1,
+   "oferty": 47,
+   "klienci": 22,
+   "zamowienia": 1,
+   "wydania": 3,
    "traffic": 1,
    "opinie": 0,
    "flota": true
@@ -104,25 +104,25 @@
  ],
  "koniunktura_daily": {
   "oferty": [
-   44,
-   30,
-   22,
-   21,
-   13,
-   0,
-   24,
-   40,
-   35,
    27,
-   15,
+   39,
+   10,
    0,
+   27,
+   12,
+   24,
+   8,
+   9,
+   3,
    0,
+   16,
+   18,
+   27,
+   30,
+   28,
+   7,
    0,
-   0,
-   0,
-   0,
-   0,
-   0,
+   43,
    0,
    0,
    0,
@@ -138,24 +138,24 @@
   ],
   "klienci": [
    25,
-   24,
-   9,
-   12,
+   17,
    8,
    0,
    11,
-   25,
+   14,
+   23,
+   16,
+   13,
+   11,
+   0,
+   36,
+   22,
    20,
-   19,
-   8,
+   24,
+   17,
+   7,
    0,
-   0,
-   10,
-   0,
-   0,
-   0,
-   0,
-   0,
+   29,
    0,
    0,
    0,
@@ -170,25 +170,25 @@
    0
   ],
   "traffic": [
-   9,
-   10,
-   16,
-   12,
-   10,
    0,
-   4,
+   0,
+   0,
+   0,
+   0,
+   9,
+   12,
    8,
    11,
-   15,
-   9,
+   13,
+   0,
    12,
+   6,
+   8,
+   5,
    0,
+   5,
    0,
-   0,
-   0,
-   0,
-   0,
-   0,
+   12,
    0,
    0,
    0,
@@ -203,8 +203,248 @@
    0
   ]
  },
- "opinie_poprzedni_raport": "08.09.2026",
+ "opinie_poprzedni_raport": "15.10.2026",
  "opinie": [
+  {
+   "data": "19.10.2026",
+   "nazwa": "MMM M.",
+   "handlowiec": "Anita",
+   "tresc": "Polecam salon VW Gazda Group w Katowicach i kontakt z Panią Anitą, która wykazała się dużym zaangażowaniem w procesie zakupu Golfa GTI. Procedura od zamówienia auta do jego odbioru została przeprowadzona szybko i bez komplikacji. Słowa uznania należą się również Panu Leszkowi Głowani (Kierownik działu części i akcesoriów) za wyszukanie atrakcyjnej oferty na zakup zimowych opon z aluminiowymi felgami (Bergamo) i fachowe doradztwo."
+  },
+  {
+   "data": "16.10.2026",
+   "nazwa": "MARTA C.",
+   "handlowiec": "Konrad",
+   "tresc": "Mogę polecić z czystym sumieniem współpracę z salonem a zwłaszcza z Panem Konradem. Od pierwszego wejścia do salonu po odbiór samochodu czuliśmy się zaopiekowani. Wszystko rzetelnie wyjaśnione w miłej atmosferze. Pan Konrad ma dużo cierpliwości i widać, że z pasją wykonuje swoją pracę. Jak wrócimy po kolejny samochód to tylko do Pana Konrada. I mamy nadzieję, że prace z serwisem też przebiegną bezproblemowo."
+  },
+  {
+   "data": "14.10.2026",
+   "nazwa": "OKSANA S.",
+   "handlowiec": "Oskar",
+   "tresc": "Kupowałam auto na leasing w tym salonie. Obsługiwał mnie Pan Oskar. Jestem kobietą która nie zna się na autach i podejście Pana Oskara było mega profesjonalne. Wszytko wytłumaczono mi prostym językiem, bez śmiechu że czegoś nie ogarniam. Zamierzam brać drugie auto też w obsłudze Pana Oskara. Po 1,5 roku czasu znowu jestem w salonie ale to przez to że uszkodziłam oponę i felgę. Obsługiwał mnie Pan Marcin: nieziemski i cierpliwy fachowiec. Wszytko po koleji wytłumaczył, zaopiekował się wszystkimi dokumentami, w ciągu 1,5 tyg mam wymienioną oponę i felgę a do tego zapytał czy coś jeszcze mnie niepokoi z autem, co faktycznie było dobrym pytaniem bo zdecydowałam się na wymianę wycieraczek. Jak dziś zabierałam auto (było na Servisie 4 h) to okazało się że mi jeszcze servis perfekcyjnie umył auto i nawet odkurzył wewnątrz. Mega profesjonalnie i miło zaskakujące dla mnie podejścia. Jeśli zastanawiasz się nad kupnem lub serwisem auta to tylko do dwóch fachowców swojej sprawy (Pan Oskar od doboru auta, a Pan Marcin od serwisu)! Ogromnie i z całego serca polecam! Nigdy nie byłam tak zadowolona!"
+  },
+  {
+   "data": "14.10.2026",
+   "nazwa": "NAZARII P.",
+   "handlowiec": "Małgorzata",
+   "tresc": "Z całego serca polecam współpracę z panią Małgorzatą P-P! To niezwykle profesjonalna, cierpliwa i zaangażowana osoba. Przez cały proces zakupu samochodu czułem się zaopiekowany, a pani Małgorzata chętnie i wyczerpująco odpowiadała na każde moje pytanie. Rzadko spotyka się tak serdeczne i uczciwe podejście do klienta w branży motoryzacyjnej. Samochód idealnie spełnia moje oczekiwania, a cała transakcja przebiegła sprawnie i w świetnej atmosferze. Dziękuję!"
+  },
+  {
+   "data": "13.10.2026",
+   "nazwa": "ŁUKASZ D.",
+   "handlowiec": "Kacper",
+   "tresc": "Bardzo polecam salon, obsługa miła i sympatyczna. Na szczególne uznanie zasługuje handlowiec Kacper."
+  },
+  {
+   "data": "09.10.2026",
+   "nazwa": "MatyS",
+   "handlowiec": "Oskar",
+   "tresc": "Ogromnie polecam salon Grupy Gazda w Katowicach. Przyjechałem tutaj specjalnie z Łodzi i się nie zawiodłem. Pan Oskar załatwił wszystko od A do Z, dopasował ofertę samochodu do moich potrzeb i wymagań. Cały czas byliśmy w kontakcie, byłem informowany o kolejnych krokach, a na koniec wydanie pojazdu to czysta przyjemność. Czy przyjadę tutaj po kolejny pojazd? Oczywiście!"
+  },
+  {
+   "data": "08.10.2026",
+   "nazwa": "Krzysiek H.",
+   "handlowiec": "Małgorzata",
+   "tresc": "Nigdy nie byłem zwolennikiem marki VW i nie rozważałem nawet zakupu auta tej marki. Jednak wystarczyło krótkie zapytanie o konkretny egzemplarz (dostępny tylko w Volkswagen Gazda Group Katowice), żebym po krótkim czasie wyjechał z salonu Golfem GTE. Myślę, że w 90% jest to zasługa profesjonalizmu i zaangażowania poszczególnych pracowników salonu z którymi miałem ogromną przyjemność się kontaktować. Bardzo doceniam również natychmiastową reakcję na moje jakiekolwiek uwagi. Rewelacja bo cały proces przebiegał z nieustannym, wspaniałym uśmiechem."
+  },
+  {
+   "data": "07.10.2026",
+   "nazwa": "Klaudia W.",
+   "handlowiec": "Anita",
+   "tresc": "To mój pierwszy samochód z salonu i myślę, że super trafiłam. Pani Anita poprowadziła cały proces zakupowy od początku do końca, wszystko profesjonalnie i w miłej atmosferze. A samochód? Przesiadka z Polo 2004 na Polo 2026 jest naprawdę fajnym uczuciem 🙂 Jeśli ktoś szuka nowego Volkswagena to polecam VW Gazda Group Katowice, a w szczególności Panią Anitę 🙂"
+  },
+  {
+   "data": "05.10.2026",
+   "nazwa": "JULIA S.",
+   "handlowiec": "Anita",
+   "tresc": "Wszelkie formalności związane z zakupem naszego nowego samochodu załatwialiśmy z Panią Anitą. Bardzo miła osoba i niezwykle komunikatywna. Jedocześnie bardzo konkretna, rzetelna i kompetentna. Pani Anita podczas wydawania nam samochodu wykazała się dużą wiedzą i pełnym profesjonalizmem. jeszcze raz bardzo dziękujemy. Mariusz i Marzena Szczecińscy."
+  },
+  {
+   "data": "01.10.2026",
+   "nazwa": "BARBARA B.",
+   "handlowiec": "Oskar",
+   "tresc": "Jak kupować Volkswagena to tylko w salonie Gazda Group w Katowicach .Jest to mój trzeci Volkswagen ,ale nigdzie nie zostałam tak obsłużona jak w tym salonie .Pan Oskar świetny fachowiec -konkretnie ,szybko ,sprawnie -pełna profeska .Auto zgodnie z ustaleniami po tygodniu do odbioru .Duże zaskoczenie przy odbiorze -piękna czerwona kokarda ,upominek od firmy -no nigdzie do tej pory nie było tego w żadnym innym salonie VW .Dziekuje .Zakup u Was to przyjemność .Panie Oskarze widzimy się za dwa lata przy kolejnym zakupie .ðSerdecznie pozdrawiam Barbara Bochenek Chrzanów"
+  },
+  {
+   "data": "30.09.2026",
+   "nazwa": "KAZIMIERZ",
+   "handlowiec": "Fabian",
+   "tresc": "Wszystko OK.W szczególności SZACUN,dla Pana Fabiana Jóžwiaka,za pełny profesjonalizm"
+  },
+  {
+   "data": "30.09.2026",
+   "nazwa": "XRIXBR B.",
+   "handlowiec": "Fabian",
+   "tresc": "Polecam Pana Fabiana Józwiaka. profesjonalna obsługa"
+  },
+  {
+   "data": "30.09.2026",
+   "nazwa": "ZUZANNA M.",
+   "handlowiec": "Anita",
+   "tresc": "Dziękuję Pani Anicie, super obsługa ❤️"
+  },
+  {
+   "data": "30.09.2026",
+   "nazwa": "OLA L.",
+   "handlowiec": "Anita",
+   "tresc": "Dziękuję Pani Anicie, super obsługa ❤️"
+  },
+  {
+   "data": "29.09.2026",
+   "nazwa": "TOMASZ M.",
+   "handlowiec": "Konrad",
+   "tresc": "Zakup samochodu z pomocą pana Konrada to czysta przyjemność. Na szczególne wyróżnienie zasługuje jego podejście do klienta – wysoka kultura osobista, cierpliwość i ciągła opieka nad całym procesem. Największe brawa należą się za wzorowy przepływ informacji: przez cały czas byłem na bieżąco informowany o kolejnych krokach i dokładnie wiedziałem, na jakim etapie jesteśmy, na co czekamy i co ja muszę dostarczyć żeby wszystko działo się zgodnie z planem. Zdecydowanie polecam współpracę z panem Konradem!"
+  },
+  {
+   "data": "28.09.2026",
+   "nazwa": "MARCEL W.",
+   "handlowiec": "Kacper",
+   "tresc": "Odebrałem dziś nowego T-Roca. Kacper przeprowadził mnie przez cały proces szybko i sprawnie - dzięki!"
+  },
+  {
+   "data": "28.09.2026",
+   "nazwa": "MIRKA W.",
+   "handlowiec": "Małgorzata",
+   "tresc": "Bardzo dziękuję za fachową pomoc Pani Małorzacie w doborze nowego samochodu. Polecam Panią handlowiec oraz salon samochodowy."
+  },
+  {
+   "data": "28.09.2026",
+   "nazwa": "TOMASZ J.",
+   "handlowiec": "Anita",
+   "tresc": "Bardzo polecam salon VW przy alei Murckowskiej w Katowicach. Cały proces zamówienia i zakupu auta przebiegł bardzo szybko i sprawnie, a obsługa była na najwyższym poziomie. Szczególne podziękowania należą się pani Anicie, która była pomocna na każdym etapie, wszystko dokładnie wyjaśniając. Zdecydowanie polecam!"
+  },
+  {
+   "data": "26.09.2026",
+   "nazwa": "WERONIKA K.",
+   "handlowiec": "Oskar",
+   "tresc": "Dziękuję Panu Oskarowii za perfekcyjną obsługę"
+  },
+  {
+   "data": "26.09.2026",
+   "nazwa": "GERARD G.",
+   "handlowiec": "Konrad",
+   "tresc": "Serdecznie polecam Pana Konrada za profesjonalną i bardzo miłą obsługę w salonie. Od początku wykazał się dużą empatią, zaangażowaniem i cierpliwością, a także pomógł sprawnie przejść przez wszystkie formalności. Pełen profesjonalizm i świetne podejście do klienta. Dziękuję za pomoc!"
+  },
+  {
+   "data": "26.09.2026",
+   "nazwa": "GABRIELA M.",
+   "handlowiec": "Konrad",
+   "tresc": "Świetny salon z niesamowitą obsługą. Pan Konrad to jeden z najlepszych specjalistów do sprzedaży aut, z jakim miałam przyjemność rozmawiać. Najlepiej opisują go słowa: profesjonalizm, dokładność a także cierpliwość. Cenię sobie też kulturę osobistą Pana Konrada. Podczas procedury kupna auta, na każdym kroku czułam się zaopiekowana. Więc, jeśli zastanawiasz się przyszły kliencie nad zakupem VW to polecam GG Katowice i Pana Konrada!"
+  },
+  {
+   "data": "26.09.2026",
+   "nazwa": "DAMIAN B.",
+   "handlowiec": "Konrad",
+   "tresc": "Jesteśmy bardzo zadowoleni z nowego VW Taigo. Podziękowania dla Pana Konrada za profesjonalne podejście do klienta. ð"
+  },
+  {
+   "data": "26.09.2026",
+   "nazwa": "KAMILA B.",
+   "handlowiec": "Konrad",
+   "tresc": "Świetna obsługa i profesjonalizm pana Konrada. Zakup auta przebiegł idealnie, bardzo polecam!"
+  },
+  {
+   "data": "26.09.2026",
+   "nazwa": "LUCYNA K.",
+   "handlowiec": "Konrad",
+   "tresc": "Kupiłam samochód w Salonie GG i jestem bardzo zadowolona z obsługi w salonie. W czasie w którym kupowałam samochód był duży wybór samochód \"od ręki\". Nikt nie pogania, nie naciska a tylko doradza i pokazuje jakie są możliwości. Pan Konrad profesjonalnie doradził mi w wyborze samochodu dopasowanego do moich potrzeb. Polecam!"
+  },
+  {
+   "data": "25.09.2026",
+   "nazwa": "JUSTYNA S.",
+   "handlowiec": "Oskar",
+   "tresc": "Bardzo polecam. Obsluga na najwyższym poziomie. Rzetelne odpowiedzi na wszelkie pytania. P. Oskar bardzo profesjonalnie przeprowadzil nas przez caly proces zakupu"
+  },
+  {
+   "data": "25.09.2026",
+   "nazwa": "PAULINA K.",
+   "handlowiec": "Oskar",
+   "tresc": "Polecam! Pan Oskar doskonałe podejście do klienta"
+  },
+  {
+   "data": "25.09.2026",
+   "nazwa": "BEATA L.",
+   "handlowiec": "Oskar",
+   "tresc": "Polecam bardzo. Pan Oskar bardzo profesjonalny sprzedawca."
+  },
+  {
+   "data": "25.09.2026",
+   "nazwa": "KINGA N.",
+   "handlowiec": "Oskar",
+   "tresc": "Proces wyboru samochodu przeprowadzony przez Pana Oskara zasługuje na ocenę 5 gwiazdek. Dzięki profesjonalnemu podejściu, sporym zaangażowaniu i szybkim kontakcie zakup samochodu w tym salonie okazał się bardzo dobrą decyzją."
+  },
+  {
+   "data": "25.09.2026",
+   "nazwa": "GABRIELA S.",
+   "handlowiec": "Oskar",
+   "tresc": "Polecam sprzedawcę Oskar!"
+  },
+  {
+   "data": "25.09.2026",
+   "nazwa": "JULIA P.",
+   "handlowiec": "Oskar",
+   "tresc": "Pan Oskar sprzedawca godny polecenia!!!"
+  },
+  {
+   "data": "25.09.2026",
+   "nazwa": "MIRELLA M.",
+   "handlowiec": "Oskar",
+   "tresc": "Bardzo przyjemny salon, wszystko cierpliwie wytłumaczone :) obsługiwał mnie Pan Oskar, dziękuję i do zobaczenia"
+  },
+  {
+   "data": "25.09.2026",
+   "nazwa": "SAD W.",
+   "handlowiec": "Oskar",
+   "tresc": "Chciałbym serdecznie podziękować Panu Oskarowii za pełen profesjonalizm, zaangażowanie i świetne podejście podczas całego procesu zakupu VW Polo. Sam odbiór auta przebiegł w świetnej atmosferze i z dużą dbałością o każdy szczegół. Profesjonalna obsługa, świetny kontakt, indywidualne podejście i pozytywna atmosfera sprawiły, że zakup Polo był naprawdę przyjemnym doświadczeniem. Panie Oskarze — dziękuję za pomoc i zaangażowanie. Zdecydowanie polecam współpracę z Panem Oskarem każdemu, kto szuka profesjonalnego i godnego zaufania doradcy przy zakupie Volkswagena."
+  },
+  {
+   "data": "25.09.2026",
+   "nazwa": "E S.",
+   "handlowiec": "Oskar",
+   "tresc": "Bardzo jestem zadowolona z wizyty.Pan Oskar profesjonalny sprzedawca godny polecenia ð"
+  },
+  {
+   "data": "25.09.2026",
+   "nazwa": "HALINA C.",
+   "handlowiec": "Oskar",
+   "tresc": "Bardzo dziękuję panu Oskarowii za profesjonalne podejście"
+  },
+  {
+   "data": "25.09.2026",
+   "nazwa": "KATERYNA K.",
+   "handlowiec": "Konrad",
+   "tresc": "Bardzo dziękujemy Panu Konradu! Jest świetnym specjalistą, poświęcił nam wiele czasu i szczegółowo omówił wszystkie opcje. Jest oddany swojej pracy i stanowi eksperta w swojej dziedzinie."
+  },
+  {
+   "data": "24.09.2026",
+   "nazwa": "WIK T.",
+   "handlowiec": "Małgorzata",
+   "tresc": "Bardzo polecam salon Volkswagen Gazda Group Katowice a szczególnie Panią Małgorzatę, która była ze mną od pierwszego dnia, przedstawiając ofertę i pomagając w doborze, należy podkreślić jej wysoką kulturę osobistą i umiejętność pracy z klientem, dzięki czemu mój zakup od pierwszego dnia i złożenia zamówienia aż po odbiór gotowego do wydania samochodu i wyjazdu z salonu przebiegał nienagannie, żadnych problemów, wszystko zgodnie z ustaleniami w momencie złożenia zamówienia. Liczę również na równie owocną współpracę w kwestii serwisowania naszego pojazdu w Państwa serwisie."
+  },
+  {
+   "data": "24.09.2026",
+   "nazwa": "KRYSTIAN K.",
+   "handlowiec": "Anita",
+   "tresc": "Sprzedawca Pani Anita. Sprawnie szybko z klasą. Śmiało mogę polecić a sam trafiłem przez stronę internetową. Z ubezpieczeniem u Pani Aleksandry Kawon to samo. Polecam"
+  },
+  {
+   "data": "21.09.2026",
+   "nazwa": "BENIAMIN K.",
+   "handlowiec": "Oskar",
+   "tresc": "Podziękowania dla pana Oskara za sprawną pomoc w zakupie nowego samochodu i dopilnowania wszelkich formalności."
+  },
+  {
+   "data": "16.09.2026",
+   "nazwa": "JANUSZ S.",
+   "handlowiec": "Małgorzata",
+   "tresc": "Bardzo profesjonalnie przeprowadzona procedura sprzedaży leasingu ubezpieczenia i wydanie samochodu przez bardzo młodą panią Małgosię która potrafiła też wszystko wyjaśnić."
+  },
+  {
+   "data": "11.09.2026",
+   "nazwa": "KRZYSZTOF O.",
+   "handlowiec": "Małgorzata",
+   "tresc": "Profesjonalne podejście, wiedza i miła obsługa to klucz do tych pięciu gwiazdek. Tak trzymać Pani Małgorzato"
+  },
   {
    "data": "09.09.2026",
    "nazwa": "KAMIL B.",
@@ -771,43 +1011,124 @@
   }
  ],
  "trade_in_crm": {
-  "miesiac": "2026-09",
+  "miesiac": "2026-10",
   "biezacy": {
-   "label": "Wrzesień 2026",
-   "total_leads": 28,
+   "label": "Październik 2026",
+   "total_leads": 129,
    "ranking": [
     {
+     "name": "Fabian",
+     "przekazane": 2,
+     "odkupione": 1,
+     "konwersja": 50
+    },
+    {
      "name": "Małgorzata",
-     "przekazane": 9,
+     "przekazane": 3,
      "odkupione": 0,
      "konwersja": 0
     },
     {
-     "name": "Fabian",
-     "przekazane": 7,
+     "name": "Anita",
+     "przekazane": 2,
      "odkupione": 0,
      "konwersja": 0
     },
     {
      "name": "Oskar",
-     "przekazane": 4,
-     "odkupione": 1,
-     "konwersja": 25
+     "przekazane": 2,
+     "odkupione": 0,
+     "konwersja": 0
     },
     {
-     "name": "Anita",
-     "przekazane": 3,
+     "name": "Patryk",
+     "przekazane": 1,
      "odkupione": 0,
      "konwersja": 0
     },
     {
      "name": "Kacper",
-     "przekazane": 3,
+     "przekazane": 0,
      "odkupione": 0,
      "konwersja": 0
     },
     {
      "name": "Konrad",
+     "przekazane": 0,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Magdalena",
+     "przekazane": 0,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Tymoteusz",
+     "przekazane": 0,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Robert",
+     "przekazane": 0,
+     "odkupione": 0,
+     "konwersja": 0
+    }
+   ],
+   "wygrane": [
+    {
+     "data": "13.10.2026",
+     "klient": "A.B.",
+     "pojazd": "Seat Arona",
+     "vin": "LR074969",
+     "handlowiec": "Fabian"
+    }
+   ]
+  },
+  "poprzedni": {
+   "label": "Wrzesień 2026",
+   "total_leads": 206,
+   "ranking": [
+    {
+     "name": "Małgorzata",
+     "przekazane": 10,
+     "odkupione": 1,
+     "konwersja": 10
+    },
+    {
+     "name": "Oskar",
+     "przekazane": 7,
+     "odkupione": 1,
+     "konwersja": 14
+    },
+    {
+     "name": "Fabian",
+     "przekazane": 10,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Anita",
+     "przekazane": 9,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Kacper",
+     "przekazane": 5,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Konrad",
+     "przekazane": 5,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Robert",
      "przekazane": 2,
      "odkupione": 0,
      "konwersja": 0
@@ -823,80 +1144,894 @@
      "przekazane": 0,
      "odkupione": 0,
      "konwersja": 0
+    },
+    {
+     "name": "Tymoteusz",
+     "przekazane": 0,
+     "odkupione": 0,
+     "konwersja": 0
     }
    ],
    "wygrane": [
     {
      "data": "03.09.2026",
      "klient": "P.K.",
-     "pojazd": "Volkswagen T-Roc",
-     "vin": "",
+     "pojazd": "VW T-ROC",
+     "vin": "-",
      "handlowiec": "Oskar"
-    }
-   ]
-  },
-  "poprzedni": {
-   "label": "Sierpień 2026",
-   "total_leads": 54,
-   "ranking": [
-    {
-     "name": "Małgorzata",
-     "przekazane": 12,
-     "odkupione": 0,
-     "konwersja": 0
     },
     {
-     "name": "Anita",
-     "przekazane": 10,
-     "odkupione": 1,
-     "konwersja": 10
-    },
-    {
-     "name": "Kacper",
-     "przekazane": 10,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Fabian",
-     "przekazane": 10,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Konrad",
-     "przekazane": 6,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Oskar",
-     "przekazane": 6,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Magdalena",
-     "przekazane": 0,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Patryk",
-     "przekazane": 0,
-     "odkupione": 0,
-     "konwersja": 0
-    }
-   ],
-   "wygrane": [
-    {
-     "data": "26.08.2026",
-     "klient": "S.K.",
-     "pojazd": "Volkswagen T-Roc",
-     "vin": "",
-     "handlowiec": "Anita"
+     "data": "14.09.2026",
+     "klient": "H.K.",
+     "pojazd": "Honda HRV",
+     "vin": "-",
+     "handlowiec": "Małgorzata"
     }
    ]
   }
+ },
+ "grafik": {
+  "aktualny": {
+   "rok": 2026,
+   "mc": 10,
+   "mc_label": "Październik 2026",
+   "dni": 31,
+   "weekdays": {
+    "1": 3,
+    "2": 4,
+    "3": 5,
+    "4": 6,
+    "5": 0,
+    "6": 1,
+    "7": 2,
+    "8": 3,
+    "9": 4,
+    "10": 5,
+    "11": 6,
+    "12": 0,
+    "13": 1,
+    "14": 2,
+    "15": 3,
+    "16": 4,
+    "17": 5,
+    "18": 6,
+    "19": 0,
+    "20": 1,
+    "21": 2,
+    "22": 3,
+    "23": 4,
+    "24": 5,
+    "25": 6,
+    "26": 0,
+    "27": 1,
+    "28": 2,
+    "29": 3,
+    "30": 4,
+    "31": 5
+   },
+   "holidays": {},
+   "handlowcy": [
+    {
+     "short": "Anita",
+     "name": "Anita",
+     "days": [
+      "10",
+      "10",
+      "8",
+      "",
+      "8",
+      "8",
+      "8",
+      "8",
+      "",
+      "",
+      "",
+      "",
+      "9",
+      "9",
+      "9",
+      "9",
+      "8",
+      "",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "8",
+      "",
+      "8",
+      "8",
+      "8",
+      "8",
+      "8",
+      ""
+     ]
+    },
+    {
+     "short": "Konrad",
+     "name": "Konrad",
+     "days": [
+      "10",
+      "10",
+      "",
+      "",
+      "9",
+      "9",
+      "9",
+      "9",
+      "9",
+      "8",
+      "",
+      "8",
+      "8",
+      "8",
+      "8",
+      "8",
+      "8",
+      "",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "",
+      "",
+      "10",
+      "9",
+      "9",
+      "9",
+      "9",
+      "8"
+     ]
+    },
+    {
+     "short": "Oskar",
+     "name": "Oskar",
+     "days": [
+      "8",
+      "8",
+      "",
+      "",
+      "10",
+      "10",
+      "10",
+      "9",
+      "8",
+      "",
+      "",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "",
+      "",
+      "8",
+      "",
+      "8",
+      "8",
+      "8",
+      "",
+      "",
+      "9",
+      "9",
+      "9",
+      "9",
+      "9",
+      ""
+     ]
+    },
+    {
+     "short": "Kacper",
+     "name": "Kacper",
+     "days": [
+      "9",
+      "9",
+      "8",
+      "",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "",
+      "",
+      "9",
+      "9",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "9",
+      "",
+      "",
+      "",
+      "",
+      "10",
+      "10",
+      "10",
+      "10",
+      "8"
+     ]
+    },
+    {
+     "short": "Fabian",
+     "name": "Fabian",
+     "days": [
+      "9",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "10",
+      "8",
+      "",
+      "8",
+      "8",
+      "8",
+      "8",
+      "8",
+      "8",
+      "",
+      "9",
+      "9",
+      "9",
+      "9",
+      "9",
+      "8",
+      "",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      ""
+     ]
+    },
+    {
+     "short": "Małgorzata",
+     "name": "Małgorzata",
+     "days": [
+      "8",
+      "8",
+      "8",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "9",
+      "8",
+      "",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "",
+      "",
+      "8",
+      "8",
+      "8",
+      "8",
+      "8",
+      "",
+      "",
+      "9",
+      "9",
+      "9",
+      "9",
+      "9",
+      "8"
+     ]
+    },
+    {
+     "short": "Magdalena",
+     "name": "Magdalena",
+     "days": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "short": "Patryk",
+     "name": "Patryk",
+     "days": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ]
+    }
+   ],
+   "plan_urlopowy": {},
+   "asystenci": []
+  },
+  "nastepny": {
+   "rok": 2026,
+   "mc": 11,
+   "mc_label": "Listopad 2026",
+   "dni": 30,
+   "weekdays": {
+    "1": 6,
+    "2": 0,
+    "3": 1,
+    "4": 2,
+    "5": 3,
+    "6": 4,
+    "7": 5,
+    "8": 6,
+    "9": 0,
+    "10": 1,
+    "11": 2,
+    "12": 3,
+    "13": 4,
+    "14": 5,
+    "15": 6,
+    "16": 0,
+    "17": 1,
+    "18": 2,
+    "19": 3,
+    "20": 4,
+    "21": 5,
+    "22": 6,
+    "23": 0,
+    "24": 1,
+    "25": 2,
+    "26": 3,
+    "27": 4,
+    "28": 5,
+    "29": 6,
+    "30": 0
+   },
+   "holidays": {
+    "1": "Wszystkich Świętych",
+    "11": "Dzień Niepodległości"
+   },
+   "handlowcy": [
+    {
+     "short": "Kacper",
+     "name": "Kacper",
+     "days": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "short": "Konrad",
+     "name": "Konrad",
+     "days": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "short": "Oskar",
+     "name": "Oskar",
+     "days": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "short": "Fabian",
+     "name": "Fabian",
+     "days": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "short": "Małgorzata",
+     "name": "Małgorzata",
+     "days": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "short": "Anita",
+     "name": "Anita",
+     "days": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "short": "Magdalena",
+     "name": "Magdalena",
+     "days": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "short": "Patryk",
+     "name": "Patryk",
+     "days": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ]
+    }
+   ],
+   "plan_urlopowy": {},
+   "asystenci": []
+  }
+ },
+ "ih_numer": "IH 51/2026",
+ "ih_plik": "Informacja handlowa 51_2026 Załącznik1_Informacja produkcyjna na tydzień 40_2026 (1).pdf",
+ "produkcja": {
+  "komunikaty": [
+   {
+    "tytul": "PLAC CENTRALNY IMPORTERA",
+    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "tresc": "PLAC CENTRALNY IMPORTERA: zachęcamy do zapoznania się z bogatą ofertą samochodów w ramach tzw. „Oferty pod ZWS” importera, szczegóły w Piśmie okólnym 29/2026. Obecnie na stoku VGP znajduje się blisko 80 samochodów dostępnych od ręki. Zachęcamy do jak najszybszego zamawiania nowych komisji w ramach kwot, im wcześniej zamówione komisje, tym większa szansa na szybszą produkcję – planujemy już tygodnie od 43/2026 wzwyż zatem tymi kwotami budujemy magazyny na Q4_2026."
+   },
+   {
+    "tytul": "SILNIKI HEV",
+    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "tresc": "SILNIKI HEV zachęcamy do zapoznania się z prezentacją dotyczącą technologii HEV, w modelu Golf i T-Roc, szczegóły znajdują się na platformie PAS"
+   },
+   {
+    "tytul": "T-Roc HEV i Golf HEV – Opcja „Park Assist Pro” niedostępna do 07/2027 – szczegóły kolejny",
+    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "tresc": "slajd"
+   },
+   {
+    "tytul": "Golf HB/VAR (DA1/DB5) – informujemy o zmianie oferty produktowej dla zamówień od 22.10.202",
+    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "tresc": "6, szczegóły znajdują się w Piśmie okólnym 85/2026"
+   },
+   {
+    "tytul": "W związku z przełomem roku kalendarzowego przypominamy, że zamówienia klienckie opisane pr",
+    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "tresc": "zez Państwa spodziewaną datą realizacji do 15.02.2027, mogą zostać zaplanowane i wyprodukowane z datą CP8 2026. Wynika to wprost z faktu potrzeby uwzględnienia zwyczajowej przerwy produkcyjnej między tygodniami 50/2026 - 01/2027 oraz czasu logistycznej dostawy pojazdów."
+   },
+   {
+    "tytul": "W przypadku zamówień klienckich, dla których rok produkcji 2027 jest kluczowym atrybutem,",
+    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "tresc": "W przypadku zamówień klienckich, dla których rok produkcji 2027 jest kluczowym atrybutem, sugerujemy ustawienie terminu wydania pojazdu klientowi (TRZ) na późniejszą datę, np. marzec 2027 r. Po zamknięciu planowania tygodni produkcyjnych na rok 2026 będzie można ponownie dostosować termin wydania do daty bardziej odpowiadającej oczekiwaniom klienta."
+   },
+   {
+    "tytul": "UWAGA: T-RocHEV i Golf HEV – Opcja „Park Assist Pro” niedostępna do 07/2027!",
+    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "tresc": "UWAGA: T-RocHEV i Golf HEV – Opcja „Park Assist Pro” niedostępna do 07/2027!"
+   },
+   {
+    "tytul": "T-RocHEV",
+    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "tresc": "T-RocHEV Opcja „Park Assist Pro” [8A5] będzie niedostępna produkcyjnie do tygodnia 07/2027. „Park Assist Pro” został czasowo usunięty z GO i Konfiguratora klienckiego. Termin dostawy zamówienia z kodem [8A5] w specyfikacji to marzec 2027 - prosimy poinformować o tym Klientów. Alternatywą jest usunięcie kodu 8A5, samochód będzie wtedy wyposażony w „Park Assist Plus” [8A2], który jest standardem w wersjach Style oraz R-Line a jego produkcja będzie możliwa jeszcze w 2026 roku."
+   },
+   {
+    "tytul": "Golf HEV",
+    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "tresc": "Golf HEV Opcja „Park Assist Pro” [PK2/PK3] będzie niedostępna produkcyjnie do tygodnia 07/2027. „Park Assist Pro” został czasowo usunięty z GO i Konfiguratora klienckiego. Termin dostawy zamówienia z kodem [PK2/PK3] w specyfikacji to marzec 2027. - prosimy poinformować o tym Klientów. Dla wersji Plus: standard wersji Plus zmienia się z kodu PK2/PK3 na PK6/PK7 - samochód będzie wtedy wyposażony w „Park Assist Plus” W pozostałych wersjach: istnieje możliwość całkowitej rezygnacji z opcji „Park Assist”. W przypadku już zebranych zamówień, w przypadku chęci rezygnacji z „Park Assist Pro” należy skontaktować się z Dysporegionem."
+   }
+  ],
+  "przerwy": [
+   {
+    "tytul": "Przerwy produkcyjne",
+    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "pre": true,
+    "tresc": "KOMUNIKATY\n▪ W związku z przełomem roku kalendarzowego przypominamy, że zamówienia klienckie opisane przez\nPaństwa spodziewaną datą realizacji do 15.02.2027, mogą zostać zaplanowane i wyprodukowane z datą\nCP8 2026.\nWynika to wprost z faktu potrzeby uwzględnienia zwyczajowej przerwy produkcyjnej między\ntygodniami 50/2026 - 01/2027 oraz czasu logistycznej dostawy pojazdów.\n▪ W przypadku zamówień klienckich, dla których rok produkcji 2027 jest kluczowym atrybutem,\nsugerujemy ustawienie terminu wydania pojazdu klientowi (TRZ) na późniejszą datę, np. marzec 2027 r.\nPo zamknięciu planowania tygodni produkcyjnych na rok 2026 będzie można ponownie dostosować\ntermin wydania do daty bardziej odpowiadającej oczekiwaniom klienta."
+   }
+  ],
+  "kalendarz": [
+   {
+    "tytul": "Kalendarz produkcyjny — tydzień 40/2026",
+    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "tabela": [
+     [
+      "Model",
+      "Najbliższy zatw. tydzień",
+      "Najwcześniejszy m-c dla nowych komisji",
+      "Opóźnienie prod.",
+      "Dostawa fabryka → VGP"
+     ],
+     [
+      "POLO (AE1)",
+      "50/2026",
+      "STYCZEŃ 2027",
+      "-",
+      "7 TYGODNI"
+     ],
+     [
+      "T-CROSS (D31)",
+      "45/2026",
+      "LISTOPAD",
+      "-",
+      "4 TYGODNIE"
+     ],
+     [
+      "TAIGO (CS1)",
+      "45/2026",
+      "STYCZEŃ 2027",
+      "-",
+      "5 TYGODNI"
+     ],
+     [
+      "T-ROC (D41)",
+      "44/2026",
+      "LISTOPAD",
+      "-",
+      "4 TYGODNIE"
+     ],
+     [
+      "GOLF HB (DA1)",
+      "44/2026",
+      "LISTOPAD",
+      "-",
+      "3 –14 DNI"
+     ],
+     [
+      "GOLF VAR (DB5)",
+      "44/2026",
+      "LISTOPAD",
+      "-",
+      "3 –14 DNI"
+     ],
+     [
+      "PASSAT (CJ5)",
+      "44/2026",
+      "LISTOPAD",
+      "-",
+      "3 –14 DNI"
+     ],
+     [
+      "TIGUAN (CT1)",
+      "44/2026",
+      "LISTOPAD",
+      "-",
+      "3 –14 DNI"
+     ],
+     [
+      "TAYRON (R41)",
+      "44/2026",
+      "LISTOPAD",
+      "-",
+      "3 –14 DNI"
+     ],
+     [
+      "ID. POLO (ES1)",
+      "44+45/2026",
+      "GRUDZIEŃ",
+      "-",
+      "4 TYGODNIE"
+     ],
+     [
+      "ID.3 NEO (E13)",
+      "44/2026",
+      "GRUDZIEŃ",
+      "-",
+      "3 –14 DNI"
+     ],
+     [
+      "ID.4 (E21)",
+      "47/2026",
+      "ZAKOŃCZENIE PRODUKCJI",
+      "-",
+      "3 –14 DNI"
+     ],
+     [
+      "ID.5 (E39)",
+      "-",
+      "ZAKOŃCZENIE PRODUKCJI",
+      "-",
+      "3 –14 DNI"
+     ],
+     [
+      "ID.7 (ED2)",
+      "44/2026",
+      "GRUDZIEŃ",
+      "-",
+      "3 –14 DNI"
+     ],
+     [
+      "ID.7 TOURER (ED5)",
+      "44/2026",
+      "STYCZEŃ 2027",
+      "-",
+      "3 –14 DNI"
+     ]
+    ],
+    "tresc": "Terminy orientacyjne — mogą się wydłużyć. Uwzględnij też restrykcje."
+   }
+  ],
+  "restrykcje": [
+   {
+    "tytul": "Elementy restrykcyjne — 40/2026",
+    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "pre": true,
+    "tresc": "1M6/1M9/1D2 Hak holowniczy\nDla wszystkich modeli\n3FU/3FG/PS1 Dach panoramiczny\nAE13GV Silnik MPI –80KM\nPOLO (AE1)\nC5C Obręcze ze stopu metali lekkich \"Torsby\" 6,5J x 16\"\nT-CROSS (D31) C1K/44M Obręcze aluminiowe York 18”\n40L Obręcze ze stopu metali lekkich Belmopan 16\"\nTAIGO (CS1)\nC1K/44M/40L Obręcze aluminiowe York 18” /Obręcze ze stopu metali lekkich York 18\"\nSilniki mHEV\nPakiet Performance Plus / GTI Performance / R-Performance / GTI Edition 50 Performance / pakiet Black Edition\nGOLF (DA1)/(DB5) Czarny dach\nPJ9 Obręcze aluminiowe Warmenau8J x 19, czarne\n40P/PJN/PI9/C7M/45N Obręcze aluminiowe Nottingham 7.5J x 17 / Warmenau19” / York 7.5J x 19, czarne\nTiguanEdition 20\nF15/F14/PJU/PJR Obręcze aluminiowe York 8J x 20, czarne / czarne, szlif diamentowy\nTIGUAN (CT1) F42 Obręcze aluminiowe Coventry 8.5J x 19, czarne\nWBR Pakiet stylistyczny R-Line Black Style\nSilniki PHEV\nID.3 NEO (E13) 49G/53P/PJN Felgi Wellington 19’’\n40M/PJ1 Obręcze aluminiowe Edinburgh7J x 17 czarne, polerowane\nID. POLO (ES1)\nBateria 37 kWh\nID.7/ID.7 TOURER (ED2/ED5) 64Q Obręcze aluminiowe czarne Bergen 8J x 19 z przodu, 8,5J x 19 z tyłu\n\nWystąpienie któregokolwiek z powyższych elementów w specyfikacji może wydłużyć czas zatwierdzenia zamówienia do produkcji, a tym samym czas dostawy do Klienta."
+   }
+  ]
  }
 }
