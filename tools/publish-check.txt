@@ -1,3 +1,0 @@
-Test kanalu publikacji przez mcp__github__push_files.
-Przebieg weryfikacyjny: 2026-10-20
-Plik techniczny, nie wplywa na dashboard - mozna usunac.
