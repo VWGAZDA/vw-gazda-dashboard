@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za październik 2026, stan 20.10.2026 · Trade-in: CRM Klienci — stan 20.10.2026 · Grafik: arkusz GRAFIK — stan 20.10.2026 (zakładka „Grafik listopad” jeszcze nie istnieje)",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za październik 2026, stan 22.10.2026 · Trade-in: CRM Klienci — stan 22.10.2026 · Grafik: arkusz GRAFIK — stan 22.10.2026 (zakładka „Grafik listopad” nadal nie istnieje)",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -15,12 +15,12 @@
  "kpi": [
   {
    "name": "Anita",
-   "trade_in": 2,
+   "trade_in": 3,
    "oferty": 40,
    "klienci": 37,
-   "zamowienia": 14,
+   "zamowienia": 16,
    "wydania": 7,
-   "traffic": 14,
+   "traffic": 20,
    "opinie": 4,
    "flota": false
   },
@@ -31,7 +31,7 @@
    "klienci": 57,
    "zamowienia": 13,
    "wydania": 7,
-   "traffic": 28,
+   "traffic": 32,
    "opinie": 1,
    "flota": false
   },
@@ -64,7 +64,7 @@
    "klienci": 37,
    "zamowienia": 6,
    "wydania": 3,
-   "traffic": 13,
+   "traffic": 15,
    "opinie": 0,
    "flota": false
   },
@@ -75,7 +75,7 @@
    "klienci": 47,
    "zamowienia": 14,
    "wydania": 4,
-   "traffic": 14,
+   "traffic": 15,
    "opinie": 2,
    "flota": false
   },
@@ -84,9 +84,9 @@
    "trade_in": 0,
    "oferty": 34,
    "klienci": 12,
-   "zamowienia": 4,
+   "zamowienia": 5,
    "wydania": 2,
-   "traffic": 7,
+   "traffic": 8,
    "opinie": 0,
    "flota": true
   },
@@ -97,7 +97,7 @@
    "klienci": 22,
    "zamowienia": 1,
    "wydania": 3,
-   "traffic": 1,
+   "traffic": 2,
    "opinie": 0,
    "flota": true
   }
@@ -189,8 +189,8 @@
    5,
    0,
    12,
-   0,
-   0,
+   11,
+   4,
    0,
    0,
    0,
@@ -203,7 +203,7 @@
    0
   ]
  },
- "opinie_poprzedni_raport": "15.10.2026",
+ "opinie_poprzedni_raport": "20.10.2026",
  "opinie": [
   {
    "data": "19.10.2026",
@@ -1014,13 +1014,13 @@
   "miesiac": "2026-10",
   "biezacy": {
    "label": "Październik 2026",
-   "total_leads": 129,
+   "total_leads": 135,
    "ranking": [
     {
-     "name": "Fabian",
-     "przekazane": 2,
-     "odkupione": 1,
-     "konwersja": 50
+     "name": "Anita",
+     "przekazane": 3,
+     "odkupione": 0,
+     "konwersja": 0
     },
     {
      "name": "Małgorzata",
@@ -1029,10 +1029,10 @@
      "konwersja": 0
     },
     {
-     "name": "Anita",
+     "name": "Fabian",
      "przekazane": 2,
-     "odkupione": 0,
-     "konwersja": 0
+     "odkupione": 1,
+     "konwersja": 50
     },
     {
      "name": "Oskar",
@@ -1089,19 +1089,13 @@
   },
   "poprzedni": {
    "label": "Wrzesień 2026",
-   "total_leads": 206,
+   "total_leads": 207,
    "ranking": [
     {
      "name": "Małgorzata",
      "przekazane": 10,
      "odkupione": 1,
      "konwersja": 10
-    },
-    {
-     "name": "Oskar",
-     "przekazane": 7,
-     "odkupione": 1,
-     "konwersja": 14
     },
     {
      "name": "Fabian",
@@ -1116,13 +1110,19 @@
      "konwersja": 0
     },
     {
-     "name": "Kacper",
+     "name": "Oskar",
+     "przekazane": 7,
+     "odkupione": 1,
+     "konwersja": 14
+    },
+    {
+     "name": "Konrad",
      "przekazane": 5,
      "odkupione": 0,
      "konwersja": 0
     },
     {
-     "name": "Konrad",
+     "name": "Kacper",
      "przekazane": 5,
      "odkupione": 0,
      "konwersja": 0
