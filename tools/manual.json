@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za październik 2026, stan 22.10.2026 · Trade-in: CRM Klienci — stan 22.10.2026 · Grafik: arkusz GRAFIK — stan 22.10.2026 (zakładka „Grafik listopad” nadal nie istnieje)",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za październik 2026, stan 23.10.2026 · Trade-in: CRM Klienci — stan 23.10.2026 · Grafik: arkusz GRAFIK — stan 23.10.2026 (zakładka „Grafik listopad” nadal nie istnieje)",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -16,33 +16,33 @@
   {
    "name": "Anita",
    "trade_in": 3,
-   "oferty": 40,
-   "klienci": 37,
+   "oferty": 46,
+   "klienci": 42,
    "zamowienia": 16,
    "wydania": 7,
-   "traffic": 20,
+   "traffic": 23,
    "opinie": 4,
    "flota": false
   },
   {
    "name": "Konrad",
    "trade_in": 0,
-   "oferty": 55,
-   "klienci": 57,
+   "oferty": 65,
+   "klienci": 66,
    "zamowienia": 13,
    "wydania": 7,
-   "traffic": 32,
+   "traffic": 35,
    "opinie": 1,
    "flota": false
   },
   {
    "name": "Oskar",
    "trade_in": 2,
-   "oferty": 45,
-   "klienci": 55,
+   "oferty": 51,
+   "klienci": 60,
    "zamowienia": 24,
    "wydania": 7,
-   "traffic": 14,
+   "traffic": 16,
    "opinie": 3,
    "flota": false
   },
@@ -53,37 +53,37 @@
    "klienci": 26,
    "zamowienia": 12,
    "wydania": 5,
-   "traffic": 10,
+   "traffic": 12,
    "opinie": 1,
    "flota": false
   },
   {
    "name": "Fabian",
-   "trade_in": 2,
-   "oferty": 32,
-   "klienci": 37,
+   "trade_in": 3,
+   "oferty": 46,
+   "klienci": 47,
    "zamowienia": 6,
    "wydania": 3,
-   "traffic": 15,
+   "traffic": 17,
    "opinie": 0,
    "flota": false
   },
   {
    "name": "Małgorzata",
    "trade_in": 3,
-   "oferty": 49,
-   "klienci": 47,
+   "oferty": 52,
+   "klienci": 52,
    "zamowienia": 14,
    "wydania": 4,
-   "traffic": 15,
+   "traffic": 17,
    "opinie": 2,
    "flota": false
   },
   {
    "name": "Magdalena",
    "trade_in": 0,
-   "oferty": 34,
-   "klienci": 12,
+   "oferty": 36,
+   "klienci": 13,
    "zamowienia": 5,
    "wydania": 2,
    "traffic": 8,
@@ -93,11 +93,11 @@
   {
    "name": "Patryk",
    "trade_in": 1,
-   "oferty": 47,
+   "oferty": 67,
    "klienci": 22,
    "zamowienia": 1,
    "wydania": 3,
-   "traffic": 2,
+   "traffic": 3,
    "opinie": 0,
    "flota": true
   }
@@ -123,8 +123,8 @@
    7,
    0,
    43,
-   0,
-   0,
+   35,
+   26,
    0,
    0,
    0,
@@ -156,8 +156,8 @@
    7,
    0,
    29,
-   0,
-   0,
+   16,
+   19,
    0,
    0,
    0,
@@ -191,7 +191,7 @@
    12,
    11,
    4,
-   0,
+   15,
    0,
    0,
    0,
@@ -203,7 +203,7 @@
    0
   ]
  },
- "opinie_poprzedni_raport": "20.10.2026",
+ "opinie_poprzedni_raport": "21.10.2026",
  "opinie": [
   {
    "data": "19.10.2026",
@@ -1014,8 +1014,14 @@
   "miesiac": "2026-10",
   "biezacy": {
    "label": "Październik 2026",
-   "total_leads": 135,
+   "total_leads": 144,
    "ranking": [
+    {
+     "name": "Fabian",
+     "przekazane": 3,
+     "odkupione": 1,
+     "konwersja": 33
+    },
     {
      "name": "Anita",
      "przekazane": 3,
@@ -1027,12 +1033,6 @@
      "przekazane": 3,
      "odkupione": 0,
      "konwersja": 0
-    },
-    {
-     "name": "Fabian",
-     "przekazane": 2,
-     "odkupione": 1,
-     "konwersja": 50
     },
     {
      "name": "Oskar",
@@ -1065,13 +1065,13 @@
      "konwersja": 0
     },
     {
-     "name": "Tymoteusz",
+     "name": "Robert",
      "przekazane": 0,
      "odkupione": 0,
      "konwersja": 0
     },
     {
-     "name": "Robert",
+     "name": "Tymoteusz",
      "przekazane": 0,
      "odkupione": 0,
      "konwersja": 0
@@ -1092,6 +1092,12 @@
    "total_leads": 207,
    "ranking": [
     {
+     "name": "Oskar",
+     "przekazane": 7,
+     "odkupione": 1,
+     "konwersja": 14
+    },
+    {
      "name": "Małgorzata",
      "przekazane": 10,
      "odkupione": 1,
@@ -1110,19 +1116,13 @@
      "konwersja": 0
     },
     {
-     "name": "Oskar",
-     "przekazane": 7,
-     "odkupione": 1,
-     "konwersja": 14
-    },
-    {
-     "name": "Konrad",
+     "name": "Kacper",
      "przekazane": 5,
      "odkupione": 0,
      "konwersja": 0
     },
     {
-     "name": "Kacper",
+     "name": "Konrad",
      "przekazane": 5,
      "odkupione": 0,
      "konwersja": 0
