@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za październik 2026, stan 23.10.2026 · Trade-in: CRM Klienci — stan 23.10.2026 · Grafik: arkusz GRAFIK — stan 23.10.2026 (zakładka „Grafik listopad” nadal nie istnieje)",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za październik 2026, stan 23.10.2026 (26.10 konektor Google Drive wymagał ponownego logowania — nie odświeżono) · Trade-in: CRM Klienci — stan 26.10.2026 · Grafik: arkusz GRAFIK — stan 26.10.2026 (zakładka „Grafik listopad” nadal nie istnieje)",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -1014,7 +1014,7 @@
   "miesiac": "2026-10",
   "biezacy": {
    "label": "Październik 2026",
-   "total_leads": 144,
+   "total_leads": 156,
    "ranking": [
     {
      "name": "Fabian",
