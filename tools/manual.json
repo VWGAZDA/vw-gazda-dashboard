@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za październik 2026, stan 02.11.2026 (konektor Google Drive znów działa) · Trade-in: CRM Klienci — stan 02.11.2026 · Grafik: arkusz GRAFIK — stan 02.11.2026, zakładka „Grafik listopad” już istnieje i jest wypełniona",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za październik 2026, stan 03.11.2026 · Trade-in: CRM Klienci — stan 03.11.2026 · Grafik: arkusz GRAFIK — stan 03.11.2026, październik i listopad odczytane, test niedziel OK",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -17,9 +17,9 @@
    "name": "Anita",
    "trade_in": 6,
    "oferty": 69,
-   "klienci": 64,
-   "zamowienia": 26,
-   "wydania": 10,
+   "klienci": 76,
+   "zamowienia": 30,
+   "wydania": 11,
    "traffic": 29,
    "opinie": 5,
    "flota": false
@@ -28,19 +28,19 @@
    "name": "Konrad",
    "trade_in": 0,
    "oferty": 91,
-   "klienci": 79,
-   "zamowienia": 18,
+   "klienci": 83,
+   "zamowienia": 20,
    "wydania": 10,
    "traffic": 48,
-   "opinie": 3,
+   "opinie": 5,
    "flota": false
   },
   {
    "name": "Oskar",
    "trade_in": 2,
    "oferty": 68,
-   "klienci": 74,
-   "zamowienia": 27,
+   "klienci": 75,
+   "zamowienia": 28,
    "wydania": 9,
    "traffic": 22,
    "opinie": 3,
@@ -50,9 +50,9 @@
    "name": "Kacper",
    "trade_in": 0,
    "oferty": 42,
-   "klienci": 36,
+   "klienci": 39,
    "zamowienia": 17,
-   "wydania": 6,
+   "wydania": 7,
    "traffic": 18,
    "opinie": 4,
    "flota": false
@@ -61,7 +61,7 @@
    "name": "Fabian",
    "trade_in": 4,
    "oferty": 64,
-   "klienci": 59,
+   "klienci": 63,
    "zamowienia": 7,
    "wydania": 6,
    "traffic": 23,
@@ -72,7 +72,7 @@
    "name": "Małgorzata",
    "trade_in": 4,
    "oferty": 69,
-   "klienci": 75,
+   "klienci": 77,
    "zamowienia": 18,
    "wydania": 8,
    "traffic": 27,
@@ -83,9 +83,9 @@
    "name": "Magdalena",
    "trade_in": 0,
    "oferty": 51,
-   "klienci": 14,
+   "klienci": 16,
    "zamowienia": 7,
-   "wydania": 2,
+   "wydania": 3,
    "traffic": 8,
    "opinie": 0,
    "flota": true
@@ -94,7 +94,7 @@
    "name": "Patryk",
    "trade_in": 4,
    "oferty": 84,
-   "klienci": 31,
+   "klienci": 40,
    "zamowienia": 1,
    "wydania": 3,
    "traffic": 3,
@@ -165,8 +165,8 @@
    25,
    18,
    19,
-   0,
-   0,
+   27,
+   10,
    0
   ],
   "traffic": [
@@ -206,6 +206,18 @@
  "opinie_poprzedni_raport": "29.10.2026",
  "opinie": [
   {
+   "data": "01.11.2026",
+   "nazwa": "ZOSIA B.",
+   "handlowiec": "Anita",
+   "tresc": "W zeszłym miesiącu udało mi się sfinalizować zakup samochodu. Transakcja przebiegła płynnie, Pani Anita to uprzejma, rzetelna i pomocna osoba. Formalności załatwiliśmy szybko i bezproblemowo, samochód zgodny z opisem, wszystko jest w jak najlepszym porządku. Dziękuję i szczerze polecam!"
+  },
+  {
+   "data": "30.10.2026",
+   "nazwa": "IZABELA B.",
+   "handlowiec": "Konrad",
+   "tresc": "Z pełnym przekonaniem polecam współpracę z Panem Konradem! Profesjonalna obsługa, ogromna wiedza, życzliwe podejście do klienta i pełne zaangażowanie na każdym etapie zakupu samochodu. Wszystkie kwestie zostały jasno i rzetelnie wyjaśnione, a cały proces przebiegł sprawnie i w miłej atmosferze. Sprzedawca wykazał się cierpliwością, kompetencją i indywidualnym podejściem, dzięki czemu mogliśmy czuć się zaopiekowani i pewni podjętej decyzji. Takiej obsługi życzyłabym sobie w każdym salonie samochodowym! Serdecznie polecam! 🙂"
+  },
+  {
    "data": "29.10.2026",
    "nazwa": "WIKTOR K.",
    "handlowiec": "Małgorzata",
@@ -222,6 +234,12 @@
    "nazwa": "SONIA K.",
    "handlowiec": "Konrad",
    "tresc": "Ostatnio miałam przyjemność rozmawiać z p. Konradem i jestem mega zadowolona - szybko, sprawnie i konkretnie załatwione to, co chciałam. Samochód śmiga, kontakt w razie „w” jest i widać, że wsparcie klienta w wyborze samochodu jest na wysokim poziomie :)"
+  },
+  {
+   "data": "29.10.2026",
+   "nazwa": "TOMASZ B.",
+   "handlowiec": "Konrad",
+   "tresc": "Jesteśmy bardzo zadowoleni z obsługi Pana Konrada w tym salonie. Sprzedawca wykazał się pełnym profesjonalizmem, ogromną życzliwością i zaangażowaniem. Chętnie odpowiadał na wszystkie pytania, służył fachową radą i pomógł w wyborze najlepszego rozwiązania. Cała obsługa przebiegła w miłej i przyjaznej atmosferze. Takich sprzedawców spotyka się naprawdę rzadko! Zdecydowanie polecam i dziękuję za profesjonalną obsługę! 😊"
   },
   {
    "data": "28.10.2026",
