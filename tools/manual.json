@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za październik 2026, stan 03.11.2026 · Trade-in: CRM Klienci — stan 03.11.2026 · Grafik: arkusz GRAFIK — stan 03.11.2026, październik i listopad odczytane, test niedziel OK",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za październik 2026, stan 04.11.2026 · Trade-in: CRM Klienci — stan 04.11.2026 · Grafik: arkusz GRAFIK — stan 04.11.2026, październik i listopad odczytane, test niedziel OK",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -16,8 +16,8 @@
   {
    "name": "Anita",
    "trade_in": 6,
-   "oferty": 69,
-   "klienci": 76,
+   "oferty": 72,
+   "klienci": 67,
    "zamowienia": 30,
    "wydania": 11,
    "traffic": 29,
@@ -27,7 +27,7 @@
   {
    "name": "Konrad",
    "trade_in": 0,
-   "oferty": 91,
+   "oferty": 96,
    "klienci": 83,
    "zamowienia": 20,
    "wydania": 10,
@@ -38,8 +38,8 @@
   {
    "name": "Oskar",
    "trade_in": 2,
-   "oferty": 68,
-   "klienci": 75,
+   "oferty": 74,
+   "klienci": 77,
    "zamowienia": 28,
    "wydania": 9,
    "traffic": 22,
@@ -49,7 +49,7 @@
   {
    "name": "Kacper",
    "trade_in": 0,
-   "oferty": 42,
+   "oferty": 46,
    "klienci": 39,
    "zamowienia": 17,
    "wydania": 7,
@@ -60,8 +60,8 @@
   {
    "name": "Fabian",
    "trade_in": 4,
-   "oferty": 64,
-   "klienci": 63,
+   "oferty": 76,
+   "klienci": 68,
    "zamowienia": 7,
    "wydania": 6,
    "traffic": 23,
@@ -71,8 +71,8 @@
   {
    "name": "Małgorzata",
    "trade_in": 4,
-   "oferty": 69,
-   "klienci": 77,
+   "oferty": 74,
+   "klienci": 80,
    "zamowienia": 18,
    "wydania": 8,
    "traffic": 27,
@@ -82,8 +82,8 @@
   {
    "name": "Magdalena",
    "trade_in": 0,
-   "oferty": 51,
-   "klienci": 16,
+   "oferty": 59,
+   "klienci": 22,
    "zamowienia": 7,
    "wydania": 3,
    "traffic": 8,
@@ -93,8 +93,8 @@
   {
    "name": "Patryk",
    "trade_in": 4,
-   "oferty": 84,
-   "klienci": 40,
+   "oferty": 92,
+   "klienci": 43,
    "zamowienia": 1,
    "wydania": 3,
    "traffic": 3,
@@ -132,8 +132,8 @@
    42,
    28,
    27,
-   0,
-   0,
+   32,
+   19,
    0
   ],
   "klienci": [
@@ -166,7 +166,7 @@
    18,
    19,
    27,
-   10,
+   20,
    0
   ],
   "traffic": [
@@ -203,7 +203,7 @@
    0
   ]
  },
- "opinie_poprzedni_raport": "29.10.2026",
+ "opinie_poprzedni_raport": "31.10.2026",
  "opinie": [
   {
    "data": "01.11.2026",
@@ -326,7 +326,7 @@
    "tresc": "To mój pierwszy samochód z salonu i myślę, że super trafiłam. Pani Anita poprowadziła cały proces zakupowy od początku do końca, wszystko profesjonalnie i w miłej atmosferze. A samochód? Przesiadka z Polo 2004 na Polo 2026 jest naprawdę fajnym uczuciem 🙂 Jeśli ktoś szuka nowego Volkswagena to polecam VW Gazda Group Katowice, a w szczególności Panią Anitę 🙂"
   },
   {
-   "data": "05.10.2026",
+   "data": "01.10.2026",
    "nazwa": "JULIA S.",
    "handlowiec": "Anita",
    "tresc": "Wszelkie formalności związane z zakupem naszego nowego samochodu załatwialiśmy z Panią Anitą. Bardzo miła osoba i niezwykle komunikatywna. Jedocześnie bardzo konkretna, rzetelna i kompetentna. Pani Anita podczas wydawania nam samochodu wykazała się dużą wiedzą i pełnym profesjonalizmem. jeszcze raz bardzo dziękujemy. Mariusz i Marzena Szczecińscy."
