@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za listopad 2026, stan 05.11.2026 · Trade-in: CRM Klienci — stan 05.11.2026 · Grafik: arkusz GRAFIK — stan 05.11.2026, listopad odczytany (test niedziel OK); zakładki „Grafik grudzień” brak, miesiąc pusty",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za listopad 2026, stan 06.11.2026 · Trade-in: CRM Klienci — stan 06.11.2026 · Grafik: arkusz GRAFIK — stan 06.11.2026, listopad odczytany (test niedziel OK); zakładki „Grafik grudzień” brak, miesiąc pusty",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -203,7 +203,7 @@
    0
   ]
  },
- "opinie_poprzedni_raport": "31.10.2026",
+ "opinie_poprzedni_raport": "03.11.2026",
  "opinie": [
   {
    "data": "01.11.2026",
@@ -1086,7 +1086,7 @@
   "miesiac": "2026-11",
   "biezacy": {
    "label": "Listopad 2026",
-   "total_leads": 35,
+   "total_leads": 40,
    "ranking": [
     {
      "name": "Kacper",
