@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za listopad 2026, stan 06.11.2026 · Trade-in: CRM Klienci — stan 06.11.2026 · Grafik: arkusz GRAFIK — stan 06.11.2026, listopad odczytany (test niedziel OK); zakładki „Grafik grudzień” brak, miesiąc pusty",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za listopad 2026, stan 09.11.2026 · Trade-in: CRM Klienci — stan 09.11.2026 · Grafik: arkusz GRAFIK — stan 09.11.2026, listopad odczytany (test niedziel OK); zakładki „Grafik grudzień” brak, miesiąc pusty",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -16,9 +16,9 @@
   {
    "name": "Anita",
    "trade_in": 0,
-   "oferty": 0,
-   "klienci": 2,
-   "zamowienia": 0,
+   "oferty": 14,
+   "klienci": 17,
+   "zamowienia": 2,
    "wydania": 0,
    "traffic": 1,
    "opinie": 0,
@@ -27,20 +27,20 @@
   {
    "name": "Konrad",
    "trade_in": 0,
-   "oferty": 0,
-   "klienci": 0,
-   "zamowienia": 0,
+   "oferty": 11,
+   "klienci": 7,
+   "zamowienia": 3,
    "wydania": 0,
-   "traffic": 0,
+   "traffic": 5,
    "opinie": 0,
    "flota": false
   },
   {
    "name": "Oskar",
    "trade_in": 0,
-   "oferty": 0,
-   "klienci": 3,
-   "zamowienia": 0,
+   "oferty": 12,
+   "klienci": 15,
+   "zamowienia": 7,
    "wydania": 0,
    "traffic": 1,
    "opinie": 0,
@@ -49,9 +49,9 @@
   {
    "name": "Kacper",
    "trade_in": 5,
-   "oferty": 0,
-   "klienci": 3,
-   "zamowienia": 0,
+   "oferty": 31,
+   "klienci": 13,
+   "zamowienia": 2,
    "wydania": 0,
    "traffic": 0,
    "opinie": 0,
@@ -60,9 +60,9 @@
   {
    "name": "Fabian",
    "trade_in": 1,
-   "oferty": 0,
-   "klienci": 4,
-   "zamowienia": 0,
+   "oferty": 24,
+   "klienci": 25,
+   "zamowienia": 4,
    "wydania": 0,
    "traffic": 1,
    "opinie": 0,
@@ -70,10 +70,10 @@
   },
   {
    "name": "Małgorzata",
-   "trade_in": 0,
-   "oferty": 0,
-   "klienci": 4,
-   "zamowienia": 0,
+   "trade_in": 1,
+   "oferty": 29,
+   "klienci": 24,
+   "zamowienia": 2,
    "wydania": 0,
    "traffic": 1,
    "opinie": 0,
@@ -82,8 +82,8 @@
   {
    "name": "Magdalena",
    "trade_in": 0,
-   "oferty": 0,
-   "klienci": 0,
+   "oferty": 8,
+   "klienci": 3,
    "zamowienia": 0,
    "wydania": 0,
    "traffic": 0,
@@ -93,9 +93,9 @@
   {
    "name": "Patryk",
    "trade_in": 0,
-   "oferty": 0,
-   "klienci": 9,
-   "zamowienia": 0,
+   "oferty": 19,
+   "klienci": 13,
+   "zamowienia": 2,
    "wydania": 0,
    "traffic": 0,
    "opinie": 0,
@@ -105,12 +105,12 @@
  "koniunktura_daily": {
   "oferty": [
    0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
+   20,
+   43,
+   28,
+   17,
+   33,
+   7,
    0,
    0,
    0,
@@ -138,12 +138,12 @@
   ],
   "klienci": [
    25,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
+   22,
+   20,
+   19,
+   11,
+   15,
+   5,
    0,
    0,
    0,
@@ -176,7 +176,7 @@
    4,
    0,
    0,
-   0,
+   5,
    0,
    0,
    0,
@@ -203,7 +203,7 @@
    0
   ]
  },
- "opinie_poprzedni_raport": "03.11.2026",
+ "opinie_poprzedni_raport": "04.11.2026",
  "opinie": [
   {
    "data": "01.11.2026",
@@ -1086,7 +1086,7 @@
   "miesiac": "2026-11",
   "biezacy": {
    "label": "Listopad 2026",
-   "total_leads": 40,
+   "total_leads": 44,
    "ranking": [
     {
      "name": "Kacper",
@@ -1096,6 +1096,12 @@
     },
     {
      "name": "Fabian",
+     "przekazane": 1,
+     "odkupione": 0,
+     "konwersja": 0
+    },
+    {
+     "name": "Małgorzata",
      "przekazane": 1,
      "odkupione": 0,
      "konwersja": 0
@@ -1114,12 +1120,6 @@
     },
     {
      "name": "Magdalena",
-     "przekazane": 0,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Małgorzata",
      "przekazane": 0,
      "odkupione": 0,
      "konwersja": 0
@@ -1204,13 +1204,13 @@
      "konwersja": 0
     },
     {
-     "name": "Tymoteusz",
+     "name": "Robert",
      "przekazane": 0,
      "odkupione": 0,
      "konwersja": 0
     },
     {
-     "name": "Robert",
+     "name": "Tymoteusz",
      "przekazane": 0,
      "odkupione": 0,
      "konwersja": 0
