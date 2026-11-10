@@ -1,68 +1,98 @@
 {
- "ih_numer": "IH 51/2026",
- "ih_tydzien": "40/2026",
- "ih_data": "29 września 2026",
- "ih_plik": "Informacja handlowa 51_2026 Załącznik1_Informacja produkcyjna na tydzień 40_2026 (1).pdf",
+ "ih_numer": "IH 58/2026",
+ "ih_tydzien": "45/2026",
+ "ih_data": "2 Listopada 2026",
+ "ih_plik": "Informacja handlowa 58_2026 Załącznik1_Informacja produkcyjna na tydzień 45_2026.pdf",
  "produkcja": {
   "komunikaty": [
    {
-    "tytul": "PLAC CENTRALNY IMPORTERA",
-    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
-    "tresc": "PLAC CENTRALNY IMPORTERA: zachęcamy do zapoznania się z bogatą ofertą samochodów w ramach tzw. „Oferty pod ZWS” importera, szczegóły w Piśmie okólnym 29/2026. Obecnie na stoku VGP znajduje się blisko 80 samochodów dostępnych od ręki. Zachęcamy do jak najszybszego zamawiania nowych komisji w ramach kwot, im wcześniej zamówione komisje, tym większa szansa na szybszą produkcję – planujemy już tygodnie od 43/2026 wzwyż zatem tymi kwotami budujemy magazyny na Q4_2026."
+    "tytul": "ZMIANY PRODUKTOWE 48 TYGODNIA – Szczegóły w Piśmie okólnym 85 i 93",
+    "data": "IH 58/2026 · Informacja Produkcyjna na tydzień 45/2026",
+    "tresc": "ZMIANY PRODUKTOWE 48 TYGODNIA – Szczegóły w Piśmie okólnym 85 i 93 Trwają zmiany roku modelowego w modelach Taigo, Golf, Golf Variant, Passat, Tiguan, T-Roc oraz Tayron W związku z tym, na komisjach w tych modelach mogą występować tymczasowe błędy produkcyjne (komunikat \"F\"). Komisje wymagające interwencji po stronie Sieci dealerskiej zostaną oznaczone jako „DO POPRAWY DEALER”. Inne chwilowe niedogodności: - brak widoczności cen a tym samym brak możliwości wyboru kodu incentive. - \"wykrzyknik\" przy incentive wybranym w czasie, gdy cena była widoczna. PROSIMY O NIEZGŁASZANIE KOMISJI NA BŁĘDACH DO KOŃCA 44 TYGODNIA"
    },
    {
     "tytul": "SILNIKI HEV",
-    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "data": "IH 58/2026 · Informacja Produkcyjna na tydzień 45/2026",
     "tresc": "SILNIKI HEV zachęcamy do zapoznania się z prezentacją dotyczącą technologii HEV, w modelu Golf i T-Roc, szczegóły znajdują się na platformie PAS"
    },
    {
     "tytul": "T-Roc HEV i Golf HEV – Opcja „Park Assist Pro” niedostępna do 07/2027 – szczegóły kolejny",
-    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "data": "IH 58/2026 · Informacja Produkcyjna na tydzień 45/2026",
     "tresc": "slajd"
    },
    {
     "tytul": "Golf HB/VAR (DA1/DB5) – informujemy o zmianie oferty produktowej dla zamówień od 22.10.202",
-    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
-    "tresc": "6, szczegóły znajdują się w Piśmie okólnym 85/2026"
+    "data": "IH 58/2026 · Informacja Produkcyjna na tydzień 45/2026",
+    "tresc": "6, szczegóły znajdują się w Piśmie okólnym 85/2026; konfigurator będzie dostępny dostępny do końca 44 tygodnia ."
    },
    {
     "tytul": "W związku z przełomem roku kalendarzowego przypominamy, że zamówienia klienckie opisane pr",
-    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "data": "IH 58/2026 · Informacja Produkcyjna na tydzień 45/2026",
     "tresc": "zez Państwa spodziewaną datą realizacji do 15.02.2027, mogą zostać zaplanowane i wyprodukowane z datą CP8 2026. Wynika to wprost z faktu potrzeby uwzględnienia zwyczajowej przerwy produkcyjnej między tygodniami 50/2026 - 01/2027 oraz czasu logistycznej dostawy pojazdów."
    },
    {
     "tytul": "W przypadku zamówień klienckich, dla których rok produkcji 2027 jest kluczowym atrybutem,",
-    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "data": "IH 58/2026 · Informacja Produkcyjna na tydzień 45/2026",
     "tresc": "W przypadku zamówień klienckich, dla których rok produkcji 2027 jest kluczowym atrybutem, sugerujemy ustawienie terminu wydania pojazdu klientowi (TRZ) na późniejszą datę, np. marzec 2027 r. Po zamknięciu planowania tygodni produkcyjnych na rok 2026 będzie można ponownie dostosować termin wydania do daty bardziej odpowiadającej oczekiwaniom klienta."
    },
    {
     "tytul": "UWAGA: T-RocHEV i Golf HEV – Opcja „Park Assist Pro” niedostępna do 07/2027!",
-    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "data": "IH 58/2026 · Informacja Produkcyjna na tydzień 45/2026",
     "tresc": "UWAGA: T-RocHEV i Golf HEV – Opcja „Park Assist Pro” niedostępna do 07/2027!"
    },
    {
     "tytul": "T-RocHEV",
-    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "data": "IH 58/2026 · Informacja Produkcyjna na tydzień 45/2026",
     "tresc": "T-RocHEV Opcja „Park Assist Pro” [8A5] będzie niedostępna produkcyjnie do tygodnia 07/2027. „Park Assist Pro” został czasowo usunięty z GO i Konfiguratora klienckiego. Termin dostawy zamówienia z kodem [8A5] w specyfikacji to marzec 2027 - prosimy poinformować o tym Klientów. Alternatywą jest usunięcie kodu 8A5, samochód będzie wtedy wyposażony w „Park Assist Plus” [8A2], który jest standardem w wersjach Style oraz R-Line a jego produkcja będzie możliwa jeszcze w 2026 roku."
    },
    {
     "tytul": "Golf HEV",
-    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "data": "IH 58/2026 · Informacja Produkcyjna na tydzień 45/2026",
     "tresc": "Golf HEV Opcja „Park Assist Pro” [PK2/PK3] będzie niedostępna produkcyjnie do tygodnia 07/2027. „Park Assist Pro” został czasowo usunięty z GO i Konfiguratora klienckiego. Termin dostawy zamówienia z kodem [PK2/PK3] w specyfikacji to marzec 2027. - prosimy poinformować o tym Klientów. Dla wersji Plus: standard wersji Plus zmienia się z kodu PK2/PK3 na PK6/PK7 - samochód będzie wtedy wyposażony w „Park Assist Plus” W pozostałych wersjach: istnieje możliwość całkowitej rezygnacji z opcji „Park Assist”. W przypadku już zebranych zamówień, w przypadku chęci rezygnacji z „Park Assist Pro” należy skontaktować się z Dysporegionem."
+   },
+   {
+    "tytul": "KWOTY MAGAZYNOWE",
+    "data": "IH 58/2026 · Informacja Produkcyjna na tydzień 45/2026",
+    "tresc": "rozdanie kwot magazynowych nastąpi 2.11.2026. Zachęcamy do jak najszybszego zamawiania nowych komisji, im wcześniej zamówione komisje, tym większa szansa na szybszą produkcję. Od tego miesiąca kwoty będą przyznawane co miesiąc, a nie jak dotychczas co dwa tygodnie. Przypominamy, że od tego rozdania wszystkie modele elektryczne (BEV) dostępne w gamie marki Volkswagen objęte zostają dystrybucją w ramach przydzielonych kwot produkcyjnych zarówno dla zamówień klienckich jak i magazynowych."
+   },
+   {
+    "tytul": "AKTUALNA CENA",
+    "data": "IH 58/2026 · Informacja Produkcyjna na tydzień 45/2026",
+    "tresc": "Przypominamy o konieczności dodawania tagu „Aktualna cena” do komisji przy których nastąpiło anulowanie ZWS, a które posiadają tag „GW CENY”. Tag „Aktualna cena” służy do usunięcia gwarancji ceny przypisanej do ZWS klienckiego (zob. Informacja Handlowa 4/2026). Anulowanie ZWS przy komisji, która miała ustawioną gwarancję ceny w zw. z ogłoszoną podwyżką i brak sygnału z Państwa strony powoduje, że znika cena katalogowa, auto nie może zostać zafakturowane ani zadysponowane przez nas do transportu ."
+   },
+   {
+    "tytul": "GWARANCJA CENY",
+    "data": "IH 58/2026 · Informacja Produkcyjna na tydzień 45/2026",
+    "tresc": "Belka dot. gwarancji ceny odnosząca się do pism okólnych 93/2026 oraz 95/2026, została opublikowana. Gwarancja ceny dla komisji z ZWS od 22.10.2026 wyprodukowanych w 2026 roku, zostanie ustawiona na początku stycznia (tym samym oznacza to, że do tego czasu komisji nie będzie widać w belce)."
+   },
+   {
+    "tytul": "ZMIANY PRODUKTOWE DLA SAMOCHODÓW WYPRODUKOWANYCH OD 48 TYGODNIA",
+    "data": "IH 58/2026 · Informacja Produkcyjna na tydzień 45/2026",
+    "tresc": "ZMIANY PRODUKTOWE DLA SAMOCHODÓW WYPRODUKOWANYCH OD 48 TYGODNIA – informujemy o zmianach produktowych oraz podwyżce inflacyjnej dla RP_2027 w modelach T-Roc, Tiguan i Tayron dla zamówień zebranych od 22.10.2026r. Szczegóły znajdują się w Piśmie okólnym 93/2026"
+   },
+   {
+    "tytul": "ID.7/ID.7 Tourer",
+    "data": "IH 58/2026 · Informacja Produkcyjna na tydzień 45/2026",
+    "tresc": "od 48 tygodnia 2026 w modelach ID.7 oraz ID.7 Tourer nastąpi zmiana śrub kół. - do 47 tygodnia 2026: 1PE → śruby kół ze zwiększonym zabezpieczeniem przed kradzieżą w kolorze srebrnym, z plastikowymi osłonami. - od 48 tygodnia 2026: 1PC → śruby kół ze zwiększonym zabezpieczeniem przed kradzieżą w kolorze czarnym."
+   },
+   {
+    "tytul": "OFERTA PROMOCYJNA DLA RP 2027",
+    "data": "IH 58/2026 · Informacja Produkcyjna na tydzień 45/2026",
+    "tresc": "Informujemy o nowej ofercie promocyjnej dla samochodów wyprodukowanych z RP 2027, na które zostały złożone zamówienia w terminie od 2.11, szczegóły w Piśmie okólnym 96/2026"
    }
   ],
   "przerwy": [
    {
     "tytul": "Przerwy produkcyjne",
-    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "data": "IH 58/2026 · Informacja Produkcyjna na tydzień 45/2026",
     "pre": true,
     "tresc": "KOMUNIKATY\n▪ W związku z przełomem roku kalendarzowego przypominamy, że zamówienia klienckie opisane przez\nPaństwa spodziewaną datą realizacji do 15.02.2027, mogą zostać zaplanowane i wyprodukowane z datą\nCP8 2026.\nWynika to wprost z faktu potrzeby uwzględnienia zwyczajowej przerwy produkcyjnej między\ntygodniami 50/2026 - 01/2027 oraz czasu logistycznej dostawy pojazdów.\n▪ W przypadku zamówień klienckich, dla których rok produkcji 2027 jest kluczowym atrybutem,\nsugerujemy ustawienie terminu wydania pojazdu klientowi (TRZ) na późniejszą datę, np. marzec 2027 r.\nPo zamknięciu planowania tygodni produkcyjnych na rok 2026 będzie można ponownie dostosować\ntermin wydania do daty bardziej odpowiadającej oczekiwaniom klienta."
    }
   ],
   "kalendarz": [
    {
-    "tytul": "Kalendarz produkcyjny — tydzień 40/2026",
-    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "tytul": "Kalendarz produkcyjny — tydzień 45/2026",
+    "data": "IH 58/2026 · Informacja Produkcyjna na tydzień 45/2026",
     "tabela": [
      [
       "Model",
@@ -73,106 +103,106 @@
      ],
      [
       "POLO (AE1)",
-      "50/2026",
-      "STYCZEŃ 2027",
+      "5/2027",
+      "LUTY",
       "-",
       "7 TYGODNI"
      ],
      [
       "T-CROSS (D31)",
-      "45/2026",
-      "LISTOPAD",
+      "50/2026",
+      "STYCZEŃ",
       "-",
       "4 TYGODNIE"
      ],
      [
       "TAIGO (CS1)",
-      "45/2026",
-      "STYCZEŃ 2027",
+      "50/2026",
+      "STYCZEŃ",
       "-",
       "5 TYGODNI"
      ],
      [
       "T-ROC (D41)",
-      "44/2026",
-      "LISTOPAD",
+      "49/2026",
+      "STYCZEŃ",
       "-",
       "4 TYGODNIE"
      ],
      [
       "GOLF HB (DA1)",
-      "44/2026",
-      "LISTOPAD",
+      "49/2026",
+      "STYCZEŃ",
       "-",
       "3 –14 DNI"
      ],
      [
       "GOLF VAR (DB5)",
-      "44/2026",
-      "LISTOPAD",
+      "49/2026",
+      "LUTY",
       "-",
       "3 –14 DNI"
      ],
      [
       "PASSAT (CJ5)",
-      "44/2026",
-      "LISTOPAD",
+      "49/2026",
+      "STYCZEŃ",
       "-",
       "3 –14 DNI"
      ],
      [
       "TIGUAN (CT1)",
-      "44/2026",
-      "LISTOPAD",
+      "49/2026",
+      "STYCZEŃ",
       "-",
       "3 –14 DNI"
      ],
      [
       "TAYRON (R41)",
-      "44/2026",
-      "LISTOPAD",
+      "49/2026",
+      "STYCZEŃ",
       "-",
       "3 –14 DNI"
      ],
      [
       "ID. POLO (ES1)",
-      "44+45/2026",
-      "GRUDZIEŃ",
+      "50/2026",
+      "LUTY",
+      "-",
+      "4 TYGODNIE"
+     ],
+     [
+      "ID.CROSS (EH1)",
+      "-",
+      "STYCZEŃ",
       "-",
       "4 TYGODNIE"
      ],
      [
       "ID.3 NEO (E13)",
-      "44/2026",
-      "GRUDZIEŃ",
+      "49/2026",
+      "LUTY",
       "-",
       "3 –14 DNI"
      ],
      [
-      "ID.4 (E21)",
-      "47/2026",
-      "ZAKOŃCZENIE PRODUKCJI",
+      "ID.TIGUAN (E22)",
       "-",
-      "3 –14 DNI"
-     ],
-     [
-      "ID.5 (E39)",
-      "-",
-      "ZAKOŃCZENIE PRODUKCJI",
+      "STYCZEŃ",
       "-",
       "3 –14 DNI"
      ],
      [
       "ID.7 (ED2)",
-      "44/2026",
-      "GRUDZIEŃ",
+      "49/2026",
+      "STYCZEŃ",
       "-",
       "3 –14 DNI"
      ],
      [
       "ID.7 TOURER (ED5)",
-      "44/2026",
-      "STYCZEŃ 2027",
+      "49/2026",
+      "LUTY",
       "-",
       "3 –14 DNI"
      ]
@@ -182,10 +212,10 @@
   ],
   "restrykcje": [
    {
-    "tytul": "Elementy restrykcyjne — 40/2026",
-    "data": "IH 51/2026 · Informacja Produkcyjna na tydzień 40/2026",
+    "tytul": "Elementy restrykcyjne — 45/2026",
+    "data": "IH 58/2026 · Informacja Produkcyjna na tydzień 45/2026",
     "pre": true,
-    "tresc": "1M6/1M9/1D2 Hak holowniczy\nDla wszystkich modeli\n3FU/3FG/PS1 Dach panoramiczny\nAE13GV Silnik MPI –80KM\nPOLO (AE1)\nC5C Obręcze ze stopu metali lekkich \"Torsby\" 6,5J x 16\"\nT-CROSS (D31) C1K/44M Obręcze aluminiowe York 18”\n40L Obręcze ze stopu metali lekkich Belmopan 16\"\nTAIGO (CS1)\nC1K/44M/40L Obręcze aluminiowe York 18” /Obręcze ze stopu metali lekkich York 18\"\nSilniki mHEV\nPakiet Performance Plus / GTI Performance / R-Performance / GTI Edition 50 Performance / pakiet Black Edition\nGOLF (DA1)/(DB5) Czarny dach\nPJ9 Obręcze aluminiowe Warmenau8J x 19, czarne\n40P/PJN/PI9/C7M/45N Obręcze aluminiowe Nottingham 7.5J x 17 / Warmenau19” / York 7.5J x 19, czarne\nTiguanEdition 20\nF15/F14/PJU/PJR Obręcze aluminiowe York 8J x 20, czarne / czarne, szlif diamentowy\nTIGUAN (CT1) F42 Obręcze aluminiowe Coventry 8.5J x 19, czarne\nWBR Pakiet stylistyczny R-Line Black Style\nSilniki PHEV\nID.3 NEO (E13) 49G/53P/PJN Felgi Wellington 19’’\n40M/PJ1 Obręcze aluminiowe Edinburgh7J x 17 czarne, polerowane\nID. POLO (ES1)\nBateria 37 kWh\nID.7/ID.7 TOURER (ED2/ED5) 64Q Obręcze aluminiowe czarne Bergen 8J x 19 z przodu, 8,5J x 19 z tyłu\n\nWystąpienie któregokolwiek z powyższych elementów w specyfikacji może wydłużyć czas zatwierdzenia zamówienia do produkcji, a tym samym czas dostawy do Klienta."
+    "tresc": "1M6/1M9/1D2 Hak holowniczy\nDla wszystkich modeli\n3FU/3FG/PS1 Dach panoramiczny\nPOLO (AE1) C5C Obręcze ze stopu metali lekkich \"Torsby\" 6,5J x 16\"\nSilniki mHEV\nPakiet Performance Plus / GTI Performance / R-Performance / GTI Edition 50 Performance / pakiet Black Edition\nGOLF (DA1)/(DB5)\nCzarny dach\n40P/PJN/PI9/C7M/45N Obręcze aluminiowe Nottingham 7.5J x 17 / Warmenau19” / York 7.5J x 19, czarne\nPP1/8A5 Park AssistPro -Asystent Parkowania w tym zdalne parkowanie z wykorzystaniem aplikacji na smartfona\nWBS Pakiet stylistyczny Black Style\nT-ROC (D41) PTC Pakiet technology\nPL1 Tapicerka skórzana\nSilnik HEV\nTAYRON (R41) Silnik PHEV\nWBS Pakiet stylistyczny R-Line Black Style\nTIGUAN (CT1)\nSilniki PHEV\n49G/53P/PJN Felgi Wellington 19/Obręcze aluminiowe czarne Wellington 7,5J x 19\nQ94/PJO Opony wielosezonowe 215/50 R19\nID.3 NEO (E13)\n8A2 Park AssistPlus\n8A5 Park AssistPro -Asystent Parkowania w tym zdalne parkowanie\nWersja Trend\nID. POLO (ES1)\nBateria 37 kWh oraz Bateria 55 kWh\nID7/ID7 TOURER (ED2/ED5) 64Q/WBT Obręcze aluminiowe czarne Bergen 8J x 19 z przodu, 8,5J x 19 z tyłu\n\nWystąpienie któregokolwiek z powyższych elementów w specyfikacji może wydłużyć czas zatwierdzenia zamówienia do produkcji, a tym samym czas dostawy do Klienta."
    }
   ]
  }

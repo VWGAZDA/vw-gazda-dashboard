@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za listopad 2026, stan 09.11.2026 · Trade-in: CRM Klienci — stan 09.11.2026 · Grafik: arkusz GRAFIK — stan 09.11.2026, listopad odczytany (test niedziel OK); zakładki „Grafik grudzień” brak, miesiąc pusty",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za listopad 2026, stan 10.11.2026 · Trade-in: CRM Klienci — stan 10.11.2026 · Grafik: arkusz GRAFIK — stan 10.11.2026, listopad odczytany (test niedziel OK); zakładki „Grafik grudzień” brak, miesiąc pusty",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -19,9 +19,9 @@
    "oferty": 14,
    "klienci": 17,
    "zamowienia": 2,
-   "wydania": 0,
-   "traffic": 1,
-   "opinie": 0,
+   "wydania": 3,
+   "traffic": 4,
+   "opinie": 1,
    "flota": false
   },
   {
@@ -29,8 +29,8 @@
    "trade_in": 0,
    "oferty": 11,
    "klienci": 7,
-   "zamowienia": 3,
-   "wydania": 0,
+   "zamowienia": 5,
+   "wydania": 5,
    "traffic": 5,
    "opinie": 0,
    "flota": false
@@ -41,8 +41,8 @@
    "oferty": 12,
    "klienci": 15,
    "zamowienia": 7,
-   "wydania": 0,
-   "traffic": 1,
+   "wydania": 1,
+   "traffic": 2,
    "opinie": 0,
    "flota": false
   },
@@ -53,7 +53,7 @@
    "klienci": 13,
    "zamowienia": 2,
    "wydania": 0,
-   "traffic": 0,
+   "traffic": 2,
    "opinie": 0,
    "flota": false
   },
@@ -62,9 +62,9 @@
    "trade_in": 1,
    "oferty": 24,
    "klienci": 25,
-   "zamowienia": 4,
+   "zamowienia": 6,
    "wydania": 0,
-   "traffic": 1,
+   "traffic": 5,
    "opinie": 0,
    "flota": false
   },
@@ -74,7 +74,7 @@
    "oferty": 29,
    "klienci": 24,
    "zamowienia": 2,
-   "wydania": 0,
+   "wydania": 2,
    "traffic": 1,
    "opinie": 0,
    "flota": false
@@ -85,7 +85,7 @@
    "oferty": 8,
    "klienci": 3,
    "zamowienia": 0,
-   "wydania": 0,
+   "wydania": 1,
    "traffic": 0,
    "opinie": 0,
    "flota": true
@@ -96,8 +96,8 @@
    "oferty": 19,
    "klienci": 13,
    "zamowienia": 2,
-   "wydania": 0,
-   "traffic": 0,
+   "wydania": 2,
+   "traffic": 1,
    "opinie": 0,
    "flota": true
   }
@@ -176,9 +176,9 @@
    4,
    0,
    0,
-   5,
+   9,
    0,
-   0,
+   7,
    0,
    0,
    0,
@@ -203,8 +203,14 @@
    0
   ]
  },
- "opinie_poprzedni_raport": "04.11.2026",
+ "opinie_poprzedni_raport": "08.11.2026",
  "opinie": [
+  {
+   "data": "04.11.2026",
+   "nazwa": "SEBASTIAN Z.",
+   "handlowiec": "Anita",
+   "tresc": "Serdecznie polecam salon! W szczególności Pani Anita, która od początku wykazała się ogromnym profesjonalizmem!!! Polecam!"
+  },
   {
    "data": "01.11.2026",
    "nazwa": "ZOSIA B.",
@@ -1086,7 +1092,7 @@
   "miesiac": "2026-11",
   "biezacy": {
    "label": "Listopad 2026",
-   "total_leads": 44,
+   "total_leads": 54,
    "ranking": [
     {
      "name": "Kacper",
