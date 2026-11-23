@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za listopad 2026, stan 12.11.2026 · Trade-in: CRM Klienci — stan 12.11.2026 · Grafik: arkusz GRAFIK — stan 12.11.2026, listopad odczytany (test niedziel OK); zakładki „Grafik grudzień” brak, miesiąc pusty",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za listopad 2026, stan 23.11.2026 · Trade-in: CRM Klienci — stan 23.11.2026 · Grafik: arkusz GRAFIK — stan 23.11.2026, listopad odczytany (test niedziel OK); zakładki „Grafik grudzień” brak, miesiąc pusty",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -16,86 +16,86 @@
   {
    "name": "Anita",
    "trade_in": 0,
-   "oferty": 21,
-   "klienci": 23,
-   "zamowienia": 3,
-   "wydania": 4,
-   "traffic": 7,
-   "opinie": 1,
+   "oferty": 49,
+   "klienci": 44,
+   "zamowienia": 8,
+   "wydania": 12,
+   "traffic": 24,
+   "opinie": 2,
    "flota": false
   },
   {
    "name": "Konrad",
    "trade_in": 0,
-   "oferty": 19,
-   "klienci": 12,
-   "zamowienia": 8,
-   "wydania": 6,
-   "traffic": 7,
-   "opinie": 0,
+   "oferty": 62,
+   "klienci": 36,
+   "zamowienia": 14,
+   "wydania": 10,
+   "traffic": 23,
+   "opinie": 1,
    "flota": false
   },
   {
    "name": "Oskar",
    "trade_in": 0,
-   "oferty": 15,
-   "klienci": 17,
-   "zamowienia": 10,
-   "wydania": 1,
-   "traffic": 4,
+   "oferty": 46,
+   "klienci": 43,
+   "zamowienia": 22,
+   "wydania": 5,
+   "traffic": 18,
    "opinie": 0,
    "flota": false
   },
   {
    "name": "Kacper",
    "trade_in": 5,
-   "oferty": 38,
-   "klienci": 18,
-   "zamowienia": 2,
-   "wydania": 0,
-   "traffic": 5,
-   "opinie": 0,
+   "oferty": 53,
+   "klienci": 27,
+   "zamowienia": 6,
+   "wydania": 6,
+   "traffic": 10,
+   "opinie": 1,
    "flota": false
   },
   {
    "name": "Fabian",
-   "trade_in": 1,
-   "oferty": 28,
-   "klienci": 36,
-   "zamowienia": 6,
-   "wydania": 2,
-   "traffic": 5,
+   "trade_in": 2,
+   "oferty": 52,
+   "klienci": 52,
+   "zamowienia": 10,
+   "wydania": 3,
+   "traffic": 17,
    "opinie": 0,
    "flota": false
   },
   {
    "name": "Małgorzata",
-   "trade_in": 1,
-   "oferty": 44,
-   "klienci": 35,
-   "zamowienia": 3,
-   "wydania": 3,
-   "traffic": 1,
-   "opinie": 0,
+   "trade_in": 4,
+   "oferty": 100,
+   "klienci": 83,
+   "zamowienia": 9,
+   "wydania": 7,
+   "traffic": 16,
+   "opinie": 2,
    "flota": false
   },
   {
    "name": "Magdalena",
    "trade_in": 0,
-   "oferty": 12,
-   "klienci": 3,
-   "zamowienia": 1,
-   "wydania": 1,
-   "traffic": 0,
+   "oferty": 24,
+   "klienci": 8,
+   "zamowienia": 2,
+   "wydania": 8,
+   "traffic": 3,
    "opinie": 0,
    "flota": true
   },
   {
    "name": "Patryk",
    "trade_in": 0,
-   "oferty": 26,
-   "klienci": 14,
-   "zamowienia": 2,
+   "oferty": 57,
+   "klienci": 25,
+   "zamowienia": 5,
    "wydania": 2,
    "traffic": 2,
    "opinie": 0,
@@ -115,16 +115,16 @@
    20,
    35,
    0,
+   50,
+   37,
+   15,
    0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
+   38,
+   11,
+   32,
+   19,
+   24,
+   14,
    0,
    0,
    0,
@@ -148,16 +148,16 @@
    16,
    25,
    0,
+   31,
+   25,
+   9,
    0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
+   22,
+   8,
+   24,
+   14,
+   19,
+   8,
    0,
    0,
    0,
@@ -181,18 +181,18 @@
    7,
    9,
    0,
-   2,
+   12,
+   13,
    0,
    0,
+   6,
+   17,
+   7,
+   11,
+   3,
+   10,
    0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
+   5,
    0,
    0,
    0,
@@ -203,8 +203,38 @@
    0
   ]
  },
- "opinie_poprzedni_raport": "08.11.2026",
+ "opinie_poprzedni_raport": "19.11.2026",
  "opinie": [
+  {
+   "data": "20.11.2026",
+   "nazwa": "DARIUSZ P.",
+   "handlowiec": "Konrad",
+   "tresc": "Właśnie jestem po odbiorze samochodu, cały proces zakupu od zamówienia do odbioru prowadził Pan Konrad. Miła i profesjonalna obsługa klienta, byłem na bieżąco informowany o etapach realizacji zamówienia, zawsze chętnie i rzeczowo odpowiadał na moje pytania, wszystko wyjaśnił tak aby nie było żadnych wątpliwości. Szczerze polecam zakup samochodu w Gazda Group Katowice."
+  },
+  {
+   "data": "19.11.2026",
+   "nazwa": "ODDYMIANIE P.",
+   "handlowiec": "Anita",
+   "tresc": "Super - profesjonalna obsługa od początku do końca - dawno nie kupowaliśma auta z taką przyjemnością. Dziękujemy w szczególności pani Anicie z działu sprzedaży :)"
+  },
+  {
+   "data": "18.11.2026",
+   "nazwa": "NIE M.",
+   "handlowiec": "Małgorzata",
+   "tresc": "Świetna, profesjonalna i przede wszystkim ekspresowa obsługa :) pani Małgorzata sprawę leasingu auta załatwiła błyskawicznie, a przy tym wszystko jasno i na bieżąco wyjaśniała. Kontakt z klientem i obsługa na najwyższym poziomie. Zdecydowanie warto się „pofatygować” do tego salonu, nawet z dalekiej Warszawy. A już na pewno po Golfa R."
+  },
+  {
+   "data": "15.11.2026",
+   "nazwa": "ARKADIUSZ B.",
+   "handlowiec": "Kacper",
+   "tresc": "Świetny kontakt i przemiła obsługa ze strony Pana Kacpra. Bardzo pomocny, uczciwy i profesjonalny sprzedawca. Załatwienie wszelkich formalności było czystą przyjemnością. Serdecznie polecam!"
+  },
+  {
+   "data": "13.11.2026",
+   "nazwa": "IZABELA C.",
+   "handlowiec": "Małgorzata",
+   "tresc": "Polecam salon Volkswagen Gazda Group w Katowicach. Dziękujemy szczególnie pani Małgorzacie która zajęła się nami . Profesjonalnie kompleksowo i w miłej atmosferze odpowiadała na wszystkie pytania."
+  },
   {
    "data": "04.11.2026",
    "nazwa": "SEBASTIAN Z.",
@@ -1091,8 +1121,7 @@
  "trade_in_crm": {
   "miesiac": "2026-11",
   "biezacy": {
-   "label": "Listopad 2026",
-   "total_leads": 60,
+   "total_leads": 130,
    "ranking": [
     {
      "name": "Kacper",
@@ -1101,56 +1130,14 @@
      "konwersja": 0
     },
     {
-     "name": "Fabian",
-     "przekazane": 1,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
      "name": "Małgorzata",
-     "przekazane": 1,
+     "przekazane": 4,
      "odkupione": 0,
      "konwersja": 0
     },
     {
-     "name": "Anita",
-     "przekazane": 0,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Konrad",
-     "przekazane": 0,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Magdalena",
-     "przekazane": 0,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Oskar",
-     "przekazane": 0,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Patryk",
-     "przekazane": 0,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Robert",
-     "przekazane": 0,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Tymoteusz",
-     "przekazane": 0,
+     "name": "Fabian",
+     "przekazane": 2,
      "odkupione": 0,
      "konwersja": 0
     }
@@ -1158,20 +1145,19 @@
    "wygrane": []
   },
   "poprzedni": {
-   "label": "Październik 2026",
    "total_leads": 195,
    "ranking": [
-    {
-     "name": "Fabian",
-     "przekazane": 4,
-     "odkupione": 1,
-     "konwersja": 25
-    },
     {
      "name": "Anita",
      "przekazane": 6,
      "odkupione": 0,
      "konwersja": 0
+    },
+    {
+     "name": "Fabian",
+     "przekazane": 4,
+     "odkupione": 1,
+     "konwersja": 25
     },
     {
      "name": "Małgorzata",
@@ -1190,36 +1176,6 @@
      "przekazane": 2,
      "odkupione": 0,
      "konwersja": 0
-    },
-    {
-     "name": "Kacper",
-     "przekazane": 0,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Konrad",
-     "przekazane": 0,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Magdalena",
-     "przekazane": 0,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Robert",
-     "przekazane": 0,
-     "odkupione": 0,
-     "konwersja": 0
-    },
-    {
-     "name": "Tymoteusz",
-     "przekazane": 0,
-     "odkupione": 0,
-     "konwersja": 0
     }
    ],
    "wygrane": [
@@ -1227,7 +1183,7 @@
      "data": "13.10.2026",
      "klient": "A.B.",
      "pojazd": "Seat Arona",
-     "vin": "LR074969",
+     "vin": "-",
      "handlowiec": "Fabian"
     }
    ]
