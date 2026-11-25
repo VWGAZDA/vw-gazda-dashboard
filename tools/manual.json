@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za listopad 2026, stan 23.11.2026 · Trade-in: CRM Klienci — stan 23.11.2026 · Grafik: arkusz GRAFIK — stan 23.11.2026, listopad odczytany (test niedziel OK); zakładki „Grafik grudzień” brak, miesiąc pusty",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za listopad 2026, stan 25.11.2026 · Trade-in: CRM Klienci — stan 25.11.2026 · Grafik: arkusz GRAFIK — stan 25.11.2026, listopad odczytany (test niedziel OK); zakładki „Grafik grudzień” brak, miesiąc pusty",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -20,8 +20,8 @@
    "klienci": 44,
    "zamowienia": 8,
    "wydania": 12,
-   "traffic": 24,
-   "opinie": 2,
+   "traffic": 29,
+   "opinie": 3,
    "flota": false
   },
   {
@@ -31,7 +31,7 @@
    "klienci": 36,
    "zamowienia": 14,
    "wydania": 10,
-   "traffic": 23,
+   "traffic": 26,
    "opinie": 1,
    "flota": false
   },
@@ -42,7 +42,7 @@
    "klienci": 43,
    "zamowienia": 22,
    "wydania": 5,
-   "traffic": 18,
+   "traffic": 23,
    "opinie": 0,
    "flota": false
   },
@@ -53,7 +53,7 @@
    "klienci": 27,
    "zamowienia": 6,
    "wydania": 6,
-   "traffic": 10,
+   "traffic": 13,
    "opinie": 1,
    "flota": false
   },
@@ -64,7 +64,7 @@
    "klienci": 52,
    "zamowienia": 10,
    "wydania": 3,
-   "traffic": 17,
+   "traffic": 21,
    "opinie": 0,
    "flota": false
   },
@@ -75,7 +75,7 @@
    "klienci": 83,
    "zamowienia": 9,
    "wydania": 7,
-   "traffic": 16,
+   "traffic": 22,
    "opinie": 2,
    "flota": false
   },
@@ -86,7 +86,7 @@
    "klienci": 8,
    "zamowienia": 2,
    "wydania": 8,
-   "traffic": 3,
+   "traffic": 5,
    "opinie": 0,
    "flota": true
   },
@@ -192,9 +192,9 @@
    3,
    10,
    0,
-   5,
-   0,
-   0,
+   10,
+   21,
+   2,
    0,
    0,
    0,
@@ -203,8 +203,14 @@
    0
   ]
  },
- "opinie_poprzedni_raport": "19.11.2026",
+ "opinie_poprzedni_raport": "22.11.2026",
  "opinie": [
+  {
+   "data": "23.11.2026",
+   "nazwa": "BARTEK T.",
+   "handlowiec": "Anita",
+   "tresc": "Serdecznie polecam Panią Anitę! Bardzo sprawny kontakt, profesjonalne podejście do klienta, fachowe doradztwo oraz atrakcyjna oferta. Cały proces przebiegł sprawnie i w miłej atmosferze."
+  },
   {
    "data": "20.11.2026",
    "nazwa": "DARIUSZ P.",
@@ -1121,7 +1127,7 @@
  "trade_in_crm": {
   "miesiac": "2026-11",
   "biezacy": {
-   "total_leads": 130,
+   "total_leads": 140,
    "ranking": [
     {
      "name": "Kacper",
