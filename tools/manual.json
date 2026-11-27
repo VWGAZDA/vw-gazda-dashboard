@@ -7,7 +7,7 @@
   "Tymoteusz",
   "Robert"
  ],
- "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za listopad 2026, stan 26.11.2026 · Trade-in: CRM Klienci — stan 26.11.2026 · Grafik: arkusz GRAFIK — stan 26.11.2026, listopad odczytany (test niedziel OK); zakładki „Grafik grudzień” brak, miesiąc pusty",
+ "zrodla_dodatkowe": "KPI/koniunktura/opinie: arkusz RAPORT (Google Sheets) — dane za listopad 2026, stan 27.11.2026 · Trade-in: CRM Klienci — stan 27.11.2026 · Grafik: arkusz GRAFIK — stan 27.11.2026, listopad odczytany (test niedziel OK); zakładki „Grafik grudzień” brak, miesiąc pusty",
  "zadania_cele": {
   "Trade-in": 10,
   "Opinie Google": 5
@@ -20,7 +20,7 @@
    "klienci": 54,
    "zamowienia": 11,
    "wydania": 15,
-   "traffic": 31,
+   "traffic": 34,
    "opinie": 4,
    "flota": false
   },
@@ -31,7 +31,7 @@
    "klienci": 44,
    "zamowienia": 21,
    "wydania": 10,
-   "traffic": 26,
+   "traffic": 27,
    "opinie": 1,
    "flota": false
   },
@@ -42,7 +42,7 @@
    "klienci": 49,
    "zamowienia": 29,
    "wydania": 5,
-   "traffic": 23,
+   "traffic": 25,
    "opinie": 1,
    "flota": false
   },
@@ -53,7 +53,7 @@
    "klienci": 30,
    "zamowienia": 7,
    "wydania": 6,
-   "traffic": 13,
+   "traffic": 15,
    "opinie": 1,
    "flota": false
   },
@@ -64,7 +64,7 @@
    "klienci": 57,
    "zamowienia": 14,
    "wydania": 3,
-   "traffic": 21,
+   "traffic": 25,
    "opinie": 0,
    "flota": false
   },
@@ -75,7 +75,7 @@
    "klienci": 96,
    "zamowienia": 12,
    "wydania": 7,
-   "traffic": 23,
+   "traffic": 26,
    "opinie": 2,
    "flota": false
   },
@@ -195,15 +195,15 @@
    10,
    21,
    5,
-   0,
-   0,
+   14,
+   1,
    0,
    0,
    0,
    0
   ]
  },
- "opinie_poprzedni_raport": "22.11.2026",
+ "opinie_poprzedni_raport": "24.11.2026",
  "opinie": [
   {
    "data": "25.11.2026",
@@ -1133,7 +1133,7 @@
  "trade_in_crm": {
   "miesiac": "2026-11",
   "biezacy": {
-   "total_leads": 142,
+   "total_leads": 147,
    "ranking": [
     {
      "name": "Kacper",
@@ -1310,10 +1310,10 @@
       "9",
       "9",
       "9",
-      "9",
       "",
       "",
-      "10"
+      "",
+      ""
      ]
     },
     {
